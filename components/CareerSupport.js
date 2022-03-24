@@ -1,22 +1,17 @@
-import {
-  Avatar,
-  Box,
-  Container,
-  Grid,
-  List,
-  ListItem,
-  ListItemAvatar,
-  ListItemText,
-  Typography,
-} from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import Image from "next/image";
 
 const CareerSupport = () => {
   return (
-    <Box bgcolor="#6364D9" color="white">
+    <Box
+      bgcolor="#6364D9"
+      color="white"
+      mt={{ md: 10, xs: 5 }}
+      p={{ md: 0, xs: 5 }}
+    >
       <Container maxWidth="lg">
         <Grid container spacing={0} alignItems="center" justifyContent="center">
-          <Grid item xs={12} sm={8}>
+          <Grid item xs={12} sm={8} order={{ xs: 2, sm: 1 }}>
             <Typography variant="h4" sx={{ fontWeight: "bold" }}>
               Career Support?
             </Typography>
@@ -38,7 +33,7 @@ const CareerSupport = () => {
               <li>Networking Events </li>
             </ul>
           </Grid>
-          <Grid item xs={12} sm={4}>
+          <Grid item xs={12} sm={4} order={{ xs: 1, sm: 2 }}>
             <Box
               sx={{
                 color: "blue",

@@ -5,7 +5,7 @@ import { Link, NavLink } from 'react-router-dom';
 import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
 import Image from 'next/image';
-import logo from '../../Images/Logo.svg';
+import logo from '../../images/Logo.svg';
 
 const sideLinks = [
     {name:"Home", to:'/'},
