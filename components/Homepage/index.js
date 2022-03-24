@@ -1,5 +1,5 @@
 import Hero from "./Hero";
-import CareerSupport from "./CareerSupport/CareerSupport";
+import CareerSupport from "./CareerSupport";
 import Footer from "./Footer";
 
 export default function HomePage() {
