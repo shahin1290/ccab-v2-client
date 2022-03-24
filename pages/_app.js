@@ -1,11 +1,12 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
+import HomepageLayout from "../components/Layout/HomepageLayout";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div suppressHydrationWarning>
-      {typeof window === 'undefined' ? null : <Component {...pageProps} />}  
-   </div>
-)
+    <HomepageLayout suppressHydrationWarning>
+      {typeof window === "undefined" ? null : <Component {...pageProps} />}
+    </HomepageLayout>
+  );
 }
 
-export default MyApp
+export default MyApp;

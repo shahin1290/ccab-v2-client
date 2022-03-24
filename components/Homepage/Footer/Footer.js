@@ -1,7 +1,7 @@
 import { Box, Grid, Link } from "@mui/material";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import Image from "next/image";
-import logo from "../images/Logo.svg";
+import logo from "../../../images/Logo.svg";
 import styled from "@emotion/styled";
 import LocalPostOfficeIcon from "@mui/icons-material/LocalPostOffice";
 import PinDropIcon from "@mui/icons-material/PinDrop";
@@ -25,9 +25,8 @@ export default function Footer() {
               <Image src={logo} alt="company-logo" width="100" height="100" />
             </Box>
             <Box pr={{ xl: 25, lg: 15, md: 10, xs: 2 }} color="white">
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui
-              blanditiis praesentium voluptatum deleniti atque corrupti quos
-              dolores et quas molestias excepturi sint occaecati.
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
+              atque corrupti quos dolores et quas molestias excepturi sint occaecati.
             </Box>
             <Box
               pt={{ xs: 2 }}
@@ -35,8 +34,7 @@ export default function Footer() {
                 display: "flex",
                 gap: "10px",
                 justifyContent: `${matches ? "center" : "start"}`,
-              }}
-            >
+              }}>
               <FacebookRoundedIcon
                 sx={{
                   color: "#6364D9",
@@ -57,11 +55,7 @@ export default function Footer() {
             </Box>
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <Box
-              sx={{ color: "#6364D9", fontWeight: "bold" }}
-              pt={{ xs: 2, md: 10 }}
-              pb={{ xs: 3 }}
-            >
+            <Box sx={{ color: "#6364D9", fontWeight: "bold" }} pt={{ xs: 2, md: 10 }} pb={{ xs: 3 }}>
               Services
             </Box>
             <Box pb={{ xs: 3 }}>
@@ -92,11 +86,7 @@ export default function Footer() {
           </Grid>
 
           <Grid item xs={12} md={2} sm={6}>
-            <Box
-              pt={{ xs: 2, md: 10 }}
-              pb={{ xs: 3 }}
-              sx={{ color: "#6364D9", fontWeight: "bold" }}
-            >
+            <Box pt={{ xs: 2, md: 10 }} pb={{ xs: 3 }} sx={{ color: "#6364D9", fontWeight: "bold" }}>
               Quick Links
             </Box>
             <Box pb={{ xs: 3 }}>
@@ -121,30 +111,18 @@ export default function Footer() {
             </Box>
           </Grid>
           <Grid item xs={12} sm={3}>
-            <Box
-              pt={{ xs: 2, md: 10 }}
-              pb={{ xs: 3 }}
-              sx={{ color: "#6364D9", fontWeight: "bold" }}
-            >
+            <Box pt={{ xs: 2, md: 10 }} pb={{ xs: 3 }} sx={{ color: "#6364D9", fontWeight: "bold" }}>
               Contact Us
             </Box>
-            <Box
-              pb={{ xs: 2 }}
-              sx={{ display: "flex", alignItems: "center", gap: "10px" }}
-            >
+            <Box pb={{ xs: 2 }} sx={{ display: "flex", alignItems: "center", gap: "10px" }}>
               <PinDropIcon sx={{ fontSize: "20px", color: "#6364D9" }} />
 
               <FooterLink href="/" color="inherit">
                 Rontgenvagen 1, 141 52, Huddinge, Stockholm, Sweden
               </FooterLink>
             </Box>
-            <Box
-              pb={{ xs: 5 }}
-              sx={{ display: "flex", alignItems: "center", gap: "10px" }}
-            >
-              <LocalPostOfficeIcon
-                sx={{ fontSize: "20px", color: "#6364D9" }}
-              />
+            <Box pb={{ xs: 5 }} sx={{ display: "flex", alignItems: "center", gap: "10px" }}>
+              <LocalPostOfficeIcon sx={{ fontSize: "20px", color: "#6364D9" }} />
 
               <FooterLink href="/" color="inherit">
                 info@codifycollege.se
@@ -153,8 +131,7 @@ export default function Footer() {
           </Grid>
         </Grid>
         <Box py={{ xs: 5 }} color="#fff">
-          {new Date().getFullYear()} &copy; CF College AB. Designed by CF
-          College AB
+          {new Date().getFullYear()} &copy; CF College AB. Designed by CF College AB
         </Box>
       </Box>
     </footer>
