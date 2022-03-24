@@ -1,15 +1,25 @@
-import "../styles/globals.css";
-import HomepageLayout from "../components/Layout/HomepageLayout";
 import { ThemeProvider } from "@mui/system";
-import theme from "../theme";
+import Head from "next/head";
+import createEmotionCache from "../src/theme/createEmotionCache";
+import { CacheProvider } from "@emotion/react";
+import CssBaseline from "@mui/material/CssBaseline";
+import theme from "../src/theme";
 
-function MyApp({ Component, pageProps }) {
+const clientSideEmotionCache = createEmotionCache();
+
+function MyApp(props) {
+  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+
   return (
-    <ThemeProvider theme={theme}>
-      <HomepageLayout suppressHydrationWarning>
-        {typeof window === "undefined" ? null : <Component {...pageProps} />}
-      </HomepageLayout>
-    </ThemeProvider>
+    <CacheProvider value={emotionCache}>
+      <Head>
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
+      </Head>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </CacheProvider>
   );
 }
 
