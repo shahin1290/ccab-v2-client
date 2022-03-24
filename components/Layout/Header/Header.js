@@ -4,7 +4,6 @@ import { SwipeableDrawer, IconButton, Divider, List, ListItem } from "@mui/mater
 import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
 import Image from "next/image";
-
 import logo from "../../../images/Logo.svg";
 import Link from "next/link";
 
@@ -57,8 +56,8 @@ export default function Header() {
             <Link href="/" className={classes.navLinks} passHref>
               <button className={classes.button}>Login</button>
             </Link>
-            <Link href="/" className={classes.navLinks} passHref>
-              <button className={classes.button2}>Register</button>
+            <Link href="/" className={classes.navLinks}>
+              Register
             </Link>
           </div>
         </div>
@@ -75,7 +74,7 @@ export default function Header() {
           {sideLinks.map((item) => (
             <ListItem key={item.name}>
               <Link
-                to={item.to}
+                href={item.to}
                 className={classes.sidebarLink}
                 onClick={() => setOpen(false)}
                 nKeyPress={() => setOpen(false)}>

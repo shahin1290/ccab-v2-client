@@ -1,10 +1,9 @@
-import React from "react";
-import Header from "../Homepage/Header/Header";
+import Header from "./Header/Header";
 
 const HomepageLayout = ({ children }) => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <main>{children}</main>
     </>
   );

@@ -4,13 +4,13 @@ import HomePage from "../components/Homepage";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Head>
         <title>CodifyCollege</title>
         <meta name="description" content="CodifyCollege" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <HomePage />
-    </div>
+    </>
   );
 }
