@@ -1,10 +1,10 @@
 import { createTheme } from "@mui/material/styles";
 
-const NotoSnas = "'Noto Sans', sans-serif";
 const theme = createTheme({
   palette: {
     primary: {
       main: "#6364D9",
+      light: "rgba(99,100,217,0.38)",
       contrastText: "#FFFFFF",
       background: "#F0F0F8",
     },
@@ -17,9 +17,6 @@ const theme = createTheme({
       contrastText: "#E2004D",
     },
     mainTextColor: "#313030",
-  },
-  typography: {
-    fontFamily: NotoSnas,
   },
 });
 
