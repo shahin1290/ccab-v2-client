@@ -5,11 +5,11 @@ import HowToStart from "./HowToStart";
 
 export default function HomePage() {
   return (
-    <main>
-      <Hero />
+    <>
+      {/* <Hero /> */}
       <HowToStart />
       <CareerSupport />
       <Footer />
-    </main>
+    </>
   );
 }

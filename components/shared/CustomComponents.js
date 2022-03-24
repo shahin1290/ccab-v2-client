@@ -1,16 +1,17 @@
 import { styled } from "@mui/system";
-import Typography from "@material-ui/core/Typography";
-import { Button } from "@mui/material";
+
+import { Button, Typography } from "@mui/material";
 import Image from "next/image";
 
 const SectionHeader = styled(Typography)(({ theme }) => ({
   color: theme.palette.mainTextColor,
-  fontFamily: "'Segoe UI', sans-serif !important",
+  fontFamily: "'Segoe UI', sans-serif ",
   fontWeight: "bold !important",
 }));
 
 const SectionSubHeader = styled(Typography)(({ theme }) => ({
   color: theme.palette.secondary.contrastText,
+  fontFamily: "'Segoe UI', sans-serif",
 }));
 
 const PrimaryButton = styled(Button)(({ theme }) => ({

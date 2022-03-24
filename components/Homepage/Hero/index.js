@@ -3,7 +3,6 @@ import React from "react";
 import Image from "next/image";
 import useStyles from "./styles";
 import hero from "../../../images/Hero_Section_SVG.svg";
-import HeroSVG from "../../../images/svg/HeroSVG";
 
 export default function Hero() {
   const classes = useStyles();
@@ -21,7 +20,6 @@ export default function Hero() {
         </Grid>
         <Grid item xs={12} md={6} className={classes.rightSide}>
           <Image src={hero} alt="learn coding" className={classes.image} />
-          {/* <HeroSVG /> */}
         </Grid>
       </Grid>
     </Container>
