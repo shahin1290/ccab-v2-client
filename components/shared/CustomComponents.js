@@ -1,18 +1,6 @@
 import { styled } from "@mui/system";
 
-import { Button, Typography, Card } from "@mui/material";
-import Image from "next/image";
-
-const SectionHeader = styled(Typography)(({ theme }) => ({
-  color: theme.palette.mainTextColor,
-  fontFamily: "'Segoe UI', sans-serif ",
-  fontWeight: "bold",
-}));
-
-const SectionSubHeader = styled(Typography)(({ theme }) => ({
-  color: theme.palette.secondary.contrastText,
-  fontFamily: "'Segoe UI', sans-serif",
-}));
+import { Button, Typography, Card, CardContent } from "@mui/material";
 
 const PrimaryButton = styled(Button)(({ theme }) => ({
   fontSize: 22,
@@ -34,18 +22,52 @@ const CustomImage = styled("img")(({ theme }) => ({
 
 const CustomCard = styled(Card)(({ theme }) => ({
   borderRadius: 20,
-  // width: "300px",
   height: "364px",
   boxShadow: "0 0 20px  #00000029",
-}));
-const CustomCardContent = styled(Card)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
-  justifyContent: "start",
+  // justifyContent: "stretch",
   alignItems: "center",
-  padding: "30px 20px",
-  border: " none",
-  height: "100%",
+  padding: "30px 10px",
+}));
+const CustomCardContent = styled(CardContent)(({ theme }) => ({
+  // height: "60%",
 }));
 
-export { SectionHeader, SectionSubHeader, PrimaryButton, CustomImage, CustomCard, CustomCardContent };
+const BannerImage = styled("img")(({ theme }) => ({
+  width: "20%",
+  height: "auto",
+  position: "absolute",
+  right: 40,
+  bottom: 0,
+  [theme.breakpoints.down("md")]: {
+    width: "30%",
+    height: "auto",
+    right: 0,
+  },
+  [theme.breakpoints.down("sm")]: {
+    height: "70%",
+    width: "auto",
+    right: 15,
+  },
+}));
+
+const SecondaryButton = styled(Button)(({ theme }) => ({
+  fontSize: "1.8rem",
+  borderRadius: 100,
+  textTransform: "none",
+  padding: "5px 50px",
+  marginTop: 30,
+  color: theme.palette.primary.contrastText,
+  [theme.breakpoints.down("md")]: {
+    fontSize: 16,
+    marginTop: 15,
+    padding: "5px 30px",
+  },
+  [theme.breakpoints.down("sm")]: {
+    fontSize: 12,
+    marginTop: 5,
+    padding: "5px 10px",
+  },
+}));
+export { PrimaryButton, CustomImage, CustomCard, CustomCardContent, SecondaryButton, BannerImage };

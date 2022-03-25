@@ -1,14 +1,14 @@
-import { Container, Stack, Box, Card, CardMedia, CardContent, Grid } from "@mui/material";
+import { Container, Stack, Box, Card, CardMedia, CardContent, Grid, Typography } from "@mui/material";
 import Image from "next/image";
 import { CalenderIcon, HelpIcon, HouseIcon, TeacherIcon } from "../../../images/svg/cardIcons";
 
 import {
   PrimaryButton,
-  SectionHeader,
-  SectionSubHeader,
   CustomImage,
   CustomCard,
   CustomCardContent,
+  SecondaryButton,
+  BannerImage,
 } from "../../shared/CustomComponents";
 
 const cardData = [
@@ -41,60 +41,107 @@ const cardData = [
 ];
 const HowToStart = () => {
   return (
-    <Container
-      sx={{
-        bgcolor: "secondary.background",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        my: { xs: 1, md: 5 },
-        py: { xs: 3, md: 10 },
-        gap: { xs: 5, md: 10 },
-      }}>
-      <Stack justifyContent="center" alignItems="center" spacing={2}>
-        <SectionHeader variant="h4">How can you start?</SectionHeader>
-        <SectionSubHeader>
-          Register yourself now and get real employable skills that top companies want
-        </SectionSubHeader>
-      </Stack>
-      <Grid container justifyContent={{ lg: "space-between", xs: "center" }} spacing={5}>
-        <Grid item md={5}>
+    <Box bgcolor="secondary.background">
+      <Container
+        maxWidth="xl"
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          my: { xs: 2, md: 5 },
+          py: { xs: 3, md: 10 },
+          gap: { xs: 5, md: 10 },
+        }}>
+        <Stack justifyContent="center" alignItems="center" spacing={1}>
+          <Typography variant="h3">How can you start?</Typography>
+          <Typography variant="subtitle2">
+            Register yourself now and get real employable skills that top companies want
+          </Typography>
+        </Stack>
+        <Grid container justifyContent={{ lg: "space-between", xs: "center" }} spacing={5}>
+          <Grid item md={5}>
+            <Stack
+              spacing={2}
+              justifyContent="center"
+              alignItems={{ xs: "center", md: "start" }}
+              sx={{ maxWidth: "450px", height: "100%" }}>
+              <Typography variant="h4">Remote supervised self-paced training</Typography>
+              <Typography variant="body1">
+                Choose a start date and register on this page to secure your spot. To prepare for the Bootcamp, get the
+                pre-course materials. If you have no prior experience with JavaScript, HTML, or CSS, we estimate it will
+                take you 20-30 hours
+              </Typography>
+              <PrimaryButton variant="contained" color="primary">
+                Learn More
+              </PrimaryButton>
+            </Stack>
+          </Grid>
+          <Grid item md={5}>
+            <CustomImage src="/howToStart.png" alt="How To Start Image" />
+          </Grid>
+        </Grid>
+        <Grid container sx={{ justifyContent: { xs: "center", lg: "space-between" } }} gap={2}>
+          {cardData.map((item) => {
+            return (
+              <Grid item key={item.id} sx={{ width: 290 }}>
+                <CustomCard>
+                  <CardMedia component={item.icon} height="180px" size={1} />
+                  <CustomCardContent>
+                    <Typography variant="h6" align="center" mb={2}>
+                      {item.title}
+                    </Typography>
+                    <Typography variant="body2">{item.content}</Typography>
+                  </CustomCardContent>
+                </CustomCard>
+              </Grid>
+            );
+          })}
+        </Grid>
+        <Container
+          maxWidth="xl"
+          sx={{
+            height: "300px",
+            display: "flex",
+            alignItems: { sm: "flex-end", xs: "initial" },
+            justifyContent: "stretch",
+          }}>
           <Stack
-            spacing={2}
-            justifyContent="center"
-            alignItems={{ xs: "center", md: "start" }}
-            sx={{ maxWidth: "450px", height: "100%" }}>
-            <SectionHeader variant="h5">Remote supervised self-paced training</SectionHeader>
-            <SectionSubHeader>
-              Choose a start date and register on this page to secure your spot. To prepare for the Bootcamp, get the
-              pre-course materials. If you have no prior experience with JavaScript, HTML, or CSS, we estimate it will
-              take you 20-30 hours
-            </SectionSubHeader>
-            <PrimaryButton variant="contained" color="primary">
-              Learn More
-            </PrimaryButton>
+            direction="row"
+            bgcolor="primary.main"
+            gap={5}
+            sx={{
+              width: "100%",
+              position: "relative",
+              borderRadius: "20px",
+              height: { xs: "100%", sm: "80%" },
+              alignItems: { md: "flex-end", sm: "center" },
+              flexDirection: { sm: "row", xs: "column" },
+            }}>
+            <Stack
+              justifyContent="center"
+              sx={{
+                pl: { lg: 15, md: 7, sm: 4, xs: 2 },
+                pt: { xs: 5 },
+                alignItems: { sm: "flex-start", xs: "flex-start" },
+                justifyContent: { xs: "flex-start" },
+                height: "100%",
+                width: { md: "70%", xs: "100%" },
+              }}>
+              <Typography sx={{ color: "secondary.main" }} variant="h3">
+                Unsure which course fits you?
+              </Typography>
+              <Typography sx={{ color: "common.white" }} variant="subtitle2">
+                Talk to our advisor to craft the ideal course plan
+              </Typography>
+              <SecondaryButton variant="contained" color="secondary">
+                Ask an advisor
+              </SecondaryButton>
+            </Stack>
+            <BannerImage src="/happyGuy.png" alt="Advisor"></BannerImage>
           </Stack>
-        </Grid>
-        <Grid item md={5}>
-          <CustomImage src="/howToStart.png" alt="How To Start Image" />
-        </Grid>
-      </Grid>
-      <Grid container justifyContent="space-around" gap={2} columns={13}>
-        {cardData.map((item) => {
-          return (
-            <Grid item key={item.id} lg={3} sm={6} xs={12}>
-              <CustomCard>
-                <CustomCardContent>
-                  <item.icon />
-                  <SectionHeader sx={{ fontSize: "18px", my: 2, textAlign: "center" }}>{item.title}</SectionHeader>
-                  <SectionSubHeader sx={{ fontSize: "14px" }}>{item.content}</SectionSubHeader>
-                </CustomCardContent>
-              </CustomCard>
-            </Grid>
-          );
-        })}
-      </Grid>
-    </Container>
+        </Container>
+      </Container>
+    </Box>
   );
 };
 
