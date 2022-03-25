@@ -19,7 +19,7 @@ const CareerSupport = () => {
                 padding: "15px",
               }}>
               <li>CV writing </li>
-              <li>Tecknical Interviews / Mock Interviews </li>
+              <li>Technical Interviews / Mock Interviews </li>
               <li>Personal Development Program Portfolio </li>
               <li>Networking Events </li>
             </ul>
