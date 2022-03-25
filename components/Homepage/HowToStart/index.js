@@ -79,10 +79,10 @@ const HowToStart = () => {
           <CustomImage src="/howToStart.png" alt="How To Start Image" />
         </Grid>
       </Grid>
-      <Grid container justifyContent="space-around" gap={2} columns={14}>
+      <Grid container justifyContent="space-around" gap={2} columns={13}>
         {cardData.map((item) => {
           return (
-            <Grid item key={item.id} lg={3} md={5} sm={6} xs={14}>
+            <Grid item key={item.id} lg={3} sm={6} xs={12}>
               <CustomCard>
                 <CustomCardContent>
                   <item.icon />

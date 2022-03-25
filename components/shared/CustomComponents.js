@@ -24,11 +24,11 @@ const PrimaryButton = styled(Button)(({ theme }) => ({
 
 const CustomImage = styled("img")(({ theme }) => ({
   borderRadius: 20,
-  boxShadow: `-30px 30px 0px ${theme.palette.primary.light}`,
+  boxShadow: `-20px 20px 0px ${theme.palette.primary.light}`,
   width: "100%",
   height: "auto",
   [theme.breakpoints.down("md")]: {
-    boxShadow: `none`,
+    boxShadow: `-10px 10px 0px ${theme.palette.primary.light}`,
   },
 }));
 
