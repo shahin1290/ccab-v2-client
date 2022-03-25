@@ -6,6 +6,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import theme from "../theme";
 import "../styles/globals.css";
 import HomepageLayout from "../components/Layout/HomepageLayout";
+import { Head } from "next/head";
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -14,8 +15,8 @@ function MyApp(props) {
 
   return (
     <CacheProvider value={emotionCache}>
-      <CssBaseline />
       <ThemeProvider theme={theme}>
+        <CssBaseline />
         <HomepageLayout>
           <Component {...pageProps} />
         </HomepageLayout>

@@ -11,9 +11,6 @@ import {
   CustomCardContent,
 } from "../../shared/CustomComponents";
 
-import { useTheme } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
-
 const cardData = [
   {
     id: 1,
@@ -43,10 +40,6 @@ const cardData = [
   },
 ];
 const HowToStart = () => {
-  const theme = useTheme();
-  const lg = useMediaQuery(theme.breakpoints.down("lg"));
-  const md = useMediaQuery(theme.breakpoints.down("md"));
-
   return (
     <Container
       sx={{
@@ -54,15 +47,9 @@ const HowToStart = () => {
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        my: 5,
-        py: 10,
-        gap: 10,
-
-        [theme.breakpoints.down("md")]: {
-          my: 1,
-          py: 3,
-          gap: 5,
-        },
+        my: { xs: 1, md: 5 },
+        py: { xs: 3, md: 10 },
+        gap: { xs: 5, md: 10 },
       }}>
       <Stack justifyContent="center" alignItems="center" spacing={2}>
         <SectionHeader variant="h4">How can you start?</SectionHeader>
@@ -70,12 +57,12 @@ const HowToStart = () => {
           Register yourself now and get real employable skills that top companies want
         </SectionSubHeader>
       </Stack>
-      <Grid container justifyContent={lg ? "center" : "space-between"} spacing={5}>
+      <Grid container justifyContent={{ lg: "space-between", xs: "center" }} spacing={5}>
         <Grid item md={5}>
           <Stack
             spacing={2}
             justifyContent="center"
-            alignItems={md ? "center" : "start"}
+            alignItems={{ xs: "center", md: "start" }}
             sx={{ maxWidth: "450px", height: "100%" }}>
             <SectionHeader variant="h5">Remote supervised self-paced training</SectionHeader>
             <SectionSubHeader>
