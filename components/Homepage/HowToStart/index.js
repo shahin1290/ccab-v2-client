@@ -2,14 +2,7 @@ import { Container, Stack, Box, Card, CardMedia, CardContent, Grid, Typography }
 import Image from "next/image";
 import { CalenderIcon, HelpIcon, HouseIcon, TeacherIcon } from "../../../images/svg/cardIcons";
 
-import {
-  PrimaryButton,
-  CustomImage,
-  CustomCard,
-  CustomCardContent,
-  SecondaryButton,
-  BannerImage,
-} from "../../shared/CustomComponents";
+import { PrimaryButton, CustomImage, CustomCard, SecondaryButton, BannerImage } from "../../shared/CustomComponents";
 
 const cardData = [
   {
@@ -86,12 +79,12 @@ const HowToStart = () => {
               <Grid item key={item.id} sx={{ width: 290 }}>
                 <CustomCard>
                   <CardMedia component={item.icon} height="180px" size={1} />
-                  <CustomCardContent>
+                  <CardContent>
                     <Typography variant="h6" align="center" mb={2}>
                       {item.title}
                     </Typography>
                     <Typography variant="body2">{item.content}</Typography>
-                  </CustomCardContent>
+                  </CardContent>
                 </CustomCard>
               </Grid>
             );
