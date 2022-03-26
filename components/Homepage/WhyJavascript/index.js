@@ -146,7 +146,7 @@ const WhyJavascript = () => {
                 index={index + 1}
                 key={index}
                 style={{ alignSelf: "center", justifySelf: "start" }}>
-                <Typography variant="body2" fontWeight="bold">
+                <Typography variant="body2" fontWeight="normal">
                   {card}
                 </Typography>
               </CustomBorder>

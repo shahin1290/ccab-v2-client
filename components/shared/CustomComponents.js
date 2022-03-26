@@ -41,13 +41,15 @@ const CustomImage = styled("img")(({ theme }) => ({
 
 const CustomCard = styled(Card)(({ theme }) => ({
   borderRadius: 20,
-  maxHeight: "364px",
+  height: "364px",
   boxShadow: "0 0 20px  #00000029",
   display: "flex",
   flexDirection: "column",
-  // justifyContent: "stretch",
   alignItems: "center",
   padding: "30px 10px",
+  [theme.breakpoints.down("sm")]: {
+    height: "304px",
+  },
 }));
 
 const BannerImage = styled("img")(({ theme }) => ({

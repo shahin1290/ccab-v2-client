@@ -65,15 +65,9 @@ const Tuition = () => {
               width: "100%",
               maxWidth: "500px",
               display: "grid",
-              // justifyContent: "center",
-              // alignItems: "center",
-              // backgroundColor: "red",
               height: "100%",
-              // gridTemplateColumns: "40% 20% 40%",
-              // gridTemplateRows: "45%  10% 45% ",
               gridTemplateColumns: "minmax(40%, 200px) minmax(20%, 100px) minmax(40%, 200px)",
               gridTemplateRows: "minmax(45%, 80px) minmax(5%, 20px) minmax(45%, 80px)",
-
               justifyItems: { xs: "center", sm: "end" },
               alignContent: "center",
             }}>

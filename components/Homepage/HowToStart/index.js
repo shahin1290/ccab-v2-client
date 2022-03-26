@@ -43,7 +43,7 @@ const HowToStart = () => {
           justifyContent: "center",
           my: { xs: 2, md: 5 },
           py: { xs: 3, md: 10 },
-          gap: { xs: 5, md: 10 },
+          gap: { xs: 3, md: 10 },
         }}>
         <Stack justifyContent="center" alignItems="center" spacing={1}>
           <Typography variant="h3">How can you start?</Typography>
