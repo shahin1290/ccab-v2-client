@@ -2,11 +2,11 @@ import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 
-const CustomBorder = ({ children, index, color, width = 306, height = 233 }) => {
+const CustomBorder = ({ children, index, color, width = 300, height = 233 }) => {
   const CustomBorderColor = `6px solid ${color}`;
   const customDropShadow = "drop-shadow(5px 15px 6px rgba(0,0,0,0.2))";
   return (
-    <Box sx={{ position: "relative", width, height, mx: 8 }}>
+    <Box sx={{ position: "relative", width, height, m: 8, mx: 16 }}>
       <Typography
         variant="h1"
         sx={{
@@ -37,6 +37,7 @@ const CustomBorder = ({ children, index, color, width = 306, height = 233 }) => 
           height,
           border: CustomBorderColor,
           borderTopLeftRadius: 30,
+
           borderBottomLeftRadius: 30,
           borderRight: "none",
           display: "flex",
@@ -51,8 +52,8 @@ const CustomBorder = ({ children, index, color, width = 306, height = 233 }) => 
           sx={{
             width: "10%",
             display: "flex",
-            borderTopLeftRadius: 30,
-            borderBottomLeftRadius: 30,
+            borderTopLeftRadius: "100%",
+            borderBottomLeftRadius: "100%",
             flexDirection: "column",
             filter: customDropShadow,
           }}>

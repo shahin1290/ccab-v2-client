@@ -26,9 +26,11 @@ const WhyJavascript = () => {
 
   const settings = {
     dots: false,
-    infinite: false,
+    infinite: true,
     slidesToShow: 3,
     slidesToScroll: 3,
+    centerMode: true,
+    centerPadding: "0px",
 
     responsive: [
       {
@@ -36,6 +38,20 @@ const WhyJavascript = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 770,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
         },
       },
       {
@@ -48,6 +64,8 @@ const WhyJavascript = () => {
       {
         breakpoint: 480,
         settings: {
+          centerMode: false,
+          centerPadding: "20px",
           slidesToShow: 1,
           slidesToScroll: 1,
         },
@@ -63,23 +81,39 @@ const WhyJavascript = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
+        justifyContent: "center",
         height: { lg: 472, md: 400 },
       }}>
       <Worldmap width="100%" />
-      <Stack direction="row" spacing={3}>
+      <Stack direction="row" spacing={3} mb={3}>
         <SliderButton onClick={() => slider.slickPrev()}>
           <ArrowBackIosNewIcon color="white" />
         </SliderButton>
-        <Typography variant="h3" color="primary.main">
+        <Typography variant="h3" color="primary.main" sx={{ alignItems: "center", display: "flex" }}>
           WHY JAVASCRIPT?
         </Typography>
         <SliderButton onClick={() => slider.slickNext()}>
           <ArrowForwardIosIcon />
         </SliderButton>
       </Stack>
+
       <Container
-        sx={{ display: "flex", justifyContent: "center", height: "100%", alignItems: "center", width: "100%" }}>
-        <Slider {...settings} style={{ width: "100%" }} ref={(slider) => setSlider(slider)}>
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100%",
+          width: "100%",
+        }}>
+        <Slider
+          {...settings}
+          style={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+          ref={(slider) => setSlider(slider)}>
           {Cards.map((card, index) => {
             const color = (index + 1) % 3 === 0 ? "primary" : (index + 1) % 2 === 0 ? "tertiary" : "secondary";
             return (

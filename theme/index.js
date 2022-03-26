@@ -81,7 +81,7 @@ const theme = createTheme({
       fontFamily: "'Segoe UI', sans-serif",
       fontSize: "1.4rem",
       "@media (max-width: 600px)": {
-        fontSize: "2.8rem",
+        fontSize: "2.4rem",
       },
     },
     button: {
