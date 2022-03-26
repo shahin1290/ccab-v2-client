@@ -7,7 +7,7 @@ const CustomBorder = ({ children, index, color, width = 230, height = 233 }) => 
   const customDropShadow = "drop-shadow(5px 15px 6px rgba(0,0,0,0.2))";
   const radius = width / 10;
   return (
-    <Box sx={{ position: "relative", width, height, my: 8, mx: { xs: 3, sm: -20, md: -16, lg: 16 } }}>
+    <Box sx={{ position: "relative", width, height, my: 8, mx: { xs: 5, sm: -20, md: -16, lg: 16 } }}>
       <Typography
         variant="h1"
         sx={{

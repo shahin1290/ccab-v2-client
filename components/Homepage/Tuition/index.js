@@ -17,7 +17,7 @@ const data = {
 const Tuition = () => {
   const theme = useTheme();
   return (
-    <Box bgcolor="primary.background" py={{ xs: 2, sm: 10 }}>
+    <Box bgcolor="#F8F9FB" py={{ xs: 2, sm: 10 }}>
       <Container maxWidth="xl">
         <Stack justifyContent="center" alignItems="center">
           <Typography variant="h3">Tuition</Typography>

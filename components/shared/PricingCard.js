@@ -16,6 +16,7 @@ const PricingCard = ({ price, cardColor, checked, crossed, height }) => {
         justifyContent: "center",
         alignItems: "center",
         maxWidth: 300,
+        filter: "drop-shadow(0px 15px 12px rgba(0,0,0,0.15))",
       }}>
       <Box
         sx={{

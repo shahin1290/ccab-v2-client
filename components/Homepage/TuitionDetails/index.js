@@ -7,17 +7,33 @@ import PricingCard from "../../shared/PricingCard";
 const pricingDetails = [
   {
     price: "€5995",
-    checked: ["item 1", "item 2"],
-    crossed: ["item 3", "item 4", "item 5", "item 6", "item 7", "item 8"],
+    checked: ["Lorem Ipsum  1", "Lorem Ipsum  2"],
+    crossed: [
+      "Lorem Ipsum  3",
+      "Lorem Ipsum  4",
+      "Lorem Ipsum  5",
+      "Lorem Ipsum  6",
+      "Lorem Ipsum  7",
+      "Lorem Ipsum  8",
+    ],
   },
   {
     price: "€6995",
-    checked: ["item 1", "item 2", "item 3", "item 4"],
-    crossed: ["item 5", "item 6", "item 7", "item 8"],
+    checked: ["Lorem Ipsum  1", "Lorem Ipsum  2", "Lorem Ipsum  3", "Lorem Ipsum  4"],
+    crossed: ["Lorem Ipsum  5", "Lorem Ipsum  6", "Lorem Ipsum  7", "Lorem Ipsum  8"],
   },
   {
     price: "€7995",
-    checked: ["item 1", "item 2", "item 3", "item 4", "item 5", "item 6", "item 7", "item 8"],
+    checked: [
+      "Lorem Ipsum  1",
+      "Lorem Ipsum  2",
+      "Lorem Ipsum  3",
+      "Lorem Ipsum  4",
+      "Lorem Ipsum  5",
+      "Lorem Ipsum  6",
+      "Lorem Ipsum  7",
+      "Lorem Ipsum  8",
+    ],
     crossed: [],
   },
 ];
@@ -26,7 +42,14 @@ const TuitionDetails = () => {
   return (
     <Container
       maxWidth="xl"
-      sx={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", py: { xs: 3 } }}>
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        pt: { xs: 3, md: 10 },
+        pb: { xs: 2 },
+      }}>
       <Typography variant="h3" mb={1}>
         Tuition Details
       </Typography>
