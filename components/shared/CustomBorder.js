@@ -2,11 +2,12 @@ import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 
-const CustomBorder = ({ children, index, color, width = 300, height = 233 }) => {
+const CustomBorder = ({ children, index, color, width = 250, height = 233 }) => {
   const CustomBorderColor = `6px solid ${color}`;
   const customDropShadow = "drop-shadow(5px 15px 6px rgba(0,0,0,0.2))";
+  const radius = 25;
   return (
-    <Box sx={{ position: "relative", width, height, m: 8, mx: 16 }}>
+    <Box sx={{ position: "relative", width, height, my: 8, mx: { xs: -5, sm: 0, md: 16 } }}>
       <Typography
         variant="h1"
         sx={{
@@ -36,9 +37,8 @@ const CustomBorder = ({ children, index, color, width = 300, height = 233 }) => 
           width,
           height,
           border: CustomBorderColor,
-          borderTopLeftRadius: 30,
-
-          borderBottomLeftRadius: 30,
+          borderTopLeftRadius: radius,
+          borderBottomLeftRadius: radius,
           borderRight: "none",
           display: "flex",
           justifyContent: "center",
@@ -57,7 +57,7 @@ const CustomBorder = ({ children, index, color, width = 300, height = 233 }) => 
             flexDirection: "column",
             filter: customDropShadow,
           }}>
-          <Box sx={{ height: "25%", borderLeft: CustomBorderColor, borderTopLeftRadius: 30 }}></Box>
+          <Box sx={{ height: "25%", borderLeft: CustomBorderColor, borderTopLeftRadius: radius }}></Box>
           <Box
             sx={{
               height: "50%",
@@ -69,7 +69,7 @@ const CustomBorder = ({ children, index, color, width = 300, height = 233 }) => 
               height: "25%",
               borderLeft: CustomBorderColor,
               filter: customDropShadow,
-              borderBottomLeftRadius: 30,
+              borderBottomLeftRadius: radius,
             }}></Box>
         </Box>
         <Box
@@ -99,8 +99,8 @@ const CustomBorder = ({ children, index, color, width = 300, height = 233 }) => 
             sx={{
               height: "75%",
               border: CustomBorderColor,
-              borderTopLeftRadius: 30,
-              borderBottomLeftRadius: 30,
+              borderTopLeftRadius: radius,
+              borderBottomLeftRadius: radius,
               borderRight: "none",
               filter: customDropShadow,
             }}></Box>

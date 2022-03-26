@@ -3,6 +3,7 @@ import CareerSupport from "./CareerSupport";
 import Footer from "./Footer";
 import HowToStart from "./HowToStart";
 import WhyJavascript from "./WhyJavascript";
+import Tuition from "./Tuition";
 
 export default function HomePage() {
   return (
@@ -10,6 +11,7 @@ export default function HomePage() {
       {/* <Hero /> */}
       <HowToStart />
       <WhyJavascript />
+      <Tuition />
       <CareerSupport />
       <Footer />
     </>

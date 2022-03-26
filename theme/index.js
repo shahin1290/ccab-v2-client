@@ -68,6 +68,7 @@ const theme = createTheme({
       fontFamily: "'Segoe UI', sans-serif",
       fontSize: "1.8rem",
       fontWeight: "normal",
+      color: "#707070",
     },
     body1: {
       fontFamily: "'Segoe UI', sans-serif",

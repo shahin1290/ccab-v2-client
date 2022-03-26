@@ -22,27 +22,27 @@ const Cards = [
 const WhyJavascript = () => {
   const theme = useTheme();
   const [slider, setSlider] = useState(null);
-  console.log(slider);
 
   const settings = {
     dots: false,
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 3,
-    centerMode: true,
-    centerPadding: "0px",
-
+    initialSlide: 0,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          centerMode: true,
+          centerPadding: "-60px",
+          slidesToShow: 3,
+          slidesToScroll: 1,
         },
       },
       {
         breakpoint: 800,
         settings: {
+          centerMode: true,
           slidesToShow: 2,
           slidesToScroll: 1,
         },
@@ -50,22 +50,27 @@ const WhyJavascript = () => {
       {
         breakpoint: 770,
         settings: {
+          infinite: true,
+          centerMode: true,
+          centerPadding: "0px",
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 620,
+        settings: {
+          centerMode: true,
+          centerPadding: "90px",
           slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 540,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          centerMode: false,
-          centerPadding: "20px",
+          centerMode: true,
+          centerPadding: "-30px",
           slidesToShow: 1,
           slidesToScroll: 1,
         },
@@ -110,14 +115,18 @@ const WhyJavascript = () => {
           style={{
             width: "100%",
             display: "flex",
-            justifyContent: "center",
+            justifyContent: "start",
             alignItems: "center",
           }}
           ref={(slider) => setSlider(slider)}>
           {Cards.map((card, index) => {
             const color = (index + 1) % 3 === 0 ? "primary" : (index + 1) % 2 === 0 ? "tertiary" : "secondary";
             return (
-              <CustomBorder color={theme.palette[color].main} index={index + 1} key={index}>
+              <CustomBorder
+                color={theme.palette[color].main}
+                index={index + 1}
+                key={index}
+                style={{ alignSelf: "center", justifySelf: "start" }}>
                 <Typography variant="body2" fontWeight="bold">
                   {card}
                 </Typography>
