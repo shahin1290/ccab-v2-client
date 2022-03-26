@@ -88,6 +88,9 @@ const theme = createTheme({
     button: {
       fontFamily: " 'Verdana', sans-serif ",
       fontSize: "1.8rem",
+      "@media (max-width: 600px)": {
+        fontSize: "2.2rem",
+      },
     },
   },
   breakpoints: {

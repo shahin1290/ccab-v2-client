@@ -43,6 +43,7 @@ const WhyJavascript = () => {
         breakpoint: 800,
         settings: {
           centerMode: true,
+          centerPadding: "60px",
           slidesToShow: 2,
           slidesToScroll: 1,
         },
@@ -52,7 +53,7 @@ const WhyJavascript = () => {
         settings: {
           infinite: true,
           centerMode: true,
-          centerPadding: "0px",
+          centerPadding: "-30px",
           slidesToShow: 2,
           slidesToScroll: 1,
         },
@@ -61,7 +62,7 @@ const WhyJavascript = () => {
         breakpoint: 620,
         settings: {
           centerMode: true,
-          centerPadding: "90px",
+          centerPadding: "100px",
           slidesToShow: 1,
           slidesToScroll: 1,
         },
@@ -70,7 +71,25 @@ const WhyJavascript = () => {
         breakpoint: 540,
         settings: {
           centerMode: true,
-          centerPadding: "-30px",
+          centerPadding: "100px",
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 520,
+        settings: {
+          centerMode: true,
+          centerPadding: "90px",
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          centerMode: true,
+          centerPadding: "10px",
           slidesToShow: 1,
           slidesToScroll: 1,
         },

@@ -17,7 +17,7 @@ const data = {
 const Tuition = () => {
   const theme = useTheme();
   return (
-    <Box bgcolor="primary.background" py={10}>
+    <Box bgcolor="primary.background" py={{ xs: 2, sm: 10 }}>
       <Container maxWidth="xl">
         <Stack justifyContent="center" alignItems="center">
           <Typography variant="h3">Tuition</Typography>
@@ -25,7 +25,13 @@ const Tuition = () => {
             We conduct discount programs from time to time, so the price may be lower
           </Typography>
         </Stack>
-        <Grid container alignItems="start" justifyContent="space-between" mt={10} spacing={1} wrap="wrap-reverse">
+        <Grid
+          container
+          alignItems="start"
+          justifyContent="space-between"
+          mt={{ sm: 10, xs: 2 }}
+          spacing={1}
+          wrap="wrap-reverse">
           <Grid
             item
             md={6}
@@ -81,7 +87,7 @@ const Tuition = () => {
                 zIndex: 1,
                 gridColumn: "1 / 3",
                 gridRow: "1 / 3",
-                width: { sm: 300, xs: 230 },
+                width: { sm: 300, xs: 200 },
               }}
             />
             <Typography
@@ -100,7 +106,7 @@ const Tuition = () => {
                 zIndex: 2,
                 gridColumn: "2 / 4",
                 gridRow: "2 / 4",
-                width: { sm: 300, xs: 230 },
+                width: { sm: 300, xs: 200 },
               }}
             />
           </Grid>

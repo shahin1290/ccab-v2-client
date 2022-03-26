@@ -25,7 +25,7 @@ const CustomCard = ({ price, duration, durationType, width = 300, cardColor, sx 
           borderTopLeftRadius: 20,
           borderTopRightRadius: 20,
         }}>
-        <Typography align="center" variant="h3" sx={{ color: "secondary.background" }}>
+        <Typography align="center" variant="h3" sx={{ color: "secondary.background", fontSize: { xs: 22 } }}>
           {price}
         </Typography>
       </Box>
@@ -37,10 +37,10 @@ const CustomCard = ({ price, duration, durationType, width = 300, cardColor, sx 
           alignItems: "center",
           height: "55%",
         }}>
-        <Typography align="center" variant="h3" sx={{ color: cardColor, fontWeight: "normal" }}>
+        <Typography align="center" variant="h3" sx={{ color: cardColor, fontWeight: "normal", fontSize: { xs: 22 } }}>
           {duration}
         </Typography>
-        <Typography align="center" variant="h6" sx={{ fontWeight: "normal" }}>
+        <Typography align="center" variant="h6" sx={{ fontWeight: "normal", fontSize: { xs: 16 } }}>
           {durationType}
         </Typography>
       </Box>

@@ -41,7 +41,7 @@ const CustomImage = styled("img")(({ theme }) => ({
 
 const CustomCard = styled(Card)(({ theme }) => ({
   borderRadius: 20,
-  height: "364px",
+  maxHeight: "364px",
   boxShadow: "0 0 20px  #00000029",
   display: "flex",
   flexDirection: "column",
