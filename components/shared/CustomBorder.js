@@ -4,9 +4,9 @@ import React from "react";
 
 const CustomBorder = ({ children, index, color, width = 306, height = 233 }) => {
   const CustomBorderColor = `6px solid ${color}`;
-  const customDropShadow = "drop-shadow(10px 20px 6px rgba(0,0,0,0.2))";
+  const customDropShadow = "drop-shadow(5px 15px 6px rgba(0,0,0,0.2))";
   return (
-    <Box sx={{ position: "relative", width, height }}>
+    <Box sx={{ position: "relative", width, height, mx: 8 }}>
       <Typography
         variant="h1"
         sx={{
@@ -88,15 +88,15 @@ const CustomBorder = ({ children, index, color, width = 306, height = 233 }) => 
         {/* RIGHT SIDE */}
         <Box
           sx={{
-            width: "20%",
+            width: "17%",
             display: "flex",
             flexDirection: "column",
             filter: customDropShadow,
           }}>
-          <Box sx={{ height: "10%", borderRight: CustomBorderColor }}></Box>
+          <Box sx={{ height: "12.5%", borderRight: CustomBorderColor }}></Box>
           <Box
             sx={{
-              height: "80%",
+              height: "75%",
               border: CustomBorderColor,
               borderTopLeftRadius: 30,
               borderBottomLeftRadius: 30,
@@ -105,7 +105,7 @@ const CustomBorder = ({ children, index, color, width = 306, height = 233 }) => 
             }}></Box>
           <Box
             sx={{
-              height: "10%",
+              height: "12.5%",
               borderRight: CustomBorderColor,
               filter: customDropShadow,
             }}></Box>

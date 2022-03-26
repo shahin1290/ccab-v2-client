@@ -1,9 +1,9 @@
-const Worldmap = ({ transform }) => {
+const Worldmap = ({ transform, width = 735, height = 402 }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="734.839"
-      height="402.481"
+      width={width}
+      height={height}
       viewBox="0 0 734.839 402.481"
       style={{ transform, position: "absolute", zIndex: -1, marginTop: 50 }}>
       <path

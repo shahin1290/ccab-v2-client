@@ -9,7 +9,8 @@ const theme = createTheme({
       background: "#F0F0F8",
     },
     secondary: {
-      main: "#FFA950",
+      main: "rgb(255, 169, 80)",
+      dark: "rgba(255, 169, 80, 0.8)",
       contrastText: "#707070",
       background: "#FFFFFF",
     },
@@ -38,7 +39,7 @@ const theme = createTheme({
     h3: {
       fontFamily: "'Segoe UI', sans-serif",
       fontSize: "2.8rem",
-      fontWeight: "bold",
+      fontWeight: "bolder",
     },
     h4: {
       fontFamily: "'Segoe UI', sans-serif",
