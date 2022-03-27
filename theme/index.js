@@ -9,7 +9,8 @@ const theme = createTheme({
       background: "#F0F0F8",
     },
     secondary: {
-      main: "#FFA950",
+      main: "rgb(255, 169, 80)",
+      dark: "rgba(255, 169, 80, 0.8)",
       contrastText: "#707070",
       background: "#FFFFFF",
     },
@@ -19,7 +20,75 @@ const theme = createTheme({
     },
     mainTextColor: "#313030",
   },
-  spacing: 10,
+  typography: {
+    htmlFontSize: 10,
+    "@media (max-width: 600px)": {
+      htmlFontSize: 5,
+    },
+    // fontSize: 10,
+    h1: {
+      fontFamily: "'Segoe UI', sans-serif",
+      fontSize: "4.8rem",
+      fontWeight: "bold",
+    },
+    h2: {
+      fontFamily: "'Segoe UI', sans-serif",
+      fontSize: "4.5rem",
+      fontWeight: "bold",
+    },
+    h3: {
+      fontFamily: "'Segoe UI', sans-serif",
+      fontSize: "2.8rem",
+      fontWeight: "bolder",
+    },
+    h4: {
+      fontFamily: "'Segoe UI', sans-serif",
+      fontSize: "2.4rem",
+      fontWeight: "bold",
+    },
+    h5: {
+      fontFamily: "'Segoe UI', sans-serif",
+      fontSize: "2rem",
+      fontWeight: "bold",
+    },
+    h6: {
+      fontFamily: "'Segoe UI', sans-serif",
+      fontSize: "1.8rem",
+      fontWeight: "bold",
+      "@media (max-width: 600px)": {
+        fontSize: "2.4rem",
+      },
+    },
+    subtitle1: {
+      fontFamily: "'Segoe UI', sans-serif",
+      fontSize: "2rem",
+      fontWeight: "normal",
+    },
+    subtitle2: {
+      fontFamily: "'Segoe UI', sans-serif",
+      fontSize: "1.8rem",
+      fontWeight: "normal",
+    },
+    body1: {
+      fontFamily: "'Segoe UI', sans-serif",
+      fontSize: "1.6rem",
+      fontWeight: "normal",
+      "@media (max-width: 600px)": {
+        fontSize: "2.8rem",
+      },
+    },
+    body2: {
+      fontFamily: "'Segoe UI', sans-serif",
+      fontSize: "1.4rem",
+      "@media (max-width: 600px)": {
+        fontSize: "2.8rem",
+      },
+    },
+    button: {
+      fontFamily: " 'Verdana', sans-serif ",
+      fontSize: "1.8rem",
+    },
+  },
   breakpoints: {
     values: {
       xs: 0,

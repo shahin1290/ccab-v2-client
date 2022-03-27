@@ -7,10 +7,12 @@ const CareerSupport = () => {
       <Container maxWidth="lg">
         <Grid container spacing={0} alignItems="center" justifyContent="center">
           <Grid item xs={12} sm={8} order={{ xs: 2, sm: 1 }}>
-            <Typography variant="h4" sx={{ fontWeight: "bold" }}>
-              Career Support?
-            </Typography>
-            <Box py={{ xs: 1 }}>Register yourself now and get real employable skills that top companies want.</Box>
+            <Typography variant="h3">Career Support?</Typography>
+            <Box py={{ xs: 1 }}>
+              <Typography variant="body1">
+                Register yourself now and get real employable skills that top companies want.
+              </Typography>
+            </Box>
             <ul
               style={{
                 display: "flex",

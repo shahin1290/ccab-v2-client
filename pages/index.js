@@ -6,9 +6,9 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>CodifyCollege</title>
+        <title>Codify College Dashboard</title>
         <meta name="description" content="CodifyCollege" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/Logo.ico" />
       </Head>
       <HomePage />
     </div>
