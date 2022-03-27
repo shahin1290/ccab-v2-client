@@ -10,7 +10,7 @@ import TuitionDetails from "./TuitionDetails";
 export default function HomePage() {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       {/* <Hero /> */}
       <HowToStart />
       <WhyJavascript />
