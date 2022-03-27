@@ -4,7 +4,6 @@ import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
 import logo from "../../../images/Logo.svg";
 import { Appbar, ButtonWrap, FirstButton, Logo, MobileIcon, NavbarContainer, NavItem, NavLinks, NavLogo, NavMenu, SecondButton, SidebarLink, Wrap } from "./styles";
-import { useRouter } from 'next/router'
 import ActiveLink from "./ActiveLink";
 
 const sideLinks = [

@@ -40,23 +40,11 @@ const theme = createTheme({
       fontFamily: "'Segoe UI', sans-serif",
       fontSize: "2.8rem",
       fontWeight: "bolder",
-<<<<<<< HEAD
-=======
-      "@media (max-width: 600px)": {
-        fontSize: "3.6rem",
-      },
->>>>>>> ce2d0fa6f02c8e3c7bd434874e585f2fad9baae0
     },
     h4: {
       fontFamily: "'Segoe UI', sans-serif",
       fontSize: "2.4rem",
       fontWeight: "bold",
-<<<<<<< HEAD
-=======
-      "@media (max-width: 600px)": {
-        fontSize: "3.2rem",
-      },
->>>>>>> ce2d0fa6f02c8e3c7bd434874e585f2fad9baae0
     },
     h5: {
       fontFamily: "'Segoe UI', sans-serif",
@@ -68,11 +56,7 @@ const theme = createTheme({
       fontSize: "1.8rem",
       fontWeight: "bold",
       "@media (max-width: 600px)": {
-<<<<<<< HEAD
         fontSize: "2.4rem",
-=======
-        fontSize: "3.2rem",
->>>>>>> ce2d0fa6f02c8e3c7bd434874e585f2fad9baae0
       },
     },
     subtitle1: {
@@ -84,13 +68,6 @@ const theme = createTheme({
       fontFamily: "'Segoe UI', sans-serif",
       fontSize: "1.8rem",
       fontWeight: "normal",
-<<<<<<< HEAD
-=======
-      color: "#707070",
-      "@media (max-width: 600px)": {
-        fontSize: "2.4rem",
-      },
->>>>>>> ce2d0fa6f02c8e3c7bd434874e585f2fad9baae0
     },
     body1: {
       fontFamily: "'Segoe UI', sans-serif",
@@ -110,12 +87,6 @@ const theme = createTheme({
     button: {
       fontFamily: " 'Verdana', sans-serif ",
       fontSize: "1.8rem",
-<<<<<<< HEAD
-=======
-      "@media (max-width: 600px)": {
-        fontSize: "2.2rem",
-      },
->>>>>>> ce2d0fa6f02c8e3c7bd434874e585f2fad9baae0
     },
   },
   breakpoints: {

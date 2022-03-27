@@ -22,7 +22,6 @@ const Cards = [
 const WhyJavascript = () => {
   const theme = useTheme();
   const [slider, setSlider] = useState(null);
-<<<<<<< HEAD
   console.log(slider);
 
   const settings = {
@@ -31,20 +30,10 @@ const WhyJavascript = () => {
     slidesToShow: 3,
     slidesToScroll: 3,
 
-=======
-
-  const settings = {
-    dots: false,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    initialSlide: 0,
->>>>>>> ce2d0fa6f02c8e3c7bd434874e585f2fad9baae0
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-<<<<<<< HEAD
           slidesToShow: 2,
           slidesToScroll: 2,
         },
@@ -52,70 +41,13 @@ const WhyJavascript = () => {
       {
         breakpoint: 600,
         settings: {
-=======
-          centerMode: true,
-          centerPadding: "-60px",
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 800,
-        settings: {
-          centerMode: true,
-          centerPadding: "60px",
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 770,
-        settings: {
-          infinite: true,
-          centerMode: true,
-          centerPadding: "-30px",
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 620,
-        settings: {
-          centerMode: true,
-          centerPadding: "100px",
->>>>>>> ce2d0fa6f02c8e3c7bd434874e585f2fad9baae0
           slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
       {
-<<<<<<< HEAD
         breakpoint: 480,
         settings: {
-=======
-        breakpoint: 540,
-        settings: {
-          centerMode: true,
-          centerPadding: "100px",
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 520,
-        settings: {
-          centerMode: true,
-          centerPadding: "90px",
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 500,
-        settings: {
-          centerMode: true,
-          centerPadding: "10px",
->>>>>>> ce2d0fa6f02c8e3c7bd434874e585f2fad9baae0
           slidesToShow: 1,
           slidesToScroll: 1,
         },
@@ -131,7 +63,6 @@ const WhyJavascript = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-<<<<<<< HEAD
         height: { lg: 472, md: 400 },
       }}>
       <Worldmap width="100%" />
@@ -140,24 +71,12 @@ const WhyJavascript = () => {
           <ArrowBackIosNewIcon color="white" />
         </SliderButton>
         <Typography variant="h3" color="primary.main">
-=======
-        justifyContent: "center",
-        height: { lg: 472, md: 400 },
-      }}>
-      <Worldmap width="100%" />
-      <Stack direction="row" spacing={3} mb={3}>
-        <SliderButton onClick={() => slider.slickPrev()}>
-          <ArrowBackIosNewIcon color="white" />
-        </SliderButton>
-        <Typography variant="h3" color="primary.main" sx={{ alignItems: "center", display: "flex" }}>
->>>>>>> ce2d0fa6f02c8e3c7bd434874e585f2fad9baae0
           WHY JAVASCRIPT?
         </Typography>
         <SliderButton onClick={() => slider.slickNext()}>
           <ArrowForwardIosIcon />
         </SliderButton>
       </Stack>
-<<<<<<< HEAD
       <Container
         sx={{ display: "flex", justifyContent: "center", height: "100%", alignItems: "center", width: "100%" }}>
         <Slider {...settings} style={{ width: "100%" }} ref={(slider) => setSlider(slider)}>
@@ -166,35 +85,6 @@ const WhyJavascript = () => {
             return (
               <CustomBorder color={theme.palette[color].main} index={index + 1} key={index}>
                 <Typography variant="body2" fontWeight="bold">
-=======
-
-      <Container
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "100%",
-          width: "100%",
-        }}>
-        <Slider
-          {...settings}
-          style={{
-            width: "100%",
-            display: "flex",
-            justifyContent: "start",
-            alignItems: "center",
-          }}
-          ref={(slider) => setSlider(slider)}>
-          {Cards.map((card, index) => {
-            const color = (index + 1) % 3 === 0 ? "primary" : (index + 1) % 2 === 0 ? "tertiary" : "secondary";
-            return (
-              <CustomBorder
-                color={theme.palette[color].main}
-                index={index + 1}
-                key={index}
-                style={{ alignSelf: "center", justifySelf: "start" }}>
-                <Typography variant="body2" fontWeight="normal">
->>>>>>> ce2d0fa6f02c8e3c7bd434874e585f2fad9baae0
                   {card}
                 </Typography>
               </CustomBorder>

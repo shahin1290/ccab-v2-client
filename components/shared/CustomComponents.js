@@ -45,17 +45,9 @@ const CustomCard = styled(Card)(({ theme }) => ({
   boxShadow: "0 0 20px  #00000029",
   display: "flex",
   flexDirection: "column",
-<<<<<<< HEAD
   // justifyContent: "stretch",
   alignItems: "center",
   padding: "30px 10px",
-=======
-  alignItems: "center",
-  padding: "30px 10px",
-  [theme.breakpoints.down("sm")]: {
-    height: "304px",
-  },
->>>>>>> ce2d0fa6f02c8e3c7bd434874e585f2fad9baae0
 }));
 
 const BannerImage = styled("img")(({ theme }) => ({
