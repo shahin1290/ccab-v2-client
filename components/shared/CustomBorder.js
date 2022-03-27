@@ -7,6 +7,12 @@ const CustomBorder = ({ children, index, color, width = 306, height = 233 }) => 
   const customDropShadow = "drop-shadow(5px 15px 6px rgba(0,0,0,0.2))";
   return (
     <Box sx={{ position: "relative", width, height, mx: 8 }}>
+const CustomBorder = ({ children, index, color, width = 230, height = 233 }) => {
+  const CustomBorderColor = `6px solid ${color}`;
+  const customDropShadow = "drop-shadow(5px 15px 6px rgba(0,0,0,0.2))";
+  const radius = width / 10;
+  return (
+    <Box sx={{ position: "relative", width, height, my: 8, mx: { xs: 5, sm: -20, md: -16, lg: 16 } }}>
       <Typography
         variant="h1"
         sx={{
@@ -17,6 +23,9 @@ const CustomBorder = ({ children, index, color, width = 306, height = 233 }) => 
           fontSize: 140,
           fontFamily: " 'Archivo' , sans-serif",
           fontWeight: 900,
+          fontSize: { sm: 140, xs: 120 },
+          fontFamily: " 'Archivo' , sans-serif",
+          fontWeight: { sm: 900, xs: 400 },
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -38,6 +47,8 @@ const CustomBorder = ({ children, index, color, width = 306, height = 233 }) => 
           border: CustomBorderColor,
           borderTopLeftRadius: 30,
           borderBottomLeftRadius: 30,
+          borderTopLeftRadius: radius,
+          borderBottomLeftRadius: radius,
           borderRight: "none",
           display: "flex",
           justifyContent: "center",
@@ -57,6 +68,12 @@ const CustomBorder = ({ children, index, color, width = 306, height = 233 }) => 
             filter: customDropShadow,
           }}>
           <Box sx={{ height: "25%", borderLeft: CustomBorderColor, borderTopLeftRadius: 30 }}></Box>
+            borderTopLeftRadius: "100%",
+            borderBottomLeftRadius: "100%",
+            flexDirection: "column",
+            filter: customDropShadow,
+          }}>
+          <Box sx={{ height: "25%", borderLeft: CustomBorderColor, borderTopLeftRadius: radius }}></Box>
           <Box
             sx={{
               height: "50%",
@@ -69,6 +86,7 @@ const CustomBorder = ({ children, index, color, width = 306, height = 233 }) => 
               borderLeft: CustomBorderColor,
               filter: customDropShadow,
               borderBottomLeftRadius: 30,
+              borderBottomLeftRadius: radius,
             }}></Box>
         </Box>
         <Box
@@ -100,6 +118,8 @@ const CustomBorder = ({ children, index, color, width = 306, height = 233 }) => 
               border: CustomBorderColor,
               borderTopLeftRadius: 30,
               borderBottomLeftRadius: 30,
+              borderTopLeftRadius: radius,
+              borderBottomLeftRadius: radius,
               borderRight: "none",
               filter: customDropShadow,
             }}></Box>
