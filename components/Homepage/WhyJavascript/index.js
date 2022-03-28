@@ -22,7 +22,6 @@ const Cards = [
 const WhyJavascript = () => {
   const theme = useTheme();
   const [slider, setSlider] = useState(null);
-  console.log(slider);
 
   const settings = {
     dots: false,
