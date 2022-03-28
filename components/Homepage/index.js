@@ -6,6 +6,8 @@ import WhyJavascript from "./WhyJavascript";
 import Header from "../Layout/Header/Header";
 import Tuition from "./Tuition";
 import TuitionDetails from "./TuitionDetails";
+import CompanyReviews from "./CompanyReviews";
+import StudentReviews from "../StudentReviews";
 
 export default function HomePage() {
   return (
@@ -16,6 +18,8 @@ export default function HomePage() {
       <WhyJavascript />
       <Tuition />
       <TuitionDetails />
+      <StudentReviews />
+      <CompanyReviews />
       <CareerSupport />
       <Footer />
     </>

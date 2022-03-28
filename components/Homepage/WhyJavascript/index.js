@@ -67,7 +67,7 @@ const WhyJavascript = () => {
       }}>
       <Worldmap width="100%" />
       <Stack direction="row" spacing={3}>
-        <SliderButton onClick={() => slider.slickPrev()}>
+        <SliderButton  onClick={() => slider.slickPrev()}>
           <ArrowBackIosNewIcon color="white" />
         </SliderButton>
         <Typography variant="h3" color="primary.main">
