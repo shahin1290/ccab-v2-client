@@ -17,7 +17,7 @@ export default function Hero() {
           </Description>
         </LeftSide>
         <RightSide item xs={12} md={6} >
-          <Media src={hero} alt="learn coding" />
+          <Media src={hero} alt="learn coding" layout='responsive' />
         </RightSide>
       </Grid>
     </HeroContainer>
