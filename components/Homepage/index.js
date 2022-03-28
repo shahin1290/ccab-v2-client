@@ -11,7 +11,7 @@ export default function HomePage() {
   return (
     <>
       <Header />
-      {/* <Hero /> */}
+      <Hero />
       <HowToStart />
       <WhyJavascript />
       <Tuition />
