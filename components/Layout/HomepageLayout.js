@@ -1,9 +1,9 @@
-// import Header from "./Header/Header";
+import Header from "./Header/Header";
 
 const HomepageLayout = ({ children }) => {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <main>{children}</main>
     </>
   );

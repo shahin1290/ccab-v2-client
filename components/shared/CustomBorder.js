@@ -6,7 +6,7 @@ const CustomBorder = ({ children, index, color, width = 306, height = 233 }) => 
   const CustomBorderColor = `6px solid ${color}`;
   const customDropShadow = "drop-shadow(5px 15px 6px rgba(0,0,0,0.2))";
   return (
-    <Box sx={{ position: "relative", width, height, mx: 8 }}>
+    <Box sx={{ position: "relative", width, height, mx: 10, mb: 5 }}>
       <Typography
         variant="h1"
         sx={{

@@ -25,7 +25,7 @@ const WhyJavascript = () => {
 
   const settings = {
     dots: false,
-    infinite: false,
+    infinite: true,
     slidesToShow: 3,
     slidesToScroll: 3,
 
@@ -38,17 +38,19 @@ const WhyJavascript = () => {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 777,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          centerMode: true,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 500,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          centerMode: false,
         },
       },
     ],

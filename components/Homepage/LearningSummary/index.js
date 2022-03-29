@@ -16,7 +16,6 @@ import {
 import learning from "../../../images/learning.png";
 import Image from "next/image";
 
-
 export default function LearningSummary() {
   return (
     <SummaryContainer>
@@ -39,7 +38,7 @@ export default function LearningSummary() {
         spacing={{ xs: 2, md: 3 }}
         columns={{ xs: 4, sm: 8, md: 12 }}
         style={{ textAlign: "-webkit-center", marginTop: "20px" }}>
-        <Grid item xs={2} sm={4} md={4}>
+        <Grid item xs={4}>
           <Card sx={{ maxWidth: 385 }} style={{ background: "#F7F8FB", borderRadius: "20px" }}>
             <Image src={learning} alt="learning" layout="responsive" />
             <CardContent style={{ textAlign: "center" }}>
@@ -51,7 +50,7 @@ export default function LearningSummary() {
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={2} sm={4} md={4}>
+        <Grid item xs={4}>
           <Card sx={{ maxWidth: 385 }} style={{ background: "#F7F8FB", borderRadius: "20px" }}>
             <Image src={learning} alt="learning" layout="responsive" />
             <CardContent style={{ textAlign: "center" }}>
@@ -63,7 +62,7 @@ export default function LearningSummary() {
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={2} sm={4} md={4}>
+        <Grid item xs={4}>
           <Card sx={{ maxWidth: 385 }} style={{ background: "#F7F8FB", borderRadius: "20px" }}>
             <Image src={learning} alt="learning" layout="responsive" />
             <CardContent style={{ textAlign: "center" }}>
