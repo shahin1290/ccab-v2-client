@@ -1,10 +1,8 @@
 import { Container } from '@mui/material';
 import {  styled } from '@mui/system';
-import Image from 'next/image';
 
 export const SummaryContainer = styled(Container)({
     background:"#ffffff !important",
-    marginTop: '110px',
     maxWidth:'none !important',
 })
 
@@ -12,7 +10,7 @@ export const TextWrapper = styled('div')({
     textAlign: 'center',
     marginRight: 'auto',
     marginLeft: 'auto',
-    marginTop: '100px',
+    marginTop: '20px',
     paddingTop:'100px',
     "@media (max-width: 480px)":{
         marginTop: '30px',
@@ -77,9 +75,6 @@ export const Description = styled('p')({
     }
 })
 
-export const Cover =styled(Image)({
-
-})
 
 export const CardTitle = styled('h3')({
     color:'#313030',

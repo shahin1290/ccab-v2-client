@@ -5,7 +5,6 @@ import {
   CardButton,
   CardDescription,
   CardTitle,
-  Cover,
   Description,
   Line1,
   Line2,
@@ -16,8 +15,7 @@ import {
 } from "./styles";
 import learning from "../../../images/learning.png";
 import Image from "next/image";
-import CurriculumSVGDesktop from "../../../images/svg/CurriculumImageDesktop";
-import CurriculumImageMobile from "../../../images/svg/CurriculumImageMobile";
+
 
 export default function LearningSummary() {
   return (
@@ -78,8 +76,6 @@ export default function LearningSummary() {
           </Card>
         </Grid>
       </Grid>
-      {/* <CurriculumSVGDesktop />
-      <CurriculumImageMobile /> */}
     </SummaryContainer>
   );
 }

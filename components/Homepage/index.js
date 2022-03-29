@@ -7,6 +7,7 @@ import Header from "../Layout/Header/Header";
 import Tuition from "./Tuition";
 import TuitionDetails from "./TuitionDetails";
 import LearningSummary from "./LearningSummary";
+import ComprehensiveCurriculum from "./ComprehensiveCurriculum";
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
       <Header />
       <Hero />
       <LearningSummary />
+      <ComprehensiveCurriculum />
       <HowToStart />
       <WhyJavascript />
       <Tuition />

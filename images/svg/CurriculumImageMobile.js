@@ -2,7 +2,7 @@ import React from "react";
 
 const CurriculumImageMobile = ({ width = 315, height = 871 }) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 315.523 871.634">
+    <svg xmlns="http://www.w3.org/2000/svg" width="-webkit-fill-available"  height={height} viewBox="0 0 315.523 871.634">
       <g id="Group_17783" data-name="Group 17783" transform="translate(-30 -1431)">
         <g id="Group_120" data-name="Group 120" transform="translate(105.814 1449.965)">
           <g id="Group_17771" data-name="Group 17771" transform="translate(0 0.035)">
