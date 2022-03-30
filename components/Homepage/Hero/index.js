@@ -1,6 +1,13 @@
 import { Container, Grid } from "@mui/material";
 import hero from "../../../images/Hero_Section_SVG.svg";
-import { Description, HeadLine, HeroContainer, LeftSide, Media, RightSide, Title } from './styles'
+import { 
+  Description, 
+  HeadLine, 
+  HeroContainer, 
+  HeroTitle, 
+  LeftSide, 
+  Media, 
+  RightSide,} from "../../../theme/Componentstyling";
 
 
 export default function Hero() {
@@ -10,7 +17,7 @@ export default function Hero() {
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <LeftSide item xs={12} md={6} >
           <HeadLine >Learn to code,</HeadLine>
-          <Title >With a New Digital Life</Title>
+          <HeroTitle >With a New Digital Life</HeroTitle>
           <Description>
             Start your new Work with our weekly remotely Tech programs in full-stack developer and build web and mobile
             apps powered by JavaScript Start your new Work with our weekly remotely

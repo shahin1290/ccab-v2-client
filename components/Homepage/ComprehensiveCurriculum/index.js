@@ -1,8 +1,17 @@
 import { Grid } from '@mui/material'
 import React from 'react'
-import {  Description, DesktopContent, Line1, Line2, LineHolder, MobileContent, SectionContainer, TextWrapper, Title } from './styles'
 import CurriculumSVGDesktop from "../../../images/svg/CurriculumImageDesktop";
 import CurriculumImageMobile from "../../../images/svg/CurriculumImageMobile";
+import { 
+    Description, 
+    DesktopContent, 
+    Line1, 
+    Line2, 
+    LineHolder, 
+    MobileContent, 
+    SectionContainer, 
+    TextWrapper, 
+    Title } from '../../../theme/Componentstyling';
 
 export default function ComprehensiveCurriculum() {
   return (

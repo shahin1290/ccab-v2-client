@@ -1,20 +1,19 @@
 import { Card, CardContent, Grid, Typography } from "@mui/material";
 import React from "react";
-import {
-  BranchedTitle,
-  CardButton,
-  CardDescription,
-  CardTitle,
-  Description,
-  Line1,
-  Line2,
-  LineHolder,
-  SummaryContainer,
-  TextWrapper,
-  Title,
-} from "./styles";
 import learning from "../../../images/learning.png";
 import Image from "next/image";
+import { 
+  BranchedTitle, 
+  CardButton, 
+  CardDescription, 
+  CardTitle, 
+  Description, 
+  Line1, 
+  Line2, 
+  LineHolder, 
+  SummaryContainer, 
+  TextWrapper, 
+  Title } from "../../../theme/Componentstyling";
 
 export default function LearningSummary() {
   return (
