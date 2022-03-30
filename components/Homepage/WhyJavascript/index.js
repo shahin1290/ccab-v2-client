@@ -22,11 +22,10 @@ const Cards = [
 const WhyJavascript = () => {
   const theme = useTheme();
   const [slider, setSlider] = useState(null);
-  console.log(slider);
 
   const settings = {
     dots: false,
-    infinite: false,
+    infinite: true,
     slidesToShow: 3,
     slidesToScroll: 3,
 
@@ -39,17 +38,19 @@ const WhyJavascript = () => {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 777,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          centerMode: true,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 500,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          centerMode: false,
         },
       },
     ],
@@ -66,8 +67,8 @@ const WhyJavascript = () => {
         height: { lg: 472, md: 400 },
       }}>
       <Worldmap width="100%" />
-      <Stack direction="row" spacing={3}>
-        <SliderButton  onClick={() => slider.slickPrev()}>
+      <Stack direction="row" spacing={3} alignItems="center" mb={{ xs: 3 }}>
+        <SliderButton onClick={() => slider.slickPrev()}>
           <ArrowBackIosNewIcon color="white" />
         </SliderButton>
         <Typography variant="h3" color="primary.main">

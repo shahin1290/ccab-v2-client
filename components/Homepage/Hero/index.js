@@ -1,27 +1,32 @@
 import { Container, Grid } from "@mui/material";
-import React from "react";
-import Image from "next/image";
-import useStyles from "./styles";
 import hero from "../../../images/Hero_Section_SVG.svg";
+import { 
+  Description, 
+  HeadLine, 
+  HeroContainer, 
+  HeroTitle, 
+  LeftSide, 
+  Media, 
+  RightSide,} from "../../../theme/Componentstyling";
+
 
 export default function Hero() {
-  const classes = useStyles();
 
   return (
-    <Container md={6}>
+    <HeroContainer md={6}>
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-        <Grid item xs={12} md={6} className={classes.leftSide}>
-          <h2 className={classes.headLine}>Learn to code,</h2>
-          <h1 className={classes.title}>With a New Digital Life</h1>
-          <p className={classes.description}>
+        <LeftSide item xs={12} md={6} >
+          <HeadLine >Learn to code,</HeadLine>
+          <HeroTitle >With a New Digital Life</HeroTitle>
+          <Description>
             Start your new Work with our weekly remotely Tech programs in full-stack developer and build web and mobile
             apps powered by JavaScript Start your new Work with our weekly remotely
-          </p>
-        </Grid>
-        <Grid item xs={12} md={6} className={classes.rightSide}>
-          <Image src={hero} alt="learn coding" className={classes.image} />
-        </Grid>
+          </Description>
+        </LeftSide>
+        <RightSide item xs={12} md={6} >
+          <Media src={hero} alt="learn coding" layout='responsive' />
+        </RightSide>
       </Grid>
-    </Container>
+    </HeroContainer>
   );
 }

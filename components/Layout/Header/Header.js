@@ -3,8 +3,9 @@ import { SwipeableDrawer, IconButton, Divider, List, ListItem,  } from "@mui/mat
 import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
 import logo from "../../../images/Logo.svg";
-import { Appbar, ButtonWrap, FirstButton, Logo, MobileIcon, NavbarContainer, NavItem, NavLinks, NavLogo, NavMenu, SecondButton, SidebarLink, Wrap } from "./styles";
 import ActiveLink from "./ActiveLink";
+import {Appbar, NavbarContainer, NavLogo, Logo, MobileIcon, Wrap, NavMenu, NavItem, ButtonWrap, FirstButton, SecondButton,SidebarLink, NavLinks} from './styles'
+
 
 const sideLinks = [
   { name: "Home", to: "/" },
@@ -18,14 +19,13 @@ export default function Header() {
   return (
     <Appbar >
       <NavbarContainer >
-        <NavLogo href="/" passHref>
+        <NavLogo href="/" >
           <Logo src={logo} alt="codify logo" />
         </NavLogo>
 
         <MobileIcon onClick={() => setOpen(true)}>
           <MenuIcon style={{ fontSize:'35px' }} />
         </MobileIcon>
-
         <Wrap >
           <NavMenu >
             <NavItem >    
@@ -63,13 +63,13 @@ export default function Header() {
       <SwipeableDrawer anchor="top" open={open} onOpen={() => setOpen(true)} onClose={() => setOpen(false)}>
         <div onClick={() => setOpen(false)} onKeyPress={() => setOpen(false)} role="button" tabIndex={0}>
           <IconButton>
-            <CloseIcon style={{ color: "#6162D8", fontSize:'25px' }} />
+            <CloseIcon style={{ color: "#6162D8",}} />
           </IconButton>
         </div>
         <Divider />
         <List>
           {sideLinks.map((item) => (
-            <ListItem key={item.name}>
+            <ListItem key={item.name} style={{fontSize:"20px",}}>
               <SidebarLink
                 href={item.to}
                 onClick={() => setOpen(false)}
