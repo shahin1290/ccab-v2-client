@@ -13,9 +13,16 @@ import { Calculate } from "@mui/icons-material";
 
 const UserImg = styled("img")(({ theme }) => ({
   display: "block",
-  width: "10em",
-  height: "10em",
+  width: "140px",
   borderRadius: "50%",
+
+  [theme.breakpoints.down("md")]: {
+    width: "100px",
+  },
+
+  [theme.breakpoints.down("sm")]: {
+    width: "80px",
+  },
 }));
 
 function Arrow(props) {
@@ -35,9 +42,18 @@ function Arrow(props) {
 
 const CustomImage = styled("img")(({ theme }) => ({
   borderRadius: 20,
-  width: "50%",
+  width: "55%",
   height: "auto",
   margin: "0 auto",
+  [theme.breakpoints.down("md")]: {
+    width: "60%",
+  },
+  [theme.breakpoints.down("sm")]: {
+    width: "70%",
+  },
+  [theme.breakpoints.down("xs")]: {
+    width: "80%",
+  },
 }));
 
 const StudentReviews = () => {
@@ -78,201 +94,78 @@ const StudentReviews = () => {
 
       <Box sx={{ position: "relative" }}>
         <Slider {...settings} ref={(slider) => setSlider(slider)}>
-          <Box
-            sx={{
-              position: "relative",
-              paddingBottom: "100px",
-            }}
-          >
-            <Box sx={{ position: "relative" }}>
-              <CustomImage src="/review-img.jpg" alt="Student Review Image" />
-              <Box
-                onClick={handleOpen}
-                sx={{
-                  position: "absolute",
-                  top: "calc(50% - 50px)",
-                  left: "calc(50% - 50px)",
-                  cursor: "pointer",
-                }}
-              >
-                <svg
-                  focusable="false"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="10rem"
-                  height="10rem"
-                >
-                  <path
-                    fill="white"
-                    stroke="none"
-                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"
-                  ></path>
-                </svg>
-              </Box>
-              <Stack
-                justifyContent="center"
-                alignItems="center"
-                spacing={1}
-                sx={{
-                  position: "absolute",
-                  bottom: "-100px",
-                  left: "calc(50% - 50px)",
-                }}
-              >
-                <UserImg src="/person.jpg" alt="student" />
-                <Typography
-                  align="center"
-                  variant="h3"
+          {data.map((item) => (
+            <Box
+              sx={{
+                position: "relative",
+                pb: 20,
+              }}
+              key={item.id}
+            >
+              <Box sx={{ position: "relative" }}>
+                <CustomImage src="/review-img.jpg" alt="Student Review Image" />
+                <Box
+                  onClick={handleOpen}
                   sx={{
-                    color: theme.palette.primary.main,
-                    fontWeight: "normal",
-                    fontSize: { xs: 22 },
+                    position: "absolute",
+                    top: { md: "40%", xs: "40%" },
+                    left: { md: "45%", xs: "45%" },
+                    cursor: "pointer",
                   }}
                 >
-                  Ema Watsom
-                </Typography>
-                <Typography
-                  align="center"
-                  variant="h6"
-                  sx={{ fontWeight: "normal", fontSize: { xs: 16 } }}
-                >
-                  London, UK
-                </Typography>
-              </Stack>
-            </Box>
-          </Box>
-          <Box
-            sx={{
-              position: "relative",
-              paddingBottom: "50px",
-            }}
-          >
-            <Box sx={{ position: "relative" }}>
-              <CustomImage src="/review-img.jpg" alt="Student Review Image" />
-              <Box
-                onClick={handleOpen}
-                sx={{
-                  position: "absolute",
-                  top: "calc(50% - 50px)",
-                  left: "calc(50% - 50px)",
-                  cursor: "pointer",
-                }}
-              >
-                <svg
-                  focusable="false"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="10rem"
-                  height="10rem"
-                >
-                  <path
-                    fill="white"
-                    stroke="none"
-                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"
-                  ></path>
-                </svg>
-              </Box>
-              <Stack
-                justifyContent="center"
-                alignItems="center"
-                spacing={1}
-                sx={{
-                  position: "absolute",
-                  bottom: "-100px",
-                  left: "calc(50% - 50px)",
-                }}
-              >
-                <UserImg src="/person.jpg" alt="student" />
-                <Typography
-                  align="center"
-                  variant="h3"
+                  <svg
+                    focusable="false"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="7vw"
+                    height="7vw"
+                  >
+                    <path
+                      fill="white"
+                      stroke="none"
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"
+                    ></path>
+                  </svg>
+                </Box>
+                <Stack
+                  justifyContent="center"
+                  alignItems="center"
+                  spacing={1}
                   sx={{
-                    color: theme.palette.primary.main,
-                    fontWeight: "normal",
-                    fontSize: { xs: 22 },
+                    position: "absolute",
+                    bottom: { md: "-130px", sm: "-110px", xs: "-100px" },
+                    left: { md: "45%", sm: "40%", xs: "35%" },
                   }}
                 >
-                  Ema Watsom
-                </Typography>
-                <Typography
-                  align="center"
-                  variant="h6"
-                  sx={{ fontWeight: "normal", fontSize: { xs: 16 } }}
-                >
-                  London, UK
-                </Typography>
-              </Stack>
-            </Box>
-          </Box>
-          <Box
-            sx={{
-              position: "relative",
-              paddingBottom: "50px",
-            }}
-          >
-            <Box sx={{ position: "relative" }}>
-              <CustomImage src="/review-img.jpg" alt="Student Review Image" />
-              <Box
-                onClick={handleOpen}
-                sx={{
-                  position: "absolute",
-                  top: "calc(50% - 50px)",
-                  left: "calc(50% - 50px)",
-                  cursor: "pointer",
-                }}
-              >
-                <svg
-                  focusable="false"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="10rem"
-                  height="10rem"
-                >
-                  <path
-                    fill="white"
-                    stroke="none"
-                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"
-                  ></path>
-                </svg>
+                  <UserImg src={item.avatarUrl} alt="student" />
+                  <Typography
+                    align="center"
+                    variant="h3"
+                    sx={{
+                      color: theme.palette.primary.main,
+                      fontWeight: "normal",
+                      fontSize: { xs: 22 },
+                    }}
+                  >
+                    {item.name}
+                  </Typography>
+                  <Typography
+                    align="center"
+                    variant="h6"
+                    sx={{ fontWeight: "normal", fontSize: { xs: 16 } }}
+                  >
+                    {item.address}
+                  </Typography>
+                </Stack>
               </Box>
-              <Stack
-                justifyContent="center"
-                alignItems="center"
-                spacing={1}
-                sx={{
-                  position: "absolute",
-                  bottom: "-100px",
-                  left: "calc(50% - 50px)",
-                }}
-              >
-                <UserImg src="/person.jpg" alt="student" />
-                <Typography
-                  align="center"
-                  variant="h3"
-                  sx={{
-                    color: theme.palette.primary.main,
-                    fontWeight: "normal",
-                    fontSize: { xs: 22 },
-                  }}
-                >
-                  Ema Watsom
-                </Typography>
-                <Typography
-                  align="center"
-                  variant="h6"
-                  sx={{ fontWeight: "normal", fontSize: { xs: 16 } }}
-                >
-                  London, UK
-                </Typography>
-              </Stack>
             </Box>
-          </Box>
+          ))}
         </Slider>
         <Box
           sx={{
             position: "absolute",
-            top: "calc(50% - 50px)",
-            right: "150px",
+            top: { md: "14vw", xs: "16vw" },
+            right: { md: "10vw", xs: "10px" },
           }}
         >
           <SliderButton onClick={() => slider.slickNext()}>
@@ -281,7 +174,11 @@ const StudentReviews = () => {
         </Box>
 
         <Box
-          sx={{ position: "absolute", top: "calc(50% - 50px)", left: "150px" }}
+          sx={{
+            position: "absolute",
+            top: { md: "14vw", xs: "16vw" },
+            left: { md: "10vw", xs: "10px" },
+          }}
         >
           <SliderButton onClick={() => slider.slickPrev()}>
             <ArrowBackIosNewIcon color="white" />
@@ -293,5 +190,11 @@ const StudentReviews = () => {
     </Container>
   );
 };
+
+const data = [
+  { id: 1, name: "John doe", address: "London, UK", avatarUrl: "/person.jpg" },
+  { id: 2, name: "John doe", address: "London, UK", avatarUrl: "/person.jpg" },
+  { id: 3, name: "John doe", address: "London, UK", avatarUrl: "/person.jpg" },
+];
 
 export default StudentReviews;

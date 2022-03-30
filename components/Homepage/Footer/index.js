@@ -1,4 +1,4 @@
-import { Box, Grid, Link } from "@mui/material";
+import { Box, Grid, Link, Stack, Typography } from "@mui/material";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import Image from "next/image";
 import logo from "../../../images/Logo.svg";
@@ -25,9 +25,11 @@ export default function Footer() {
               <Image src={logo} alt="company-logo" width="100" height="100" />
             </Box>
             <Box pr={{ xl: 25, lg: 15, md: 10, xs: 2 }} color="white">
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui
-              blanditiis praesentium voluptatum deleniti atque corrupti quos
-              dolores et quas molestias excepturi sint occaecati.
+              <Typography variant="body2">
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                blanditiis praesentium voluptatum deleniti atque corrupti quos
+                dolores et quas molestias excepturi sint occaecati.
+              </Typography>
             </Box>
             <Box
               pt={{ xs: 2 }}
@@ -40,8 +42,8 @@ export default function Footer() {
               <Box
                 bgcolor="#6364D9"
                 sx={{
-                  width:"2.4em",
-                  height:"2.4em",
+                  width: "22px",
+                  height: "22px",
                   borderRadius: "50%",
                   display: "flex",
                   justifyContent: "center",
@@ -51,15 +53,10 @@ export default function Footer() {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   aria-hidden="true"
-                  role="img"
-                  width="2em"
-                  height="2em"
-                  
-                  preserveAspectRatio="xMidYMid meet"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    fill="currentColor"
+                    fill="#fff"
                     d="M19.545 15.025v-2.421h2.422v-1.815h-2.422V8.368H17.73v2.421h-2.421v1.815h2.421v2.421zM8.052 8.302c1.133 0 1.896.484 2.33.896l1.722-1.67c-1.048-.98-2.415-1.58-4.052-1.58C4.714 5.947 2 8.659 2 12s2.714 6.053 6.052 6.053c3.493 0 5.812-2.457 5.812-5.913c0-.503-.064-.86-.153-1.24H8.049v2.256h3.332c-.158.951-1.011 2.556-3.329 2.556c-2.003 0-3.637-1.665-3.637-3.704c0-2.042 1.634-3.706 3.637-3.706z"
                   />
                 </svg>
@@ -68,8 +65,8 @@ export default function Footer() {
                 bgcolor="#6364D9"
                 sx={{
                   borderRadius: "50%",
-                  width:"2.4em",
-                  height:"2.4em",
+                  width: "22px",
+                  height: "22px",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
@@ -79,8 +76,8 @@ export default function Footer() {
                   xmlns="http://www.w3.org/2000/svg"
                   aria-hidden="true"
                   role="img"
-                  width="1.4em"
-                  height="1.4em"
+                  width="12px"
+                  height="12px"
                   preserveAspectRatio="xMidYMid meet"
                   viewBox="0 0 320 512"
                 >
@@ -94,8 +91,8 @@ export default function Footer() {
                 bgcolor="#6364D9"
                 sx={{
                   borderRadius: "50%",
-                  width:"2.4em",
-                  height:"2.4em",
+                  width: "22px",
+                  height: "22px",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
@@ -105,8 +102,8 @@ export default function Footer() {
                   xmlns="http://www.w3.org/2000/svg"
                   aria-hidden="true"
                   role="img"
-                  width="1.5em"
-                  height="1.5em"
+                  width="15px"
+                  height="15px"
                   preserveAspectRatio="xMidYMid meet"
                   viewBox="0 0 32 32"
                 >
@@ -124,31 +121,36 @@ export default function Footer() {
               pt={{ xs: 2, md: 10 }}
               pb={{ xs: 3 }}
             >
-              Services
+              <Typography variant="body1">Services</Typography>
             </Box>
             <Box pb={{ xs: 3 }}>
               <FooterLink href="/" color="inherit">
-                Foundation Course
+                <Typography variant="body1">Foundation Course</Typography>
               </FooterLink>
             </Box>
             <Box pb={{ xs: 3 }}>
               <FooterLink href="/" color="inherit">
-                Front-end Full Course
+                <Typography variant="body1">Front-end Full Course</Typography>
               </FooterLink>
             </Box>
             <Box pb={{ xs: 3 }}>
               <FooterLink href="/" color="inherit">
-                Mern Full-Stack Developer
+                <Typography variant="body1">
+                  Mern Full-Stack Developer
+                </Typography>
               </FooterLink>
             </Box>
             <Box pb={{ xs: 3 }}>
               <FooterLink href="/" color="inherit">
-                Career Support
+                <Typography variant="body1">Career Support</Typography>
               </FooterLink>
             </Box>
             <Box pb={{ xs: 3 }}>
               <FooterLink href="/" color="inherit">
-                Comprehendive Curriculum
+                <Typography variant="body1">
+                  {" "}
+                  Comprehendive Curriculum
+                </Typography>
               </FooterLink>
             </Box>
           </Grid>
@@ -159,26 +161,26 @@ export default function Footer() {
               pb={{ xs: 3 }}
               sx={{ color: "#6364D9", fontWeight: "bold" }}
             >
-              Quick Links
+              <Typography variant="body1">Quick Links</Typography>
             </Box>
             <Box pb={{ xs: 3 }}>
               <FooterLink href="/" color="inherit">
-                About Us
+                <Typography variant="body1">About Us</Typography>
               </FooterLink>
             </Box>
             <Box pb={{ xs: 3 }}>
               <FooterLink href="/" color="inherit">
-                Contact Us
+                <Typography variant="body1">Contact Us</Typography>
               </FooterLink>
             </Box>
             <Box pb={{ xs: 3 }}>
               <FooterLink href="/" color="inherit">
-                FAQs
+                <Typography variant="body1"> FAQs</Typography>
               </FooterLink>
             </Box>
             <Box pb={{ xs: 3 }}>
               <FooterLink href="/" color="inherit">
-                Privacy Policy
+                <Typography variant="body1">Privacy Policy</Typography>
               </FooterLink>
             </Box>
           </Grid>
@@ -188,18 +190,17 @@ export default function Footer() {
               pb={{ xs: 3 }}
               sx={{ color: "#6364D9", fontWeight: "bold" }}
             >
-              Contact Us
+              <Typography variant="body1"> Contact Us</Typography>
             </Box>
-            <Box
-              pb={{ xs: 2 }}
-              sx={{ display: "flex", alignItems: "center", gap: "10px" }}
-            >
+            <Stack direction="row">
               <PinDropIcon sx={{ fontSize: "20px", color: "#6364D9" }} />
 
               <FooterLink href="/" color="inherit">
-                Rontgenvagen 1, 141 52, Huddinge, Stockholm, Sweden
+                <Typography variant="body1">
+                  Rontgenvagen 1, 141 52, Huddinge, Stockholm, Sweden
+                </Typography>
               </FooterLink>
-            </Box>
+            </Stack>
             <Box
               pb={{ xs: 5 }}
               sx={{ display: "flex", alignItems: "center", gap: "10px" }}
@@ -209,14 +210,16 @@ export default function Footer() {
               />
 
               <FooterLink href="/" color="inherit">
-                info@codifycollege.se
+                <Typography variant="body1"> info@codifycollege.se</Typography>
               </FooterLink>
             </Box>
           </Grid>
         </Grid>
         <Box py={{ xs: 5 }} color="#fff">
-          {new Date().getFullYear()} &copy; CF College AB. Designed by CF
-          College AB
+          <Typography variant="body1">
+            {new Date().getFullYear()} &copy; CF College AB. Designed by CF
+            College AB
+          </Typography>
         </Box>
       </Box>
     </footer>

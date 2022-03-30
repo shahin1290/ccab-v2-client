@@ -4,7 +4,7 @@ import { Box, Container, Typography } from "@mui/material";
 
 const Content = styled.div`
   background-color: #f5f6f9;
-  height: ${(props) => (props.show ? "80px" : 0)};
+  height: ${(props) => (props.show ? "110px" : 0)};
   opacity: ${(props) => (props.show ? 1 : 0)};
   display: flex;
   overflow: hidden;
@@ -32,7 +32,7 @@ const StyledKeyboardArrowDownIcon = styled(ArrowForwardIosIcon)`
 
 const FAQAccordion = ({ title, description, active, setActive }) => {
   return (
-    <Container sx={{ margin: "15px auto" }}>
+    <Container>
       <Box bgcolor="#F5F6F9" sx={{ borderRadius: "10px" }}>
         <HContainer onClick={() => setActive(title)} show={active === title}>
           <Typography>{title}</Typography>

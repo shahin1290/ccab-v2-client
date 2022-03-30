@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import { useState } from "react";
+import Underline from "../../../images/svg/Underline";
 import FAQAccordion from "./FAQAccordion";
 
 const FAQs = [
@@ -23,7 +24,7 @@ const FAQs = [
     title:
       "Is this course really with live Mentoring and online? Do I need to attend any classes in person?",
     content:
-      "This course is entirely with live Mentoring and online, where you will book your live mentoring sessions in person from the platform calendar. You can access your lectures, readings, recorded videos, and assignments anytime and anywhere via the web or your mobile device.",
+      "This course is entirely with live Mentoring and online, where you will book your live mentoring sessions in the platform calendar. You can access your lectures, recorded videos, and assignments via  web or mobile.",
   },
   {
     title: "Do I get a certificate after completion of the course?",
@@ -47,20 +48,23 @@ const FAQ = () => {
 
   return (
     <Box bgcolor="#fff">
-      <Typography
-        variant="h4"
+      <Box
         sx={{
-          fontWeight: "bold",
           display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
           justifyContent: "center",
-          fontSize: "30px",
-          color: "#313030",
+          pt: { xs: 5, md: 10 },
+          pb: { xs: 5 },
         }}
-        py={{ xs: 5 }}
       >
-        Frequently Asked Questions
-      </Typography>
-      <Box pb={{ xs: 10 }}>
+        <Typography variant="h3" mb={1}>
+          Frequently Asked Questions
+        </Typography>
+        <Underline />
+      </Box>
+
+      <Box pb={{ xs: 2 }}>
         {FAQs.map((faq) => (
           <FAQAccordion
             key={faq.title}

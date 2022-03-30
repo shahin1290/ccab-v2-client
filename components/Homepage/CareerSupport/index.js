@@ -1,38 +1,64 @@
-import { Box, Container, Grid, Typography } from "@mui/material";
+import {
+  Box,
+  Container,
+  Grid,
+  List,
+  ListItem,
+  ListItemText,
+  Stack,
+  Typography,
+} from "@mui/material";
 import Image from "next/image";
+import CircleIcon from "@mui/icons-material/Circle";
 
 const CareerSupport = () => {
   return (
-    <Box bgcolor="#6364D9" color="white" mt={{ md: 10, xs: 5 }} p={{ md: 0, xs: 5 }}>
+    <Box
+      bgcolor="#6364D9"
+      color="white"
+      mt={{ md: 10, xs: 5 }}
+      p={{ md: 0, xs: 5 }}
+    >
       <Container maxWidth="lg">
         <Grid container spacing={0} alignItems="center" justifyContent="center">
           <Grid item xs={12} sm={8} order={{ xs: 2, sm: 1 }}>
-            <Typography variant="h3">Career Support?</Typography>
+            <Typography variant="h2">Career Support?</Typography>
             <Box py={{ xs: 1 }}>
               <Typography variant="body1">
-                Register yourself now and get real employable skills that top companies want.
+                Register yourself now and get real employable skills that top
+                companies want.
               </Typography>
             </Box>
-            <ul
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: "10px",
-                padding: "15px",
-              }}>
-              <li>CV writing </li>
-              <li>Technical Interviews / Mock Interviews </li>
-              <li>Personal Development Program Portfolio </li>
-              <li>Networking Events </li>
-            </ul>
+
+            <List>
+              {data.map((item) => (
+                <ListItem key={item.id} disableGutters>
+                  <Stack
+                    direction="row"
+                    spacing={2}
+                    justifyContent="center"
+                    alignItems="center"
+                  >
+                    <CircleIcon sx={{ fontSize: 8 }} />
+                    <Typography variant="body2">{item.content}</Typography>
+                  </Stack>
+                </ListItem>
+              ))}
+            </List>
           </Grid>
           <Grid item xs={12} sm={4} order={{ xs: 1, sm: 2 }}>
             <Box
               sx={{
                 color: "blue",
                 paddingBottom: "15px",
-              }}>
-              <Image src="/career-support.png" alt="company-logo" width="400" height="400" />
+              }}
+            >
+              <Image
+                src="/career-support.png"
+                alt="company-logo"
+                width="400"
+                height="400"
+              />
             </Box>
           </Grid>
         </Grid>
@@ -41,4 +67,10 @@ const CareerSupport = () => {
   );
 };
 
+const data = [
+  { id: 1, content: "CV writing" },
+  { id: 2, content: "Technical Interviews / Mock Interviews" },
+  { id: 3, content: "Personal Development Program Portfolio" },
+  { id: 4, content: " Network Events" },
+];
 export default CareerSupport;

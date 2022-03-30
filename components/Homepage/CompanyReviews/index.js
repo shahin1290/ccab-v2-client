@@ -11,12 +11,17 @@ const RatingSection = () => {
       sx={{
         background: theme.palette.secondary.main,
         py: { xs: 3, md: 10 },
+        mt: { xs: 3, md: 10 },
       }}
     >
       <Container maxWidth="xl">
-        <Grid container spacing={10} sx={{ width: "100%" }}>
+        <Grid
+          container
+          sx={{ justifyContent: { xs: "center", lg: "space-between" } }}
+          gap={2}
+        >
           {data.map((item) => (
-            <Grid item md={3} xs={12} key={item.id}>
+            <Grid item key={item.id} sx={{ width: 290 }}>
               <Stack
                 direction="column"
                 justifyContent="center"

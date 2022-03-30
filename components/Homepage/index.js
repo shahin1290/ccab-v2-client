@@ -9,6 +9,8 @@ import CompanyReviews from "./CompanyReviews";
 import StudentReviews from "../StudentReviews";
 import LearningSummary from "./LearningSummary";
 import ComprehensiveCurriculum from "./ComprehensiveCurriculum";
+import WhatStandsOut from "./WhatStandsOut";
+import FAQ from "./FAQ";
 
 export default function HomePage() {
   return (
@@ -20,8 +22,10 @@ export default function HomePage() {
       <WhyJavascript />
       <Tuition />
       <TuitionDetails />
+      <WhatStandsOut />
       <StudentReviews />
       <CompanyReviews />
+      <FAQ />
       <CareerSupport />
       <Footer />
     </>
