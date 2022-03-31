@@ -1,6 +1,6 @@
 import React from "react";
 
-const CurriculumImageMobile = ({ width = 315, height = 871 }) => {
+const CurriculumImageMobile = ({ height = 871 }) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="-webkit-fill-available"  height={height} viewBox="0 0 315.523 871.634">
       <g id="Group_17783" data-name="Group 17783" transform="translate(-30 -1431)">

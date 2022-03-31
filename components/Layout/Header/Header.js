@@ -29,8 +29,7 @@ export default function Header() {
         <Wrap >
           <NavMenu >
             <NavItem >    
-              <NavLinks
-                href='/'
+              <NavLinks href='/'
               > 
                 <ActiveLink href='/'>
                  Home
@@ -38,8 +37,7 @@ export default function Header() {
               </NavLinks>  
             </NavItem>
             <NavItem>
-              <NavLinks
-                href='/jobs'
+              <NavLinks href='/jobs'
                 >
                   <ActiveLink href='/jobs'>
                     Jobs
