@@ -20,8 +20,8 @@ export const LeftSide = styled(Grid)({
 
 export const RightSide = styled(Grid)({
     marginTop:'60px',
-    "@media (max-width: 480px)":{
-        marginTop:'0',
+    "@media (max-width: 600px)":{
+        marginTop:'-40px',
     }
 })
 

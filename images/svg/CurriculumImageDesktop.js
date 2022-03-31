@@ -1,8 +1,8 @@
 import React from "react";
 
-const CurriculumSVGDesktop = ({ width = 1275, height = 511 }) => {
+const CurriculumSVGDesktop = ({ width = 1275,height = 511 }) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="-webkit-fill-available" height="510.092" viewBox="0 0 1266.599 510.092">
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height={height} viewBox="0 0 1266.599 510.092">
       <g id="Group_87" data-name="Group 87" transform="translate(41.62 249.975)">
         <rect
           id="Rectangle_127"

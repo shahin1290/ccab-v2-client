@@ -1,11 +1,10 @@
 import {  Grid, Typography } from "@mui/material";
 import { useTheme } from "@emotion/react";
-import hero from "../../../images/Hero_Section_SVG.svg";
-import Image from 'next/image';
 import { 
   HeroContainer, 
   LeftSide, 
   RightSide,} from "../../shared/CustomComponent2";
+import HeroSVG from "../../../images/svg/HeroSVG";
 
 
 export default function Hero() {
@@ -22,7 +21,7 @@ export default function Hero() {
           </Typography>
         </LeftSide>
         <RightSide item xs={12} md={6} >
-          <Image src={hero} alt="learn coding" layout='responsive' />
+          <HeroSVG />
         </RightSide>
       </Grid>
     </HeroContainer>

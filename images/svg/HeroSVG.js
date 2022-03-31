@@ -2,7 +2,7 @@ import React from "react";
 
 const HeroSVG = ({ size = 1 }) => {
   return (
-    <svg width={size * 697} height={size * 536} viewBox="0 0 697 536" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="100%" height={size * 536} viewBox="0 0 697 536" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M456.232 235.359C452.047 232.281 449.297 230.217 449.297 230.217C450.458 228.669 468.807 209.123 479.429 193.371C479.429 193.373 457.945 236.619 456.232 235.359Z"
         fill="#2A1E17"
