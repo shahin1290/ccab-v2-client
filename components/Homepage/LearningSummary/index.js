@@ -5,32 +5,25 @@ import Image from "next/image";
 import { 
   BranchedTitle, 
   CardButton, 
-  CardDescription, 
-  CardTitle, 
-  Description, 
-  Line1, 
-  Line2, 
-  LineHolder, 
   SummaryContainer, 
   TextWrapper, 
-  Title } from "../../../theme/Componentstyling";
+ } from "../../shared/CustomComponent2";
+import Underline from "../../../images/svg/Underline";
 
 export default function LearningSummary() {
   return (
     <SummaryContainer>
       <TextWrapper>
-        <Title>
+        <Typography variant="h3">
           Learn how to become a<BranchedTitle>Full-stack Developer</BranchedTitle>
-        </Title>
-        <Title style={{ marginTop: "-5px" }}>and build Web and Mobile Apps using JavaScript</Title>
-        <LineHolder>
-          <Line1></Line1>
-          <Line2></Line2>
-        </LineHolder>
-        <Description>
+        </Typography>
+        <Typography style={{ marginTop: "5px" }} variant="h3">and build Web and Mobile Apps using JavaScript</Typography>
+        <Underline />
+
+        <Typography variant="subtitle2" sx={{ color: "secondary.contrastText", padding:'0.8rem' }}>
           As a graduate, you’ll leave with a solid base of fundamental programming and computer science knowledge, as
           well as experience with languages, frameworks, and libraries that employers demand.
-        </Description>
+        </Typography>
       </TextWrapper>
       <Grid
         container
@@ -41,10 +34,10 @@ export default function LearningSummary() {
           <Card sx={{ maxWidth: 385 }} style={{ background: "#F7F8FB", borderRadius: "20px" }}>
             <Image src={learning} alt="learning" layout="responsive" />
             <CardContent style={{ textAlign: "center" }}>
-              <CardTitle>Javascript Full Stack Web and Mobile Development</CardTitle>
-              <CardDescription>
+              <Typography variant="h6" align="center" mb={2}>Javascript Full Stack Web and Mobile Development</Typography>
+              <Typography variant="body2"  sx={{ color: "secondary.contrastText", padding:'0.8rem' }}>
                 We will start from the ground up by learning how to implement modern web pages with HTML and CSS.
-              </CardDescription>
+              </Typography>
               <CardButton>Learn More</CardButton>
             </CardContent>
           </Card>
@@ -53,10 +46,10 @@ export default function LearningSummary() {
           <Card sx={{ maxWidth: 385 }} style={{ background: "#F7F8FB", borderRadius: "20px" }}>
             <Image src={learning} alt="learning" layout="responsive" />
             <CardContent style={{ textAlign: "center" }}>
-              <CardTitle>Javascript Full Stack Web and Mobile Development</CardTitle>
-              <CardDescription>
+              <Typography variant="h6" align="center" mb={2}>Javascript Full Stack Web and Mobile Development</Typography>
+              <Typography variant="body2"  sx={{ color: "secondary.contrastText", padding:'0.8rem' }}>
                 We will start from the ground up by learning how to implement modern web pages with HTML and CSS.
-              </CardDescription>
+              </Typography>
               <CardButton>Learn More</CardButton>
             </CardContent>
           </Card>
@@ -65,10 +58,10 @@ export default function LearningSummary() {
           <Card sx={{ maxWidth: 385 }} style={{ background: "#F7F8FB", borderRadius: "20px" }}>
             <Image src={learning} alt="learning" layout="responsive" />
             <CardContent style={{ textAlign: "center" }}>
-              <CardTitle>Javascript Full Stack Web and Mobile Development</CardTitle>
-              <CardDescription>
+              <Typography variant="h6" align="center" mb={2}>Javascript Full Stack Web and Mobile Development</Typography>
+              <Typography variant="body2"  sx={{ color: "secondary.contrastText", padding:'0.8rem' }}>
                 We will start from the ground up by learning how to implement modern web pages with HTML and CSS.
-              </CardDescription>
+              </Typography>
               <CardButton>Learn More</CardButton>
             </CardContent>
           </Card>
