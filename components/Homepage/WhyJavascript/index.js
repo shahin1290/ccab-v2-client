@@ -1,5 +1,5 @@
 import { Container, Grid, Stack, Typography } from "@mui/material";
-import { Box, useTheme } from "@mui/system";
+import { Box } from "@mui/system";
 import React, { useState } from "react";
 import Border from "../../../images/svg/Border";
 import Worldmap from "../../../images/svg/Worldmap";
@@ -7,8 +7,10 @@ import CustomBorder from "../../shared/CustomBorder";
 import Slider from "react-slick";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import { IconButton } from "@mui/material";
 import { SliderButton } from "../../shared/CustomComponents";
+
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const Cards = [
   "JavaScript has been the most popular language in the world for 9 years in a row, according to StackOverflow.com, the largest community website for professional and enthusiast programmers.",
@@ -22,12 +24,14 @@ const Cards = [
 const WhyJavascript = () => {
   const theme = useTheme();
   const [slider, setSlider] = useState(null);
+  const sm = useMediaQuery(theme.breakpoints.down("sm"));
 
   const settings = {
     dots: false,
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 3,
+    speed: 500,
 
     responsive: [
       {
@@ -65,7 +69,8 @@ const WhyJavascript = () => {
         flexDirection: "column",
         alignItems: "center",
         height: { lg: 472, md: 400 },
-      }}>
+      }}
+    >
       <Worldmap width="100%" />
       <Stack direction="row" spacing={3} alignItems="center" mb={{ xs: 3 }}>
         <SliderButton onClick={() => slider.slickPrev()}>
@@ -79,13 +84,34 @@ const WhyJavascript = () => {
         </SliderButton>
       </Stack>
       <Container
-        sx={{ display: "flex", justifyContent: "center", height: "100%", alignItems: "center", width: "100%" }}>
-        <Slider {...settings} style={{ width: "100%" }} ref={(slider) => setSlider(slider)}>
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          height: "100%",
+          alignItems: "center",
+          width: "100%",
+        }}
+      >
+        <Slider
+          {...settings}
+          style={{ width: "100%" }}
+          ref={(slider) => setSlider(slider)}
+        >
           {Cards.map((card, index) => {
-            const color = (index + 1) % 3 === 0 ? "primary" : (index + 1) % 2 === 0 ? "tertiary" : "secondary";
+            const color =
+              (index + 1) % 3 === 0
+                ? "primary"
+                : (index + 1) % 2 === 0
+                ? "tertiary"
+                : "secondary";
             return (
-              <CustomBorder color={theme.palette[color].main} index={index + 1} key={index}>
-                <Typography variant="body2" fontWeight="bold">
+              <CustomBorder
+                color={theme.palette[color].main}
+                index={index + 1}
+                key={index}
+                width={sm ? 250 : 300}
+              >
+                <Typography variant="body2" fontWeight={sm ? "normal" : "bold"}>
                   {card}
                 </Typography>
               </CustomBorder>
