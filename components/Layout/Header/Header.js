@@ -25,6 +25,7 @@ import {
   SidebarLink,
   NavLinks,
 } from "./styles";
+import Link from 'next/link';
 
 const sideLinks = [
   { name: "Home", to: "/" },
@@ -38,31 +39,30 @@ export default function Header() {
   return (
     <Appbar>
       <NavbarContainer>
-        <NavLogo href="/">
+        <NavLogo href='/'>
           <Logo src={logo} alt="codify logo" />
         </NavLogo>
-
         <MobileIcon onClick={() => setOpen(true)}>
           <MenuIcon style={{ fontSize: "35px" }} />
         </MobileIcon>
         <Wrap>
           <NavMenu>
             <NavItem>
-              <NavLinks href="/">
+              <NavLinks href="/" >
                 <ActiveLink href="/">Home</ActiveLink>
               </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks href="/services">
+              <NavLinks href="/services" >
                 <ActiveLink href="/services">Software Hub</ActiveLink>
               </NavLinks>
             </NavItem>
           </NavMenu>
           <ButtonWrap>
-            <NavLinks href="/">
+            <NavLinks href="/" >
               <FirstButton>Login</FirstButton>
             </NavLinks>
-            <NavLinks href="/">
+            <NavLinks href="/" >
               <SecondButton>Register</SecondButton>
             </NavLinks>
           </ButtonWrap>

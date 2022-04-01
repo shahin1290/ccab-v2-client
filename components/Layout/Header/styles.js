@@ -1,6 +1,8 @@
-import { Link } from '@mui/material';
+import { Link as LinkMUI} from '@mui/material';
 import {  styled } from '@mui/system';
 import Image from 'next/image';
+import Link from 'next/link';
+
 
 export const Appbar =styled('nav')({
         height: '120px',
@@ -26,7 +28,7 @@ export const NavbarContainer = styled('div')({
         maxWidth:'1100px',
 })
 
-export const NavLogo = styled(Link)({
+export const NavLogo = styled(LinkMUI)({
         justifySelf:'flex-start',
         cursor: 'pointer',
         display:'flex',
@@ -88,6 +90,15 @@ export const NavMenu = styled('ul')({
 
 export const NavItem = styled('li')({
         height: '60px',
+        color: '#ffffff',
+        display:'flex',
+        fontSize: '20px ',
+        alignItems:'center',
+        textDecoration: 'none',
+        padding: '0 1.5rem',
+        height: '100%',
+        cursor:'pointer',
+        whiteSpace:'nowrap',
 
 })
 
@@ -109,6 +120,7 @@ export const ButtonWrap = styled('div')({
 	    justifyContent: 'flex-end',
 	    flexFlow: 'wrap',
 	    gap:' 0.5rem',
+            paddingRight:'1rem',
         "@media (max-width: 980px)":{
             display:'none',
         }  
@@ -117,17 +129,18 @@ export const ButtonWrap = styled('div')({
 export const FirstButton = styled('button')({
         transition: 'all .5s ease',
         borderRadius: '18px',
-	    background: 'none',
-	    whiteSpace: 'nowrap',
-	    fontSize: '20px',
-	    color: '#ffffff',
-	    outline: 'none',
-	    border: '2px solid #ffffff',
-	    cursor: 'pointer',
-	    overflow:' hidden',
+	background: 'none',
+	whiteSpace: 'nowrap',
+	fontSize: '20px',
+	color: '#ffffff',
+	outline: 'none',
+	border: '2px solid #ffffff',
+	cursor: 'pointer',
+	overflow:' hidden',
         width:'115px',
         height:'35px',
-	    position: 'relative',
+	position: 'relative',
+        marginRight:'1rem',
         '&:hover':{
             color: '#001F3F',
             backgroundColor: '#fff',
@@ -137,17 +150,17 @@ export const FirstButton = styled('button')({
 export const SecondButton = styled('button')({
         transition: 'all .5s ease',
         borderRadius: '20px',
-	    background: '#ffffff',
-	    whiteSpace: 'nowrap',
-	    fontSize: '18px',
-	    color: '#001F3F',
-	    outline: 'none',
-	    border: '2px solid #ffffff',
-	    cursor: 'pointer',
-	    overflow:' hidden',
+	background: '#ffffff',
+	whiteSpace: 'nowrap',
+	fontSize: '18px',
+	color: '#001F3F',
+	outline: 'none',
+	border: '2px solid #ffffff',
+	cursor: 'pointer',
+	overflow:' hidden',
         width:'115px',
         height:'35px',
-	    position: 'relative',
+	position: 'relative',
         '&:hover':{
             color: '#fff',
             backgroundColor: 'transparent',

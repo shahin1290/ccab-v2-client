@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
+import React from 'react'
 
-function ActiveLink({ children, href }) {
+const ActiveLink = React.forwardRef(function ActiveLink({ children, href,},ref) {
   const router = useRouter()
   const style = {
     borderTop: router.asPath === href ? '4px solid  #ffffff' : 'none',
@@ -16,10 +17,10 @@ function ActiveLink({ children, href }) {
   }
 
   return (
-    <p href={href} onClick={handleClick} style={style}>
+    <p href={href} onClick={handleClick} style={style} ref={ref}>
       {children}
     </p>
   )
-}
+})
 
 export default ActiveLink
