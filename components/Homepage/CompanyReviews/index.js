@@ -109,7 +109,7 @@ const RatingSection = () => {
                       background: "white",
                       height: "100%",
                       overflow: "hidden",
-                      "mix-blend-mode": "color",
+                      mixBlendMode: "color",
                       position: "absolute",
                       top: 0,
                       right: 0,

@@ -192,7 +192,7 @@ export default function Footer() {
             >
               <Typography variant="body1"> Contact Us</Typography>
             </Box>
-            <Stack direction="row">
+            <Stack direction="row" spacing={1}>
               <PinDropIcon sx={{ fontSize: "20px", color: "#6364D9" }} />
 
               <FooterLink href="/" color="inherit">
@@ -202,7 +202,7 @@ export default function Footer() {
               </FooterLink>
             </Stack>
             <Box
-              pb={{ xs: 5 }}
+              py={{ xs: 3 }}
               sx={{ display: "flex", alignItems: "center", gap: "10px" }}
             >
               <LocalPostOfficeIcon

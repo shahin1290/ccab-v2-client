@@ -34,12 +34,15 @@ const FAQAccordion = ({ title, description, active, setActive }) => {
   return (
     <Container>
       <Box bgcolor="#F5F6F9" sx={{ borderRadius: "10px" }}>
-        <HContainer onClick={() => setActive(title)} show={active === title}>
+        <HContainer
+          onClick={() => setActive(title)}
+          show={active === title ? 1 : 0}
+        >
           <Typography>{title}</Typography>
-          <StyledKeyboardArrowDownIcon show={active === title} />
+          <StyledKeyboardArrowDownIcon show={active === title ? 1 : 0} />
         </HContainer>
 
-        <Content show={active === title}>
+        <Content show={active === title ? 1 : 0}>
           <Typography
             sx={{
               padding: "0 30px",

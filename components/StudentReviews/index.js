@@ -16,12 +16,16 @@ const UserImg = styled("img")(({ theme }) => ({
   width: "140px",
   borderRadius: "50%",
 
-  [theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("lg")]: {
     width: "100px",
   },
 
-  [theme.breakpoints.down("sm")]: {
+  [theme.breakpoints.down("md")]: {
     width: "80px",
+  },
+
+  [theme.breakpoints.down("sm")]: {
+    width: "70px",
   },
 }));
 
@@ -133,8 +137,8 @@ const StudentReviews = () => {
                   spacing={1}
                   sx={{
                     position: "absolute",
-                    bottom: { md: "-130px", sm: "-110px", xs: "-100px" },
-                    left: { md: "45%", sm: "40%", xs: "35%" },
+                    bottom: { lg: "-130px", sm: "-110px", xs: "-100px" },
+                    left: { sm: "45%", xs: "43%" },
                   }}
                 >
                   <UserImg src={item.avatarUrl} alt="student" />
