@@ -3,7 +3,7 @@ import { Container, Grid, Stack, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 
-import CustomCard from "../../shared/CustomCard";
+import CustomCard from "../../shared/customComponents/CustomCard";
 
 const data = {
   title: "Fully Flexible Self-Paced Online Learning",
@@ -22,7 +22,8 @@ const Tuition = () => {
         <Stack justifyContent="center" alignItems="center">
           <Typography variant="h3">Tuition</Typography>
           <Typography variant="subtitle2">
-            We conduct discount programs from time to time, so the price may be lower
+            We conduct discount programs from time to time, so the price may be
+            lower
           </Typography>
         </Stack>
         <Grid
@@ -31,7 +32,8 @@ const Tuition = () => {
           justifyContent="space-between"
           mt={{ sm: 10, xs: 2 }}
           spacing={1}
-          wrap="wrap-reverse">
+          wrap="wrap-reverse"
+        >
           <Grid
             item
             md={6}
@@ -41,14 +43,19 @@ const Tuition = () => {
               alignItems: "start",
               justifyContent: "start",
               display: "flex",
-            }}>
+            }}
+          >
             <Stack direction="column" spacing={3}>
               <Typography variant="h4" sx={{ color: "primary.main" }}>
                 {data.title}
               </Typography>
               {data.content.map((item, index) => {
                 return (
-                  <Typography variant="body1" sx={{ color: "secondary.contrastText" }} key={index}>
+                  <Typography
+                    variant="body1"
+                    sx={{ color: "secondary.contrastText" }}
+                    key={index}
+                  >
                     {item}
                   </Typography>
                 );
@@ -66,11 +73,14 @@ const Tuition = () => {
               maxWidth: "500px",
               display: "grid",
               height: "100%",
-              gridTemplateColumns: "minmax(40%, 200px) minmax(20%, 100px) minmax(40%, 200px)",
-              gridTemplateRows: "minmax(45%, 80px) minmax(5%, 20px) minmax(45%, 80px)",
+              gridTemplateColumns:
+                "minmax(40%, 200px) minmax(20%, 100px) minmax(40%, 200px)",
+              gridTemplateRows:
+                "minmax(45%, 80px) minmax(5%, 20px) minmax(45%, 80px)",
               justifyItems: { xs: "center", sm: "end" },
               alignContent: "center",
-            }}>
+            }}
+          >
             <CustomCard
               price="2000€"
               duration="3-5"
@@ -87,7 +97,13 @@ const Tuition = () => {
             <Typography
               variant="h6"
               textAlign="center"
-              sx={{ gridColumn: "3 ", gridRow: "1", alignSelf: "center", justifySelf: "center" }}>
+              sx={{
+                gridColumn: "3 ",
+                gridRow: "1",
+                alignSelf: "center",
+                justifySelf: "center",
+              }}
+            >
               Course Fees
             </Typography>
             <CustomCard

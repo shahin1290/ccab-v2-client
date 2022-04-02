@@ -1,8 +1,28 @@
-import { Container, Stack, Box, Card, CardMedia, CardContent, Grid, Typography } from "@mui/material";
+import {
+  Container,
+  Stack,
+  Box,
+  Card,
+  CardMedia,
+  CardContent,
+  Grid,
+  Typography,
+} from "@mui/material";
 import Image from "next/image";
-import { CalenderIcon, HelpIcon, HouseIcon, TeacherIcon } from "../../../images/svg/cardIcons";
+import {
+  CalenderIcon,
+  HelpIcon,
+  HouseIcon,
+  TeacherIcon,
+} from "../../../images/svg/cardIcons";
 
-import { PrimaryButton, CustomImage, CustomCard, SecondaryButton, BannerImage } from "../../shared/CustomComponents";
+import {
+  PrimaryButton,
+  CustomImage,
+  CustomCard,
+  SecondaryButton,
+  BannerImage,
+} from "../../shared/customComponents/CustomComponents";
 
 const cardData = [
   {
@@ -23,13 +43,15 @@ const cardData = [
     id: 3,
     icon: HelpIcon,
     title: "For code-related questions, there is a support platform",
-    content: "The curriculum, projects, exercises, and outcomes are identical to the boot camp's in-person version.",
+    content:
+      "The curriculum, projects, exercises, and outcomes are identical to the boot camp's in-person version.",
   },
   {
     id: 4,
     icon: CalenderIcon,
     title: "Flexible schedule Completely",
-    content: "We provide support via a support portal, chat, and provide comments on your progress.",
+    content:
+      "We provide support via a support portal, chat, and provide comments on your progress.",
   },
 ];
 const HowToStart = () => {
@@ -44,25 +66,35 @@ const HowToStart = () => {
           my: { xs: 2, md: 5 },
           py: { xs: 3, md: 10 },
           gap: { xs: 5, md: 10 },
-        }}>
+        }}
+      >
         <Stack justifyContent="center" alignItems="center" spacing={1}>
           <Typography variant="h3">How can you start?</Typography>
           <Typography variant="subtitle2">
-            Register yourself now and get real employable skills that top companies want
+            Register yourself now and get real employable skills that top
+            companies want
           </Typography>
         </Stack>
-        <Grid container justifyContent={{ lg: "space-between", xs: "center" }} spacing={5}>
+        <Grid
+          container
+          justifyContent={{ lg: "space-between", xs: "center" }}
+          spacing={5}
+        >
           <Grid item md={5}>
             <Stack
               spacing={2}
               justifyContent="center"
               alignItems={{ xs: "center", md: "start" }}
-              sx={{ maxWidth: "450px", height: "100%" }}>
-              <Typography variant="h4">Remote supervised self-paced training</Typography>
+              sx={{ maxWidth: "450px", height: "100%" }}
+            >
+              <Typography variant="h4">
+                Remote supervised self-paced training
+              </Typography>
               <Typography variant="body1">
-                Choose a start date and register on this page to secure your spot. To prepare for the Bootcamp, get the
-                pre-course materials. If you have no prior experience with JavaScript, HTML, or CSS, we estimate it will
-                take you 20-30 hours
+                Choose a start date and register on this page to secure your
+                spot. To prepare for the Bootcamp, get the pre-course materials.
+                If you have no prior experience with JavaScript, HTML, or CSS,
+                we estimate it will take you 20-30 hours
               </Typography>
               <PrimaryButton variant="contained" color="primary">
                 Learn More
@@ -73,7 +105,11 @@ const HowToStart = () => {
             <CustomImage src="/howToStart.png" alt="How To Start Image" />
           </Grid>
         </Grid>
-        <Grid container sx={{ justifyContent: { xs: "center", lg: "space-between" } }} gap={2}>
+        <Grid
+          container
+          sx={{ justifyContent: { xs: "center", lg: "space-between" } }}
+          gap={2}
+        >
           {cardData.map((item) => {
             return (
               <Grid item key={item.id} sx={{ width: 290 }}>
@@ -97,7 +133,8 @@ const HowToStart = () => {
             display: "flex",
             alignItems: { sm: "flex-end", xs: "initial" },
             justifyContent: "stretch",
-          }}>
+          }}
+        >
           <Stack
             direction="row"
             bgcolor="primary.main"
@@ -109,7 +146,8 @@ const HowToStart = () => {
               height: { xs: "100%", sm: "80%" },
               alignItems: { md: "flex-end", sm: "center" },
               flexDirection: { sm: "row", xs: "column" },
-            }}>
+            }}
+          >
             <Stack
               justifyContent="center"
               sx={{
@@ -119,7 +157,8 @@ const HowToStart = () => {
                 justifyContent: { xs: "flex-start" },
                 height: "100%",
                 width: { md: "70%", xs: "100%" },
-              }}>
+              }}
+            >
               <Typography sx={{ color: "secondary.main" }} variant="h3">
                 Unsure which course fits you?
               </Typography>

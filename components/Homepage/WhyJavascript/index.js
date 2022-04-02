@@ -3,11 +3,11 @@ import { Box } from "@mui/system";
 import React, { useState } from "react";
 import Border from "../../../images/svg/Border";
 import Worldmap from "../../../images/svg/Worldmap";
-import CustomBorder from "../../shared/CustomBorder";
+import CustomBorder from "../../shared/customComponents/CustomBorder";
 import Slider from "react-slick";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import { SliderButton } from "../../shared/CustomComponents";
+import { SliderButton } from "../../shared/customComponents/CustomComponents";
 
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";

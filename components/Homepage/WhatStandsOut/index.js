@@ -23,7 +23,7 @@ import {
   CustomCard,
   SecondaryButton,
   BannerImage,
-} from "../../shared/CustomComponents";
+} from "../../shared/customComponents/CustomComponents";
 
 const cardData = [
   {

@@ -2,7 +2,7 @@ import { useTheme } from "@emotion/react";
 import { Box, Container, Stack, Typography } from "@mui/material";
 import Slider from "react-slick";
 import StyledModal from "./StyledModal";
-import { SliderButton } from "../shared/CustomComponents";
+import { SliderButton } from "../shared/customComponents/CustomComponents";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { useState } from "react";

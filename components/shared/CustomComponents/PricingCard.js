@@ -2,7 +2,7 @@ import { Paper, Stack, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 
-import { Checked, Crossed } from "../../images/svg/pricingIcons";
+import { Checked, Crossed } from "../../../images/svg/pricingIcons";
 import { PrimaryButton } from "./CustomComponents";
 
 const PricingCard = ({ price, cardColor, checked, crossed, height }) => {
@@ -17,7 +17,8 @@ const PricingCard = ({ price, cardColor, checked, crossed, height }) => {
         alignItems: "center",
         maxWidth: 300,
         filter: "drop-shadow(0px 15px 12px rgba(0,0,0,0.15))",
-      }}>
+      }}
+    >
       <Box
         sx={{
           width: "90%",
@@ -25,7 +26,8 @@ const PricingCard = ({ price, cardColor, checked, crossed, height }) => {
           backgroundColor: cardColor,
           borderTopLeftRadius: border,
           borderTopRightRadius: border,
-        }}></Box>
+        }}
+      ></Box>
       <Paper
         elevation={5}
         sx={{
@@ -37,15 +39,34 @@ const PricingCard = ({ price, cardColor, checked, crossed, height }) => {
           alignItems: "center",
           flexDirection: "column",
           borderRadius: 5,
-        }}>
+        }}
+      >
         <Typography variant="h2" sx={{ color: cardColor, fontSize: 40 }}>
           {price}
         </Typography>
-        <Stack direction="column" spacing={2} sx={{ width: "100%", my: 6 }} justifyContent="start">
+        <Stack
+          direction="column"
+          spacing={2}
+          sx={{ width: "100%", my: 6 }}
+          justifyContent="start"
+        >
           {checked.map((item, index) => {
             return (
-              <Stack key={index} direction="row" justifyContent="start" alignItems="center" spacing={2}>
-                <Box sx={{ width: "10%", display: "flex", justifyContent: "center", alignItems: "center" }}>
+              <Stack
+                key={index}
+                direction="row"
+                justifyContent="start"
+                alignItems="center"
+                spacing={2}
+              >
+                <Box
+                  sx={{
+                    width: "10%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
                   <Checked />
                 </Box>
                 <Typography variant="body1" align="left">
@@ -56,8 +77,21 @@ const PricingCard = ({ price, cardColor, checked, crossed, height }) => {
           })}
           {crossed.map((item, index) => {
             return (
-              <Stack key={index} direction="row" justifyContent="start" alignItems="center" spacing={2}>
-                <Box sx={{ width: "10%", display: "flex", justifyContent: "center", alignItems: "center" }}>
+              <Stack
+                key={index}
+                direction="row"
+                justifyContent="start"
+                alignItems="center"
+                spacing={2}
+              >
+                <Box
+                  sx={{
+                    width: "10%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
                   <Crossed />
                 </Box>
                 <Typography variant="body1">{item}</Typography>
@@ -67,7 +101,12 @@ const PricingCard = ({ price, cardColor, checked, crossed, height }) => {
         </Stack>
         <PrimaryButton
           variant="contained"
-          sx={{ borderRadius: 2, backgroundColor: cardColor, fontSize: { sm: 18, xs: 14 } }}>
+          sx={{
+            borderRadius: 2,
+            backgroundColor: cardColor,
+            fontSize: { sm: 18, xs: 14 },
+          }}
+        >
           Select
         </PrimaryButton>
       </Paper>
@@ -78,7 +117,8 @@ const PricingCard = ({ price, cardColor, checked, crossed, height }) => {
           backgroundColor: cardColor,
           borderBottomLeftRadius: border,
           borderBottomRightRadius: border,
-        }}></Box>
+        }}
+      ></Box>
     </Stack>
   );
 };
