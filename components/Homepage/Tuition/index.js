@@ -3,7 +3,7 @@ import { Container, Grid, Stack, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 
-import CustomCard from "../../shared/customComponents/CustomCard";
+import CustomCard from "../../shared/CustomCard";
 
 const data = {
   title: "Fully Flexible Self-Paced Online Learning",

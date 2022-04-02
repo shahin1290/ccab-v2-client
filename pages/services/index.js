@@ -3,7 +3,7 @@ import React from "react";
 import ServiceCard, {
   ServiceCardBack,
   ServiceCardFront,
-} from "../../components/shared/CustomComponents/ServiceCard";
+} from "../../components/shared/ServiceCard";
 
 const SoftwareHub = () => {
   const theme = useTheme();

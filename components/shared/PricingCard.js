@@ -2,7 +2,7 @@ import { Paper, Stack, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 
-import { Checked, Crossed } from "../../../images/svg/pricingIcons";
+import { Checked, Crossed } from "../../images/svg/pricingIcons";
 import { PrimaryButton } from "./CustomComponents";
 
 const PricingCard = ({ price, cardColor, checked, crossed, height }) => {

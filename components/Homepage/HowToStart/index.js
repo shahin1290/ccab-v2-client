@@ -15,14 +15,13 @@ import {
   HouseIcon,
   TeacherIcon,
 } from "../../../images/svg/cardIcons";
-
 import {
-  PrimaryButton,
-  CustomImage,
-  CustomCard,
-  SecondaryButton,
   BannerImage,
-} from "../../shared/customComponents/CustomComponents";
+  CustomCard,
+  CustomImage,
+  PrimaryButton,
+  SecondaryButton,
+} from "../../shared/CustomComponents";
 
 const cardData = [
   {

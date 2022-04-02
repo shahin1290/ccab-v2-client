@@ -2,7 +2,7 @@ import { useTheme } from "@emotion/react";
 import { Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import Underline from "../../../images/svg/Underline";
-import PricingCard from "../../shared/customComponents/PricingCard";
+import PricingCard from "../../shared/PricingCard";
 
 const pricingDetails = [
   {

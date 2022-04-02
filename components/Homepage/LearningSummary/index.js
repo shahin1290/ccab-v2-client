@@ -7,7 +7,7 @@ import {
   CardButton,
   SummaryContainer,
   TextWrapper,
-} from "../../shared/CustomComponents/customComponents-2";
+} from "../../shared/customComponents2";
 import Underline from "../../../images/svg/Underline";
 
 export default function LearningSummary() {

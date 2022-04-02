@@ -4,7 +4,7 @@ import {
   HeroContainer,
   LeftSide,
   RightSide,
-} from "../../shared/customComponents/CustomComponent2";
+} from "../../shared/CustomComponents2";
 import HeroSVG from "../../../images/svg/HeroSVG";
 
 export default function Hero() {

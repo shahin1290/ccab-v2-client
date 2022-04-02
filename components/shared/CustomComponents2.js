@@ -1,6 +1,6 @@
 import { Container, Grid } from "@mui/material";
 import { styled } from "@mui/system";
-import { SecondaryButton } from "./customComponents";
+import { SecondaryButton } from "./CustomComponents";
 
 export const HeroContainer = styled(Container)({
   background: "#f5f6f9",
