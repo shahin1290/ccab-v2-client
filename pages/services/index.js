@@ -29,6 +29,7 @@ const SoftwareHub = () => {
         />
         <button
           onClick={() => {
+            if (currentStage >= 7) return;
             setCurrentStage(currentStage + 1);
           }}
         >
@@ -36,6 +37,7 @@ const SoftwareHub = () => {
         </button>
         <button
           onClick={() => {
+            if (currentStage <= 1) return;
             setCurrentStage(currentStage - 1);
           }}
         >
