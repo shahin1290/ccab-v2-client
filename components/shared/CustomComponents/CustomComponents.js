@@ -1,6 +1,12 @@
 import { Box, styled } from "@mui/system";
 
-import { Button, Typography, Card, CardContent, IconButton } from "@mui/material";
+import {
+  Button,
+  Typography,
+  Card,
+  CardContent,
+  IconButton,
+} from "@mui/material";
 
 const PrimaryButton = styled(Button)(({ theme }) => ({
   fontSize: 22,
@@ -14,7 +20,7 @@ const SecondaryButton = styled(Button)(({ theme }) => ({
   fontSize: "1.8rem",
   borderRadius: 100,
   textTransform: "none",
-  padding: "5px 50px",
+  padding: "10px 50px",
   marginTop: 30,
   color: theme.palette.primary.contrastText,
   [theme.breakpoints.down("md")]: {
@@ -47,7 +53,7 @@ const CustomCard = styled(Card)(({ theme }) => ({
   flexDirection: "column",
   // justifyContent: "stretch",
   alignItems: "center",
-  padding: "30px 10px",
+  padding: "35px 10px 5px",
 }));
 
 const BannerImage = styled("img")(({ theme }) => ({
@@ -82,4 +88,11 @@ const SliderButton = styled(IconButton)(({ theme }) => ({
   },
 }));
 
-export { PrimaryButton, CustomImage, CustomCard, SecondaryButton, BannerImage, SliderButton };
+export {
+  PrimaryButton,
+  CustomImage,
+  CustomCard,
+  SecondaryButton,
+  BannerImage,
+  SliderButton,
+};

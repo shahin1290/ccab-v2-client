@@ -70,7 +70,7 @@ const HowToStart = () => {
       >
         <Stack justifyContent="center" alignItems="center" spacing={1}>
           <Typography variant="h3">How can you start?</Typography>
-          <Typography variant="subtitle2">
+          <Typography variant="subtitle2" color="secondary.contrastText">
             Register yourself now and get real employable skills that top
             companies want
           </Typography>
@@ -82,7 +82,7 @@ const HowToStart = () => {
         >
           <Grid item md={5}>
             <Stack
-              spacing={2}
+              spacing={4}
               justifyContent="center"
               alignItems={{ xs: "center", md: "start" }}
               sx={{ maxWidth: "450px", height: "100%" }}
@@ -112,10 +112,12 @@ const HowToStart = () => {
         >
           {cardData.map((item) => {
             return (
-              <Grid item key={item.id} sx={{ width: 290 }}>
+              <Grid item key={item.id} sx={{ width: 294 }}>
                 <CustomCard>
-                  <CardMedia component={item.icon} height="180px" size={1} />
-                  <CardContent>
+                  <CardMedia sx={{ height: "30%" }}>
+                    <item.icon />
+                  </CardMedia>
+                  <CardContent sx={{ height: "70%" }}>
                     <Typography variant="h6" align="center" mb={2}>
                       {item.title}
                     </Typography>
