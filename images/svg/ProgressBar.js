@@ -11,7 +11,7 @@ const progress = {
   7: 1,
 };
 
-const ProgressBar = ({ width = 1258, height = 119, stage, color }) => {
+const ProgressBar = ({ width = 1258, height = 120, stage, color }) => {
   let currentStage = stage;
   if (currentStage < 1) currentStage = 1;
   if (currentStage > 7) currentStage = 7;
