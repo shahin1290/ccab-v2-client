@@ -25,7 +25,7 @@ import {
   SidebarLink,
   NavLinks,
 } from "./styles";
-import Link from 'next/link';
+import Link from "next/link";
 
 const sideLinks = [
   { name: "Home", to: "/" },
@@ -39,7 +39,7 @@ export default function Header() {
   return (
     <Appbar>
       <NavbarContainer>
-        <NavLogo href='/'>
+        <NavLogo href="/">
           <Logo src={logo} alt="codify logo" />
         </NavLogo>
         <MobileIcon onClick={() => setOpen(true)}>
@@ -48,21 +48,21 @@ export default function Header() {
         <Wrap>
           <NavMenu>
             <NavItem>
-              <NavLinks href="/" >
-                <ActiveLink href="/">Home</ActiveLink>
+              <NavLinks href="/" passHref>
+                <ActiveLink>Home</ActiveLink>
               </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks href="/services" >
-                <ActiveLink href="/services">Software Hub</ActiveLink>
+              <NavLinks href="/services" passHref>
+                <ActiveLink>Software Hub</ActiveLink>
               </NavLinks>
             </NavItem>
           </NavMenu>
           <ButtonWrap>
-            <NavLinks href="/" >
+            <NavLinks href="/">
               <FirstButton>Login</FirstButton>
             </NavLinks>
-            <NavLinks href="/" >
+            <NavLinks href="/">
               <SecondButton>Register</SecondButton>
             </NavLinks>
           </ButtonWrap>
@@ -75,27 +75,31 @@ export default function Header() {
         onOpen={() => setOpen(true)}
         onClose={() => setOpen(false)}
       >
-        <div
+        <IconButton
+          size="large"
+          color="primary"
           onClick={() => setOpen(false)}
           onKeyPress={() => setOpen(false)}
           role="button"
           tabIndex={0}
+          sx={{ display: "flex", justifyContent: "start" }}
         >
-          <IconButton>
-            <CloseIcon style={{ color: "#6162D8" }} />
-          </IconButton>
-        </div>
+          <CloseIcon color="primary" fontSize="large" />
+        </IconButton>
+
         <Divider />
         <List>
           {sideLinks.map((item) => (
-            <ListItem key={item.name} style={{ fontSize: "20px" }}>
-              <SidebarLink
-                href={item.to}
-                onClick={() => setOpen(false)}
-                nKeyPress={() => setOpen(false)}
-              >
-                {item.name}
-              </SidebarLink>
+            <ListItem
+              dense
+              alignItems="center"
+              onClick={() => setOpen(false)}
+              onKeyPress={() => setOpen(false)}
+              key={item.name}
+            >
+              <Link href={item.to} passHref>
+                <SidebarLink>{item.name}</SidebarLink>
+              </Link>
             </ListItem>
           ))}
         </List>
