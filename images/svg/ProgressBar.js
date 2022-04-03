@@ -11,7 +11,7 @@ const progress = {
   7: 1,
 };
 
-const ProgressBar = ({ stage, color }) => {
+const ProgressBar = ({ width = 1257, height = 120, stage, color }) => {
   let currentStage = stage;
   if (currentStage < 1) currentStage = 1;
   if (currentStage > 7) currentStage = 7;
@@ -46,7 +46,8 @@ const ProgressBar = ({ stage, color }) => {
           id="ProgressPath"
           d="M15.1249 16.2856C116.015 16.2856 116.015 102.127 216.906 102.127C317.797 102.127 317.798 16.2856 418.688 16.2856C519.578 16.2856 519.578 102.127 620.469 102.127C654.769 102.127 677.413 92.2036 696.425 79.0316C733.025 53.6776 755.665 16.2845 822.255 16.2845C923.155 16.2845 923.155 102.126 1024.05 102.126C1124.94 102.126 1124.95 16.2845 1225.84 16.2845"
           stroke="white"
-          width="100%"
+          width={width}
+          height={height}
           strokeWidth="8"
           strokeMiterlimit="10"
           strokeLinecap="round"

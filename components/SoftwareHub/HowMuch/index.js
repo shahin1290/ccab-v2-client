@@ -1,5 +1,12 @@
 import React from "react";
-import { Button, Container, Grid, Stack, Typography } from "@mui/material";
+import {
+  Button,
+  Container,
+  Grid,
+  Stack,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import ProgressBar from "../../../images/svg/ProgressBar";
 import { Box, useTheme } from "@mui/system";
 import ProgressBarMobile from "../../../images/svg/ProgressBarMobile";
@@ -14,6 +21,7 @@ const HowMuch = () => {
   const theme = useTheme();
   const [currentStage, setCurrentStage] = React.useState(1);
   const [slider, setSlider] = React.useState(null);
+  const md = useMediaQuery(theme.breakpoints.down("md"));
 
   const settings = {
     dots: false,
@@ -64,24 +72,33 @@ const HowMuch = () => {
           Click the icons below to describe your app to get the estimate
         </Typography>
         <Stack
-          sx={{ flexDirection: { sm: "column", xs: "row" } }}
-          justifyContent="center"
-          alignItems="center"
-          spacing={0}
+          sx={{
+            flexDirection: { md: "column", xs: "row" },
+            // backgroundColor: "red",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
         >
-          <ProgressBar
-            color={theme.palette.secondary.main}
-            stage={currentStage}
-          />
+          {md ? (
+            <ProgressBarMobile
+              color={theme.palette.secondary.main}
+              stage={currentStage}
+            />
+          ) : (
+            <ProgressBar
+              color={theme.palette.secondary.main}
+              stage={currentStage}
+            />
+          )}
           <Container maxWidth="lg">
             <Slider
               {...settings}
               style={{
-                width: "100%",
+                width: md ? "50vw" : "90vw",
                 // backgroundColor: "red",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
+                // display: "flex",
+                // justifyContent: "center",
+                // alignItems: "center",
               }}
               ref={(slider) => setSlider(slider)}
             >
@@ -93,14 +110,20 @@ const HowMuch = () => {
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
-                      padding: 5,
+                      py: { xs: 3, md: 4 },
                     }}
                     key={index}
                   >
-                    <Grid key={index} container rowSpacing={6}>
+                    <Grid
+                      key={index}
+                      container
+                      rowSpacing={{ xs: 1, md: 6 }}
+                      justifyContent="start"
+                      sx={{ my: 0.5 }}
+                    >
                       {section.map((item, index) => {
                         return (
-                          <Grid key={index} item sm={4} xs={12}>
+                          <Grid key={index} item lg={4} md={6} xs={12}>
                             <ServiceSelectionCard
                               title={item.title}
                               Icon={item.Icon}
@@ -153,6 +176,7 @@ const HowMuch = () => {
               justifyContent: "space-evenly",
               alignItems: "center",
               fill: `white !important`,
+              fontSize: "16px",
               px: 5,
               "&:hover": {
                 backgroundColor: "common.white",

@@ -16,18 +16,18 @@ const SelectionCard = styled("div")(({ theme }) => ({
   fontWeight: "bold",
   border: `5px solid ${theme.palette.common.white}`,
   cursor: "pointer",
-  [theme.breakpoints.down("sm")]: {
-    width: "250px",
-    height: "200px",
+  [theme.breakpoints.down("md")]: {
+    width: "200px",
+    height: "120px",
+    border: `3px solid ${theme.palette.common.white}`,
   },
 }));
 
 const CheckMark = styled("div")(({ theme }) => ({
   position: "absolute",
   backgroundColor: theme.palette.secondary.main,
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
+  display: "grid",
+  placeItems: "center",
   width: "50px",
   height: "50px",
   borderRadius: "100%",
@@ -35,10 +35,14 @@ const CheckMark = styled("div")(({ theme }) => ({
   border: `5px solid ${theme.palette.common.white}`,
   cursor: "pointer",
   transition: "scale boxShadow 0.5s",
+  boxSizing: "border-box",
 
-  [theme.breakpoints.down("sm")]: {
-    width: "40px",
-    height: "40px",
+  [theme.breakpoints.down("md")]: {
+    width: "35px",
+    height: "35px",
+    fontSize: "16px",
+    fontWeight: "normal",
+    border: `3px solid ${theme.palette.common.white}`,
   },
 }));
 
@@ -64,18 +68,23 @@ const ServiceSelectionCard = (props) => {
 
   const checkMarkVariant = {
     notSelected: {
-      display: "none",
+      opacity: 0,
       top: 2,
-      zIndex: -5,
+      zIndex: 2,
+      transition: {
+        duration: 0.1,
+      },
     },
     selected: {
+      opacity: 3,
       display: "block",
-      top: -30,
+      top: -25,
       zIndex: 2,
+      display: "grid",
+      placeItems: "center",
       transition: {
         type: "spring",
         stiffness: 300,
-        delayChildren: 3,
       },
     },
   };
@@ -95,7 +104,9 @@ const ServiceSelectionCard = (props) => {
         initial="notSelected"
         animate={selected ? "selected" : "notSelected"}
       >
-        <CheckOutlinedIcon sx={{ fontSize: { sm: 40, xs: 30 } }} />
+        <div>
+          <CheckOutlinedIcon sx={{ fontSize: { md: 35, xs: 25 } }} />
+        </div>
       </MotionCheckMark>
 
       <Stack
@@ -104,8 +115,19 @@ const ServiceSelectionCard = (props) => {
         alignItems="center"
         spacing={1}
       >
-        <Box>{props.Icon}</Box>
-        <Typography variant="subtitle2" sx={{ fontWeight: "bold" }}>
+        <Box
+          sx={{
+            "& svg": {
+              height: { xs: 40, md: 85 },
+            },
+          }}
+        >
+          {props.Icon}
+        </Box>
+        <Typography
+          variant="subtitle2"
+          sx={{ fontWeight: { xs: "normal", md: "bold" } }}
+        >
           {props.title}
         </Typography>
       </Stack>
