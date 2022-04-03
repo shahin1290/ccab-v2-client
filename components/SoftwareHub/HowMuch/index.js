@@ -22,6 +22,8 @@ const HowMuch = () => {
   const [currentStage, setCurrentStage] = React.useState(1);
   const [slider, setSlider] = React.useState(null);
   const md = useMediaQuery(theme.breakpoints.down("md"));
+  const lg = useMediaQuery(theme.breakpoints.down("lg"));
+  const xl = useMediaQuery(theme.breakpoints.down("xl"));
 
   const settings = {
     dots: false,
@@ -30,6 +32,9 @@ const HowMuch = () => {
     draggable: false,
     slidesToShow: 1,
     slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: "0px",
+    adaptiveHeight: true,
     speed: 500,
   };
 
@@ -73,76 +78,79 @@ const HowMuch = () => {
         </Typography>
         <Stack
           sx={{
+            width: "100%",
             flexDirection: { md: "column", xs: "row" },
             // backgroundColor: "red",
-            justifyContent: "space-between",
             alignItems: "center",
+            justifyContent: "space-between",
+            px: { xs: 1, md: 4 },
           }}
         >
           {md ? (
-            <ProgressBarMobile
-              color={theme.palette.secondary.main}
-              stage={currentStage}
-            />
+            <Box>
+              <ProgressBarMobile
+                color={theme.palette.secondary.main}
+                stage={currentStage}
+              />
+            </Box>
           ) : (
             <ProgressBar
               color={theme.palette.secondary.main}
               stage={currentStage}
             />
           )}
-          <Container maxWidth="lg">
-            <Slider
-              {...settings}
-              style={{
-                width: md ? "50vw" : "90vw",
-                // backgroundColor: "red",
-                // display: "flex",
-                // justifyContent: "center",
-                // alignItems: "center",
-              }}
-              ref={(slider) => setSlider(slider)}
-            >
-              {AllSections.map((section, index) => {
-                return (
-                  <Container
-                    maxWidth="xl"
-                    sx={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      py: { xs: 3, md: 4 },
-                    }}
+
+          <Slider
+            {...settings}
+            style={{
+              width: md ? "60vw" : "80vw",
+              // backgroundColor: "blue",
+            }}
+            ref={(slider) => setSlider(slider)}
+          >
+            {AllSections.map((section, index) => {
+              return (
+                <Container
+                  maxWidth="xl"
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    py: { xs: 3, md: 4 },
+                    mx: { sm: 3, xs: 0 },
+                  }}
+                  key={index}
+                >
+                  <Grid
                     key={index}
+                    container
+                    rowSpacing={{ xs: 1, md: 6 }}
+                    justifyContent="start"
+                    alignItems="center"
+                    sx={{ my: 0.5, mx: { xs: -1.5 } }}
                   >
-                    <Grid
-                      key={index}
-                      container
-                      rowSpacing={{ xs: 1, md: 6 }}
-                      justifyContent="start"
-                      sx={{ my: 0.5 }}
-                    >
-                      {section.map((item, index) => {
-                        return (
-                          <Grid key={index} item lg={4} md={6} xs={12}>
-                            <ServiceSelectionCard
-                              title={item.title}
-                              Icon={item.Icon}
-                            />
-                          </Grid>
-                        );
-                      })}
-                    </Grid>
-                  </Container>
-                );
-              })}
-            </Slider>
-          </Container>
+                    {section.map((item, index) => {
+                      return (
+                        <Grid key={index} item lg={4} md={6} xs={12}>
+                          <ServiceSelectionCard
+                            title={item.title}
+                            Icon={item.Icon}
+                          />
+                        </Grid>
+                      );
+                    })}
+                  </Grid>
+                </Container>
+              );
+            })}
+          </Slider>
         </Stack>
         <Stack
           direction="row"
           justifyContent="center"
           alignItems="center"
           spacing={2}
+          mt={2}
         >
           <Button
             onClick={prevHandler}
@@ -151,6 +159,7 @@ const HowMuch = () => {
               borderRadius: "30px",
               height: "60px",
               width: "70px",
+
               backgroundColor: "common.white",
               "&:hover": {
                 backgroundColor: "secondary.main",
@@ -160,7 +169,11 @@ const HowMuch = () => {
               },
             }}
           >
-            <KeyboardBackspaceIcon className="icon" color="primary" />
+            <KeyboardBackspaceIcon
+              className="icon"
+              color="primary"
+              fontSize="large"
+            />
           </Button>
           <Button
             onClick={nextHandler}
