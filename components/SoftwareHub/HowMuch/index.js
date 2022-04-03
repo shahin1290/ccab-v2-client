@@ -91,14 +91,17 @@ const HowMuch = () => {
   return (
     <LargeContainer>
       <InnerContainer maxWidth="xl">
-        <Typography variant="h2" sx={{ color: "common.white", mb: 2 }}>
+        <Typography
+          variant="h2"
+          sx={{ color: "common.white", mb: 2, mt: { md: 10, xs: 3 } }}
+        >
           How much?
         </Typography>
         <Underline fill={theme.palette.common.white} />
         <Typography variant="subtitle2" color="common.white" mt={3} mb={5}>
           Click the icons below to describe your app to get the estimate
         </Typography>
-        <CustomStack>
+        <CustomStack spacing={1}>
           {md ? (
             <Box>
               <ProgressBarMobile
@@ -128,8 +131,8 @@ const HowMuch = () => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    py: { xs: 3, md: 4 },
-                    mx: { sm: 3, xs: 0 },
+                    py: { xs: 4, md: 5 },
+                    mx: { xl: 10, lg: 5, xs: 0, md: 10 },
                   }}
                   key={index}
                 >
