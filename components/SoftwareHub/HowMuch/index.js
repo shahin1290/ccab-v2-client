@@ -15,27 +15,66 @@ import ServiceSelectionCard from "../../shared/ServiceSelectionCard";
 import AllSections from "./data.";
 import Slider from "react-slick";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
-import { BackArrow, ForwardArrow } from "../../../images/svg/ServiceIcons";
+import { ForwardArrow } from "../../../images/svg/ServiceIcons";
+import styled from "@emotion/styled";
+
+const LargeContainer = styled(Box)(({ theme }) => ({
+  width: "100%",
+  backgroundColor: theme.palette.primary.main,
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  paddingTop: 3,
+  paddingBottom: 3,
+}));
+
+const InnerContainer = styled(Container)(({ theme }) => ({
+  paddingTop: 5,
+  paddingBottom: 5,
+  flexDirection: "column",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+}));
+
+const CustomStack = styled(Stack)(({ theme }) => ({
+  width: "100%",
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+  paddingLeft: 1,
+  paddingRight: 1,
+
+  [theme.breakpoints.up("md")]: {
+    flexDirection: "column",
+    paddingLeft: 4,
+    paddingRight: 4,
+  },
+}));
 
 const HowMuch = () => {
   const theme = useTheme();
   const [currentStage, setCurrentStage] = React.useState(1);
   const [slider, setSlider] = React.useState(null);
   const md = useMediaQuery(theme.breakpoints.down("md"));
-  const lg = useMediaQuery(theme.breakpoints.down("lg"));
-  const xl = useMediaQuery(theme.breakpoints.down("xl"));
 
   const settings = {
     dots: false,
     infinite: false,
     arrows: false,
-    draggable: false,
+    draggable: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: true,
     centerPadding: "0px",
     adaptiveHeight: true,
+    swipeToSlide: true,
     speed: 500,
+
+    beforeChange: function (oldIndex, newIndex) {
+      // console.log(oldIndex, newIndex);
+      setCurrentStage(newIndex + 1);
+    },
   };
 
   const nextHandler = () => {
@@ -50,25 +89,8 @@ const HowMuch = () => {
     setCurrentStage(currentStage - 1);
   };
   return (
-    <Box
-      sx={{
-        width: "100%",
-        backgroundColor: "primary.main",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Container
-        maxWidth="xl"
-        sx={{
-          py: 5,
-          flexDirection: "column",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+    <LargeContainer>
+      <InnerContainer maxWidth="xl">
         <Typography variant="h2" sx={{ color: "common.white", mb: 2 }}>
           How much?
         </Typography>
@@ -76,16 +98,7 @@ const HowMuch = () => {
         <Typography variant="subtitle2" color="common.white" mt={3} mb={5}>
           Click the icons below to describe your app to get the estimate
         </Typography>
-        <Stack
-          sx={{
-            width: "100%",
-            flexDirection: { md: "column", xs: "row" },
-            // backgroundColor: "red",
-            alignItems: "center",
-            justifyContent: "space-between",
-            px: { xs: 1, md: 4 },
-          }}
-        >
+        <CustomStack>
           {md ? (
             <Box>
               <ProgressBarMobile
@@ -104,7 +117,6 @@ const HowMuch = () => {
             {...settings}
             style={{
               width: md ? "60vw" : "80vw",
-              // backgroundColor: "blue",
             }}
             ref={(slider) => setSlider(slider)}
           >
@@ -144,13 +156,15 @@ const HowMuch = () => {
               );
             })}
           </Slider>
-        </Stack>
+        </CustomStack>
+
         <Stack
           direction="row"
           justifyContent="center"
           alignItems="center"
           spacing={2}
           mt={2}
+          mb={5}
         >
           <Button
             onClick={prevHandler}
@@ -159,7 +173,6 @@ const HowMuch = () => {
               borderRadius: "30px",
               height: "60px",
               width: "70px",
-
               backgroundColor: "common.white",
               "&:hover": {
                 backgroundColor: "secondary.main",
@@ -201,8 +214,8 @@ const HowMuch = () => {
             Next <ForwardArrow />
           </Button>
         </Stack>
-      </Container>
-    </Box>
+      </InnerContainer>
+    </LargeContainer>
   );
 };
 
