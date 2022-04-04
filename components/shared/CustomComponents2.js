@@ -36,7 +36,7 @@ export const SummaryContainer = styled(Container)({
   maxWidth: "none !important",
 });
 
-export const TextWrapper = styled("div")({
+export const TextWrapper = styled(Grid)({
   textAlign: "center",
   marginRight: "auto",
   marginLeft: "auto",
@@ -63,7 +63,7 @@ export const BranchedTitle = styled("span")({
   color: "#6364d9",
   fontSize: "2.9rem",
   fontWeight: "900",
-  whiteSpace: "none",
+  whiteSpace: "nowrap",
   paddingLeft: "4px",
   "@media (max-width: 480px)": {
     fontSize: "20px",

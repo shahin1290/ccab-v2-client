@@ -14,7 +14,7 @@ export default function LearningSummary() {
   return (
     <SummaryContainer>
       <Container maxWidth="xl">
-        <TextWrapper>
+        <TextWrapper >
           <Typography variant="h3">
             Learn how to become a
             <BranchedTitle>Full-stack Developer</BranchedTitle>
@@ -33,15 +33,17 @@ export default function LearningSummary() {
             with languages, frameworks, and libraries that employers demand.
           </Typography>
         </TextWrapper>
+
         <Grid
           container
-          spacing={{ xs: 2, md: 3 }}
+          spacing={{ xs: 4, md: 3 }}
           columns={{ xs: 4, sm: 8, md: 12 }}
-          style={{ textAlign: "-webkit-center", marginTop: "20px" }}
+          style={{ textAlign: "-webkit-center", marginTop: "20px", flexWrap: 'nowrap',
+          overflowY: 'hidden' }}
         >
           <Grid item xs={4}>
             <Card
-              sx={{ maxWidth: 385 }}
+              sx={{ maxWidth: 400 }}
               style={{ background: "#F7F8FB", borderRadius: "20px" }}
             >
               <Image src={learning} alt="learning" layout="responsive" />
@@ -64,7 +66,7 @@ export default function LearningSummary() {
           </Grid>
           <Grid item xs={4}>
             <Card
-              sx={{ maxWidth: 385 }}
+              sx={{ maxWidth: 400 }}
               style={{ background: "#F7F8FB", borderRadius: "20px" }}
             >
               <Image src={learning} alt="learning" layout="responsive" />
@@ -87,7 +89,7 @@ export default function LearningSummary() {
           </Grid>
           <Grid item xs={4}>
             <Card
-              sx={{ maxWidth: 385 }}
+              sx={{ maxWidth: 400 }}
               style={{ background: "#F7F8FB", borderRadius: "20px" }}
             >
               <Image src={learning} alt="learning" layout="responsive" />
