@@ -8,21 +8,26 @@ export const HeroContainer = styled(Container)({
   fontFamily: "Segoe UI",
   "@media (max-width: 480px)": {
     fontSize: "5px",
+    maxHeight:'260px'
   },
 });
 
 export const LeftSide = styled(Grid)({
   marginTop: "120px",
   zIndex: "1",
+  "@media (max-width: 600px)": {
+    marginTop: "55px",
+  },
   "@media (max-width: 480px)": {
     marginTop: "10px",
   },
+
 });
 
 export const RightSide = styled(Grid)({
   marginTop: "60px",
   "@media (max-width: 600px)": {
-    marginTop: "-40px",
+    marginTop: "-120px",
   },
 });
 

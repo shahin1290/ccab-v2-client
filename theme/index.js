@@ -30,11 +30,17 @@ const theme = createTheme({
       fontFamily: "'Segoe UI', sans-serif",
       fontSize: "4.8rem",
       fontWeight: "bold",
+      "@media (max-width: 480px)": {
+        whiteSpace: "nowrap",
+      }
     },
     h2: {
       fontFamily: "'Segoe UI', sans-serif",
       fontSize: "4.5rem",
       fontWeight: "bold",
+      "@media (max-width: 480px)": {
+        whiteSpace: "nowrap",
+      }
     },
     h3: {
       fontFamily: "'Segoe UI', sans-serif",

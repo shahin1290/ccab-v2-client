@@ -37,12 +37,18 @@ export const NavLogo = styled(LinkMUI)({
   fontWeight: "bold",
   textDecoration: "none",
   marginTop: "5px",
+  width: "100%",
+  height: "100%",
 });
 
 export const Logo = styled(Image)({
   width: "98px",
   height: "85px",
   background: "transparent  0% 0% no-repeat padding-box",
+  // "@media (max-width: 480px)": {
+  //   width: "50px",
+  //   height: "60px",
+  // }
 });
 
 export const MobileIcon = styled("div")({
@@ -54,7 +60,7 @@ export const MobileIcon = styled("div")({
     transform: "translate(100%, 60%)",
     fontSize: "2rem",
     cursor: "pointer",
-    color: "#6162D8",
+    color: "#000000",
     boxShadow: "transparent 1.95px 1.95px 2.6px",
   },
 });

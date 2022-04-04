@@ -18,7 +18,7 @@ export default function Hero() {
           columnSpacing={{ xs: 1, sm: 2, md: 3 }}
           justifyContent="space-between"
         >
-          <LeftSide item xs={12} md={5}>
+          <LeftSide item xs={6} md={6}>
             <Typography variant="h2" color="secondary.contrastText" mb={1}>
               Learn to code,
             </Typography>
@@ -34,7 +34,7 @@ export default function Hero() {
               JavaScript Start your new Work with our weekly remotely
             </Typography>
           </LeftSide>
-          <RightSide item xs={12} md={5}>
+          <RightSide item xs={6} md={6}>
             <HeroSVG />
           </RightSide>
         </Grid>
