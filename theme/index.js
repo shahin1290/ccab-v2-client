@@ -69,6 +69,9 @@ const theme = createTheme({
       fontFamily: "'Segoe UI', sans-serif",
       fontSize: "2rem",
       fontWeight: "normal",
+      "@media (max-width: 600px)": {
+        fontSize: "2.8rem",
+      },
     },
     subtitle2: {
       fontFamily: "'Segoe UI', sans-serif",

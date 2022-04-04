@@ -8,7 +8,7 @@ export const HeroContainer = styled(Container)({
   fontFamily: "Segoe UI",
   "@media (max-width: 480px)": {
     fontSize: "5px",
-    maxHeight:'260px'
+    maxHeight: "360px",
   },
 });
 
@@ -21,7 +21,6 @@ export const LeftSide = styled(Grid)({
   "@media (max-width: 480px)": {
     marginTop: "10px",
   },
-
 });
 
 export const RightSide = styled(Grid)({
@@ -105,10 +104,9 @@ export const HubLeftSide = styled(Grid)({
   marginTop: "140px",
   zIndex: "1",
   "@media (max-width: 600px)": {
-    textAlign:'center',
+    textAlign: "center",
     marginTop: "10px",
   },
-
 });
 export const HubRightSide = styled(Grid)({
   "@media (max-width: 600px)": {
