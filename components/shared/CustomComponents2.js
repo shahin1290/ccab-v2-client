@@ -91,3 +91,27 @@ export const DesktopContent = styled(Grid)({
 export const MobileContent = styled(Grid)({
   textAlign: "center",
 });
+
+export const HeroHubContainer = styled(Container)({
+  background: "#f5f6f9",
+  maxWidth: "none !important",
+  fontFamily: "Segoe UI",
+  "@media (max-width: 480px)": {
+    fontSize: "5px",
+  },
+});
+
+export const HubLeftSide = styled(Grid)({
+  marginTop: "140px",
+  zIndex: "1",
+  "@media (max-width: 600px)": {
+    textAlign:'center',
+    marginTop: "10px",
+  },
+
+});
+export const HubRightSide = styled(Grid)({
+  "@media (max-width: 600px)": {
+    marginTop: "-100px",
+  },
+});
