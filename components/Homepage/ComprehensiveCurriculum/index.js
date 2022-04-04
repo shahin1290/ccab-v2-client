@@ -20,7 +20,7 @@ export default function ComprehensiveCurriculum() {
           </Typography>
           <Underline />
           <Typography
-            variant="subtitle2"
+            variant="h6"
             sx={{ color: "secondary.contrastText", padding: "0.8rem", mb: 3 }}
           >
             Our Full Stack Developer Courses are made to give you an easy and

@@ -75,8 +75,8 @@ const WhatStandsOut = () => {
           </Typography>
           <Underline fill="#fff" />
           <Typography
-            variant="subtitle2"
-            sx={{ color: "primary.contrastText" }}
+            variant="h6"
+            sx={{ color: "primary.contrastText", fontWeight: "normal" }}
             pt={1}
           >
             Register yourself now and get real employable skills that top

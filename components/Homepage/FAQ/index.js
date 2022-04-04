@@ -58,7 +58,7 @@ const FAQ = () => {
           pb: { xs: 5 },
         }}
       >
-        <Typography variant="h3" mb={1}>
+        <Typography variant="h3" mb={2}>
           Frequently Asked Questions
         </Typography>
         <Underline />

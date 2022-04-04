@@ -14,7 +14,7 @@ export default function LearningSummary() {
   return (
     <SummaryContainer>
       <Container maxWidth="xl">
-        <TextWrapper >
+        <TextWrapper>
           <Typography variant="h3">
             Learn how to become a
             <BranchedTitle>Full-stack Developer</BranchedTitle>
@@ -25,7 +25,7 @@ export default function LearningSummary() {
           <Underline />
 
           <Typography
-            variant="subtitle2"
+            variant="h6"
             sx={{ color: "secondary.contrastText", padding: "0.8rem" }}
           >
             As a graduate, you’ll leave with a solid base of fundamental
@@ -38,8 +38,12 @@ export default function LearningSummary() {
           container
           spacing={{ xs: 4, md: 3 }}
           columns={{ xs: 4, sm: 8, md: 12 }}
-          style={{ textAlign: "-webkit-center", marginTop: "20px", flexWrap: 'nowrap',
-          overflowY: 'hidden' }}
+          style={{
+            textAlign: "-webkit-center",
+            marginTop: "20px",
+            flexWrap: "nowrap",
+            overflowY: "hidden",
+          }}
         >
           <Grid item xs={4}>
             <Card

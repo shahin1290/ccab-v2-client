@@ -74,7 +74,7 @@ const HowToStart = () => {
       >
         <Stack justifyContent="center" alignItems="center" spacing={1}>
           <Typography variant="h3">How can you start?</Typography>
-          <Typography variant="subtitle2" color="secondary.contrastText">
+          <Typography variant="h6" color="secondary.contrastText">
             Register yourself now and get real employable skills that top
             companies want
           </Typography>

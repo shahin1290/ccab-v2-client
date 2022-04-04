@@ -66,7 +66,7 @@ const TuitionDetails = () => {
       </Typography>
       <Underline />
 
-      <Typography variant="subtitle2" mt={{ xs: 1 }}>
+      <Typography variant="h6" sx={{ mt: 1, color: "secondary.contrastText" }}>
         More detailed Pricing section
       </Typography>
       <Grid

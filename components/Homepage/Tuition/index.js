@@ -21,7 +21,7 @@ const Tuition = () => {
       <Container maxWidth="xl">
         <Stack justifyContent="center" alignItems="center">
           <Typography variant="h3">Tuition</Typography>
-          <Typography variant="subtitle2">
+          <Typography variant="h6" sx={{ color: "secondary.contrastText" }}>
             We conduct discount programs from time to time, so the price may be
             lower
           </Typography>

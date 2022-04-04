@@ -91,7 +91,7 @@ const StudentReviews = () => {
           Reviews By Students
         </Typography>
         <Underline />
-        <Typography variant="subtitle2" mt={{ xs: 1 }}>
+        <Typography variant="h6" mt={{ xs: 1 }} color="secondary.contrastText">
           Most of our graduates were employed after 6 months upon graduation
         </Typography>
       </Box>
