@@ -7,6 +7,7 @@ import {
   CardContent,
   IconButton,
 } from "@mui/material";
+import Image from "next/image";
 
 const PrimaryButton = styled(Button)(({ theme }) => ({
   fontSize: 22,
@@ -35,13 +36,19 @@ const SecondaryButton = styled(Button)(({ theme }) => ({
   },
 }));
 
-const CustomImage = styled("img")(({ theme }) => ({
+const CustomImageContainer = styled("div")(({ theme }) => ({
+  position: "relative",
+  display: "block",
   borderRadius: 20,
-  boxShadow: `-20px 20px 0px ${theme.palette.primary.light}`,
   width: "100%",
   height: "auto",
+  boxShadow: `-20px 20px 0px ${theme.palette.primary.light}`,
+  overflow: "hidden",
+  border: "none",
+  outline: "none",
   [theme.breakpoints.down("md")]: {
     boxShadow: `-10px 10px 0px ${theme.palette.primary.light}`,
+    width: "80vw",
   },
 }));
 
@@ -56,21 +63,24 @@ const CustomCard = styled(Card)(({ theme }) => ({
   padding: "35px 10px 5px",
 }));
 
-const BannerImage = styled("img")(({ theme }) => ({
+const BannerImage = styled("div")(({ theme }) => ({
   width: "20%",
   height: "auto",
   position: "absolute",
   right: 40,
-  bottom: 0,
+  bottom: -4,
+  padding: 0,
+  margin: 0,
   [theme.breakpoints.down("md")]: {
     width: "30%",
     height: "auto",
     right: 0,
   },
   [theme.breakpoints.down("sm")]: {
-    height: "70%",
-    width: "auto",
+    height: "auto",
+    width: "60%",
     right: 15,
+    bottom: -2,
   },
 }));
 
@@ -90,7 +100,7 @@ const SliderButton = styled(IconButton)(({ theme }) => ({
 
 export {
   PrimaryButton,
-  CustomImage,
+  CustomImageContainer,
   CustomCard,
   SecondaryButton,
   BannerImage,

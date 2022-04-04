@@ -32,7 +32,7 @@ const theme = createTheme({
       fontWeight: "bold",
       "@media (max-width: 480px)": {
         whiteSpace: "nowrap",
-      }
+      },
     },
     h2: {
       fontFamily: "'Segoe UI', sans-serif",
@@ -40,7 +40,7 @@ const theme = createTheme({
       fontWeight: "bold",
       "@media (max-width: 480px)": {
         whiteSpace: "nowrap",
-      }
+      },
     },
     h3: {
       fontFamily: "'Segoe UI', sans-serif",

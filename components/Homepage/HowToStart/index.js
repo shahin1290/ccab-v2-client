@@ -7,6 +7,7 @@ import {
   CardContent,
   Grid,
   Typography,
+  useTheme,
 } from "@mui/material";
 import Image from "next/image";
 import {
@@ -18,10 +19,13 @@ import {
 import {
   BannerImage,
   CustomCard,
-  CustomImage,
+  CustomImageContainer,
   PrimaryButton,
   SecondaryButton,
 } from "../../shared/CustomComponents";
+
+import HappyGuy from "../../../public/happyGuy.png";
+import HowToStartImage from "../../../public/howToStart.png";
 
 const cardData = [
   {
@@ -54,6 +58,7 @@ const cardData = [
   },
 ];
 const HowToStart = () => {
+  const theme = useTheme();
   return (
     <Box bgcolor="secondary.background">
       <Container
@@ -101,7 +106,13 @@ const HowToStart = () => {
             </Stack>
           </Grid>
           <Grid item md={5}>
-            <CustomImage src="/howToStart.png" alt="How To Start Image" />
+            <CustomImageContainer>
+              <Image
+                src={HowToStartImage}
+                alt="How To Start Image"
+                layout="responsive"
+              />
+            </CustomImageContainer>
           </Grid>
         </Grid>
         <Grid
@@ -153,7 +164,7 @@ const HowToStart = () => {
               justifyContent="center"
               sx={{
                 pl: { lg: 15, md: 7, sm: 4, xs: 2 },
-                pt: { xs: 5 },
+                pt: { xs: 2, sm: 5 },
                 alignItems: { sm: "flex-start", xs: "flex-start" },
                 justifyContent: { xs: "flex-start" },
                 height: "100%",
@@ -170,7 +181,9 @@ const HowToStart = () => {
                 Ask an advisor
               </SecondaryButton>
             </Stack>
-            <BannerImage src="/happyGuy.png" alt="Advisor"></BannerImage>
+            <BannerImage>
+              <Image src={HappyGuy} alt="Advisor" />
+            </BannerImage>
           </Stack>
         </Container>
       </Container>
