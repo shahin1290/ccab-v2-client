@@ -1,3 +1,4 @@
+import { Gradient } from "@mui/icons-material";
 import { Container, Grid } from "@mui/material";
 import { styled } from "@mui/system";
 import { SecondaryButton } from "./CustomComponents";
@@ -109,6 +110,33 @@ export const HubLeftSide = styled(Grid)({
   },
 });
 export const HubRightSide = styled(Grid)({
+  "@media (max-width: 600px)": {
+    marginTop: "-100px",
+  },
+});
+
+export const InfoContainer = styled(Container)({
+  background:'linear-gradient( to right, #6364D9 50%, #f5f6f9 50%)',
+  maxWidth: "none !important",
+  fontFamily: "Segoe UI",
+  "@media (max-width: 900px)": {
+    fontSize: "5px",
+    background:'linear-gradient( to bottom, #6364D9 30%, #f5f6f9 70%)',
+  },
+});
+
+export const InfoLeftSide = styled(Grid)({
+  marginTop: "140px",
+  // background: "#6364D9",
+  zIndex: "1",
+  "@media (max-width: 600px)": {
+    textAlign: "center",
+    marginTop: "10px",
+  },
+});
+
+export const InfoRightSide = styled(Grid)({
+  // background: "#f5f6f9",
   "@media (max-width: 600px)": {
     marginTop: "-100px",
   },
