@@ -3,12 +3,13 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { Box, Container, Typography } from "@mui/material";
 
 const Content = styled.div`
-  background-color: #f5f6f9;
+  background-color: #F8F9FB;
   height: ${(props) => (props.show ? "110px" : 0)};
   opacity: ${(props) => (props.show ? 1 : 0)};
   display: flex;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
+  border-radius: 10px;
 `;
 
 const HContainer = styled.div`
@@ -32,8 +33,8 @@ const StyledKeyboardArrowDownIcon = styled(ArrowForwardIosIcon)`
 
 const FAQAccordion = ({ title, description, active, setActive }) => {
   return (
-    <Container>
-      <Box bgcolor="#F5F6F9" sx={{ borderRadius: "10px" }}>
+    <Container maxWidth="xl">
+      <Box bgcolor="#F8F9FB" sx={{ borderRadius: "10px" }} mb={2}>
         <HContainer
           onClick={() => setActive(title)}
           show={active === title ? 1 : 0}
@@ -48,7 +49,7 @@ const FAQAccordion = ({ title, description, active, setActive }) => {
               padding: "0 30px",
               fontSize: "16px",
               color: "#313030",
-              lineHeight: "1.6",
+              lineHeight: { xs: "1.2", sm: "1.5" },
             }}
           >
             {description}

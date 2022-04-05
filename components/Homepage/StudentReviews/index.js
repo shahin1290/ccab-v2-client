@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import { SliderButton } from "../shared/CustomComponents";
+import { SliderButton } from "../../shared/CustomComponents";
 import { Box, styled, useTheme } from "@mui/system";
 import { Container, Stack, Typography } from "@mui/material";
 import Image from "next/image";
-import Underline from "../../images/svg/Underline";
+import Underline from "../../../images/svg/Underline";
 
 const data = [
   {

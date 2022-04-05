@@ -6,7 +6,7 @@ import WhyJavascript from "./WhyJavascript";
 import Tuition from "./Tuition";
 import TuitionDetails from "./TuitionDetails";
 import CompanyReviews from "./CompanyReviews";
-import StudentReviews from "../StudentReviews";
+import StudentReviews from "./StudentReviews";
 import LearningSummary from "./LearningSummary";
 import ComprehensiveCurriculum from "./ComprehensiveCurriculum";
 import WhatStandsOut from "./WhatStandsOut";
