@@ -22,8 +22,6 @@ import ServiceCard, {
 
 import Underline from "../../images/svg/Underline";
 
-// import SoftwareServicesData from "../../dummydata/SoftwareServicesData";
-
 import Image from "next/image";
 import { useRouter } from "next/router";
 
