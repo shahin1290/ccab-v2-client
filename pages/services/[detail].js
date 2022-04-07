@@ -1,4 +1,7 @@
 import React from "react";
+import fs from "fs";
+import path from "path";
+import util from "util";
 import { Container, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import {
@@ -19,7 +22,7 @@ import ServiceCard, {
 
 import Underline from "../../images/svg/Underline";
 
-import SoftwareServicesData from "../../dummydata/SoftwareServicesData";
+// import SoftwareServicesData from "../../dummydata/SoftwareServicesData";
 
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -129,18 +132,28 @@ const Details = (props) => {
 
 export async function getStaticProps(context) {
   const { detail } = context.params;
+  const readFile = util.promisify(fs.readFile);
 
-  const [pageProps] = SoftwareServicesData.filter(
-    (item) => item.slug === detail
+  const jsonData = await readFile(
+    path.join(process.cwd(), "dummydata", "ServiceData.json")
   );
+  const data = JSON.parse(jsonData);
 
+  const [pageProps] = data.filter((item) => item.slug === detail);
+
+  if (!pageProps) return { notFound: true };
   return {
     props: { ...pageProps },
   };
 }
 
 export async function getStaticPaths() {
-  const ServicesPaths = SoftwareServicesData.map((item) => ({
+  const readFile = util.promisify(fs.readFile);
+  const jsonData = await readFile(
+    path.join(process.cwd(), "dummydata", "ServiceData.json")
+  );
+  const data = JSON.parse(jsonData);
+  const ServicesPaths = data.map((item) => ({
     params: {
       detail: item.slug,
     },
