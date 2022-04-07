@@ -9,12 +9,14 @@ import {
 import Image from "next/image";
 import { SecondaryButton } from "../../shared/CustomComponents";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { useRouter } from "next/router";
 
 import Underline from "../../../images/svg/Underline";
 
-const Services = ({ title, paragraphs, imageUrl, bgcolor }) => {
+const Services = ({ title, detailParagraphs, imageUrl, bgcolor, slug }) => {
   const theme = useTheme();
   const matches = useMediaQuery("(max-width:900px)");
+  const router = useRouter();
 
   return (
     <Box bgcolor={bgcolor}>
@@ -47,7 +49,7 @@ const Services = ({ title, paragraphs, imageUrl, bgcolor }) => {
               alignItems={{ xs: "center", md: "start" }}
               px={{ xs: 2, md: 5 }}
             >
-              {paragraphs.map((p) => (
+              {detailParagraphs.map((p) => (
                 <Typography
                   variant="body1"
                   sx={{
@@ -56,12 +58,19 @@ const Services = ({ title, paragraphs, imageUrl, bgcolor }) => {
                   }}
                   key={p.id}
                 >
-                  {p.content}
+                  {p.text}
                 </Typography>
               ))}
 
               {!matches && (
-                <SecondaryButton variant="contained" color="secondary">
+                <SecondaryButton
+                  variant="contained"
+                  color="secondary"
+                  onClick={() => {
+                    console.log("clicked");
+                    router.push(`/services/${slug}`);
+                  }}
+                >
                   Read More
                 </SecondaryButton>
               )}
@@ -70,15 +79,23 @@ const Services = ({ title, paragraphs, imageUrl, bgcolor }) => {
           <Grid item md={5} sm={6} xs={12}>
             <Image
               src={imageUrl}
-              alt="Service Image"
+              alt={title}
               width={500}
               height={500}
+              layout="responsive"
             />
           </Grid>
         </Grid>
         {matches && (
           <Stack justifyContent="center" alignItems="center">
-            <SecondaryButton variant="contained" color="secondary">
+            <SecondaryButton
+              variant="contained"
+              color="secondary"
+              onClick={() => {
+                console.log("clicked");
+                router.push(`/services/${slug}`);
+              }}
+            >
               Read More
             </SecondaryButton>
           </Stack>

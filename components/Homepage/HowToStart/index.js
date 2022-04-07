@@ -24,8 +24,8 @@ import {
   SecondaryButton,
 } from "../../shared/CustomComponents";
 
-import HappyGuy from "../../../public/happyGuy.png";
-import HowToStartImage from "../../../public/howToStart.png";
+import HappyGuy from "../../../public/images/happyGuy.png";
+import HowToStartImage from "../../../public/images/howToStart.png";
 
 const cardData = [
   {

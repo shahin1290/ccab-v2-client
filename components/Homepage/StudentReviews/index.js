@@ -12,22 +12,22 @@ const data = [
     id: 1,
     name: "John doe",
     address: "London, UK",
-    avatarUrl: "/person.jpg",
-    videoImageUrl: "/review-img.jpg",
+    avatarUrl: "/images/person.jpg",
+    videoImageUrl: "/images/review-img.jpg",
   },
   {
     id: 2,
     name: "John doe",
     address: "London, UK",
-    avatarUrl: "/person.jpg",
-    videoImageUrl: "/howToStart.png",
+    avatarUrl: "/images/person.jpg",
+    videoImageUrl: "/images/howToStart.png",
   },
   {
     id: 3,
     name: "John doe",
     address: "London, UK",
-    avatarUrl: "/person.jpg",
-    videoImageUrl: "/review-img2.jpg",
+    avatarUrl: "/images/person.jpg",
+    videoImageUrl: "/images/review-img2.jpg",
   },
 ];
 
@@ -154,7 +154,7 @@ const StudentReview = () => {
                       left: { sm: "40%", lg: "45%" },
                     }}
                   >
-                    <UserImg src="/person.jpg" alt="student" />
+                    <UserImg src="/images/person.jpg" alt="student" />
                     <Typography
                       align="center"
                       variant="h3"
@@ -236,7 +236,7 @@ const StudentReview = () => {
               alignItems="center"
               spacing={0.1}
             >
-              <UserImg src="/person.jpg" alt="student" />
+              <UserImg src="/images/person.jpg" alt="student" />
               <Typography
                 align="center"
                 variant="h3"

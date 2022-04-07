@@ -1,5 +1,5 @@
 import { Gradient } from "@mui/icons-material";
-import { Container, Grid } from "@mui/material";
+import { Box, Container, Grid } from "@mui/material";
 import { styled } from "@mui/system";
 import { SecondaryButton } from "./CustomComponents";
 
@@ -116,12 +116,12 @@ export const HubRightSide = styled(Grid)({
 });
 
 export const InfoContainer = styled(Container)({
-  background:'linear-gradient( to right, #6364D9 50%, #f5f6f9 50%)',
+  background: "linear-gradient( to right, #6364D9 50%, #f5f6f9 50%)",
   maxWidth: "none !important",
   fontFamily: "Segoe UI",
   "@media (max-width: 900px)": {
     fontSize: "5px",
-    background:'linear-gradient( to bottom, #6364D9 30%, #f5f6f9 70%)',
+    background: "linear-gradient( to bottom, #6364D9 30%, #f5f6f9 70%)",
   },
 });
 
@@ -147,22 +147,24 @@ export const DetailsContainer = styled(Container)({
   maxWidth: "none !important",
 });
 
-export const Wrapper = styled('div')({
-})
+export const Wrapper = styled(Box)({
+  width: "100%",
+  padding: "0 0 10vw 0",
+});
 
-export const ButtonWrap =styled('div')({
-    display: 'flex',
-    justifyContent: 'center',
-    textAlign: 'center',
-    marginTop:'20px'
-})
-export const CardDetailsButton = styled('button')({
+export const ButtonWrap = styled("div")({
+  display: "flex",
+  justifyContent: "center",
+  textAlign: "center",
+  marginTop: "20px",
+});
+export const CardDetailsButton = styled("button")({
   transition: "all .5s ease",
   borderRadius: "29px",
   background: "#6364D9",
   whiteSpace: "nowrap",
-  alignSelf:'center',
-  fontFamily:'Segoe UI, Semibold',
+  alignSelf: "center",
+  fontFamily: "Segoe UI, Semibold",
   fontSize: "16px",
   color: "#ffffff",
   outline: "none",
@@ -174,6 +176,6 @@ export const CardDetailsButton = styled('button')({
   position: "relative",
   marginRight: "1rem",
   "&:hover": {
-    transform:'scale(1.05)'
+    transform: "scale(1.05)",
   },
 });

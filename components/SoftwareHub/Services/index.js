@@ -1,10 +1,11 @@
-import { Box } from "@mui/system";
+import { Box, useTheme } from "@mui/system";
 import React from "react";
 import CustomServiceCard from "./CustomServiceCard";
-import service3 from "../../../public/career-support.png";
-import service1 from "../../../public/service1.png";
-import service2 from "../../../public/service2.png";
+import service3 from "../../../public/images/career-support.png";
+import service1 from "../../../public/images/service1.png";
+import service2 from "../../../public/images/service2.png";
 
+import SoftwareServiceData from "../../../dummydata/SoftwareServicesData";
 const moileDevelopment = {
   title: "Mobile Development",
   paragraphs: [
@@ -113,47 +114,25 @@ const wordpressSolutions = {
 };
 
 const Services = () => {
+  const theme = useTheme();
   return (
     <Box>
-      <CustomServiceCard
-        title={moileDevelopment.title}
-        paragraphs={moileDevelopment.paragraphs}
-        imageUrl={service1}
-        bgcolor="#fff"
-      />
-      <CustomServiceCard
-        title={webDevelopment.title}
-        paragraphs={webDevelopment.paragraphs}
-        imageUrl={service2}
-        bgcolor="#F8F9FB"
-      />
-      <CustomServiceCard
-        title={designSolutions.title}
-        paragraphs={designSolutions.paragraphs}
-        imageUrl={service3}
-        bgcolor="#fff"
-      />
-
-      <CustomServiceCard
-        title={hostingSolutions.title}
-        paragraphs={hostingSolutions.paragraphs}
-        imageUrl={service1}
-        bgcolor="#F8F9FB"
-      />
-
-      <CustomServiceCard
-        title={shopifySolutions.title}
-        paragraphs={shopifySolutions.paragraphs}
-        imageUrl={service2}
-        bgcolor="#fff"
-      />
-
-      <CustomServiceCard
-        title={wordpressSolutions.title}
-        paragraphs={wordpressSolutions.paragraphs}
-        imageUrl={service3}
-        bgcolor="#F8F9FB"
-      />
+      {SoftwareServiceData.map((item, index) => {
+        return (
+          <CustomServiceCard
+            key={item.slug}
+            slug={item.slug}
+            title={item.header + " " + item.subheader}
+            detailParagraphs={item.detailParagraphs}
+            imageUrl={item.HeroImage}
+            bgcolor={
+              index % 2 !== 0
+                ? theme.palette.primary.background
+                : theme.palette.common.white
+            }
+          />
+        );
+      })}
     </Box>
   );
 };

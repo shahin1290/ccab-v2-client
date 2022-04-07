@@ -3,11 +3,11 @@ import Footer from "./Footer";
 
 const HomepageLayout = ({ children }) => {
   return (
-    <>
+    <main>
       <Header />
-      <main>{children}</main>
+      {children}
       <Footer />
-    </>
+    </main>
   );
 };
 

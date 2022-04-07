@@ -1,6 +1,6 @@
 import { Card, CardContent, Container, Grid, Typography } from "@mui/material";
 import React from "react";
-import learning from "../../../images/learning.png";
+import learning from "../../../public/images/learning.png";
 import Image from "next/image";
 import {
   BranchedTitle,
