@@ -4,12 +4,12 @@ import { styled } from "@mui/system";
 import { Chip, Stack, Typography } from "@mui/material";
 
 const OuterCard = styled(Box)(({ theme }) => ({
-  width: "385px",
+  maxWidth: "385px",
   height: "250px",
   borderRadius: "20px",
   perspective: "1000px",
   padding: "1px",
-  margin: 100,
+  margin: 20,
   [theme.breakpoints.down("sm")]: {
     width: "315px",
     height: "210px",
@@ -86,7 +86,7 @@ export const ServiceCardBack = ({ title, content, price, backgroundColor }) => {
   return (
     <Box
       sx={{
-        backgroundColor,
+        backgroundColor:'#FFA950',
         position: "absolute",
         width: "100%",
         height: "100%",

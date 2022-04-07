@@ -1,10 +1,34 @@
 import { Container, Grid, Typography } from '@mui/material'
 import React from 'react'
 import HeroSVG from '../../../images/svg/HeroSVG'
-import { InfoContainer, InfoLeftSide, InfoRightSide } from '../../shared/CustomComponents2'
+import Underline from '../../../images/svg/Underline'
+import {ButtonWrap, CardDetailsButton, DetailsContainer, InfoContainer, InfoLeftSide, InfoRightSide, TextWrapper, Wrapper, } from '../../shared/CustomComponents2'
+import ServiceCard, { ServiceCardBack, ServiceCardFront } from '../../shared/ServiceCard'
+
+const fakeData = [
+  {
+   id:1,
+   title:'Test 1',
+   content: 'content 1',
+   price:'100',
+  },
+  {
+    id:2,
+    title:'Test 2',
+    content: 'content 2',
+    price:'200',
+   },
+   {
+    id:0,
+    title:'Test 3',
+    content: 'content 3',
+    price:'300',
+   },
+]
 
 export default function ShopifySol() {
   return (
+    <Wrapper>
     <InfoContainer >
         <Container maxWidth="xl">
         <Grid
@@ -33,5 +57,49 @@ export default function ShopifySol() {
         </Grid>
       </Container>
     </InfoContainer>
+    <DetailsContainer style={{background:'#fff'}}>
+            <TextWrapper>
+             <Typography variant="h3">
+                Mobile Development Services
+            </Typography>
+            <Underline />
+             <Typography
+                variant="body2"
+                sx={{ color: "secondary.contrastText", padding: "2rem" }}
+              >
+              Shopify ecommerce solution comes with a monthly fee, but comes with peace of mind knowing your customers are shopping in a safe and secure space. If you want to manage inventory for your online and physical store presence, Shopify’s ecommerce solution can be further configured with a point of sale system to manage both inventories seamlessly.
+             </Typography>
+             <Typography
+              variant="body2"
+              sx={{ color: "secondary.contrastText", padding: "0.8rem" }}
+            >
+              If you want to maintain an online store presence, and also operate a blog or other basic pages to promote your business, the Shopify ecommerce solution is set-up to handle that too!
+            </Typography>
+            </TextWrapper>
+            <Grid
+            container
+            spacing={{ xs: 4, md: 3 }}
+            columns={{ xs: 4, sm: 8, md: 12 }}
+            style={{  
+              textAlign:"-webkit-center",
+              marginTop:'20px',
+          }}
+            >
+              {fakeData.map(({id, title, content, price}) => (
+              <Grid item xs={4} key={id}>
+                <ServiceCard style={{maxWidth:'385px'}}>
+                  <ServiceCardFront title={title} />
+                  <ServiceCardBack title={title} content={content} price={price}/>
+                </ServiceCard>
+              </Grid>
+              ))}
+            </Grid>
+            <ButtonWrap>
+            <CardDetailsButton>
+               Book Appointment with the Technical team
+            </CardDetailsButton>
+            </ButtonWrap>
+      </DetailsContainer>
+    </Wrapper>
   )
 }

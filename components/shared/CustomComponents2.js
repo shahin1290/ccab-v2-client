@@ -141,3 +141,39 @@ export const InfoRightSide = styled(Grid)({
     marginTop: "-100px",
   },
 });
+
+export const DetailsContainer = styled(Container)({
+  background: "#fff !important",
+  maxWidth: "none !important",
+});
+
+export const Wrapper = styled('div')({
+})
+
+export const ButtonWrap =styled('div')({
+    display: 'flex',
+    justifyContent: 'center',
+    textAlign: 'center',
+    marginTop:'20px'
+})
+export const CardDetailsButton = styled('button')({
+  transition: "all .5s ease",
+  borderRadius: "29px",
+  background: "#6364D9",
+  whiteSpace: "nowrap",
+  alignSelf:'center',
+  fontFamily:'Segoe UI, Semibold',
+  fontSize: "16px",
+  color: "#ffffff",
+  outline: "none",
+  border: "2px solid #ffffff",
+  cursor: "pointer",
+  overflow: " hidden",
+  width: "449px",
+  height: " 58px",
+  position: "relative",
+  marginRight: "1rem",
+  "&:hover": {
+    transform:'scale(1.05)'
+  },
+});
