@@ -50,7 +50,12 @@ export default function LearningSummary() {
               sx={{ maxWidth: 400 }}
               style={{ background: "#F7F8FB", borderRadius: "20px" }}
             >
-              <Image src={learning} alt="learning" layout="responsive" />
+              <Image
+                priority
+                src={learning}
+                alt="learning"
+                layout="responsive"
+              />
               <CardContent style={{ textAlign: "center" }}>
                 <Typography variant="h6" align="center" mb={2}>
                   Javascript Full Stack Web and Mobile Development
@@ -73,7 +78,12 @@ export default function LearningSummary() {
               sx={{ maxWidth: 400 }}
               style={{ background: "#F7F8FB", borderRadius: "20px" }}
             >
-              <Image src={learning} alt="learning" layout="responsive" />
+              <Image
+                priority
+                src={learning}
+                alt="learning"
+                layout="responsive"
+              />
               <CardContent style={{ textAlign: "center" }}>
                 <Typography variant="h6" align="center" mb={2}>
                   Javascript Full Stack Web and Mobile Development
@@ -96,7 +106,12 @@ export default function LearningSummary() {
               sx={{ maxWidth: 400 }}
               style={{ background: "#F7F8FB", borderRadius: "20px" }}
             >
-              <Image src={learning} alt="learning" layout="responsive" />
+              <Image
+                priority
+                src={learning}
+                alt="learning"
+                layout="responsive"
+              />
               <CardContent style={{ textAlign: "center" }}>
                 <Typography variant="h6" align="center" mb={2}>
                   Javascript Full Stack Web and Mobile Development

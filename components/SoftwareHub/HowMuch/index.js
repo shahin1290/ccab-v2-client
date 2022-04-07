@@ -24,8 +24,8 @@ const LargeContainer = styled(Box)(({ theme }) => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  paddingTop: 3,
-  paddingBottom: 3,
+  paddingTop: 2,
+  paddingBottom: 2,
 }));
 
 const InnerContainer = styled(Container)(({ theme }) => ({
@@ -131,7 +131,7 @@ const HowMuch = () => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    py: { xs: 4, md: 5 },
+                    py: { xs: 2, md: 4 },
                     mx: { xl: 10, lg: 5, xs: 0, md: 10 },
                   }}
                   key={index}
@@ -139,7 +139,7 @@ const HowMuch = () => {
                   <Grid
                     key={index}
                     container
-                    rowSpacing={{ xs: 1, md: 6 }}
+                    rowSpacing={{ xs: 1, md: 3 }}
                     justifyContent="start"
                     alignItems="center"
                     sx={{ my: 0.5, mx: { xs: -1.5 } }}

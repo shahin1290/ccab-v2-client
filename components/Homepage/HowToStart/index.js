@@ -108,6 +108,7 @@ const HowToStart = () => {
           <Grid item md={5}>
             <CustomImageContainer>
               <Image
+                priority
                 src={HowToStartImage}
                 alt="How To Start Image"
                 layout="responsive"
@@ -182,7 +183,7 @@ const HowToStart = () => {
               </SecondaryButton>
             </Stack>
             <BannerImage>
-              <Image src={HappyGuy} alt="Advisor" />
+              <Image priority src={HappyGuy} alt="Advisor" />
             </BannerImage>
           </Stack>
         </Container>

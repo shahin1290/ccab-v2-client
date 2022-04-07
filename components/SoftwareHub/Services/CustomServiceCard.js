@@ -67,7 +67,6 @@ const Services = ({ title, detailParagraphs, imageUrl, bgcolor, slug }) => {
                   variant="contained"
                   color="secondary"
                   onClick={() => {
-                    console.log("clicked");
                     router.push(`/services/${slug}`);
                   }}
                 >
@@ -92,7 +91,6 @@ const Services = ({ title, detailParagraphs, imageUrl, bgcolor, slug }) => {
               variant="contained"
               color="secondary"
               onClick={() => {
-                console.log("clicked");
                 router.push(`/services/${slug}`);
               }}
             >

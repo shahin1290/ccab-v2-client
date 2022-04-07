@@ -1,6 +1,7 @@
 import { Gradient } from "@mui/icons-material";
-import { Box, Container, Grid } from "@mui/material";
+import { Box, Button, Container, Grid } from "@mui/material";
 import { styled } from "@mui/system";
+import Link from "next/link";
 import { SecondaryButton } from "./CustomComponents";
 
 export const HeroContainer = styled(Container)({
@@ -154,7 +155,8 @@ export const DetailsContainer = styled(Container)({
 
 export const Wrapper = styled(Box)({
   width: "100%",
-  padding: "0 0 10vw 0",
+  padding: "10px 0 10vw 0",
+  // background: "#f5f6f9",
 });
 
 export const ButtonWrap = styled("div")({
@@ -170,6 +172,7 @@ export const CardDetailsButton = styled("button")({
   whiteSpace: "nowrap",
   alignSelf: "center",
   fontFamily: "Segoe UI, Semibold",
+  textDecoration: "none",
   fontSize: "16px",
   color: "#ffffff",
   outline: "none",

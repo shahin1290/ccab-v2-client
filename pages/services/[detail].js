@@ -22,9 +22,10 @@ import Underline from "../../images/svg/Underline";
 import SoftwareServicesData from "../../dummydata/SoftwareServicesData";
 
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const Details = (props) => {
-  console.log(props.serviceCardsDetails);
+  const router = useRouter();
   return (
     <Wrapper>
       <InfoContainer>
@@ -117,7 +118,7 @@ const Details = (props) => {
           )}
         </Grid>
         <ButtonWrap>
-          <CardDetailsButton>
+          <CardDetailsButton onClick={() => router.push("/services/how-much")}>
             Book Appointment with the Technical team
           </CardDetailsButton>
         </ButtonWrap>

@@ -46,9 +46,8 @@ export default function Hero() {
           }}
         >
           <Image
+            priority
             src="/svgImages/HeroImages/SoftwareHubHero.svg"
-            width={1000}
-            height={1000}
             layout="fill"
             alt="Software Hub Hero"
           />

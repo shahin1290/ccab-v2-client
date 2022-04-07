@@ -41,6 +41,7 @@ const RatingSection = () => {
                   }}
                 >
                   <Image
+                    priority
                     src={item.imageUrl}
                     width={80}
                     height={70}

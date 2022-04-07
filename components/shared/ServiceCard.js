@@ -80,7 +80,14 @@ export const ServiceCardFront = ({ icon, title, backgroundColor }) => {
         sx={{ width: "100%", height: "100%", px: "20%" }}
       >
         <IconCircle>
-          <Image src={icon} width={40} height={40} layout="fixed" alt={title} />
+          <Image
+            priority
+            src={icon}
+            width={40}
+            height={40}
+            layout="fixed"
+            alt={title}
+          />
         </IconCircle>
         <Typography variant="h6" textAlign="center">
           {title}

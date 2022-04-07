@@ -22,7 +22,13 @@ export default function Footer() {
         <Grid container spacing={2} align={matches ? "center" : "start"}>
           <Grid item xs={12} sm={6} md={4}>
             <Box py={{ xs: 2 }}>
-              <Image src={logo} alt="company-logo" width="100" height="100" />
+              <Image
+                priority
+                src={logo}
+                alt="company-logo"
+                width="100"
+                height="100"
+              />
             </Box>
             <Box pr={{ xl: 25, lg: 15, md: 10, xs: 2 }} color="white">
               <Typography variant="body2">
