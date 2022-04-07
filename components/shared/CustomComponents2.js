@@ -155,7 +155,7 @@ export const DetailsContainer = styled(Container)({
 
 export const Wrapper = styled(Box)({
   width: "100%",
-  padding: "10px 0 10vw 0",
+  padding: "2px 0 10vw 0",
   // background: "#f5f6f9",
 });
 

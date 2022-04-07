@@ -130,10 +130,10 @@ const RatingSection = () => {
 };
 
 const data = [
-  { id: 1, imageUrl: "/facebook.png", rating: 4.5 },
-  { id: 2, imageUrl: "/google.png", rating: 4.5 },
-  { id: 3, imageUrl: "/switchup.png", rating: 4.5 },
-  { id: 4, imageUrl: "/trustpilot.jpg", rating: 4 },
+  { id: 1, imageUrl: "/images/facebook.png", rating: 4.5 },
+  { id: 2, imageUrl: "/images/google.png", rating: 4.5 },
+  { id: 3, imageUrl: "/images/switchup.png", rating: 4.5 },
+  { id: 4, imageUrl: "/images/trustpilot.jpg", rating: 4 },
 ];
 
 export default RatingSection;

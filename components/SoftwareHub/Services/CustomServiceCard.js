@@ -77,6 +77,7 @@ const Services = ({ title, detailParagraphs, imageUrl, bgcolor, slug }) => {
           </Grid>
           <Grid item md={5} sm={6} xs={12}>
             <Image
+              priority
               src={imageUrl}
               alt={title}
               width={500}

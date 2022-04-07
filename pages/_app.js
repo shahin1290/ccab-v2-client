@@ -1,5 +1,4 @@
 import { ThemeProvider } from "@mui/system";
-import PropTypes from "prop-types";
 import createEmotionCache from "../theme/createEmotionCache";
 import { CacheProvider } from "@emotion/react";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -16,8 +15,8 @@ function MyApp(props) {
 
   return (
     <CacheProvider value={emotionCache}>
+      <CssBaseline />
       <ThemeProvider theme={theme}>
-        <CssBaseline />
         <HomepageLayout>
           <Head>
             <title>Codify College Dashboard</title>
@@ -30,11 +29,5 @@ function MyApp(props) {
     </CacheProvider>
   );
 }
-
-MyApp.propTypes = {
-  Component: PropTypes.elementType.isRequired,
-  emotionCache: PropTypes.object,
-  pageProps: PropTypes.object.isRequired,
-};
 
 export default MyApp;
