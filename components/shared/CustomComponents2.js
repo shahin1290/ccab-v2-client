@@ -96,8 +96,13 @@ export const HeroHubContainer = styled(Container)({
   background: "#f5f6f9",
   maxWidth: "none !important",
   fontFamily: "Segoe UI",
+  paddingTop: "150px",
+  "@media (max-width: 900px)": {
+    paddingTop: "0px",
+  },
   "@media (max-width: 480px)": {
     fontSize: "5px",
+    paddingTop: "0px",
   },
 });
 
