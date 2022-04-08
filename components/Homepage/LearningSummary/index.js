@@ -52,6 +52,7 @@ export default function LearningSummary() {
                 background: "#F7F8FB",
                 borderRadius: "20px",
                 display: "block",
+                boxShadow:'none'
               }}
             >
               <Image
@@ -84,6 +85,7 @@ export default function LearningSummary() {
                 background: "#F7F8FB",
                 borderRadius: "20px",
                 display: "block",
+                boxShadow:'none'
               }}
             >
               <Image
@@ -112,7 +114,7 @@ export default function LearningSummary() {
           <Grid item xs={4}>
             <Card
               sx={{ maxWidth: 400 }}
-              style={{ background: "#F7F8FB", borderRadius: "20px" }}
+              style={{ background: "#F7F8FB", borderRadius: "20px",boxShadow:'none' }}
             >
               <Image
                 priority
