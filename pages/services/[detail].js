@@ -60,7 +60,7 @@ const Details = (props) => {
                 {props.description}
               </Typography>
             </InfoLeftSide>
-            <InfoRightSide item xs={12} md={6}>
+            <InfoRightSide item xs={12} md={6} sx={{ display: "block" }}>
               <Image
                 src={props.HeroImage}
                 alt={props.header}

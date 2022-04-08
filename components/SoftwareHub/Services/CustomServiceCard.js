@@ -75,7 +75,7 @@ const Services = ({ title, detailParagraphs, imageUrl, bgcolor, slug }) => {
               )}
             </Stack>
           </Grid>
-          <Grid item md={5} sm={6} xs={12}>
+          <Grid item md={5} sm={6} xs={12} sx={{ display: "block" }}>
             <Image
               priority
               src={imageUrl}
