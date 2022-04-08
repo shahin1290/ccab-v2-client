@@ -52,7 +52,8 @@ const RatingSection = () => {
                 <Typography
                   align="center"
                   variant="h6"
-                  sx={{ fontWeight: "normal", fontSize: { xs: 16 } }}
+                  color="secondary.contrastText"
+                  sx={{ fontWeight: "bold", fontSize: { xs: 16 } }}
                 >
                   {item.rating}/5 Rating
                 </Typography>
