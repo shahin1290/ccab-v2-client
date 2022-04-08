@@ -17,6 +17,7 @@ import Slider from "react-slick";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import { ForwardArrow } from "../../../images/svg/ServiceIcons";
 import styled from "@emotion/styled";
+import HowContactForm from "../ContactForm";
 
 const LargeContainer = styled(Box)(({ theme }) => ({
   width: "100%",
@@ -78,7 +79,8 @@ const HowMuch = () => {
   };
 
   const nextHandler = () => {
-    if (currentStage + 1 > 7) return;
+    if (currentStage === 7) return console.log("Form Submitted");
+
     slider.slickNext();
     setCurrentStage(currentStage + 1);
   };
@@ -158,6 +160,26 @@ const HowMuch = () => {
                 </Container>
               );
             })}
+            <Container
+              maxWidth="xl"
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                py: { xs: 3, md: 4 },
+                mx: { xl: 10, lg: 5, xs: 0, md: 10 },
+              }}
+            >
+              <Grid
+                container
+                rowSpacing={{ xs: 1, md: 3 }}
+                justifyContent="start"
+                alignItems="center"
+                sx={{ my: 0.5, mx: { xs: -1.5 } }}
+              >
+                <HowContactForm />
+              </Grid>
+            </Container>
           </Slider>
         </CustomStack>
 
@@ -198,7 +220,7 @@ const HowMuch = () => {
             sx={{
               borderRadius: "30px",
               height: "60px",
-              width: "200px",
+              width: "max-content",
               backgroundColor: "secondary.main",
               color: "common.white",
               display: "flex",
@@ -206,7 +228,9 @@ const HowMuch = () => {
               alignItems: "center",
               fill: `white !important`,
               fontSize: "16px",
+              textTransform: "none",
               px: 5,
+              gap: 1,
               "&:hover": {
                 backgroundColor: "common.white",
                 color: "secondary.main",
@@ -214,7 +238,13 @@ const HowMuch = () => {
               },
             }}
           >
-            Next <ForwardArrow />
+            {currentStage === 7 ? (
+              "Get Estimate Today "
+            ) : (
+              <>
+                Next <ForwardArrow />
+              </>
+            )}
           </Button>
         </Stack>
       </InnerContainer>

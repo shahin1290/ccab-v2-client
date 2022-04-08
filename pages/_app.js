@@ -15,13 +15,13 @@ function MyApp(props) {
 
   return (
     <CacheProvider value={emotionCache}>
-      <CssBaseline />
       <ThemeProvider theme={theme}>
         <HomepageLayout>
           <Head>
             <title>Codify College Dashboard</title>
             <meta name="description" content="CodifyCollege" />
-            <link rel="icon" href="/Logo.ico" />
+            <link rel="shortcut icon" href="/images/Logo.ico" />
+            <CssBaseline />
           </Head>
           <Component {...pageProps} />
         </HomepageLayout>

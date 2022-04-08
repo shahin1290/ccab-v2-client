@@ -1,5 +1,4 @@
 import { Container, Grid, Typography } from "@mui/material";
-import { useTheme } from "@emotion/react";
 import {
   HeroContainer,
   LeftSide,
@@ -8,7 +7,6 @@ import {
 import HeroSVG from "../../../images/svg/HeroSVG";
 
 export default function Hero() {
-  const theme = useTheme();
   return (
     <HeroContainer maxWidth="xl">
       <Container maxWidth="xl">

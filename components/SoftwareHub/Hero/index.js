@@ -4,7 +4,6 @@ import {
   HubLeftSide,
   HubRightSide,
 } from "../../shared/CustomComponents2";
-import { useTheme } from "@emotion/react";
 import Image from "next/image";
 
 export default function Hero() {
