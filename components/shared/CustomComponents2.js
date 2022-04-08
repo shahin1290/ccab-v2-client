@@ -1,6 +1,7 @@
 import { Gradient } from "@mui/icons-material";
-import { Container, Grid } from "@mui/material";
+import { Box, Button, Container, Grid } from "@mui/material";
 import { styled } from "@mui/system";
+import Link from "next/link";
 import { SecondaryButton } from "./CustomComponents";
 
 export const HeroContainer = styled(Container)({
@@ -96,6 +97,9 @@ export const HeroHubContainer = styled(Container)({
   background: "#f5f6f9",
   maxWidth: "none !important",
   fontFamily: "Segoe UI",
+  "@media (max-width: 900px)": {
+    paddingTop: "0px",
+  },
   "@media (max-width: 480px)": {
     fontSize: "5px",
   },
@@ -116,12 +120,12 @@ export const HubRightSide = styled(Grid)({
 });
 
 export const InfoContainer = styled(Container)({
-  background:'linear-gradient( to right, #6364D9 50%, #f5f6f9 50%)',
+  background: "linear-gradient( to right, #6364D9 50%, #f5f6f9 50%)",
   maxWidth: "none !important",
   fontFamily: "Segoe UI",
   "@media (max-width: 900px)": {
     fontSize: "5px",
-    background:'linear-gradient( to bottom, #6364D9 30%, #f5f6f9 70%)',
+    background: "linear-gradient( to bottom, #6364D9 30%, #f5f6f9 70%)",
   },
 });
 
@@ -139,5 +143,45 @@ export const InfoRightSide = styled(Grid)({
   // background: "#f5f6f9",
   "@media (max-width: 600px)": {
     marginTop: "-100px",
+  },
+});
+
+export const DetailsContainer = styled(Container)({
+  background: "#fff !important",
+  maxWidth: "none !important",
+});
+
+export const Wrapper = styled(Box)({
+  width: "100%",
+  padding: "2px 0 10vw 0",
+  // background: "#f5f6f9",
+});
+
+export const ButtonWrap = styled("div")({
+  display: "flex",
+  justifyContent: "center",
+  textAlign: "center",
+  marginTop: "20px",
+});
+export const CardDetailsButton = styled("button")({
+  transition: "all .5s ease",
+  borderRadius: "29px",
+  background: "#6364D9",
+  whiteSpace: "nowrap",
+  alignSelf: "center",
+  fontFamily: "Segoe UI, Semibold",
+  textDecoration: "none",
+  fontSize: "16px",
+  color: "#ffffff",
+  outline: "none",
+  border: "2px solid #ffffff",
+  cursor: "pointer",
+  overflow: " hidden",
+  width: "449px",
+  height: " 58px",
+  position: "relative",
+  marginRight: "1rem",
+  "&:hover": {
+    transform: "scale(1.05)",
   },
 });

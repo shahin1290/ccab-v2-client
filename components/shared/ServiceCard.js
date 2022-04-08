@@ -1,15 +1,16 @@
 import { Box } from "@mui/system";
 import React from "react";
 import { styled } from "@mui/system";
-import { Chip, Stack, Typography } from "@mui/material";
+import { Chip, Stack, SvgIcon, Typography } from "@mui/material";
+import Image from "next/image";
 
 const OuterCard = styled(Box)(({ theme }) => ({
-  width: "385px",
+  maxWidth: "385px",
   height: "250px",
   borderRadius: "20px",
   perspective: "1000px",
   padding: "1px",
-  margin: 100,
+  margin: 20,
   [theme.breakpoints.down("sm")]: {
     width: "315px",
     height: "210px",
@@ -40,6 +41,10 @@ const IconCircle = styled("div")(({ theme }) => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
+  flexGrow: 0,
+  flexShrink: 0,
+  flexBasis: "30%",
+
   "&  path": {
     fill: "white !important",
   },
@@ -74,7 +79,16 @@ export const ServiceCardFront = ({ icon, title, backgroundColor }) => {
         spacing={3}
         sx={{ width: "100%", height: "100%", px: "20%" }}
       >
-        <IconCircle>{icon}</IconCircle>
+        <IconCircle>
+          <Image
+            priority
+            src={icon}
+            width={40}
+            height={40}
+            layout="fixed"
+            alt={title}
+          />
+        </IconCircle>
         <Typography variant="h6" textAlign="center">
           {title}
         </Typography>
@@ -86,7 +100,7 @@ export const ServiceCardBack = ({ title, content, price, backgroundColor }) => {
   return (
     <Box
       sx={{
-        backgroundColor,
+        backgroundColor: "#FFA950",
         position: "absolute",
         width: "100%",
         height: "100%",

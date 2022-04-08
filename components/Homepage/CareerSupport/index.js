@@ -381,7 +381,8 @@ const CareerSupport = () => {
               }}
             >
               <Image
-                src="/career-support.png"
+                priority
+                src="/images/career-support.png"
                 alt="company-logo"
                 width="400"
                 height="400"

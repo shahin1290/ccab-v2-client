@@ -10,8 +10,8 @@ const SelectionCard = styled("div")(({ theme }) => ({
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
-  width: "300px",
-  height: "255px",
+  width: "275px",
+  height: "235px",
   borderRadius: "15px",
   fontWeight: "bold",
   border: `5px solid ${theme.palette.common.white}`,
@@ -34,13 +34,11 @@ const CheckMark = styled("div")(({ theme }) => ({
   fontWeight: "bold",
   border: `5px solid ${theme.palette.common.white}`,
   cursor: "pointer",
-  transition: "scale boxShadow 0.5s",
   boxSizing: "border-box",
 
   [theme.breakpoints.down("md")]: {
     width: "35px",
     height: "35px",
-    fontSize: "16px",
     fontWeight: "normal",
     border: `3px solid ${theme.palette.common.white}`,
   },
@@ -72,7 +70,7 @@ const ServiceSelectionCard = (props) => {
       top: 2,
       zIndex: 2,
       transition: {
-        duration: 0.1,
+        duration: 0.2,
       },
     },
     selected: {
@@ -104,9 +102,7 @@ const ServiceSelectionCard = (props) => {
         initial="notSelected"
         animate={selected ? "selected" : "notSelected"}
       >
-        <div>
-          <CheckOutlinedIcon sx={{ fontSize: { md: 35, xs: 25 } }} />
-        </div>
+        <CheckOutlinedIcon sx={{ fontSize: { md: 35, xs: 22 } }} />
       </MotionCheckMark>
 
       <Stack

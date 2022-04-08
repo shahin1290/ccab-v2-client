@@ -95,7 +95,7 @@ const StudentReviews = () => {
               >
                 <Box sx={{ position: "relative" }} pb={{ xs: 1, md: 0 }}>
                   <CustomImage
-                    src="/review-img.jpg"
+                    src="/images/review-img.jpg"
                     alt="Student Review Image"
                   />
                   <Box
@@ -196,10 +196,30 @@ const StudentReviews = () => {
 };
 
 const data = [
-  { id: 1, name: "John doe", address: "London, UK", avatarUrl: "/person.jpg" },
-  { id: 2, name: "John doe", address: "London, UK", avatarUrl: "/person.jpg" },
-  { id: 3, name: "John doe", address: "London, UK", avatarUrl: "/person.jpg" },
-  { id: 4, name: "John doe", address: "London, UK", avatarUrl: "/person.jpg" },
+  {
+    id: 1,
+    name: "John doe",
+    address: "London, UK",
+    avatarUrl: "/images/person.jpg",
+  },
+  {
+    id: 2,
+    name: "John doe",
+    address: "London, UK",
+    avatarUrl: "/images/person.jpg",
+  },
+  {
+    id: 3,
+    name: "John doe",
+    address: "London, UK",
+    avatarUrl: "/images/person.jpg",
+  },
+  {
+    id: 4,
+    name: "John doe",
+    address: "London, UK",
+    avatarUrl: "/images/person.jpg",
+  },
 ];
 
 export default StudentReviews;

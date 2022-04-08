@@ -1,6 +1,6 @@
 import { Card, CardContent, Container, Grid, Typography } from "@mui/material";
 import React from "react";
-import learning from "../../../images/learning.png";
+import learning from "../../../public/images/learning.png";
 import Image from "next/image";
 import {
   BranchedTitle,
@@ -48,9 +48,19 @@ export default function LearningSummary() {
           <Grid item xs={4}>
             <Card
               sx={{ maxWidth: 400 }}
-              style={{ background: "#F7F8FB", borderRadius: "20px" }}
+              style={{
+                background: "#F7F8FB",
+                borderRadius: "20px",
+                display: "block",
+                boxShadow:'none'
+              }}
             >
-              <Image src={learning} alt="learning" layout="responsive" />
+              <Image
+                priority
+                src={learning}
+                alt="learning"
+                layout="responsive"
+              />
               <CardContent style={{ textAlign: "center" }}>
                 <Typography variant="h6" align="center" mb={2}>
                   Javascript Full Stack Web and Mobile Development
@@ -71,9 +81,19 @@ export default function LearningSummary() {
           <Grid item xs={4}>
             <Card
               sx={{ maxWidth: 400 }}
-              style={{ background: "#F7F8FB", borderRadius: "20px" }}
+              style={{
+                background: "#F7F8FB",
+                borderRadius: "20px",
+                display: "block",
+                boxShadow:'none'
+              }}
             >
-              <Image src={learning} alt="learning" layout="responsive" />
+              <Image
+                priority
+                src={learning}
+                alt="learning"
+                layout="responsive"
+              />
               <CardContent style={{ textAlign: "center" }}>
                 <Typography variant="h6" align="center" mb={2}>
                   Javascript Full Stack Web and Mobile Development
@@ -94,9 +114,14 @@ export default function LearningSummary() {
           <Grid item xs={4}>
             <Card
               sx={{ maxWidth: 400 }}
-              style={{ background: "#F7F8FB", borderRadius: "20px" }}
+              style={{ background: "#F7F8FB", borderRadius: "20px",boxShadow:'none' }}
             >
-              <Image src={learning} alt="learning" layout="responsive" />
+              <Image
+                priority
+                src={learning}
+                alt="learning"
+                layout="responsive"
+              />
               <CardContent style={{ textAlign: "center" }}>
                 <Typography variant="h6" align="center" mb={2}>
                   Javascript Full Stack Web and Mobile Development

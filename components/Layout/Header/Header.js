@@ -40,7 +40,7 @@ export default function Header() {
     <Appbar>
       <NavbarContainer>
         <NavLogo href="/">
-          <Logo src={logo} alt="codify logo"  />
+          <Logo src={logo} alt="codify logo" />
         </NavLogo>
         <MobileIcon onClick={() => setOpen(true)}>
           <MenuIcon style={{ fontSize: "35px" }} />
@@ -84,7 +84,7 @@ export default function Header() {
           tabIndex={0}
           sx={{ display: "flex", justifyContent: "start" }}
         >
-          <CloseIcon color='inherit' fontSize="large" />
+          <CloseIcon color="inherit" fontSize="large" />
         </IconButton>
 
         <Divider />
@@ -98,7 +98,7 @@ export default function Header() {
               key={item.name}
             >
               <Link href={item.to} passHref>
-                <SidebarLink >{item.name}</SidebarLink>
+                <SidebarLink>{item.name}</SidebarLink>
               </Link>
             </ListItem>
           ))}
