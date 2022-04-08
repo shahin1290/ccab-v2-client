@@ -6,6 +6,7 @@ import { Box, styled, useTheme } from "@mui/system";
 import { Container, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import Underline from "../../../images/svg/Underline";
+import StyledModal from "./StyledModal";
 
 const data = [
   {
@@ -57,8 +58,9 @@ const CustomImageMobile = styled(Image)(({ theme }) => ({
 
 const StudentReview = () => {
   const theme = useTheme();
-  const [selectedIndex, setSelectedIndex] = useState(0);
 
+  /* Slider */
+  const [selectedIndex, setSelectedIndex] = useState(0);
   const checkNext = () => {
     const labels = document.querySelectorAll("#slider label");
     const nextIndex =
@@ -67,6 +69,11 @@ const StudentReview = () => {
   };
 
   const check = (index) => setSelectedIndex(index);
+
+  /* modal */
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   return (
     <Container maxWidth="xl" sx={{ pb: 7 }}>
@@ -110,6 +117,7 @@ const StudentReview = () => {
                 id={`s${index + 1}`}
                 checked={selectedIndex === index}
                 onClick={() => check(index)}
+                readOnly
               />
             ))}
 
@@ -127,6 +135,7 @@ const StudentReview = () => {
                     left: { xs: "44%" },
                     cursor: "pointer",
                   }}
+                  onClick={handleOpen}
                 >
                   <svg
                     focusable="false"
@@ -259,6 +268,8 @@ const StudentReview = () => {
           </Stack>
         ))}
       </Container>
+
+      <StyledModal open={open} handleClose={handleClose} />
     </Container>
   );
 };
