@@ -45,6 +45,7 @@ const FAQAccordion = ({ title, description, active, setActive }) => {
 
         <Content show={active === title ? 1 : 0}>
           <Typography
+          
             sx={{
               padding: "0 30px",
               fontSize: "16px",

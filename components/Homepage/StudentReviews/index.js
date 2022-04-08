@@ -6,6 +6,7 @@ import { Box, styled, useTheme } from "@mui/system";
 import { Container, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import Underline from "../../../images/svg/Underline";
+import StyledModal from "./StyledModal";
 
 const data = [
   {
@@ -57,8 +58,9 @@ const CustomImageMobile = styled(Image)(({ theme }) => ({
 
 const StudentReview = () => {
   const theme = useTheme();
-  const [selectedIndex, setSelectedIndex] = useState(0);
 
+  /* Slider */
+  const [selectedIndex, setSelectedIndex] = useState(0);
   const checkNext = () => {
     const labels = document.querySelectorAll("#slider label");
     const nextIndex =
@@ -67,6 +69,11 @@ const StudentReview = () => {
   };
 
   const check = (index) => setSelectedIndex(index);
+
+  /* modal */
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   return (
     <Container maxWidth="xl" sx={{ pb: 7 }}>
@@ -84,7 +91,11 @@ const StudentReview = () => {
           Reviews By Students
         </Typography>
         <Underline />
-        <Typography variant="subtitle2" mt={{ xs: 1 }}>
+        <Typography
+          variant="subtitle2"
+          mt={{ xs: 3 }}
+          color="secondary.contrastText"
+        >
           Most of our graduates were employed after 6 months upon graduation
         </Typography>
       </Box>
@@ -110,6 +121,7 @@ const StudentReview = () => {
                 id={`s${index + 1}`}
                 checked={selectedIndex === index}
                 onClick={() => check(index)}
+                readOnly
               />
             ))}
 
@@ -127,6 +139,7 @@ const StudentReview = () => {
                     left: { xs: "44%" },
                     cursor: "pointer",
                   }}
+                  onClick={handleOpen}
                 >
                   <svg
                     focusable="false"
@@ -249,6 +262,7 @@ const StudentReview = () => {
                 {item.name}
               </Typography>
               <Typography
+                color="secondary.contrastText"
                 align="center"
                 variant="h6"
                 sx={{ fontWeight: "normal", fontSize: { xs: 16 } }}
@@ -259,6 +273,8 @@ const StudentReview = () => {
           </Stack>
         ))}
       </Container>
+
+      <StyledModal open={open} handleClose={handleClose} />
     </Container>
   );
 };

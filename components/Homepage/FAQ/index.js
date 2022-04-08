@@ -55,7 +55,7 @@ const FAQ = () => {
           alignItems: "center",
           justifyContent: "center",
           pt: { xs: 5, md: 10 },
-          pb: { xs: 5 },
+          pb: { xs: 5, md: 10 },
         }}
       >
         <Typography variant="h3" mb={2}>
