@@ -164,21 +164,11 @@ const HowMuch = () => {
               maxWidth="xl"
               sx={{
                 display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                py: { xs: 3, md: 4 },
-                mx: { xl: 10, lg: 5, xs: 0, md: 10 },
+                justifyContent: "start",
+                alignItems: "start",
               }}
             >
-              <Grid
-                container
-                rowSpacing={{ xs: 1, md: 3 }}
-                justifyContent="start"
-                alignItems="center"
-                sx={{ my: 0.5, mx: { xs: -1.5 } }}
-              >
-                <HowContactForm />
-              </Grid>
+              <HowContactForm />
             </Container>
           </Slider>
         </CustomStack>
