@@ -1,15 +1,13 @@
-import { Container, Grid, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import {
   HeroHubContainer,
   HubLeftSide,
   HubRightSide,
 } from "../../shared/CustomComponents2";
 import { useTheme } from "@emotion/react";
-import HeroSVG from "../../../images/svg/HeroSVG";
 import Image from "next/image";
 
 export default function Hero() {
-  const theme = useTheme();
   return (
     <HeroHubContainer>
       <Grid
@@ -28,10 +26,20 @@ export default function Hero() {
             maxHeight: "400px",
           }}
         >
-          <Typography variant="h2" color="secondary.contrastText" mb={1}>
+          <Typography
+            variant="h2"
+            color="secondary.contrastText"
+            mb={1}
+            textAlign={{ xs: "center", md: "start" }}
+          >
             Applications
           </Typography>
-          <Typography variant="h2" color="primary" mb={3}>
+          <Typography
+            variant="h2"
+            color="primary"
+            mb={3}
+            textAlign={{ xs: "center", md: "start" }}
+          >
             to drive your business
           </Typography>
         </HubLeftSide>

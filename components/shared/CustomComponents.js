@@ -32,7 +32,7 @@ const SecondaryButton = styled(Button)(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {
     fontSize: 12,
     marginTop: 5,
-    padding: "5px 10px",
+    padding: "10px 25px",
   },
 }));
 

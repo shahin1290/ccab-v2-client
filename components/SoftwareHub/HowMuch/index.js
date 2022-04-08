@@ -131,7 +131,7 @@ const HowMuch = () => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    py: { xs: 2, md: 4 },
+                    py: { xs: 3, md: 4 },
                     mx: { xl: 10, lg: 5, xs: 0, md: 10 },
                   }}
                   key={index}
