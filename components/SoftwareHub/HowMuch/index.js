@@ -91,11 +91,13 @@ const HowMuch = () => {
     setCurrentStage(currentStage - 1);
   };
   return (
-    <LargeContainer>
+    <LargeContainer
+      sx={{ scrollSnapAlign: "start", display: "grid", placeItems: "center" }}
+    >
       <InnerContainer maxWidth="xl">
         <Typography
           variant="h2"
-          sx={{ color: "common.white", mb: 2, mt: { md: 10, xs: 3 } }}
+          sx={{ color: "common.white", mb: 2, mt: { md: 3, xs: 3 } }}
         >
           How much?
         </Typography>
