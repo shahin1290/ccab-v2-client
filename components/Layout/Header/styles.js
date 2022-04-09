@@ -10,7 +10,7 @@ export const Appbar = styled("nav")({
   alignItems: "center",
   fontSize: "1rem",
   // position:'fixed',
-  marginBottom: 3,
+  // marginBottom: 3,
   top: 0,
   zIndex: 10,
   "@media (max-width: 600px)": {

@@ -2,8 +2,8 @@ import React from "react";
 import fs from "fs";
 import path from "path";
 import util from "util";
-import { Container, Grid, Typography } from "@mui/material";
-import { Box } from "@mui/system";
+import { Container, Grid, Stack, Typography } from "@mui/material";
+import { Box, useTheme } from "@mui/system";
 import {
   ButtonWrap,
   CardDetailsButton,
@@ -24,55 +24,105 @@ import Underline from "../../images/svg/Underline";
 
 import Image from "next/image";
 import { useRouter } from "next/router";
+import ServiceDetailBackground from "../../images/svg/ServiceDetailBackground";
 
 const Details = (props) => {
   const router = useRouter();
+  const theme = useTheme();
   return (
-    <Wrapper>
-      <InfoContainer>
-        <Container maxWidth="xl">
-          <Grid
-            container
-            rowSpacing={1}
-            columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-            justifyContent="space-between"
-            sx={{ overflow: "visible" }}
+    <Grid container pb={12} sx={{ overflow: "visible", position: "relative" }}>
+      <Grid
+        container
+        item
+        xs={12}
+        md={6}
+        sx={{
+          maxHeight: "680px",
+          background: theme.palette.primary.main,
+          overflow: "visible",
+        }}
+      >
+        <Grid item md={11} xs={12}>
+          <Box
+            sx={{
+              display: { xs: "none", md: "grid" },
+              position: "absolute",
+              placeItems: "center",
+              px: 10,
+              py: 3,
+
+              "& > svg": {
+                position: "relative",
+                inset: 0,
+                width: "100%",
+                display: { xs: "hidden", md: "block" },
+              },
+            }}
           >
-            <InfoLeftSide item xs={12} md={4}>
-              <Typography
-                variant="h2"
-                color="#fff"
-                mb={1}
-                sx={{ fontWeight: "normal" }}
-              >
-                {props.header}
-              </Typography>
-              <Typography variant="h1" color="#fff" mb={3}>
-                {props.subheader}
-              </Typography>
-              <Box
-                sx={{ width: "30%", height: "3px", background: "white", mb: 4 }}
-              />
-              <Typography
-                variant="body1"
-                sx={{ color: "#fff", lineHeight: 1.5 }}
-              >
-                {props.description}
-              </Typography>
-            </InfoLeftSide>
-            <InfoRightSide item xs={12} md={6} sx={{ display: "block" }}>
-              <Image
-                src={props.HeroImage}
-                alt={props.header}
-                width={450}
-                height={450}
-                layout="responsive"
-                priority
-              />
-            </InfoRightSide>
-          </Grid>
-        </Container>
-      </InfoContainer>
+            <ServiceDetailBackground />
+          </Box>
+          <Stack
+            sx={{
+              height: "90%",
+              justifyContent: "center",
+              alignItems: "start",
+              px: "15%",
+              overflow: "visible",
+
+              py: { xs: "10%", md: 0 },
+            }}
+          >
+            <Typography
+              variant="h2"
+              color="#fff"
+              mb={1}
+              sx={{ fontWeight: "normal" }}
+            >
+              {props.header}
+            </Typography>
+            <Typography variant="h1" color="#fff" mb={3}>
+              {props.subheader}
+            </Typography>
+            <Box
+              sx={{ width: "30%", height: "3px", background: "white", mb: 4 }}
+            />
+            <Typography variant="body1" sx={{ color: "#fff", lineHeight: 1.5 }}>
+              {props.description}
+            </Typography>
+          </Stack>
+        </Grid>
+        <Grid
+          item
+          md={1}
+          xs={12}
+          sx={{
+            position: "relative",
+            left: { md: "5%", xs: 0 },
+            display: { md: "block", xs: "hidden" },
+            background: theme.palette.primary.main,
+          }}
+        ></Grid>
+      </Grid>
+      <Grid
+        item
+        xs={12}
+        md={6}
+        sx={{
+          background: theme.palette.primary.background,
+          overflow: "visible",
+          maxHeight: "700px",
+          display: "grid",
+        }}
+      >
+        <Image
+          src={props.HeroImage}
+          alt={props.header}
+          width={250}
+          height={250}
+          layout="responsive"
+          priority
+        />
+      </Grid>
       <DetailsContainer style={{ background: "#fff" }}>
         <Container maxWidth="lg">
           <TextWrapper>
@@ -100,7 +150,7 @@ const Details = (props) => {
           style={{
             textAlign: "-webkit-center",
             marginTop: "20px",
-            justifyContent: "center",
+            justifyContent: "start",
           }}
         >
           {props.serviceCardsDetails?.map(
@@ -124,7 +174,7 @@ const Details = (props) => {
           </CardDetailsButton>
         </ButtonWrap>
       </DetailsContainer>
-    </Wrapper>
+    </Grid>
   );
 };
 
