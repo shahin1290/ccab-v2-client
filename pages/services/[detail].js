@@ -37,9 +37,9 @@ const Details = (props) => {
         xs={12}
         md={6}
         sx={{
-          maxHeight: "680px",
           background: theme.palette.primary.main,
           overflow: "visible",
+          maxHeight: "680px",
         }}
       >
         <Grid item md={11} xs={12}>
@@ -63,13 +63,13 @@ const Details = (props) => {
           </Box>
           <Stack
             sx={{
-              height: "90%",
+              height: "100%",
               justifyContent: "center",
               alignItems: "start",
               px: "15%",
               overflow: "visible",
 
-              py: { xs: "10%", md: 0 },
+              py: { xs: "10%", md: 5 },
             }}
           >
             <Typography
@@ -112,16 +112,24 @@ const Details = (props) => {
           overflow: "visible",
           maxHeight: "700px",
           display: "grid",
+          placeItems: "center",
         }}
       >
-        <Image
-          src={props.HeroImage}
-          alt={props.header}
-          width={250}
-          height={250}
-          layout="responsive"
-          priority
-        />
+        <Box
+          sx={{
+            width: { md: "80%", xs: "100%" },
+            display: "grid",
+          }}
+        >
+          <Image
+            src={props.HeroImage}
+            alt={props.header}
+            width={250}
+            height={250}
+            layout="responsive"
+            priority
+          />
+        </Box>
       </Grid>
       <DetailsContainer style={{ background: "#fff" }}>
         <Container maxWidth="lg">
@@ -150,12 +158,13 @@ const Details = (props) => {
           style={{
             textAlign: "-webkit-center",
             marginTop: "20px",
-            justifyContent: "start",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
           {props.serviceCardsDetails?.map(
             ({ id, title, content, price, icon }) => (
-              <Grid item xs={4} key={id}>
+              <Grid item md={4} sm={6} xs={12} key={id}>
                 <ServiceCard style={{ maxWidth: "385px" }}>
                   <ServiceCardFront title={title} icon={icon} />
                   <ServiceCardBack

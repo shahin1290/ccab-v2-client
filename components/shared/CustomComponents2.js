@@ -167,7 +167,7 @@ export const CardDetailsButton = styled("button")({
   transition: "all .5s ease",
   borderRadius: "29px",
   background: "#6364D9",
-  whiteSpace: "nowrap",
+  // whiteSpace: "nowrap",
   alignSelf: "center",
   fontFamily: "Segoe UI, Semibold",
   textDecoration: "none",
