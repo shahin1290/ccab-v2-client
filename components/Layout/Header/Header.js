@@ -28,10 +28,12 @@ import {
 import Link from "next/link";
 
 const sideLinks = [
-  { name: "Home", to: "/" },
-  { name: "Software Hub", to: "/services" },
-  { name: "Login", to: "/" },
-  { name: "Register", to: "/" },
+  { name: "Home", to: "/", type: "nav" },
+  { name: "Software Hub", to: "/services", type: "nav" },
+  { name: "Company Hub", to: "/company", type: "nav" },
+  { name: "Teaching Hub", to: "/education", type: "nav" },
+  { name: "Login", to: "/", type: "button" },
+  { name: "Register", to: "/", type: "button" },
 ];
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -43,20 +45,20 @@ export default function Header() {
           <Logo src={logo} alt="codify logo" />
         </NavLogo>
         <MobileIcon onClick={() => setOpen(true)}>
-          <MenuIcon style={{ fontSize: "35px" }} />
+          <MenuIcon style={{ fontSize: "35px" }} color="primary" />
         </MobileIcon>
         <Wrap>
           <NavMenu>
-            <NavItem>
-              <NavLinks href="/" passHref>
-                <ActiveLink>Home</ActiveLink>
-              </NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks href="/services" passHref>
-                <ActiveLink>Software Hub</ActiveLink>
-              </NavLinks>
-            </NavItem>
+            {sideLinks.map((item) => {
+              if (item.type === "button") return;
+              return (
+                <NavItem key={item.name}>
+                  <NavLinks href={item.to} passHref>
+                    <ActiveLink>{item.name}</ActiveLink>
+                  </NavLinks>
+                </NavItem>
+              );
+            })}
           </NavMenu>
           <ButtonWrap>
             <NavLinks href="/">

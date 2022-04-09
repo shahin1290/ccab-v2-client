@@ -10,6 +10,7 @@ export const Appbar = styled("nav")({
   alignItems: "center",
   fontSize: "1rem",
   // position:'fixed',
+  marginBottom: 3,
   top: 0,
   zIndex: 10,
   "@media (max-width: 600px)": {
@@ -68,7 +69,7 @@ export const MobileIcon = styled("div")({
 export const Wrap = styled("div")({
   display: "flex",
   justifyContent: "space-between",
-  width: "625px",
+  // width: "625px",
   right: "0",
   borderRadius: "38px 0px 0px 38px",
   background:
