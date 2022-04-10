@@ -39,7 +39,8 @@ const Details = (props) => {
         sx={{
           background: theme.palette.primary.main,
           overflow: "visible",
-          maxHeight: "680px",
+          height: "580px",
+          maxHeight: {xs:"380px", md:'580px'},
         }}
       >
         <Grid item md={11} xs={12}>
@@ -110,7 +111,8 @@ const Details = (props) => {
         sx={{
           background: theme.palette.primary.background,
           overflow: "visible",
-          maxHeight: "700px",
+          height: "620px",
+          maxHeight:"620px",
           display: "grid",
           placeItems: "center",
         }}
@@ -119,6 +121,7 @@ const Details = (props) => {
           sx={{
             width: { md: "80%", xs: "100%" },
             display: "grid",
+            marginTop:{xs:'-100px'}
           }}
         >
           <Image
