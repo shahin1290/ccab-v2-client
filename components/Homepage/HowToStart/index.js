@@ -26,6 +26,7 @@ import {
 
 import HappyGuy from "../../../public/images/happyGuy.png";
 import HowToStartImage from "../../../public/images/howToStart.png";
+import { useRouter } from "next/router";
 
 const cardData = [
   {
@@ -59,6 +60,8 @@ const cardData = [
 ];
 const HowToStart = () => {
   const theme = useTheme();
+  const router = useRouter();
+
   return (
     <Box bgcolor="secondary.background">
       <Container
@@ -178,7 +181,13 @@ const HowToStart = () => {
               <Typography sx={{ color: "common.white" }} variant="subtitle2">
                 Talk to our advisor to craft the ideal course plan
               </Typography>
-              <SecondaryButton variant="contained" color="secondary">
+              <SecondaryButton
+                variant="contained"
+                color="secondary"
+                onClick={() => {
+                  router.push("/ask-advisor");
+                }}
+              >
                 Ask an advisor
               </SecondaryButton>
             </Stack>
