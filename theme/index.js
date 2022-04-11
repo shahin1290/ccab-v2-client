@@ -46,6 +46,10 @@ const theme = createTheme({
       fontFamily: "'Segoe UI', sans-serif",
       fontSize: "2.8rem",
       fontWeight: "bolder",
+      "@media (max-width: 600px)": {
+        whiteSpace: "nowrap",
+        fontSize: "4.8rem",
+      },
     },
     h4: {
       fontFamily: "'Segoe UI', sans-serif",
