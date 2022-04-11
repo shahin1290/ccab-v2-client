@@ -184,4 +184,60 @@ export const CardDetailsButton = styled("button")({
   "&:hover": {
     transform: "scale(1.05)",
   },
+  
+});
+
+export const CourseDetailsBtn=styled("button")({
+  transition: "all .5s ease",
+  borderRadius: "29px",
+  background:'#FFA950',
+  alignSelf: "center",
+  fontFamily: "Segoe UI, Semibold",
+  textDecoration: "none",
+  fontSize: "16px",
+  color: "#ffffff",
+  outline: "none",
+  border: "none",
+  cursor: "pointer",
+  overflow: " hidden",
+  width: "200px",
+  height: " 58px",
+  position: "relative",
+  marginRight: "1rem",
+  "&:hover": {
+    transform: "scale(1.05)",
+  },
+  "@media (max-width: 600px)": {
+    fontSize: "12px",
+    width: "120px",
+    height: " 38px",
+  },
+});
+  
+
+export const CourseDetailsBtn2=styled("button")({
+  transition: "all .5s ease",
+  borderRadius: "29px",
+  background:'#ffffff',
+  alignSelf: "center",
+  fontFamily: "Segoe UI, Semibold",
+  textDecoration: "none",
+  fontSize: "16px",
+  color: "#FFA950",
+  outline: "none",
+  border: "none",
+  cursor: "pointer",
+  overflow: " hidden",
+  width: "200px",
+  height: " 58px",
+  position: "relative",
+  marginRight: "1rem",
+  "&:hover": {
+    transform: "scale(1.05)",
+  },
+  "@media (max-width: 600px)": {
+    fontSize: "12px",
+    width: "120px",
+    height: " 38px",
+  },
 });

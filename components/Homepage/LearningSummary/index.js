@@ -9,8 +9,10 @@ import {
   TextWrapper,
 } from "../../shared/CustomComponents2";
 import Underline from "../../../images/svg/Underline";
+import { useRouter } from "next/router";
 
 export default function LearningSummary() {
+  const router = useRouter();
   return (
     <SummaryContainer>
       <Container maxWidth="xl">
@@ -72,7 +74,7 @@ export default function LearningSummary() {
                   We will start from the ground up by learning how to implement
                   modern web pages with HTML and CSS.
                 </Typography>
-                <CardButton variant="contained" color="primary">
+                <CardButton variant="contained" color="primary" onClick={() => router.push("/course")}>
                   Learn More
                 </CardButton>
               </CardContent>
@@ -105,7 +107,7 @@ export default function LearningSummary() {
                   We will start from the ground up by learning how to implement
                   modern web pages with HTML and CSS.
                 </Typography>
-                <CardButton variant="contained" color="primary">
+                <CardButton variant="contained" color="primary" onClick={() => router.push("/course")}>
                   Learn More
                 </CardButton>
               </CardContent>
@@ -133,7 +135,7 @@ export default function LearningSummary() {
                   We will start from the ground up by learning how to implement
                   modern web pages with HTML and CSS.
                 </Typography>
-                <CardButton variant="contained" color="primary">
+                <CardButton variant="contained" color="primary" onClick={() => router.push("/course")}>
                   Learn More
                 </CardButton>
               </CardContent>
