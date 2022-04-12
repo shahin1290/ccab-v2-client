@@ -10,17 +10,28 @@ import {
 } from "@mui/material";
 import { useTheme } from "@mui/system";
 import React from "react";
+import { SecondaryButton } from "../../components/shared/CustomComponents";
 
 const CardInputField = ({ label, placeholder }) => {
   return (
-    <Box sx={{ mx: 2, my: 1 }}>
-      <InputLabel sx={{ fontWeight: "bold", mb: 1, ml: 1 }}>{label}</InputLabel>
+    <Box sx={{ mx: 2, my: { md: 5, sm: 1 } }}>
+      <InputLabel
+        required
+        sx={{
+          fontWeight: "bold",
+          mb: 1,
+          ml: 1,
+          "& .MuiInputLabel-asterisk": { color: "red" },
+        }}
+      >
+        {label}
+      </InputLabel>
       <FilledInput
         fullWidth
-        hiddenLabel
         sx={{ borderRadius: 3 }}
         disableUnderline
-        placeholder={placeholder}
+        multiline={label.toLowerCase().includes("question")}
+        rows={label.toLowerCase().includes("question") ? 5 : 0}
       />
     </Box>
   );
@@ -32,35 +43,47 @@ const AskAdvisorScreen = () => {
     <Container
       sx={{
         background: theme.palette.primary.background,
-        height: "100vh",
+        height: { xl: "1300px", lg: "1100px", sm: "1000px", xs: "900px" },
         position: "relative",
-        mb: 10,
       }}
       maxWidth={false}
     >
       <Box
         bgcolor="primary.main"
         sx={{
-          width: "550px",
-          height: "1000px",
-          borderRadius: "260px 260px 0 0",
+          width: { xs: "350px", sm: "500px", lg: "500px", xl: "650px" },
+          height: { xs: "650px", sm: "850px", lg: "900px", xl: "1200px" },
+          borderRadius: "400px 400px 0 0",
           position: "absolute",
-          left: "-150px",
+          left: "-130px",
           transform: "rotate(45deg)",
         }}
       >
         <Box
-          p={15}
           sx={{
             transform: "rotate(-45deg)",
             position: "absolute",
-            top: "100px",
+            top: { lg: "25%", md: "30%", sm: "32%", xs: "12%" },
+            left: { lg: "20%", md: "14%", sm: "24%", xs: "10%" },
             color: "primary.contrastText",
+            width: {
+              xl: "16vw",
+              lg: "20vw",
+              md: "20vw",
+              sm: "30vw",
+              xs: "50vw",
+            },
           }}
         >
-          <Typography variant="h2">Ask an advisor</Typography>
+          <Typography
+            fontSize={{ lg: "35px", sm: "25px", xs: "22px" }}
+            fontWeight={{ xs: "bold" }}
+            pb={2}
+          >
+            Ask an advisor
+          </Typography>
 
-          <Typography variant="body1">
+          <Typography variant="body1" letterSpacing={1.5}>
             Enter your question(s) in the area provided below. Your question
             will be emailed to the appropriate person.
           </Typography>
@@ -70,25 +93,34 @@ const AskAdvisorScreen = () => {
         sx={{
           position: "absolute",
           transform: "translate(-50%,-50%)",
-          top: "48%",
-          left: "50%",
+          top: { xl: "50%", md: "55%", sm: "50%", xs: "60%" },
+          left: { md: "50%", sm: "65%", xs: "50%" },
         }}
       >
         <Paper
           sx={{
             placeItems: "center",
-            p: 8,
-            width: "900px",
+            p: { xl: 7, lg: 5, md: 3, xs: 2 },
+            width: { xs: "85vw", sm: "50vw", xl: "40vw", lg: "45vw" },
             borderRadius: "20px",
           }}
         >
-          <CardInputField label="Card Type" />
+          <CardInputField label="First Name" />
 
-          <CardInputField label="Card Number" />
+          <CardInputField label="Last Name" />
 
-          <CardInputField label="Expiry" placeholder="MM/YY" />
+          <CardInputField label="Email Address" />
 
-          <CardInputField label="CVV (3 digits)" />
+          <CardInputField label="Question(s)" />
+          <Stack justifyContent="center" alignItems="center">
+            <SecondaryButton
+              variant="contained"
+              color="primary"
+              sx={{ px: { xl: 15, lg: 13 } }}
+            >
+              Submit
+            </SecondaryButton>
+          </Stack>
         </Paper>
       </Box>
     </Container>
