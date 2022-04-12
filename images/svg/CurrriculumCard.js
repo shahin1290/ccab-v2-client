@@ -4,7 +4,6 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const CurriculumCard = ({
-  number,
   text,
   width = 480,
   height = 160,
@@ -266,7 +265,7 @@ const CurriculumCard = ({
           fontWeight="800"
         >
           <tspan x="19.861" y="42">
-            {number}
+            {order.toString().padStart(2, "0")}
           </tspan>
         </text>
       </g>

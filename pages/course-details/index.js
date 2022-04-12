@@ -44,7 +44,6 @@ const CourseDetails = () => {
             <CurriculumCard
               text={item}
               fill={cardColors[index]}
-              number={(index + 1).toString().padStart(2, "0")}
               key={index}
               order={index + 1}
             />
