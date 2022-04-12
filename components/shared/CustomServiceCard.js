@@ -7,13 +7,20 @@ import {
   useTheme,
 } from "@mui/material";
 import Image from "next/image";
-import { SecondaryButton } from "../../shared/CustomComponents";
+import { SecondaryButton } from "./CustomComponents";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useRouter } from "next/router";
 
-import Underline from "../../../images/svg/Underline";
+import Underline from "../../images/svg/Underline";
 
-const Services = ({ title, detailParagraphs, imageUrl, bgcolor, slug }) => {
+const Services = ({
+  title,
+  detailParagraphs,
+  imageUrl,
+  bgcolor,
+  slug,
+  subDirectory,
+}) => {
   const theme = useTheme();
   const matches = useMediaQuery("(max-width:900px)");
   const router = useRouter();
@@ -67,7 +74,7 @@ const Services = ({ title, detailParagraphs, imageUrl, bgcolor, slug }) => {
                   variant="contained"
                   color="secondary"
                   onClick={() => {
-                    router.push(`/services/${slug}`);
+                    router.push(`/${subDirectory}/${slug}`);
                   }}
                 >
                   Read More
@@ -92,7 +99,7 @@ const Services = ({ title, detailParagraphs, imageUrl, bgcolor, slug }) => {
               variant="contained"
               color="secondary"
               onClick={() => {
-                router.push(`/services/${slug}`);
+                router.push(`/${subDirectory}/${slug}`);
               }}
             >
               Read More
