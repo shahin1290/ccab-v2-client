@@ -1,7 +1,9 @@
-import { Box } from "@mui/material";
+import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 import { useTheme } from "@mui/system";
 import React from "react";
+import CurriculumCircle from "../../images/svg/CurriculumCircle";
 import CurriculumCard from "../../images/svg/CurrriculumCard";
+import Underline from "../../images/svg/Underline";
 
 const cardColors = [
   "#007793",
@@ -32,33 +34,61 @@ const CurriculumData = [
 const CourseDetails = () => {
   const theme = useTheme();
   return (
-    <>
-      <Box
-        sx={{
-          backgroundColor: theme.palette.primary.background,
-          width: "100%",
-        }}
-      >
-        {CurriculumData.map((item, index) => {
-          return (
-            <CurriculumCard
-              text={item}
-              fill={cardColors[index]}
-              key={index}
-              order={index + 1}
-            />
-          );
-        })}
-      </Box>
+    <Stack
+      direction="column"
+      justifyContent="center"
+      alignItems="center"
+      sx={{
+        background: theme.palette.primary.background,
+        width: "100%",
+        py: { md: 10, xs: 5 },
+      }}
+    >
+      <Typography variant="h3" mb={2}>
+        NFT Curriculum
+      </Typography>
+      <Underline />
+      <Container maxWidth="lg">
+        <Typography variant="subtitle2" textAlign="center" mt={2}>
+          Our Full Stack Developer Courses are made to give you an easy and fast
+          path in web development. By the end these courses you will be able to
+          build web applications from scratch.
+        </Typography>
+      </Container>
 
-      {/* <CurriculumCard
-        text="Understanding the Concepts behind NFTs and how it works which is"
-        fill="#F20000"
-        number="1"
-        order={1}
-      /> */}
-    </>
+      <Container maxWidth="lg">
+        <Grid
+          container
+          sx={{
+            width: "100%",
+            justifyContent: "space-between",
+            alignItems: "center",
+            py: 5,
+            backgroundColor: theme.palette.primary.background,
+          }}
+        >
+          {CurriculumData.map((item, index) => {
+            return (
+              <Grid key={index} item md={5} xs={12}>
+                <CurriculumCard
+                  number={(index + 1).toString().padStart(2, "0")}
+                  text={item}
+                  fill={cardColors[index]}
+                  order={index + 1}
+                />
+              </Grid>
+            );
+          })}
+        </Grid>
+      </Container>
+      <Container maxWidth="md">
+        <CurriculumCircle mainTitle="NFT" />
+      </Container>
+    </Stack>
   );
 };
 
 export default CourseDetails;
+
+{
+}

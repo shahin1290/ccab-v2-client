@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const CurriculumCard = ({
+  number,
   text,
   width = 480,
   height = 160,
@@ -31,12 +32,7 @@ const CurriculumCard = ({
   }
 
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width={width}
-      height={height}
-      viewBox="0 0 480 160"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 160">
       <style></style>
       <defs>
         <filter
@@ -87,8 +83,8 @@ const CurriculumCard = ({
           id="Path_28871"
           data-name="Path 28871"
           d="M505.953,139.276l36.07-42.022-96.24-16.479Z"
-          transform="translate(-408.192 -16.834)"
-          // fill="#b74816"
+          transform="translate(-410.192 -20.834)"
+          // fill={fill}
           style={{ filter: "brightness(70%)" }}
           fill={fill}
         /> */}
@@ -265,7 +261,7 @@ const CurriculumCard = ({
           fontWeight="800"
         >
           <tspan x="19.861" y="42">
-            {order.toString().padStart(2, "0")}
+            {number}
           </tspan>
         </text>
       </g>
