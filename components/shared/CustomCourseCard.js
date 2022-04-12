@@ -1,7 +1,7 @@
 import { Box, Stack, Typography } from "@mui/material";
 import React from "react";
 
-const CustomCourseCard = ({ price, duration, SeatsNumber, width = 300, cardColor, sx }) => {
+const CustomCourseCard = ({ price, icon, icon2, duration, SeatsNumber, width = 300, cardColor, sx }) => {
   return (
     <Stack
       direction="column"
@@ -40,10 +40,16 @@ const CustomCourseCard = ({ price, duration, SeatsNumber, width = 300, cardColor
           alignItems: "flex-start",
           height: "55%",
         }}>
-        <Typography align="center" variant="h6" sx={{ color: "secondary.contrastText" , fontWeight: "normal", fontSize: { xs: 16}, paddingBottom:'2px' }}>
+        <Typography align="center" variant="h6" sx={{ color: "secondary.contrastText" , fontWeight: "normal", fontSize: { xs: 16}, paddingBottom:'2px', display:'flex', margin:'2px' }}>
+          <Typography style={{}} sx={{color:'#6364d9', marginRight:'10px',}}>
+            {icon}
+          </Typography>
           {duration}
         </Typography>
-        <Typography align="center" variant="h6" sx={{color: "secondary.contrastText" , fontWeight: "normal", fontSize: { xs: 16 } }}>
+        <Typography align="center" variant="h6" sx={{color: "secondary.contrastText" , fontWeight: "normal", fontSize: { xs: 16 },paddingBottom:'2px', display:'flex', margin:'2px' }}>
+          <Typography style={{color:'#6364d9', marginRight:'10px'}}>
+            {icon2}
+          </Typography>
           {SeatsNumber}
         </Typography>
       </Box>

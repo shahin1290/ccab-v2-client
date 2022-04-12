@@ -6,6 +6,9 @@ import { SecondaryButton } from "../../shared/CustomComponents";
 import cover from '../../../public/images/review-img.jpg'
 import CustomCourseCard from "../../shared/CustomCourseCard";
 import CustomCourseImgCard from '../../shared/CustomCourseImgCard'
+import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
+import EventSeatSharpIcon from '@mui/icons-material/EventSeatSharp';
+
 export default function About() {
     const theme = useTheme();
   return (
@@ -85,6 +88,8 @@ export default function About() {
               price=" 384 $"
               duration="30 Weeks"
               SeatsNumber="9 Seats available"
+              icon={<AccessTimeFilledIcon style={{fontSize:'20px', marginTop:'4px'}} />}
+              icon2={<EventSeatSharpIcon style={{fontSize:'20px', marginTop:'4px'}}/>}
               cardColor={theme.palette.primary.main}
               sx={{
                 position: "relative",
