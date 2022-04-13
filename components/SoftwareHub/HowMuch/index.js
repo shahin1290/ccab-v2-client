@@ -18,7 +18,6 @@ import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import { ForwardArrow } from "../../../images/svg/ServiceIcons";
 import styled from "@emotion/styled";
 import HowContactForm from "../ContactForm";
-import Image from "next/image";
 
 const LargeContainer = styled(Box)(({ theme }) => ({
   width: "100%",
@@ -27,7 +26,8 @@ const LargeContainer = styled(Box)(({ theme }) => ({
   alignItems: "center",
   paddingTop: 2,
   paddingBottom: 2,
-  backgroundImage: 'url("/svgImages/howMuchBackgroundImage.svg")',
+  backgroundImage:
+    'url("/svgImages/BackgroundImages/howMuchBackgroundImage.svg")',
   backgroundSize: "cover",
   backgroundPosition: "center",
 }));

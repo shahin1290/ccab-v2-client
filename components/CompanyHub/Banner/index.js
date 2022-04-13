@@ -8,13 +8,16 @@ export default function Banner() {
 
   return (
     <Box bgcolor={theme.palette.primary.background} pt={{ lg: 8, xs: 2 }}>
-      <Grid container justifyContent="center">
-        <Grid item xs={10} sm={8} md={6}>
+      <Grid container justifyContent="center" alignItems="end">
+        <Grid item xs={10} sm={8} md={6} sx={{ display: "block" }}>
           <Image
             priority
-            src={HeroBanner}
+            src="/svgImages/BackgroundImages/CompanyHubBanner.svg"
             layout="responsive"
+            width={950}
+            height={550}
             alt="Software Hub Hero"
+            objectFit="contain"
           />
         </Grid>
       </Grid>
