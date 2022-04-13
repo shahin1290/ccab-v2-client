@@ -18,6 +18,7 @@ import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import { ForwardArrow } from "../../../images/svg/ServiceIcons";
 import styled from "@emotion/styled";
 import HowContactForm from "../ContactForm";
+import { useRouter } from "next/router";
 
 const LargeContainer = styled(Box)(({ theme }) => ({
   width: "100%",
@@ -61,6 +62,7 @@ const HowMuch = () => {
   const [currentStage, setCurrentStage] = React.useState(1);
   const [slider, setSlider] = React.useState(null);
   const md = useMediaQuery(theme.breakpoints.down("md"));
+  const router = useRouter();
 
   const settings = {
     dots: false,
@@ -70,6 +72,7 @@ const HowMuch = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: true,
+
     centerPadding: "0px",
     adaptiveHeight: true,
     swipeToSlide: true,
@@ -95,7 +98,13 @@ const HowMuch = () => {
   };
   return (
     <LargeContainer
-      sx={{ scrollSnapAlign: "start", display: "grid", placeItems: "center" }}
+      sx={{
+        scrollSnapAlign: router.pathname.includes("how-much")
+          ? "none"
+          : "start",
+        display: "grid",
+        placeItems: "center",
+      }}
     >
       <InnerContainer maxWidth="xl">
         <Typography
