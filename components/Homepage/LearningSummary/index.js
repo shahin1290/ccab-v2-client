@@ -1,4 +1,11 @@
-import { Card, CardContent, Container, Grid, Typography } from "@mui/material";
+import {
+  Card,
+  CardContent,
+  Container,
+  Grid,
+  Stack,
+  Typography,
+} from "@mui/material";
 import React from "react";
 import learning from "../../../public/images/learning.png";
 import Image from "next/image";
@@ -16,7 +23,13 @@ export default function LearningSummary() {
   return (
     <SummaryContainer>
       <Container maxWidth="xl">
-        <TextWrapper>
+        <Stack
+          justifyContent="center"
+          alignItems="center"
+          textAlign="center"
+          mt={5}
+          gap={1}
+        >
           <Typography variant="h3">
             Learn how to become a
             <BranchedTitle>Full-stack Developer</BranchedTitle>
@@ -34,7 +47,7 @@ export default function LearningSummary() {
             programming and computer science knowledge, as well as experience
             with languages, frameworks, and libraries that employers demand.
           </Typography>
-        </TextWrapper>
+        </Stack>
 
         <Grid
           container
@@ -54,7 +67,7 @@ export default function LearningSummary() {
                 background: "#F7F8FB",
                 borderRadius: "20px",
                 display: "block",
-                boxShadow:'none'
+                boxShadow: "none",
               }}
             >
               <Image
@@ -74,7 +87,11 @@ export default function LearningSummary() {
                   We will start from the ground up by learning how to implement
                   modern web pages with HTML and CSS.
                 </Typography>
-                <CardButton variant="contained" color="primary" onClick={() => router.push("/course")}>
+                <CardButton
+                  variant="contained"
+                  color="primary"
+                  onClick={() => router.push("/course")}
+                >
                   Learn More
                 </CardButton>
               </CardContent>
@@ -87,7 +104,7 @@ export default function LearningSummary() {
                 background: "#F7F8FB",
                 borderRadius: "20px",
                 display: "block",
-                boxShadow:'none'
+                boxShadow: "none",
               }}
             >
               <Image
@@ -107,7 +124,11 @@ export default function LearningSummary() {
                   We will start from the ground up by learning how to implement
                   modern web pages with HTML and CSS.
                 </Typography>
-                <CardButton variant="contained" color="primary" onClick={() => router.push("/course")}>
+                <CardButton
+                  variant="contained"
+                  color="primary"
+                  onClick={() => router.push("/course")}
+                >
                   Learn More
                 </CardButton>
               </CardContent>
@@ -116,7 +137,11 @@ export default function LearningSummary() {
           <Grid item xs={4}>
             <Card
               sx={{ maxWidth: 400 }}
-              style={{ background: "#F7F8FB", borderRadius: "20px",boxShadow:'none' }}
+              style={{
+                background: "#F7F8FB",
+                borderRadius: "20px",
+                boxShadow: "none",
+              }}
             >
               <Image
                 priority
@@ -135,7 +160,11 @@ export default function LearningSummary() {
                   We will start from the ground up by learning how to implement
                   modern web pages with HTML and CSS.
                 </Typography>
-                <CardButton variant="contained" color="primary" onClick={() => router.push("/course")}>
+                <CardButton
+                  variant="contained"
+                  color="primary"
+                  onClick={() => router.push("/course")}
+                >
                   Learn More
                 </CardButton>
               </CardContent>

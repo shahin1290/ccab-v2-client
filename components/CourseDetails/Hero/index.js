@@ -14,6 +14,7 @@ export default function Hero() {
         rowSpacing={1}
         columnSpacing={{ xs: 1, sm: 2, md: 3 }}
         justifyContent="space-between"
+        sx={{ pt: { md: 10, xs: 0 } }}
       >
         <HubLeftSide
           item
@@ -30,7 +31,7 @@ export default function Hero() {
             color="primary"
             mb={1}
             textAlign={{ xs: "center", md: "start" }}
-            whiteSpace={{xs:'break-spaces'}}
+            whiteSpace={{ xs: "break-spaces" }}
           >
             JavaScript Full Stack Web and Mobile Development
           </Typography>
@@ -47,7 +48,7 @@ export default function Hero() {
         >
           <Image
             priority
-            src="/svgImages/HeroImages/SoftwareHubHero.svg"
+            src="/svgImages/HeroImages/CourseHeroImage.svg"
             layout="fill"
             alt="Software Hub Hero"
           />

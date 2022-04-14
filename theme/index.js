@@ -47,7 +47,7 @@ const theme = createTheme({
       fontSize: "2.8rem",
       fontWeight: "bolder",
       "@media (max-width: 600px)": {
-        whiteSpace: "nowrap",
+        // whiteSpace: "nowrap",
         fontSize: "4.8rem",
       },
     },

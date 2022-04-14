@@ -1,13 +1,6 @@
 import { Box, styled } from "@mui/system";
 
-import {
-  Button,
-  Typography,
-  Card,
-  CardContent,
-  IconButton,
-} from "@mui/material";
-import Image from "next/image";
+import { Button, Card, IconButton } from "@mui/material";
 
 const PrimaryButton = styled(Button)(({ theme }) => ({
   fontSize: 22,
@@ -30,9 +23,9 @@ const SecondaryButton = styled(Button)(({ theme }) => ({
     padding: "5px 30px",
   },
   [theme.breakpoints.down("sm")]: {
-    fontSize: 12,
+    fontSize: 16,
     marginTop: 5,
-    padding: "10px 25px",
+    padding: "2% 10%",
   },
 }));
 
@@ -72,15 +65,16 @@ const BannerImage = styled("div")(({ theme }) => ({
   padding: 0,
   margin: 0,
   [theme.breakpoints.down("md")]: {
-    width: "30%",
+    width: "20%",
     height: "auto",
     right: 0,
   },
   [theme.breakpoints.down("sm")]: {
     height: "auto",
-    width: "60%",
-    right: 15,
+    width: "50%",
+    right: 0,
     bottom: -2,
+    display: "none",
   },
 }));
 

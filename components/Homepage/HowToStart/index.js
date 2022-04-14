@@ -162,6 +162,10 @@ const HowToStart = () => {
               height: { xs: "100%", sm: "80%" },
               alignItems: { md: "flex-end", sm: "center" },
               flexDirection: { sm: "row", xs: "column" },
+              backgroundImage:
+                'url("/svgImages/BackgroundImages/howMuchBackgroundImage.svg")',
+              backgroundSize: "cover",
+              backgroundPosition: "center",
             }}
           >
             <Stack
@@ -169,16 +173,30 @@ const HowToStart = () => {
               sx={{
                 pl: { lg: 15, md: 7, sm: 4, xs: 2 },
                 pt: { xs: 2, sm: 5 },
-                alignItems: { sm: "flex-start", xs: "flex-start" },
-                justifyContent: { xs: "flex-start" },
+                alignItems: { sm: "flex-start", xs: "center" },
+                justifyContent: { xs: "center", md: "start" },
+                gap: { xs: 2, sm: 0 },
                 height: "100%",
-                width: { md: "70%", xs: "100%" },
+                width: { md: "70%", xs: "90%" },
               }}
             >
-              <Typography sx={{ color: "secondary.main" }} variant="h3">
+              <Typography
+                sx={{
+                  color: "secondary.main",
+                  textAlign: { xs: "center", sm: "start" },
+                }}
+                variant="h3"
+              >
                 Unsure which course fits you?
               </Typography>
-              <Typography sx={{ color: "common.white" }} variant="subtitle2">
+              <Typography
+                sx={{
+                  color: "common.white",
+                  fontWeight: "normal",
+                  textAlign: { xs: "center", sm: "start" },
+                }}
+                variant="h6"
+              >
                 Talk to our advisor to craft the ideal course plan
               </Typography>
               <SecondaryButton

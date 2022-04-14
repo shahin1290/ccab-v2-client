@@ -116,7 +116,7 @@ const AskAdvisorScreen = () => {
             <SecondaryButton
               variant="contained"
               color="primary"
-              sx={{ px: { xl: 15, lg: 13 } }}
+              sx={{ px: { xl: 15, lg: 13 }, mt: { xs: 5, sm: 1 } }}
             >
               Submit
             </SecondaryButton>

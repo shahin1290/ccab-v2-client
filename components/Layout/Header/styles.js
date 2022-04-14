@@ -90,6 +90,7 @@ export const NavMenu = styled("ul")({
   alignItems: "center",
   listStyle: "none",
   textAlign: "center",
+  paddingInlineStart: 25,
   "@media (max-width: 980px)": {
     display: "none",
   },
@@ -102,7 +103,7 @@ export const NavItem = styled("li")({
   fontSize: "20px ",
   alignItems: "center",
   textDecoration: "none",
-  padding: "0 1.5rem",
+  padding: "0 1.2rem",
   height: "100%",
   cursor: "pointer",
   whiteSpace: "nowrap",
@@ -114,7 +115,7 @@ export const NavLinks = styled(Link)({
   fontSize: "20px ",
   alignItems: "center",
   textDecoration: "none",
-  padding: "0 1.5rem",
+  padding: "0 1rem",
   height: "100%",
   cursor: "pointer",
 });
