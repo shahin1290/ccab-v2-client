@@ -1,58 +1,77 @@
 import * as React from "react";
 import { useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import SkipPreviousIcon from "@mui/icons-material/SkipPrevious";
-import PlayArrowIcon from "@mui/icons-material/PlayArrow";
-import SkipNextIcon from "@mui/icons-material/SkipNext";
 import { CardButton } from "./CustomComponents2";
+import Image from "next/image";
+import { Stack } from "@mui/material";
+import { useRouter } from "next/router";
 
 export default function CustomCompanySolutionsCard({
   imageUrl,
   title,
   description,
+  slug,
+  subDirectory,
 }) {
   const theme = useTheme();
+  const router = useRouter();
+
 
   return (
-    <Card
-      sx={{ display: "flex", border: "none", boxShadow: "none" }}
-      variant="outlined"
-    >
-      <CardMedia
-        component="img"
-        sx={{ maxWidth: 300 }}
-        image={imageUrl}
-        alt="Live from space album cover"
-      />
+    <Stack alignItems="center" justifyContent="center">
+      <Box
+        sx={{
+          display: { xs: "block", sm: "flex" },
+          mb: { xs: 5, sm: 15 },
+        }}
+      >
+        <Box
+          bgcolor={theme.palette.primary.main}
+          p={1}
+          sx={{
+            maxWidth: "320px",
+            height: "auto",
+            borderRadius: { sm: "20px 0 0 20px", xs: "20px  20px 0 0" },
+          }}
+        >
+          <Image src={imageUrl} alt="image" width={500} height={500} />
+        </Box>
 
-      <Box sx={{ display: "flex", flexDirection: "column", maxWidth: 300 }}>
-        <CardContent sx={{ flex: "1 0 auto" }}>
-          <Typography component="div" variant="h5">
-            {title}
-          </Typography>
-          <Typography
-            variant="subtitle1"
-            color="text.secondary"
-            component="div"
-         
+        <Box
+          bgcolor={theme.palette.primary.background}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            maxWidth: "320px",
+            borderRadius: { sm: "0 20px 20px 0", xs: "0 0 20px  20px " },
+          }}
+        >
+          <Box
+            p={3}
+            sx={{
+              height: "auto",
+            }}
           >
-            {description}
-          </Typography>
+            <Typography component="div" variant="h3" pb={2}>
+              {title}
+            </Typography>
+            <Typography variant="body1" color="text.secondary" component="div">
+              {description}
+            </Typography>
 
-          <CardButton
-            variant="contained"
-            color="secondary"
-            onClick={() => router.push("/course")}
-          >
-            Read More
-          </CardButton>
-        </CardContent>
+            <CardButton
+              variant="contained"
+              color="secondary"
+              onClick={() => {
+                router.push(`/${subDirectory}/${slug}`);
+              }}
+            >
+              Read More
+            </CardButton>
+          </Box>
+        </Box>
       </Box>
-    </Card>
+    </Stack>
   );
 }

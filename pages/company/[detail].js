@@ -3,16 +3,10 @@ import fs from "fs";
 import path from "path";
 import util from "util";
 import { Container, Grid, Stack, Typography } from "@mui/material";
-import { Box, useTheme } from "@mui/system";
+import { Box, styled, useTheme } from "@mui/system";
 import {
-  ButtonWrap,
-  CardDetailsButton,
   DetailsContainer,
-  InfoContainer,
-  InfoLeftSide,
-  InfoRightSide,
   TextWrapper,
-  Wrapper,
 } from "../../components/shared/CustomComponents2";
 
 import ServiceCard, {
@@ -24,24 +18,36 @@ import Underline from "../../images/svg/Underline";
 
 import Image from "next/image";
 import { useRouter } from "next/router";
-import ServiceDetailBackground from "../../images/svg/ServiceDetailBackground";
 import CustomCompanySolutionsCard from "../../components/shared/CustomCompanySolutionsCard";
 import CompanySolutionsData from "../../dummydata/CompanySolutionsData";
 
+const StyledSvg = styled("svg")(({ theme }) => ({
+  width: "900px",
+  height: "900px",
+
+  [theme.breakpoints.down("xl")]: { width: "600px", height: "600px" },
+  [theme.breakpoints.down("sm")]: { width: "280px", height: "280px" },
+}));
+
+const StyledCircleSvg = styled("svg")(({ theme }) => ({
+  width: "500px",
+  height: "500px",
+
+  [theme.breakpoints.down("xl")]: { width: "350px", height: "350px" },
+  [theme.breakpoints.down("sm")]: { width: "200px", height: "200px" },
+}));
+
 const Details = (props) => {
-  console.log(props);
   const router = useRouter();
   const theme = useTheme();
   return (
-    <Box bgcolor={theme.palette.primary.background}>
-      <Grid container pb={12}>
-        <Grid
-          container
-          item
-          xs={12}
-          md={6}
+    <Box>
+      <Box pb={2}>
+        <Box
+          bgcolor={theme.palette.primary.background}
           sx={{
             position: "relative",
+            height: { xl: 900, lg: 600, sm: 550, xs: 240 },
           }}
         >
           <Box
@@ -52,12 +58,26 @@ const Details = (props) => {
               zIndex: 3,
             }}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 64 64"
-              width="900"
-              height="900"
+            <Box
+              sx={{
+                position: "absolute",
+                top: { xl: "300px", md: "200px", sm: "170px", xs: "60px" },
+                left: { xl: "100px", md: "70px", sm: "70px", xs: "20px" },
+              }}
             >
+              <Typography
+                variant="h2"
+                color="#fff"
+                mb={1}
+                sx={{ fontWeight: "normal" }}
+              >
+                {props.header}
+              </Typography>
+              <Typography variant="h1" color="#fff" mb={3}>
+                {props.subheader}
+              </Typography>
+            </Box>
+            <StyledSvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
               {/*  <defs>
                 <linearGradient
                   id="bones-gradient"
@@ -77,17 +97,17 @@ const Details = (props) => {
                 </linearGradient>
               </defs> */}
               <g fill="#7072DF">
-                <path d="M0 64 L14 64 Q18 64 22 58 L46 26 Q50 20 46 10 L42 0 L0 0 Z" />
+                <path d="M0 64 L10 64 Q18 64 22 58 L46 26 Q50 20 46 10 L42 0 L0 0 Z" />
               </g>
-            </svg>
+            </StyledSvg>
 
             <Box
               sx={{
                 position: "absolute",
-                bottom: "100px",
-                left: "20px",
-                height: "290px",
-                width: "290px",
+                bottom: { xl: "200px", lg: "100px", sm: "100px", xs: "20px" },
+                left: { md: "20px", sm: "-50px", xs: "-30px" },
+                height: { lg: "210px", xl: "290px", sm: "220px", xs: "130px" },
+                width: { lg: "210px", xl: "290px", sm: "220px", xs: "130px" },
                 backgroundColor: "rgba(0, 0, 0, 0.1)",
                 borderRadius: "50%",
                 display: "inline-block",
@@ -98,32 +118,25 @@ const Details = (props) => {
             <Box
               sx={{
                 position: "absolute",
-                right: "167px",
+                right: { xl: "167px", sm: "107px", xs: "45px" },
                 top: "0px",
-
                 zIndex: 1,
               }}
             >
-              <svg
+              <StyledCircleSvg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 64 64"
-                width="500"
-                height="500"
                 fill="rgba(0, 0, 0, 0.07)"
               >
-                <path
-                  xmlns="http://www.w3.org/2000/svg"
-                  d="M12 0 C6 20 30 42 54 22 L46 0 Z"
-                />
-              </svg>
+                <path d="M12 0 C6 20 30 42 54 22 L46 0 Z" />
+              </StyledCircleSvg>
             </Box>
 
             <Box
               sx={{
                 position: "absolute",
-                right: "167px",
-                top: "0px",
-
+                right: { sm: "2px", xl: "167px" },
+                top: { sm: "80px", xl: "100px" },
                 zIndex: 1,
               }}
             >
@@ -134,7 +147,7 @@ const Details = (props) => {
                 viewBox="0 0 614.843 573.918"
               >
                 <filter id="blur">
-                  <feGaussianBlur stdDeviation="1.2" />
+                  <feGaussianBlur stdDeviation="2.9" />
                 </filter>
                 <g
                   id="Group_23169"
@@ -156,40 +169,34 @@ const Details = (props) => {
                     d="M228.695,168.45a7.657,7.657,0,1,1-7.657-7.657A7.655,7.655,0,0,1,228.695,168.45Z"
                     transform="translate(262.116 117.511)"
                     fill="#fff"
-                    opacity="0.7"
+                    opacity="0.5"
                     filter="url(#blur)"
                   />
-                  
                 </g>
               </svg>
             </Box>
           </Box>
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          md={6}
-          sx={{
-            overflow: "visible",
-            height: "620px",
-            maxHeight: "620px",
-          }}
-        >
+
           <Box
             sx={{
-              width: { md: "400px", xs: "100%" },
+              position: "absolute",
+              left: { xl: "530px", lg: "340px", sm: "10%", xs: "20px" },
+              bottom: { xs: "15px", lg: "-70px", sm: "-60px" },
+              zIndex: 999,
+              px: 1,
+              width: { xs: 250, sm: 600, lg: 800, xl: 1000 },
+              height: { xs: 250, sm: 600, lg: 800, xl: 1000 },
             }}
           >
             <Image
               src={props.HeroImage}
               alt={props.header}
-              width={250}
-              height={250}
-              layout="responsive"
-              priority
+              width={1000}
+              height={1000}
             />
           </Box>
-        </Grid>
+        </Box>
+
         <DetailsContainer style={{ background: "#fff" }}>
           <Container maxWidth="lg">
             <TextWrapper>
@@ -236,33 +243,38 @@ const Details = (props) => {
               )
             )}
           </Grid>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              pt: { xs: 5, md: 10 },
-              pb: { xs: 5, md: 10 },
-            }}
-          >
-            <Typography variant="h3" mb={2}>
-              Other Solutions
-            </Typography>
-            <Underline />
-          </Box>
         </DetailsContainer>
-      </Grid>
+      </Box>
 
       <Container maxWidth="xl">
-        <Grid container>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            pt: { xs: 5, md: 10 },
+            pb: { xs: 5, md: 10 },
+          }}
+        >
+          <Typography variant="h3" mb={2}>
+            Other Solutions
+          </Typography>
+          <Underline />
+        </Box>
+        <Grid
+          container
+          sx={{ justifyContent: { xs: "center", lg: "space-between" } }}
+        >
           {CompanySolutionsData.filter((item) => item.slug !== props.slug).map(
             (item, index) => (
-              <Grid item key={index} xs={6} md={6}>
+              <Grid item key={index} sm={12} lg={6}>
                 <CustomCompanySolutionsCard
                   imageUrl={item.HeroImage}
                   title={item.header + " " + item.subheader}
                   description={item.description}
+                  slug={item.slug}
+                  subDirectory="company"
                 />
               </Grid>
             )
