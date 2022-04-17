@@ -3,7 +3,7 @@ const CompanySolutionsData = [
     slug: "company-solutions",
     header: "Company",
     subheader: "Solutions",
-    HeroImage: "/svgImages/HeroImages/SalesSolution.svg",
+    HeroImage: "/svgImages/HeroImages/CompanySolution.svg",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in",
     detailParagraphs: [

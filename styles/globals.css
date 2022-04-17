@@ -16,6 +16,21 @@ body {
   }
 }
 
+.imageContainer {
+  width: 100%;
+}
+
+.image {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
+
+.imageContainer > div {
+  position: unset !important;
+}
+
 /* custom slider for student review section */
 
 [type="radio"] {

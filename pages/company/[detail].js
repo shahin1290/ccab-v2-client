@@ -13,20 +13,18 @@ import ServiceCard, {
   ServiceCardBack,
   ServiceCardFront,
 } from "../../components/shared/ServiceCard";
-
 import Underline from "../../images/svg/Underline";
-
 import Image from "next/image";
 import { useRouter } from "next/router";
 import CustomCompanySolutionsCard from "../../components/shared/CustomCompanySolutionsCard";
 import CompanySolutionsData from "../../dummydata/CompanySolutionsData";
 
 const StyledSvg = styled("svg")(({ theme }) => ({
-  width: "900px",
-  height: "900px",
+  width: "930px",
+  height: "930px",
 
   [theme.breakpoints.down("xl")]: { width: "600px", height: "600px" },
-  [theme.breakpoints.down("sm")]: { width: "280px", height: "280px" },
+  [theme.breakpoints.down("sm")]: { width: "350px", height: "350px" },
 }));
 
 const StyledCircleSvg = styled("svg")(({ theme }) => ({
@@ -47,22 +45,22 @@ const Details = (props) => {
           bgcolor={theme.palette.primary.background}
           sx={{
             position: "relative",
-            height: { xl: 900, lg: 600, sm: 550, xs: 240 },
+            height: { xl: 900, lg: 600, sm: 550, xs: 300 },
           }}
         >
           <Box
             sx={{
               position: "absolute",
               top: "-120px",
-              left: 0,
+              left: { xs: "-70px", sm: 0 },
               zIndex: 3,
             }}
           >
             <Box
               sx={{
                 position: "absolute",
-                top: { xl: "300px", md: "200px", sm: "170px", xs: "60px" },
-                left: { xl: "100px", md: "70px", sm: "70px", xs: "20px" },
+                top: { xl: "300px", md: "200px", sm: "170px", xs: "90px" },
+                left: { xl: "100px", md: "70px", sm: "70px", xs: "90px" },
               }}
             >
               <Typography
@@ -78,34 +76,19 @@ const Details = (props) => {
               </Typography>
             </Box>
             <StyledSvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-              {/*  <defs>
-                <linearGradient
-                  id="bones-gradient"
-                  x1="0%"
-                  y1="0%"
-                  x2="0%"
-                  y2="100%"
-                >
-                  <stop
-                    offset="0%"
-                    style={{ "stop-color": " rgba(40, 45, 223, 0.8)" }}
-                  />
-                  <stop
-                    offset="100%"
-                    style={{ "stop-color": "rgba(40, 45, 223, 0.8)" }}
-                  />
-                </linearGradient>
-              </defs> */}
               <g fill="#7072DF">
-                <path d="M0 64 L10 64 Q18 64 22 58 L46 26 Q50 20 46 10 L42 0 L0 0 Z" />
+                <path
+                  xmlns="http://www.w3.org/2000/svg"
+                  d="M0 0 L0 64 L11.166666666666668 64 Q21.833333333333332 63.5 26.5 55.833333333333336 L44.666666666666664 20.5 Q49 13 43.666666666666664 6.5 L38.833333333333336 0 Z"
+                />
               </g>
             </StyledSvg>
 
             <Box
               sx={{
                 position: "absolute",
-                bottom: { xl: "200px", lg: "100px", sm: "100px", xs: "20px" },
-                left: { md: "20px", sm: "-50px", xs: "-30px" },
+                bottom: { xl: "200px", lg: "100px", sm: "100px", xs: "70px" },
+                left: { md: "20px", sm: "-50px", xs: "20px" },
                 height: { lg: "210px", xl: "290px", sm: "220px", xs: "130px" },
                 width: { lg: "210px", xl: "290px", sm: "220px", xs: "130px" },
                 backgroundColor: "rgba(0, 0, 0, 0.1)",
@@ -118,7 +101,7 @@ const Details = (props) => {
             <Box
               sx={{
                 position: "absolute",
-                right: { xl: "167px", sm: "107px", xs: "45px" },
+                right: { xl: "157px", sm: "92px", xs: "56px" },
                 top: "0px",
                 zIndex: 1,
               }}
@@ -128,7 +111,10 @@ const Details = (props) => {
                 viewBox="0 0 64 64"
                 fill="rgba(0, 0, 0, 0.07)"
               >
-                <path d="M12 0 C6 20 30 42 54 22 L46 0 Z" />
+                <path
+                  xmlns="http://www.w3.org/2000/svg"
+                  d="M6.166666666666666 0 C0.8333333333333339 18 25.833333333333336 41.833333333333336 50 17.833333333333332 L37.333333333333336 0.16666666666666607 Z"
+                />
               </StyledCircleSvg>
             </Box>
 
@@ -138,6 +124,7 @@ const Details = (props) => {
                 right: { sm: "2px", xl: "167px" },
                 top: { sm: "80px", xl: "100px" },
                 zIndex: 1,
+                display: { xs: "none", md: "block" },
               }}
             >
               <svg
@@ -180,20 +167,27 @@ const Details = (props) => {
           <Box
             sx={{
               position: "absolute",
-              left: { xl: "530px", lg: "340px", sm: "10%", xs: "20px" },
-              bottom: { xs: "15px", lg: "-70px", sm: "-60px" },
+              left: { xl: "40vw", lg: "550px", sm: "35vw", xs: "20vw" },
+              top: { xs: "-5vw", lg: 0, md: "-3vw", sm: "5vw" },
               zIndex: 999,
               px: 1,
-              width: { xs: 250, sm: 600, lg: 800, xl: 1000 },
-              height: { xs: 250, sm: 600, lg: 800, xl: 1000 },
+              width: {
+                xs: "75vw",
+                sm: "60vw",
+                md: "50vw",
+                lg: "40vw",
+                xl: "50vw",
+              },
+              height: {
+                xs: "75vw",
+                sm: "60vw",
+                md: "50vw",
+                lg: "40vw",
+                xl: "50vw",
+              },
             }}
           >
-            <Image
-              src={props.HeroImage}
-              alt={props.header}
-              width={1000}
-              height={1000}
-            />
+            <Image src={props.HeroImage} alt={props.header} layout="fill" />
           </Box>
         </Box>
 
