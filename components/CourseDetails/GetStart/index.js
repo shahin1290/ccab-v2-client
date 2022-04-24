@@ -6,9 +6,11 @@ import {
   } from "@mui/material";
   import { DotGrid } from "../../../images/svg/CareerSupport";
 import { ButtonWrap, CourseDetailsBtn,CourseDetailsBtn2, TextWrapper } from "../../shared/CustomComponents2";
+import { useRouter } from "next/router";
 
 export default function GetStart() {
     const theme = useTheme();
+    const router = useRouter();
 
   return (
     <Box
@@ -38,7 +40,7 @@ export default function GetStart() {
                 <CourseDetailsBtn2>
                     Get Started
                 </CourseDetailsBtn2>
-                <CourseDetailsBtn >
+                <CourseDetailsBtn onClick={() => router.push("/course-details/all-courses")}>
                     All Courses
                 </CourseDetailsBtn>
               </ButtonWrap>
