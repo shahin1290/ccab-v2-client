@@ -11,6 +11,7 @@ import LearningSummary from "./LearningSummary";
 import ComprehensiveCurriculum from "./ComprehensiveCurriculum";
 import WhatStandsOut from "./WhatStandsOut";
 import FAQ from "./FAQ";
+import TechStack from "./TechStack";
 
 export default function HomePage() {
   return (
@@ -22,6 +23,7 @@ export default function HomePage() {
       <WhyJavascript />
       <Tuition />
       <TuitionDetails />
+      <TechStack />
       <WhatStandsOut />
       <StudentReviews />
       <CompanyReviews />
