@@ -12,6 +12,7 @@ import ComprehensiveCurriculum from "./ComprehensiveCurriculum";
 import WhatStandsOut from "./WhatStandsOut";
 import FAQ from "./FAQ";
 import TechStack from "./TechStack";
+import StudyTime from "./StudyTime";
 
 export default function HomePage() {
   return (
@@ -24,6 +25,7 @@ export default function HomePage() {
       <Tuition />
       <TuitionDetails />
       <TechStack />
+      <StudyTime />
       <WhatStandsOut />
       <StudentReviews />
       <CompanyReviews />

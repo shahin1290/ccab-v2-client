@@ -97,7 +97,7 @@ export const NodeIcon = ({ size = 1 }) => (
     xmlns="http://www.w3.org/2000/svg"
     aria-hidden="true"
     role="img"
-    width={size * 60}
+    width={size * 100}
     height={size * 60}
     preserveAspectRatio="xMidYMid meet"
     viewBox="0 0 512 314"
@@ -277,7 +277,7 @@ export const MySQLIcon = ({ size = 1 }) => (
     xmlns="http://www.w3.org/2000/svg"
     aria-hidden="true"
     role="img"
-    width={size * 60}
+    width={size * 90}
     height={size * 60}
     preserveAspectRatio="xMidYMid meet"
     viewBox="0 0 512 349"
