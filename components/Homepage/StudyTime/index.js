@@ -29,7 +29,7 @@ const Study = () => {
         <Grid
           container
           alignItems="start"
-          justifyContent={{sm:"space-between", xs: "center"}}
+          justifyContent={{ sm: "space-between", xs: "center" }}
           spacing={1}
           wrap="wrap-reverse"
         >
@@ -67,7 +67,7 @@ const Study = () => {
                   <path
                     d="M 9.995 -0.005 C 9.965 3.859 10.188 2.105 1.912 5.032 Q 1.184 5.537 1.311 6.988 M 10.946 0.04 V 6.979 M 12.001 -0.019 Q 11.926 2.506 13.115 2.848 Q 16.815 3.665 20.158 4.988 Q 20.767 5.523 20.693 6.979"
                     stroke={theme.palette.primary.main}
-                    stroke-width="0.21"
+                    strokeWidth="0.21"
                     fill="none"
                   />
                 </StyledSvg>
