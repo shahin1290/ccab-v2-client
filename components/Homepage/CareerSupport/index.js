@@ -29,7 +29,7 @@ const CareerSupport = () => {
             position: "absolute",
             top: { lg: "-30px", md: "-50px" },
             left: { lg: "-70px", md: "-10px" },
-            display: { sm: "none", md: "block" },
+            display: { xs: "none", md: "block" },
           }}
         >
           <DotGrid fillColor={theme.palette.secondary.main} />
@@ -70,7 +70,7 @@ const CareerSupport = () => {
             >
               <Image
                 priority
-                src="/images/career-support.png"
+                src="/svgImages/HeroImages/CompanySolution.svg"
                 alt="company-logo"
                 width="400"
                 height="400"

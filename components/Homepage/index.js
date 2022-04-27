@@ -4,7 +4,7 @@ import Footer from "../Layout/Footer";
 import HowToStart from "./HowToStart";
 import WhyJavascript from "./WhyJavascript";
 import Tuition from "./Tuition";
-import TuitionDetails from "./TuitionDetails";
+import HowMuch from "../SoftwareHub/HowMuch";
 import CompanyReviews from "./CompanyReviews";
 import StudentReviews from "./StudentReviews";
 import LearningSummary from "./LearningSummary";
@@ -23,7 +23,7 @@ export default function HomePage() {
       <HowToStart />
       <WhyJavascript />
       <Tuition />
-      <TuitionDetails />
+      <HowMuch />
       <TechStack />
       <StudyTime />
       <WhatStandsOut />

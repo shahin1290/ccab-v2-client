@@ -82,9 +82,9 @@ const Tuition = () => {
             }}
           >
             <CustomCard
-              price="2000€"
-              duration="3-5"
-              durationType="months"
+              price="29€"
+              text="Help with your coding studies according to your needs, and schedule the number of sessions!"
+              duration="per hour"
               cardColor={theme.palette.primary.main}
               sx={{
                 position: "relative",
@@ -107,9 +107,9 @@ const Tuition = () => {
               Course Fees
             </Typography>
             <CustomCard
-              price="2000€"
-              duration="3-5"
-              durationType="months"
+              price="199€"
+              text="A Monthly formed with a set amount of sessions for any web or mobile development of your need full/part-time!"
+              duration="per month"
               cardColor={theme.palette.secondary.main}
               sx={{
                 position: "relative",

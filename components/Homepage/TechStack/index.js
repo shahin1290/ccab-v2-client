@@ -27,7 +27,7 @@ const TechStack = () => {
     <Container
       maxWidth="xl"
       sx={{
-        py: { md: 10, xs: 4 },
+        py: { md: 15, xs: 4 },
       }}
     >
       <Grid container spacing={{ md: 8, xs: 1 }} sx={{ pb: 6 }}>

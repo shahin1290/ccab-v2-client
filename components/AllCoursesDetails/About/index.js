@@ -3,7 +3,7 @@ import { Container, Grid, Stack, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import Underline from "../../../images/svg/Underline";
 import { SecondaryButton } from "../../shared/CustomComponents";
-import cover from '../../../public/images/review-img.jpg'
+import cover from '../../../public/images/review1.jpeg'
 import CustomCourseCard from "../../shared/CustomCourseCard";
 import CustomCourseImgCard from '../../shared/CustomCourseImgCard'
 import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
