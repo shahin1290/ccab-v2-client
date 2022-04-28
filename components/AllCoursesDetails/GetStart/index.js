@@ -1,17 +1,10 @@
-import {
-    Box,
-    Container,
-    Typography,
-    useTheme,
-  } from "@mui/material";
-  import { DotGrid } from "../../../images/svg/CareerSupport";
-import { ButtonWrap, CourseDetailsBtn,CourseDetailsBtn2, TextWrapper } from "../../shared/CustomComponents2";
-import { useRouter } from "next/router";
+import { Box, Container, Typography, useTheme } from '@mui/material';
+import React from 'react'
+import { DotGrid } from '../../../images/svg/CareerSupport';
+import { ButtonWrap, CourseDetailsBtn, CourseDetailsBtn2, TextWrapper } from '../../shared/CustomComponents2';
 
-export default function GetStart() {
-    const theme = useTheme();
-    const router = useRouter();
-
+export default function index() {
+  const theme = useTheme();
   return (
     <Box
       bgcolor="#6364D9"
@@ -49,4 +42,3 @@ export default function GetStart() {
     </Box>
   )
 }
-  

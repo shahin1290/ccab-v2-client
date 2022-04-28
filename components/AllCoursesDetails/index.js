@@ -1,13 +1,13 @@
 import React from 'react'
-import GetStart from '../CourseDetails/GetStart'
-import Hero from '../CourseDetails/Hero'
+import GetStart from './GetStart'
 import About from './About'
 import Courses from './Courses'
+import Hero from './Hero'
 
 export default function AllCourses() {
   return (
     <>
-        <Hero/>
+        <Hero />
         <About />
         <Courses />
         <GetStart />

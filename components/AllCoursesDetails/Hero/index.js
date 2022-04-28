@@ -1,12 +1,9 @@
-import { Grid, Typography } from "@mui/material";
-import {
-  HeroHubContainer,
-  HubLeftSide,
-  HubRightSide,
-} from "../../shared/CustomComponents2";
+import { Grid, Typography } from '@mui/material'
+import React from 'react'
+import { HeroHubContainer, HubLeftSide, HubRightSide } from '../../shared/CustomComponents2'
 import Image from "next/image";
 
-export default function Hero() {
+export default function index() {
   return (
     <HeroHubContainer>
       <Grid
@@ -55,5 +52,5 @@ export default function Hero() {
         </HubRightSide>
       </Grid>
     </HeroHubContainer>
-  );
+  )
 }
