@@ -2,6 +2,7 @@ import { useTheme } from "@emotion/react";
 import { Container, Grid, Stack, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
+import Underline from "../../../images/svg/Underline";
 
 import CustomCard from "../../shared/CustomCard";
 
@@ -20,8 +21,14 @@ const Tuition = () => {
     <Box bgcolor="#F8F9FB" py={{ xs: 2, sm: 10 }}>
       <Container maxWidth="xl">
         <Stack justifyContent="center" alignItems="center">
-          <Typography variant="h3">Tuition</Typography>
-          <Typography variant="h6" sx={{ color: "secondary.contrastText" }}>
+          <Typography variant="h3" sx={{ mt: 5, mb: 2 }}>
+            Tuition
+          </Typography>
+          <Underline />
+          <Typography
+            variant="h6"
+            sx={{ color: "secondary.contrastText", mt: 5, px: 3 }}
+          >
             We conduct discount programs from time to time, so the price may be
             lower
           </Typography>
@@ -73,6 +80,8 @@ const Tuition = () => {
               maxWidth: "500px",
               display: "grid",
               height: "100%",
+              rowGap: 3,
+
               gridTemplateColumns:
                 "minmax(40%, 200px) minmax(20%, 100px) minmax(40%, 200px)",
               gridTemplateRows:
@@ -89,9 +98,9 @@ const Tuition = () => {
               sx={{
                 position: "relative",
                 zIndex: 1,
-                gridColumn: "1 / 3",
+                gridColumn: { sm: "1 / 3", xs: " 2 " },
                 gridRow: "1 / 3",
-                width: { sm: 300, xs: 200 },
+                // width: { sm: 300, xs: 200 },
               }}
             />
             <Typography
@@ -102,6 +111,7 @@ const Tuition = () => {
                 gridRow: "1",
                 alignSelf: "center",
                 justifySelf: "center",
+                display: { sm: "block", xs: "none" },
               }}
             >
               Course Fees
@@ -114,9 +124,9 @@ const Tuition = () => {
               sx={{
                 position: "relative",
                 zIndex: 2,
-                gridColumn: "2 / 4",
-                gridRow: "2 / 4",
-                width: { sm: 300, xs: 200 },
+                gridColumn: { sm: "2 / 4", xs: " 1 / 4" },
+                gridRow: { sm: "2 / 4", xs: "3 / 4" },
+                // width: { sm: 300, xs: 200 },
               }}
             />
           </Grid>
