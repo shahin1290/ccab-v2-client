@@ -14,6 +14,13 @@ import {
 import { useTheme } from "@mui/system";
 import Image from "next/image";
 import React from "react";
+import { useState } from "react";
+
+const PaymentMethods = [
+  { id: 1, name: "paypal", image: "/svgImages/payment/paypal.svg" },
+  { id: 2, name: "Visa", image: "/svgImages/payment/visa.svg" },
+  { id: 3, name: "BankTransfer", image: "/svgImages/payment/bankTransfer.svg" },
+];
 
 const CardInputField = ({ label, placeholder }) => {
   return (
@@ -38,11 +45,12 @@ const CardInputField = ({ label, placeholder }) => {
   );
 };
 
-const PaymentMethodIconButton = ({ src, name }) => {
+const PaymentMethodIconButton = ({ src, name, selected, onClick }) => {
   const theme = useTheme();
 
   return (
     <IconButton
+      onClick={onClick}
       size="large"
       sx={{
         display: "block",
@@ -52,17 +60,11 @@ const PaymentMethodIconButton = ({ src, name }) => {
         borderRadius: 2,
         display: "grid",
         placeItems: "center",
+        border: selected ? `2px solid ${theme.palette.primary.main}` : "none",
         py: 3,
       }}
     >
-      <Image
-        src={src}
-        alt={name}
-        width={45}
-        height={15}
-        layout="fill"
-        objectFit="scale-down"
-      />
+      <Image src={src} alt={name} layout="fill" objectFit="scale-down" />
     </IconButton>
   );
 };
@@ -71,6 +73,7 @@ const PaymentScreen = () => {
   const theme = useTheme();
   const downMD = useMediaQuery(theme.breakpoints.down("md"));
 
+  const [paymentMethod, setPaymentMethod] = useState("");
   return (
     <Container
       sx={{
@@ -182,18 +185,17 @@ const PaymentScreen = () => {
             >
               <Grid item xs={12} sx={{ display: "grid", placeItems: "center" }}>
                 <Stack sx={{ width: "100%" }} direction="row" spacing={2}>
-                  <PaymentMethodIconButton
-                    name="paypal"
-                    src="/svgImages/payment/paypal.svg"
-                  />
-                  <PaymentMethodIconButton
-                    name="VISA"
-                    src="/svgImages/payment/visa.svg"
-                  />
-                  <PaymentMethodIconButton
-                    name="paypal"
-                    src="/svgImages/payment/bankTransfer.svg"
-                  />
+                  {PaymentMethods.map((item) => {
+                    return (
+                      <PaymentMethodIconButton
+                        key={item.id}
+                        name={item.name}
+                        onClick={() => setPaymentMethod(item.name)}
+                        src={item.image}
+                        selected={paymentMethod === item.name}
+                      />
+                    );
+                  })}
                 </Stack>
               </Grid>
               <Grid item xs={12}>
