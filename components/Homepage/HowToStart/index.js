@@ -203,7 +203,7 @@ const HowToStart = () => {
                 variant="contained"
                 color="secondary"
                 onClick={() => {
-                  router.push("/ask-advisor");
+                  router.push("/home/ask-advisor");
                 }}
               >
                 Ask an advisor

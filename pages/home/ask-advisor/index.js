@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import { useTheme } from "@mui/system";
 import React from "react";
-import { SecondaryButton } from "../../components/shared/CustomComponents";
+import { SecondaryButton } from "../../../components/shared/CustomComponents";
 
 const CardInputField = ({ label, placeholder }) => {
   return (

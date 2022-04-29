@@ -90,7 +90,7 @@ export default function LearningSummary() {
                 <CardButton
                   variant="contained"
                   color="primary"
-                  onClick={() => router.push("/course-details")}
+                  onClick={() => router.push("/home/course-details")}
                 >
                   Learn More
                 </CardButton>

@@ -1,6 +1,5 @@
 import Hero from "./Hero";
 import CareerSupport from "./CareerSupport";
-import Footer from "../Layout/Footer";
 import HowToStart from "./HowToStart";
 import WhyJavascript from "./WhyJavascript";
 import Tuition from "./Tuition";
