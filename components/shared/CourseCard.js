@@ -1,9 +1,11 @@
 import { Card, CardContent, Typography } from "@mui/material";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React from "react";
 import { CardButton } from "./CustomComponents2";
 
 const CourseCard = ({ image, title, description, link }) => {
+  const router = useRouter();
   return (
     <Card
       sx={{ maxWidth: 400 }}

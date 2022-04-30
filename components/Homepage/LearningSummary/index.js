@@ -17,6 +17,7 @@ import {
 } from "../../shared/CustomComponents2";
 import Underline from "../../../images/svg/Underline";
 import { useRouter } from "next/router";
+import CourseCard from "../../shared/CourseCard";
 
 export default function LearningSummary() {
   const router = useRouter();
@@ -48,7 +49,6 @@ export default function LearningSummary() {
             with languages, frameworks, and libraries that employers demand.
           </Typography>
         </Stack>
-
         <Grid
           container
           spacing={{ xs: 4, md: 3 }}
@@ -61,114 +61,31 @@ export default function LearningSummary() {
           }}
         >
           <Grid item xs={4}>
-            <Card
-              sx={{ maxWidth: 400 }}
-              style={{
-                background: "#F7F8FB",
-                borderRadius: "20px",
-                display: "block",
-                boxShadow: "none",
-              }}
-            >
-              <Image
-                priority
-                src={learning}
-                alt="learning"
-                layout="responsive"
-              />
-              <CardContent style={{ textAlign: "center" }}>
-                <Typography variant="h6" align="center" mb={2}>
-                  Javascript Full Stack Web and Mobile Development
-                </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{ color: "secondary.contrastText", padding: "0.8rem" }}
-                >
-                  We will start from the ground up by learning how to implement
-                  modern web pages with HTML and CSS.
-                </Typography>
-                <CardButton
-                  variant="contained"
-                  color="primary"
-                  onClick={() => router.push("/home/course-details")}
-                >
-                  Learn More
-                </CardButton>
-              </CardContent>
-            </Card>
+            <CourseCard
+              image={learning}
+              link="/home/course-details"
+              title="Javascript Full Stack Web and Mobile Development"
+              description="We will start from the ground up by learning how to implement modern
+              web pages with HTML and CSS."
+            />
           </Grid>
           <Grid item xs={4}>
-            <Card
-              sx={{ maxWidth: 400 }}
-              style={{
-                background: "#F7F8FB",
-                borderRadius: "20px",
-                display: "block",
-                boxShadow: "none",
-              }}
-            >
-              <Image
-                priority
-                src={learning}
-                alt="learning"
-                layout="responsive"
-              />
-              <CardContent style={{ textAlign: "center" }}>
-                <Typography variant="h6" align="center" mb={2}>
-                  Javascript Full Stack Web and Mobile Development
-                </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{ color: "secondary.contrastText", padding: "0.8rem" }}
-                >
-                  We will start from the ground up by learning how to implement
-                  modern web pages with HTML and CSS.
-                </Typography>
-                <CardButton
-                  variant="contained"
-                  color="primary"
-                  onClick={() => router.push("/course-details")}
-                >
-                  Learn More
-                </CardButton>
-              </CardContent>
-            </Card>
+            <CourseCard
+              image={learning}
+              link="/home/course-details"
+              title="Javascript Full Stack Web and Mobile Development"
+              description="We will start from the ground up by learning how to implement modern
+              web pages with HTML and CSS."
+            />
           </Grid>
           <Grid item xs={4}>
-            <Card
-              sx={{ maxWidth: 400 }}
-              style={{
-                background: "#F7F8FB",
-                borderRadius: "20px",
-                boxShadow: "none",
-              }}
-            >
-              <Image
-                priority
-                src={learning}
-                alt="learning"
-                layout="responsive"
-              />
-              <CardContent style={{ textAlign: "center" }}>
-                <Typography variant="h6" align="center" mb={2}>
-                  Javascript Full Stack Web and Mobile Development
-                </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{ color: "secondary.contrastText", padding: "0.8rem" }}
-                >
-                  We will start from the ground up by learning how to implement
-                  modern web pages with HTML and CSS.
-                </Typography>
-                <CardButton
-                  variant="contained"
-                  color="primary"
-                  onClick={() => router.push("/course-details")}
-                >
-                  Learn More
-                </CardButton>
-              </CardContent>
-            </Card>
+            <CourseCard
+              image={learning}
+              link="/home/course-details"
+              title="Javascript Full Stack Web and Mobile Development"
+              description="We will start from the ground up by learning how to implement modern
+              web pages with HTML and CSS."
+            />
           </Grid>
         </Grid>
       </Container>
