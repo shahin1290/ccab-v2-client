@@ -27,13 +27,13 @@ import {
 } from "./styles";
 import Link from "next/link";
 
-const sideLinks = [
+const navLinks = [
   { name: "Home", to: "/home", type: "nav" },
   { name: "Software Hub", to: "/software-hub", type: "nav" },
   { name: "Company Hub", to: "/company", type: "nav" },
   { name: "Teaching Hub", to: "/education", type: "nav" },
-  { name: "Login", to: "/", type: "button" },
-  { name: "Register", to: "/", type: "button" },
+  { name: "Login", to: "/", type: "button", color: "primary" },
+  { name: "Register", to: "/", type: "button", color: "secondary" },
 ];
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -49,7 +49,7 @@ export default function Header() {
         </MobileIcon>
         <Wrap>
           <NavMenu>
-            {sideLinks.map((item) => {
+            {navLinks.map((item) => {
               if (item.type === "button") return;
               return (
                 <NavItem key={item.name}>
@@ -61,12 +61,18 @@ export default function Header() {
             })}
           </NavMenu>
           <ButtonWrap>
-            <NavLinks href="/">
-              <FirstButton>Login</FirstButton>
-            </NavLinks>
-            <NavLinks href="/">
-              <SecondButton>Register</SecondButton>
-            </NavLinks>
+            {navLinks.map((item) => {
+              if (item.type === "nav") return;
+              return (
+                <NavLinks href={item.to} key={item.name}>
+                  {item.color === "primary" ? (
+                    <FirstButton>{item.name}</FirstButton>
+                  ) : (
+                    <SecondButton>{item.name}</SecondButton>
+                  )}
+                </NavLinks>
+              );
+            })}
           </ButtonWrap>
         </Wrap>
       </NavbarContainer>
@@ -91,7 +97,7 @@ export default function Header() {
 
         <Divider />
         <List>
-          {sideLinks.map((item) => (
+          {navLinks.map((item) => (
             <ListItem
               dense
               alignItems="center"

@@ -5,7 +5,7 @@ import React from "react";
 import { Checked, Crossed } from "../../images/svg/pricingIcons";
 import { PrimaryButton } from "./StyledComponents";
 
-const PricingCard = ({ price, cardColor, checked, crossed, height }) => {
+const PricingCard = ({ price, cardColor, checked, crossed }) => {
   const border = 20;
   return (
     <Stack
