@@ -9,12 +9,12 @@ import {
   CourseDetailsBtn,
   CourseDetailsBtn2,
   TextWrapper,
-} from "../../../components/shared/CustomComponents2";
+} from "../../../components/shared/StyledComponents";
 import Underline from "../../../images/svg/Underline";
-import { SecondaryButton } from "../../../components/shared/CustomComponents";
-import CustomCourseCard from "../../../components/shared/CustomCourseCard";
+import { SecondaryButton } from "../../../components/shared/StyledComponents";
+import CourseInfoCard from "../../../components/shared/CourseInfoCard";
 import cover from "../../../public/images/review1.jpeg";
-import CustomCourseImgCard from "../../../components/shared/CustomCourseImgCard";
+import CourseInfoCardImg from "../../../components/shared/CourseInfoCardImg";
 import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
 import EventSeatSharpIcon from "@mui/icons-material/EventSeatSharp";
 import { DotGrid } from "../../../images/svg/CareerSupport";
@@ -150,7 +150,7 @@ export default function Course() {
                 marginBottom: { xs: "80px" },
               }}
             >
-              <CustomCourseImgCard
+              <CourseInfoCardImg
                 src={cover}
                 alt="cover"
                 sx={{
@@ -161,7 +161,7 @@ export default function Course() {
                   width: { sm: 300, xs: 200 },
                 }}
               />
-              <CustomCourseCard
+              <CourseInfoCard
                 price=" 384 $"
                 duration="30 Weeks"
                 SeatsNumber="9 Seats available"

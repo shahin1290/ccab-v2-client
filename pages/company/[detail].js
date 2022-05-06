@@ -7,7 +7,7 @@ import { Box, styled, useTheme } from "@mui/system";
 import {
   DetailsContainer,
   TextWrapper,
-} from "../../components/shared/CustomComponents2";
+} from "../../components/shared/StyledComponents";
 
 import ServiceCard, {
   ServiceCardBack,
@@ -16,7 +16,7 @@ import ServiceCard, {
 import Underline from "../../images/svg/Underline";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import CustomCompanySolutionsCard from "../../components/shared/CustomCompanySolutionsCard";
+import CompanySolutionSection from "../../components/shared/CompanySolutionSection";
 import CompanySolutionsData from "../../dummydata/CompanySolutionsData";
 
 const StyledSvg = styled("svg")(({ theme }) => ({
@@ -263,7 +263,7 @@ const Details = (props) => {
           {CompanySolutionsData.filter((item) => item.slug !== props.slug).map(
             (item, index) => (
               <Grid item key={index} sm={12} lg={6}>
-                <CustomCompanySolutionsCard
+                <CompanySolutionSection
                   imageUrl={item.HeroImage}
                   title={item.header + " " + item.subheader}
                   description={item.description}

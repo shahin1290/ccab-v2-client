@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
-import Banner from "../../components/CompanyHub/Banner";
-import Solutions from "../../components/CompanyHub/Solutions";
+import Banner from "../../components/pages/CompanyHub/Banner";
+import Solutions from "../../components/pages/CompanyHub/Solutions";
 
 const CompanyHub = () => {
   const router = useRouter();

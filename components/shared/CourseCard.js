@@ -2,7 +2,7 @@ import { Card, CardContent, Typography } from "@mui/material";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
-import { CardButton } from "./CustomComponents2";
+import { CardButton } from "./StyledComponents";
 
 const CourseCard = ({ image, title, description, link }) => {
   const router = useRouter();

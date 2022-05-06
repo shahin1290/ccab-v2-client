@@ -3,7 +3,7 @@ import { Box } from "@mui/system";
 import React from "react";
 
 import { Checked, Crossed } from "../../images/svg/pricingIcons";
-import { PrimaryButton } from "./CustomComponents";
+import { PrimaryButton } from "./StyledComponents";
 
 const PricingCard = ({ price, cardColor, checked, crossed, height }) => {
   const border = 20;
