@@ -76,7 +76,7 @@ const ServiceSelectionCard = (props) => {
     selected: {
       opacity: 3,
       display: "block",
-      top: -35,
+      top: -25,
       zIndex: 2,
       display: "grid",
       placeItems: "center",

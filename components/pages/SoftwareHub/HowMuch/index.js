@@ -117,6 +117,7 @@ const HowMuch = () => {
         <Typography variant="subtitle2" color="common.white" mt={3} mb={5}>
           Click the icons below to describe your app to get the estimate
         </Typography>
+
         <CustomStack spacing={1}>
           {md ? (
             <Box>
@@ -147,7 +148,7 @@ const HowMuch = () => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    py: { xs: 3, md: 5 },
+                    py: { xs: 10, md: 5 },
                     mx: { xl: 10, lg: 5, xs: 0, md: 10 },
                   }}
                   key={index}
@@ -155,7 +156,7 @@ const HowMuch = () => {
                   <Grid
                     key={index}
                     container
-                    rowSpacing={{ xs: 1, md: 6 }}
+                    rowSpacing={{ xs: 3, md: 6 }}
                     justifyContent="start"
                     alignItems="center"
                     sx={{ my: 0.5, mx: { xs: -1.5 } }}
