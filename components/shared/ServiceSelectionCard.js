@@ -35,7 +35,7 @@ const CheckMark = styled("div")(({ theme }) => ({
   border: `5px solid ${theme.palette.common.white}`,
   cursor: "pointer",
   boxSizing: "border-box",
-
+  zIndex: 2,
   [theme.breakpoints.down("md")]: {
     width: "35px",
     height: "35px",
@@ -68,7 +68,7 @@ const ServiceSelectionCard = (props) => {
     notSelected: {
       opacity: 0,
       top: 2,
-      zIndex: 2,
+
       transition: {
         duration: 0.2,
       },
@@ -76,13 +76,13 @@ const ServiceSelectionCard = (props) => {
     selected: {
       opacity: 3,
       display: "block",
-      top: -25,
+      top: -35,
       zIndex: 2,
       display: "grid",
       placeItems: "center",
       transition: {
         type: "spring",
-        stiffness: 300,
+        stiffness: 150,
       },
     },
   };
@@ -110,22 +110,53 @@ const ServiceSelectionCard = (props) => {
         justifyContent="center"
         alignItems="center"
         spacing={1}
+        sx={{
+          position: "relative",
+          width: "100%",
+          height: "100%",
+        }}
       >
+        {props.iconUrl && (
+          <Box
+            sx={{
+              position: "relative",
+              height: 80,
+              width: 80,
+              backgroundColor: !selected
+                ? theme.palette.secondary.contrastText
+                : theme.palette.primary.contrastText,
+              backgroundPosition: "center",
+              maskImage: `url(${props.iconUrl})`,
+              maskPosition: "center center",
+              maskRepeat: "no-repeat",
+              maskBorder: "none",
+              maskOrigin: "border-box",
+            }}
+          ></Box>
+        )}
         <Box
           sx={{
-            "& svg": {
-              height: { xs: 40, md: 85 },
-            },
+            // flexGrow: 1,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            flexDirection: "column",
           }}
         >
-          {props.Icon}
+          {props.title && (
+            <Typography
+              variant="subtitle2"
+              sx={{ fontWeight: { xs: "normal", md: "bold" } }}
+            >
+              {props.title}
+            </Typography>
+          )}
+          {props.description && (
+            <Typography variant="body2" textAlign="center" sx={{ px: 2 }}>
+              {props.description}
+            </Typography>
+          )}
         </Box>
-        <Typography
-          variant="subtitle2"
-          sx={{ fontWeight: { xs: "normal", md: "bold" } }}
-        >
-          {props.title}
-        </Typography>
       </Stack>
     </MotionSelectionCard>
   );

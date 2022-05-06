@@ -147,7 +147,7 @@ const HowMuch = () => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    py: { xs: 3, md: 4 },
+                    py: { xs: 3, md: 5 },
                     mx: { xl: 10, lg: 5, xs: 0, md: 10 },
                   }}
                   key={index}
@@ -155,7 +155,7 @@ const HowMuch = () => {
                   <Grid
                     key={index}
                     container
-                    rowSpacing={{ xs: 1, md: 3 }}
+                    rowSpacing={{ xs: 1, md: 6 }}
                     justifyContent="start"
                     alignItems="center"
                     sx={{ my: 0.5, mx: { xs: -1.5 } }}
@@ -165,7 +165,8 @@ const HowMuch = () => {
                         <Grid key={index} item lg={4} md={6} xs={12}>
                           <ServiceSelectionCard
                             title={item.title}
-                            Icon={item.Icon}
+                            description={item.description}
+                            iconUrl={item.iconUrl}
                           />
                         </Grid>
                       );

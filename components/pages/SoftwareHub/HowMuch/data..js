@@ -36,9 +36,16 @@ import {
 } from "../../../../images/svg/ServiceIcons";
 
 const Section1 = [
-  { title: "Ios Application", Icon: <AppleLogo /> },
-  { title: "Android Application", Icon: <AndroidLogo /> },
-  { title: "Website", Icon: <WebLogo /> },
+  {
+    title: "Ios Application",
+    iconUrl: "/svgImages/ServiceCardIcons/applelogo.svg",
+    description: "This is a brief summary about the services",
+  },
+  {
+    title: "Android Applications",
+    iconUrl: "/svgImages/ServiceCardIcons/androidLogo.svg",
+  },
+  { title: "Website", iconUrl: "/svgImages/ServiceCardIcons/webLogo.svg" },
   { title: "UI / UX", Icon: <UIUXLogo /> },
   { title: "Cloud", Icon: <CloudLogo /> },
   { title: "Research", Icon: <ResearchLogo /> },
