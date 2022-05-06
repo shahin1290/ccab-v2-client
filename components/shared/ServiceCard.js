@@ -50,16 +50,6 @@ const IconCircle = styled("div")(({ theme }) => ({
   },
 }));
 
-const ServiceCard = ({ children, sx }) => {
-  return (
-    <OuterCard>
-      <InnerCard className="inner-card" sx={{ ...sx }}>
-        {children}
-      </InnerCard>
-    </OuterCard>
-  );
-};
-
 export const ServiceCardFront = ({ icon, title, backgroundColor }) => {
   return (
     <Box
@@ -138,6 +128,16 @@ export const ServiceCardBack = ({ title, content, price, backgroundColor }) => {
         />
       </Stack>
     </Box>
+  );
+};
+
+const ServiceCard = ({ children, sx }) => {
+  return (
+    <OuterCard>
+      <InnerCard className="inner-card" sx={{ ...sx }}>
+        {children}
+      </InnerCard>
+    </OuterCard>
   );
 };
 
