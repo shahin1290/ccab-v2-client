@@ -130,7 +130,7 @@ export const TextWrapper = styled(Grid)({
   marginRight: "auto",
   marginLeft: "auto",
   marginTop: "20px",
-  paddingTop: "100px",
+  // paddingTop: "100px",
   "@media (max-width: 480px)": {
     marginTop: "30px",
     paddingTop: "30px",

@@ -250,7 +250,7 @@ const CurriculumCard = ({
           </g>
         </g>
       </g>
-      <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#_06)">
+      <g transform="matrix(1, 0, 0, 1, 0, 0)">
         <text
           id="_06-2"
           data-name="06"
