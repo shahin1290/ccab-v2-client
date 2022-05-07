@@ -7,18 +7,19 @@ import HowMuch from "../SoftwareHub/HowMuch";
 import CompanyReviews from "./CompanyReviews";
 import StudentReviews from "./StudentReviews";
 import LearningSummary from "./LearningSummary";
-import ComprehensiveCurriculum from "./ComprehensiveCurriculum";
+import ComprehensiveCurriculum from "./Curriculum";
 import WhatStandsOut from "./WhatStandsOut";
 import FAQ from "./FAQ";
 import TechStack from "./TechStack";
 import StudyTime from "./StudyTime";
+import Curriculum from "./Curriculum";
 
 export default function HomePage() {
   return (
     <>
       <Hero />
       <LearningSummary />
-      <ComprehensiveCurriculum />
+      <Curriculum />
       <HowToStart />
       <WhyJavascript />
       <Tuition />

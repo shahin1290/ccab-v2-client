@@ -1,8 +1,9 @@
 import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 import { useTheme } from "@mui/system";
-import React from "react";
+import React, { useState } from "react";
 import CurriculumCard from "../../images/svg/CurrriculumCard";
 import Underline from "../../images/svg/Underline";
+import { ButtonWrap, SecondaryButton } from "../shared/StyledComponents";
 
 const cardColors = [
   "#007793",
@@ -79,29 +80,37 @@ const CurriculumData = [
 const CourseCurriculum = ({
   CurriculumTitle,
   CurriculumDescription,
-  CurriculumData,
 }) => {
   const theme = useTheme();
+  const [itemsToShow, setItemsToShow] = useState(6);
+
+  const showmore = () => {
+    setItemsToShow(CurriculumData.length)
+}
+
+const showless = () => {
+    setItemsToShow(6)
+}
   return (
-    <Stack
-      direction="column"
-      justifyContent="center"
-      alignItems="center"
-      sx={{
-        background: theme.palette.primary.background,
-        width: "100%",
-        py: { md: 10, xs: 5 },
-      }}
-    >
-      <Typography variant="h3" mb={2}>
-        {CurriculumTitle}
-      </Typography>
-      <Underline />
-      <Container maxWidth="lg">
-        <Typography variant="subtitle2" textAlign="center" mt={2}>
-          {CurriculumDescription}
-        </Typography>
-      </Container>
+    // <Stack
+    //   direction="column"
+    //   justifyContent="center"
+    //   alignItems="center"
+    //   sx={{
+    //     background: theme.palette.primary.background,
+    //     width: "100%",
+    //     py: { md: 10, xs: 5 },
+    //   }}
+    // >
+    //   <Typography variant="h3" mb={2}>
+    //      NFT Curriculum
+    //   </Typography>
+    //   <Underline />
+    //   <Container maxWidth="lg">
+    //     <Typography variant="subtitle2" textAlign="center" mt={2}>
+    //       Our Full Stack Developer Courses are made to give you an easy and fast path in web development. By the end these courses you will be able to build web applications from scratch.
+    //     </Typography>
+    //   </Container>
 
       <Container maxWidth="lg">
         <Grid
@@ -114,7 +123,7 @@ const CourseCurriculum = ({
             backgroundColor: theme.palette.primary.background,
           }}
         >
-          {CurriculumData.map((item, index) => {
+          {CurriculumData.slice(0, itemsToShow)?.map((item, index) => {
             return (
               <Grid key={index} item md={5} xs={12}>
                 <CurriculumCard
@@ -130,21 +139,25 @@ const CourseCurriculum = ({
               </Grid>
             );
           })}
+
         </Grid>
+        <ButtonWrap style={{marginBottom:'25px', marginTop:"-10px"}}>
+        {(itemsToShow === 6) ? <SecondaryButton variant="contained" color="secondary" onClick={showmore}>Show More</SecondaryButton>: <SecondaryButton variant="contained" color="secondary" onClick={showless}>Show Less</SecondaryButton>}
+        </ButtonWrap>
       </Container>
-    </Stack>
+    // </Stack>
   );
 };
 
-export async function getStaticProps() {
-  return {
-    props: {
-      CurriculumTitle: "NFT Curriculum",
-      CurriculumDescription:
-        "Our Full Stack Developer Courses are made to give you an easy and fast path in web development. By the end these courses you will be able to build web applications from scratch.",
-      CurriculumData,
-    },
-  };
-}
+// export async function getStaticProps() {
+//   return {
+//     props: {
+//       CurriculumTitle: "NFT Curriculum",
+//       CurriculumDescription:
+//         "Our Full Stack Developer Courses are made to give you an easy and fast path in web development. By the end these courses you will be able to build web applications from scratch.",
+//       CurriculumData,
+//     },
+//   };
+// }
 
 export default CourseCurriculum;
