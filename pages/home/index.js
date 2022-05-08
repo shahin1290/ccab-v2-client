@@ -13,11 +13,17 @@ import CareerSupport from "../../components/pages/Homepage/CareerSupport";
 
 import HowMuch from "../../components/pages/SoftwareHub/HowMuch";
 import CurriculumSection from "../../components/pages/Homepage/CurriculumSection";
+import { HeroDummyData } from "../../dummydata/HeroData";
 
 export default function HomePage() {
   return (
     <>
-      <Hero />
+      <Hero
+        Header={HeroDummyData.title}
+        SubHeader={HeroDummyData.subTitle}
+        Description={HeroDummyData.description}
+        Media={HeroDummyData.pic}
+      />
       <LearningSummary />
       <CurriculumSection />
       <HowToStart />
