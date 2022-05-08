@@ -7,11 +7,11 @@ import HowMuch from "../SoftwareHub/HowMuch";
 import CompanyReviews from "./CompanyReviews";
 import StudentReviews from "./StudentReviews";
 import LearningSummary from "./LearningSummary";
-import ComprehensiveCurriculum from "./ComprehensiveCurriculum";
 import WhatStandsOut from "./WhatStandsOut";
 import FAQ from "./FAQ";
 import TechStack from "./TechStack";
 import StudyTime from "./StudyTime";
+import ComprehensiveCurriculum from "./ComprehensiveCurriculum";
 
 export default function HomePage() {
   return (

@@ -1,4 +1,3 @@
-import ComprehensiveCurriculum from "../../components/pages/Homepage/ComprehensiveCurriculum";
 import Hero from "../../components/pages/Homepage/Hero";
 import HowToStart from "../../components/pages/Homepage/HowToStart";
 import LearningSummary from "../../components/pages/Homepage/LearningSummary";
@@ -13,6 +12,7 @@ import FAQ from "../../components/pages/Homepage/FAQ";
 import CareerSupport from "../../components/pages/Homepage/CareerSupport";
 
 import HowMuch from "../../components/pages/SoftwareHub/HowMuch";
+import ComprehensiveCurriculum from "../../components/pages/Homepage/ComprehensiveCurriculum";
 
 export default function HomePage() {
   return (

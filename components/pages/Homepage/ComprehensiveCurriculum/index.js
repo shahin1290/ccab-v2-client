@@ -4,7 +4,6 @@ import React from "react";
 import {
   SectionContainer,
   SliderButton,
-  TextWrapper,
 } from "../../../shared/StyledComponents";
 import Underline from "../../../../images/svg/Underline";
 import Slider from "react-slick";
@@ -31,34 +30,13 @@ const CurriculumData = [
 const settings = {
   infinite: true,
   dots: false,
+  arrows: false,
   slidesToShow: 1,
   slidesToScroll: 1,
   swipeToSlide: false,
   adaptiveHeight: true,
   centerMode: false,
   swipe: false,
-  nextArrow: <ArrowBackIosNewIcon />,
-  prevArrow: <ArrowForwardIosIcon />,
-  responsive: [
-    {
-      breakpoint: 1200,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: true,
-      },
-    },
-
-    {
-      breakpoint: 900,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: true,
-      },
-    },
-  ],
 };
 
 export default function ComprehensiveCurriculum() {
