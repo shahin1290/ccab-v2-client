@@ -1,4 +1,4 @@
-import { Container, Grid, Typography, Box, Stack } from "@mui/material";
+import { Container, Typography, Box, Stack } from "@mui/material";
 import React from "react";
 
 import {
@@ -10,11 +10,14 @@ import Slider from "react-slick";
 import { useState } from "react";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import FullStackCurriculum from "./FullStackCurriculum";
-import NFTCurriculum from "./NFTCurriculum";
-import UIUXCurriculum from "./UIUXCurriuculm";
+import CurriculumContent from "./CurriculumContent";
+import CurriculumSVGDesktop from "../../../../images/svg/CurriculumImageDesktop";
+import CurriculumImageMobile from "../../../../images/svg/CurriculumImageMobile";
+import NFTContent from "./NFTContent";
+import UIUXCurriculumDesktop from "./UIUXCurriuculmDesktop";
+import UIUXCurriculumMobile from "./UIUXCurriculumMobile";
 
-const CurriculumData = [
+const NFTCurriculumData = [
   "Welcome to the Course",
   "Understanding the Concepts behind NFTs",
   "History Behind NFTs",
@@ -38,6 +41,9 @@ const settings = {
   centerMode: false,
   swipe: false,
 };
+
+const DUMMY_DESCRIPTION =
+  "Our Full Stack Developer Courses are made to give you an easy and fast path in web development. By the end these courses you will be able to build web applications from scratch.";
 
 export default function ComprehensiveCurriculum() {
   const [slider, setSlider] = useState(null);
@@ -97,13 +103,21 @@ export default function ComprehensiveCurriculum() {
         ref={(slider) => setSlider2(slider)}
         style={{ width: "100%", padding: 0 }}
       >
-        <FullStackCurriculum />
-        <NFTCurriculum
-          CurriculumTitle="NFT Curriculum"
-          CurriculumDescription="Our Full Stack Developer Courses are made to give you an easy and fast path in web development. By the end these courses you will be able to build web applications from scratch."
-          CurriculumData={CurriculumData}
+        <CurriculumContent
+          description={DUMMY_DESCRIPTION}
+          LargeContent={<CurriculumSVGDesktop />}
+          SmallContent={<CurriculumImageMobile />}
         />
-        <UIUXCurriculum mainTitle="UI/UX" />
+        <CurriculumContent
+          description={DUMMY_DESCRIPTION}
+          LargeContent={<NFTContent data={NFTCurriculumData} />}
+          SmallContent={<NFTContent data={NFTCurriculumData} />}
+        />
+        <CurriculumContent
+          description={DUMMY_DESCRIPTION}
+          LargeContent={<UIUXCurriculumDesktop />}
+          SmallContent={<UIUXCurriculumMobile />}
+        />
       </Slider>
     </SectionContainer>
   );

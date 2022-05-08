@@ -10,7 +10,7 @@ import {
   TextWrapper,
 } from "../../../shared/StyledComponents";
 
-const FullStackCurriculum = () => {
+const CurriculumContent = ({ description, LargeContent, SmallContent }) => {
   const theme = useTheme();
   return (
     <Stack
@@ -26,21 +26,19 @@ const FullStackCurriculum = () => {
           variant="h6"
           sx={{ color: "secondary.contrastText", padding: "0.8rem", mb: 3 }}
         >
-          Our Full Stack Developer Courses are made to give you an easy and fast
-          path in web development. By the end these courses you will be able to
-          build web applications from scratch.
+          {description}
         </Typography>
       </TextWrapper>
       <Grid style={{ paddingBottom: "50px", paddingTop: "30px" }}>
         <DesktopContent display={{ xs: "none", md: "block" }}>
-          <CurriculumSVGDesktop />
+          {LargeContent}
         </DesktopContent>
         <MobileContent display={{ xs: "block", md: "none" }}>
-          <CurriculumImageMobile />
+          {SmallContent}
         </MobileContent>
       </Grid>
     </Stack>
   );
 };
 
-export default FullStackCurriculum;
+export default CurriculumContent;

@@ -1,6 +1,6 @@
 import React from "react";
 
-const UIUXCurriculum = ({ mainTitle, headers }) => {
+const UIUXCurriculumDesktop = ({ mainTitle, headers }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -1050,4 +1050,4 @@ for Designer"
   );
 };
 
-export default UIUXCurriculum;
+export default UIUXCurriculumDesktop;

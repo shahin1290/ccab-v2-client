@@ -1,7 +1,7 @@
 import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 import { useTheme } from "@mui/system";
 import React from "react";
-import CurriculumCard from "../../../shared/CurrriculumCard";
+import CurriculumCard from "../../../../shared/CurrriculumCard";
 
 const cardColors = [
   "#007793",
@@ -16,11 +16,7 @@ const cardColors = [
   "#F20000",
 ];
 
-const NFTCurriculum = ({
-  CurriculumTitle,
-  CurriculumDescription,
-  CurriculumData,
-}) => {
+const NFTCurriculum = ({ description, data }) => {
   const theme = useTheme();
   return (
     <Stack
@@ -32,7 +28,7 @@ const NFTCurriculum = ({
       }}
     >
       <Typography variant="subtitle2" textAlign="center">
-        {CurriculumDescription}
+        {description}
       </Typography>
 
       <Container maxWidth="lg">
@@ -45,7 +41,7 @@ const NFTCurriculum = ({
             backgroundColor: theme.palette.primary.background,
           }}
         >
-          {CurriculumData.map((item, index) => {
+          {data.map((item, index) => {
             return (
               <Grid key={index} item md={5} xs={12}>
                 <CurriculumCard
