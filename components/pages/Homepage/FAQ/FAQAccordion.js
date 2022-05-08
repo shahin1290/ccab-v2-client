@@ -3,7 +3,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { Box, Container, Typography } from "@mui/material";
 
 const Content = styled.div`
-  background-color: #F8F9FB;
+  background-color: #f8f9fb;
   height: ${(props) => (props.show ? "110px" : 0)};
   opacity: ${(props) => (props.show ? 1 : 0)};
   display: flex;
@@ -27,8 +27,9 @@ const HContainer = styled.div`
 const StyledKeyboardArrowDownIcon = styled(ArrowForwardIosIcon)`
   color: #6364d9;
   font-size: 18px;
-  transform: ${(props) => (props.show ? "rotate(90deg)" : 0)};
-  transition: ${(props) => (props.show ? "all 0.3s ease-in" : "none")};
+  transform: ${(props) => (props.show ? "rotate(90deg)" : "none")};
+  transition: ${(props) =>
+    props.show ? "transform 0.3s ease-in" : "transform 0.3s ease"};
 `;
 
 const FAQAccordion = ({ title, description, active, setActive }) => {
@@ -36,7 +37,7 @@ const FAQAccordion = ({ title, description, active, setActive }) => {
     <Container maxWidth="xl">
       <Box bgcolor="#F8F9FB" sx={{ borderRadius: "10px" }} mb={2}>
         <HContainer
-          onClick={() => setActive(title)}
+          onClick={() => (active === title ? setActive("") : setActive(title))}
           show={active === title ? 1 : 0}
         >
           <Typography>{title}</Typography>
@@ -45,7 +46,6 @@ const FAQAccordion = ({ title, description, active, setActive }) => {
 
         <Content show={active === title ? 1 : 0}>
           <Typography
-          
             sx={{
               padding: "0 30px",
               fontSize: "16px",
