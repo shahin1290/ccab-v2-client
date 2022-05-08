@@ -10,9 +10,8 @@ import StudentReviews from "../../components/pages/Homepage/StudentReviews";
 import CompanyReviews from "../../components/pages/Homepage/CompanyReviews";
 import FAQ from "../../components/pages/Homepage/FAQ";
 import CareerSupport from "../../components/pages/Homepage/CareerSupport";
-
+import CurriculumSection from "../../components/pages/Homepage/CurriculumSection";
 import HowMuch from "../../components/pages/SoftwareHub/HowMuch";
-import ComprehensiveCurriculum from "../../components/pages/Homepage/ComprehensiveCurriculum";
 import { HeroDummyData, LearningSummaryData } from "../../dummydata/HomePageData";
 
 export default function HomePage() {
@@ -30,7 +29,7 @@ export default function HomePage() {
       SubHeader={LearningSummaryData.subTitle}
       Description={LearningSummaryData.description}
         />
-      <ComprehensiveCurriculum />
+      <CurriculumSection />
       <HowToStart />
       <WhyJavascript />
       <Tuition />
