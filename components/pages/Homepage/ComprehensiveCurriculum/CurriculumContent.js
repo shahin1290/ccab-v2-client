@@ -29,13 +29,34 @@ const CurriculumContent = ({ description, LargeContent, SmallContent }) => {
           {description}
         </Typography>
       </TextWrapper>
-      <Grid style={{ paddingBottom: "50px", paddingTop: "30px" }}>
-        <DesktopContent display={{ xs: "none", md: "block" }}>
+      <Grid
+        style={{
+          display: "flex",
+          justifyItems: "center",
+          alignItems: "center",
+        }}
+      >
+        <Box
+          display={{
+            xs: "none",
+            md: "block",
+            minHeight: "500px",
+            width: "100%",
+          }}
+        >
           {LargeContent}
-        </DesktopContent>
-        <MobileContent display={{ xs: "block", md: "none" }}>
+        </Box>
+        <Box
+          display={{
+            xs: "block",
+            md: "none",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           {SmallContent}
-        </MobileContent>
+        </Box>
       </Grid>
     </Stack>
   );

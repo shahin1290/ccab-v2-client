@@ -3,15 +3,7 @@ import React from "react";
 
 import { motion } from "framer-motion";
 
-const CurriculumCard = ({
-  number,
-  text,
-  width = 480,
-  height = 160,
-  fill,
-  order = 1,
-  lineLength = 20,
-}) => {
+const CurriculumCard = ({ number, text, fill, order = 1, lineLength = 20 }) => {
   const delayedElements = order * 0.1;
 
   const words = text.split(" ");
@@ -32,8 +24,7 @@ const CurriculumCard = ({
   }
 
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 160">
-      <style></style>
+    <svg xmlns="http://www.w3.org/2000/svg" height="130" viewBox="0 0 480 160">
       <defs>
         <filter
           id="Path_28872"

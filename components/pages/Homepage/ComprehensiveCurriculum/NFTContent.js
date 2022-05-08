@@ -32,14 +32,20 @@ const NFTContent = ({ data }) => {
           container
           sx={{
             width: "100%",
-            justifyContent: "space-between",
+            justifyContent: "center",
             alignItems: "center",
             backgroundColor: theme.palette.primary.background,
           }}
         >
           {data.map((item, index) => {
             return (
-              <Grid key={index} item md={5} xs={12}>
+              <Grid
+                key={index}
+                item
+                md={5}
+                xs={12}
+                sx={{ display: "grid", placeItems: "center", px: 10 }}
+              >
                 <CurriculumCard
                   number={(index + 1).toString().padStart(2, "0")}
                   text={item}

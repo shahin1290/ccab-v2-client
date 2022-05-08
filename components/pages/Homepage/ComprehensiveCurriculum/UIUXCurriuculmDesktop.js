@@ -4,8 +4,8 @@ const UIUXCurriculumDesktop = ({ mainTitle, headers }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="999.579"
-      height="764.892"
+      width="100%"
+      height="768"
       viewBox="0 0 999.579 764.892"
     >
       <defs>
