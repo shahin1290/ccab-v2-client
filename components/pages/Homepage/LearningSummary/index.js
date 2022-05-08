@@ -19,7 +19,7 @@ import Underline from "../../../../images/svg/Underline";
 import { useRouter } from "next/router";
 import CourseCard from "../../../shared/CourseCard";
 
-export default function LearningSummary() {
+export default function LearningSummary({Header, BranchedHeader, SubHeader, Description}) {
   const router = useRouter();
   return (
     <SummaryContainer>
@@ -32,11 +32,11 @@ export default function LearningSummary() {
           gap={1}
         >
           <Typography variant="h3">
-            Learn how to become a
-            <BranchedTitle>Full-stack Developer</BranchedTitle>
+              {Header}
+            <BranchedTitle> {BranchedHeader} </BranchedTitle>
           </Typography>
           <Typography style={{ marginTop: "5px" }} variant="h3" mb={1}>
-            and build Web and Mobile Apps using JavaScript
+            {SubHeader}
           </Typography>
           <Underline />
 
@@ -44,9 +44,7 @@ export default function LearningSummary() {
             variant="h6"
             sx={{ color: "secondary.contrastText", padding: "0.8rem" }}
           >
-            As a graduate, you’ll leave with a solid base of fundamental
-            programming and computer science knowledge, as well as experience
-            with languages, frameworks, and libraries that employers demand.
+             {Description}
           </Typography>
         </Stack>
         <Grid
