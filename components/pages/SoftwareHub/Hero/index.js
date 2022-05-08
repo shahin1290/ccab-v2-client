@@ -5,8 +5,9 @@ import {
   HubRightSide,
 } from "../../../shared/StyledComponents";
 import Image from "next/image";
+import { HeroDummyData } from "../../../../dummydata/SoftwarePageData";
 
-export default function Hero() {
+export default function Hero({Header, SubHeader, Media}) {
   return (
     <HeroHubContainer>
       <Grid
@@ -31,7 +32,7 @@ export default function Hero() {
             mb={1}
             textAlign={{ xs: "center", md: "start" }}
           >
-            Applications
+            {Header}
           </Typography>
           <Typography
             variant="h2"
@@ -39,7 +40,7 @@ export default function Hero() {
             mb={3}
             textAlign={{ xs: "center", md: "start" }}
           >
-            to drive your business
+           {SubHeader}
           </Typography>
         </HubLeftSide>
         <HubRightSide
@@ -54,7 +55,7 @@ export default function Hero() {
         >
           <Image
             priority
-            src="/svgImages/HeroImages/SoftwareHubHero.svg"
+            src={Media}
             layout="fill"
             alt="Software Hub Hero"
           />
