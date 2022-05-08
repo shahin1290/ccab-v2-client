@@ -15,15 +15,14 @@ import HowMuch from "../../components/pages/SoftwareHub/HowMuch";
 import ComprehensiveCurriculum from "../../components/pages/Homepage/ComprehensiveCurriculum";
 import { HeroDummyData, LearningSummaryData } from "../../dummydata/HomePageData";
 
-
 export default function HomePage() {
   return (
     <>
-      <Hero 
-      Header={HeroDummyData.title} 
-      SubHeader={HeroDummyData.subTitle} 
-      Description={HeroDummyData.description}
-      Media = {HeroDummyData.pic}
+      <Hero
+        Header={HeroDummyData.title}
+        SubHeader={HeroDummyData.subTitle}
+        Description={HeroDummyData.description}
+        Media={HeroDummyData.pic}
       />
       <LearningSummary 
       Header={LearningSummaryData.title}
