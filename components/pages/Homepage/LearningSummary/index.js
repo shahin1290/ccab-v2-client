@@ -18,6 +18,7 @@ import {
 import Underline from "../../../../images/svg/Underline";
 import { useRouter } from "next/router";
 import CourseCard from "../../../shared/CourseCard";
+import { CoursesData } from "../../../../dummydata/HomePageData";
 
 export default function LearningSummary({Header, BranchedHeader, SubHeader, Description}) {
   const router = useRouter();
@@ -58,33 +59,18 @@ export default function LearningSummary({Header, BranchedHeader, SubHeader, Desc
             overflowY: "hidden",
           }}
         >
-          <Grid item xs={4}>
-            <CourseCard
-              image={learning}
-              link="/home/course-details"
-              title="Javascript Full Stack Web and Mobile Development"
-              description="We will start from the ground up by learning how to implement modern
-              web pages with HTML and CSS."
-            />
+          {CoursesData?.map((item)=>{
+          return(
+            <Grid item xs={4} key={item.id}>
+              <CourseCard
+                image={item.Pic}
+                link={item.Link}
+                title={item.Title}
+                description={item.Description}
+              /> 
           </Grid>
-          <Grid item xs={4}>
-            <CourseCard
-              image={learning}
-              link="/home/course-details"
-              title="Javascript Full Stack Web and Mobile Development"
-              description="We will start from the ground up by learning how to implement modern
-              web pages with HTML and CSS."
-            />
-          </Grid>
-          <Grid item xs={4}>
-            <CourseCard
-              image={learning}
-              link="/home/course-details"
-              title="Javascript Full Stack Web and Mobile Development"
-              description="We will start from the ground up by learning how to implement modern
-              web pages with HTML and CSS."
-            />
-          </Grid>
+            );
+          })}
         </Grid>
       </Container>
     </SummaryContainer>
