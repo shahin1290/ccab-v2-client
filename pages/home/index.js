@@ -12,14 +12,14 @@ import FAQ from "../../components/pages/Homepage/FAQ";
 import CareerSupport from "../../components/pages/Homepage/CareerSupport";
 
 import HowMuch from "../../components/pages/SoftwareHub/HowMuch";
-import ComprehensiveCurriculum from "../../components/pages/Homepage/ComprehensiveCurriculum";
+import CurriculumSection from "../../components/pages/Homepage/CurriculumSection";
 
 export default function HomePage() {
   return (
     <>
       <Hero />
       <LearningSummary />
-      <ComprehensiveCurriculum />
+      <CurriculumSection />
       <HowToStart />
       <WhyJavascript />
       <Tuition />

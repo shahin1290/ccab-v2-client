@@ -15,19 +15,19 @@ const cardColors = [
   "#F20000",
 ];
 
-const NFTContent = ({ data }) => {
+const ListCurriculum = ({ data }) => {
   const theme = useTheme();
   return (
-    <Stack
-      direction="column"
-      justifyContent="center"
-      alignItems="center"
-      sx={{
-        background: theme.palette.primary.background,
-        width: "100vw",
-      }}
-    >
-      <Container maxWidth="lg">
+    <Container maxWidth="lg">
+      <Stack
+        direction="column"
+        justifyContent="center"
+        alignItems="center"
+        sx={{
+          background: theme.palette.primary.background,
+          width: "100%",
+        }}
+      >
         <Grid
           container
           sx={{
@@ -60,9 +60,9 @@ const NFTContent = ({ data }) => {
             );
           })}
         </Grid>
-      </Container>
-    </Stack>
+      </Stack>
+    </Container>
   );
 };
 
-export default NFTContent;
+export default ListCurriculum;
