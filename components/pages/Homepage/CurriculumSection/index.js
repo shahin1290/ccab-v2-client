@@ -11,10 +11,6 @@ import { useState } from "react";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import CurriculumContent from "./CurriculumContent";
-import CurriculumSVGDesktop from "../../../../images/svg/CurriculumImageDesktop";
-import CurriculumImageMobile from "../../../../images/svg/CurriculumImageMobile";
-import NFTContent from "./ListCurriculum";
-import UIUXCurriculumDesktop from "./UIUXCurriuculmDesktop";
 import ListCurriculum from "./ListCurriculum";
 
 const NFTCurriculumData = [
