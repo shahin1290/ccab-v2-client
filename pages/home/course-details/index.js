@@ -194,7 +194,7 @@ export default function Course() {
         mt={{ md: 10, xs: 5 }}
         p={{ md: 0, xs: 5 }}
       >
-        <Container maxWidth="lg" sx={{ position: "relative" }}>
+        <Container maxWidth="lg" sx={{ position: "relative", height:{md:'300px', xs:'225px' }}}>
           <Box
             sx={{
               position: "absolute",
@@ -205,7 +205,7 @@ export default function Course() {
           >
             <DotGrid fillColor={theme.palette.secondary.main} />
           </Box>
-          <TextWrapper>
+          <TextWrapper sx={{paddingTop:'25px'}}>
             <Typography variant="h3" paddingBottom="12px">
               Ready to get Started?
             </Typography>
