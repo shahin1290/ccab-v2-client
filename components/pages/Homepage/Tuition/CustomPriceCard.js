@@ -1,3 +1,4 @@
+import { BorderAllRounded } from "@mui/icons-material";
 import { Box, Paper, Stack, Typography } from "@mui/material";
 import React from "react";
 
@@ -19,7 +20,10 @@ const CustomPriceCard = ({ bgcolor, position }) => {
           width: { xs: "85%", sm: "90%" },
           height: 20,
           backgroundColor: bgcolor,
-          borderTopLeftRadius: position == "top" && border,
+          borderTopLeftRadius: {
+            xs: border,
+            sm: position === "top" ? border : 0,
+          },
           borderTopRightRadius: border,
         }}
       ></Box>
@@ -27,10 +31,12 @@ const CustomPriceCard = ({ bgcolor, position }) => {
       <Paper
         sx={{
           py: { xs: 2, lg: 5 },
-          px: { xs: 1, sm: 3 },
+          px: { xs: 3 },
           width: "100%",
-          borderRadius:
-            position == "top" ? "20px 20px 0 20px" : "0 20px 20px 20px",
+          borderRadius: {
+            sm: position == "top" ? "20px 20px 0 20px" : "0 20px 20px 20px",
+            xs: "20px",
+          },
         }}
       >
         <Box
@@ -42,7 +48,7 @@ const CustomPriceCard = ({ bgcolor, position }) => {
             variant="h3"
             align="center"
             sx={{
-              fontSize: { xs: 15, sm: 20 },
+              fontSize: { xs: 16, sm: 20 },
             }}
           >
             {position === "top" ? "Full-time studying" : "Part-time studying"}
@@ -93,7 +99,10 @@ const CustomPriceCard = ({ bgcolor, position }) => {
           height: 20,
           backgroundColor: bgcolor,
           borderBottomLeftRadius: border,
-          borderBottomRightRadius: position === "bottom" && border,
+          borderBottomRightRadius: {
+            xs: border,
+            sm: position === "bottom" ? border : 0,
+          },
         }}
       ></Box>
     </Stack>

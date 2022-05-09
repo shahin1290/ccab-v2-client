@@ -2,10 +2,7 @@ import { useTheme } from "@emotion/react";
 import { Container, Grid, Stack, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
-import Underline from "../../../../images/svg/Underline";
-
-import InfoCard from "../../../shared/InfoCard";
-import CustomPriceCard from "../StudyTime/CustomPriceCard";
+import CustomPriceCard from "./CustomPriceCard";
 
 const data = {
   title: "Fully Flexible Self-Paced Online Learning",
@@ -143,11 +140,11 @@ const Tuition = () => {
               left: { xs: "7vw", sm: "25%", md: 0 },
             }}
           >
-            <Box>
+            <Stack justifyContent="center" alignItems="center">
               <Box
                 sx={{
-                  position: "absolute",
-                  width: { lg: 250, xs: 150, sm: 200 },
+                  position: { xs: "inherit", sm: "absolute" },
+                  width: { lg: 250, xs: 250, sm: 200 },
                   top: 0,
                   left: 0,
                 }}
@@ -160,10 +157,10 @@ const Tuition = () => {
 
               <Box
                 sx={{
-                  position: "absolute",
-                  top: { xs: "144px", sm: "163px", lg: "185px" },
+                  position: { xs: "inherit", sm: "absolute" },
+                  top: { xs: "144px", sm: "162px", lg: "185px" },
                   left: { xs: "139px", sm: "190px", lg: "238px" },
-                  width: { lg: 250, xs: 150, sm: 200 },
+                  width: { lg: 250, xs: 250, sm: 200 },
                 }}
               >
                 <CustomPriceCard
@@ -171,7 +168,7 @@ const Tuition = () => {
                   bgcolor={theme.palette.secondary.main}
                 />
               </Box>
-            </Box>
+            </Stack>
           </Grid>
         </Grid>
       </Container>

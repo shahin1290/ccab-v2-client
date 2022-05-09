@@ -11,7 +11,6 @@ import {
 import { Box, styled } from "@mui/system";
 import React from "react";
 import { SecondaryButton } from "../../../shared/StyledComponents";
-import CustomPriceCard from "./CustomPriceCard";
 import CustomScheduleCard from "./CustomScheduleCard";
 
 const StyledSvg = styled("svg")(({ theme }) => ({
