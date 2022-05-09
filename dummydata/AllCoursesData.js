@@ -3,7 +3,7 @@ export const HeroData = {
     pic:"/svgImages/HeroImages/CourseHeroImage.svg"
 }
 
-export const CourseData = [
+export const AllCourseData = [
     {
         id:1,
         title:"Course Name",
@@ -32,3 +32,8 @@ export const CourseData = [
         duration:"30 Weeks",
     },
 ]
+
+export const GetStartData = {
+    title:"Ready to get Started?",
+    subTitle:"Register yourself now and get real employable skills that top companies want."
+}

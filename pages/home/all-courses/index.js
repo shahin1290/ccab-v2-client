@@ -4,7 +4,8 @@ import About from "../../../components/pages/Homepage/AllCoursesDetails/About";
 import Courses from "../../../components/pages/Homepage/AllCoursesDetails/Courses";
 import GetStart from "../../../components/pages/Homepage/AllCoursesDetails/GetStart";
 import Hero from "../../../components/pages/Homepage/AllCoursesDetails/Hero";
-import { CourseData, HeroData } from "../../../dummydata/AllCoursesData";
+import {  HeroData, AllCourseData, GetStartData } from "../../../dummydata/AllCoursesData";
+import { CoursesData } from "../../../dummydata/HomePageData";
 
 export default function Course() {
   const router = useRouter();
@@ -14,9 +15,9 @@ export default function Course() {
     <Hero 
     Header={HeroData.title} 
     Media={HeroData.pic}/>
-    <About CourseData={CourseData} />
-    <Courses />
-    <GetStart />
+    <About AllCourseData={AllCourseData} />
+    <Courses CoursesData={CoursesData} />
+    <GetStart Header={GetStartData.title} SubHeader={GetStartData.subTitle} />
     </>
   );
 }

@@ -9,7 +9,7 @@ import {
   TextWrapper,
 } from "../../../../shared/StyledComponents";
 
-export default function GetStart() {
+export default function GetStart({Header, SubHeader}) {
   const router = useRouter();
   const theme = useTheme();
   return (
@@ -19,7 +19,7 @@ export default function GetStart() {
       mt={{ md: 10, xs: 5 }}
       p={{ md: 0, xs: 5 }}
     >
-      <Container maxWidth="lg" sx={{ position: "relative" }}>
+      <Container maxWidth="lg" sx={{ position: "relative", height: { md: "300px", xs: "225px" } }}>
         <Box
           sx={{
             position: "absolute",
@@ -30,13 +30,12 @@ export default function GetStart() {
         >
           <DotGrid fillColor={theme.palette.secondary.main} />
         </Box>
-        <TextWrapper>
+        <TextWrapper sx={{ paddingTop: "25px" }}>
           <Typography variant="h3" paddingBottom="12px">
-            Ready to get Started?
+           {Header}
           </Typography>
           <Typography variant="body1" paddingBottom="12px">
-            Register yourself now and get real employable skills that top
-            companies want.
+            {SubHeader}
           </Typography>
           <ButtonWrap style={{ paddingBottom: "50px" }}>
             <CourseDetailsBtn2>Get Started</CourseDetailsBtn2>

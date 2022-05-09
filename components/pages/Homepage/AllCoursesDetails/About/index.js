@@ -11,7 +11,7 @@ import CourseInfoCard from "../../../../shared/CourseInfoCard";
 import CourseInfoCardImg from "../../../../shared/CourseInfoCardImg";
 import { CourseData } from "../../../../../dummydata/AllCoursesData";
 
-export default function About({ CourseData}) {
+export default function About({ AllCourseData}) {
   const theme = useTheme();
   return (
     <Box bgcolor="#ffffff" py={{ xs: 2, sm: 10 }} sx={{ marginTop: "20px" }}>
@@ -22,7 +22,7 @@ export default function About({ CourseData}) {
           </Typography>
           <Underline />
         </Stack>
-        {CourseData.map(( item, index ) => {
+        {AllCourseData.map(( item, index ) => {
           return (
           <Grid
             key={item.id}

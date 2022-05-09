@@ -5,7 +5,7 @@ import { SummaryContainer } from "../../../../shared/StyledComponents";
 import Underline from "../../../../../images/svg/Underline";
 import CourseCard from "../../../../shared/CourseCard";
 
-export default function Courses() {
+export default function Courses({CoursesData}) {
   return (
     <SummaryContainer>
       <Container maxWidth="xl">
@@ -30,33 +30,19 @@ export default function Courses() {
             overflowY: "hidden",
           }}
         >
-          <Grid item xs={4}>
-            <CourseCard
-              image={learning}
-              link="/home/course-details"
-              title="Javascript Full Stack Web and Mobile Development"
-              description="We will start from the ground up by learning how to implement modern
-              web pages with HTML and CSS."
-            />
-          </Grid>
-          <Grid item xs={4}>
-            <CourseCard
-              image={learning}
-              link="/home/course-details"
-              title="Javascript Full Stack Web and Mobile Development"
-              description="We will start from the ground up by learning how to implement modern
-              web pages with HTML and CSS."
-            />
-          </Grid>
-          <Grid item xs={4}>
-            <CourseCard
-              image={learning}
-              link="/home/course-details"
-              title="Javascript Full Stack Web and Mobile Development"
-              description="We will start from the ground up by learning how to implement modern
-              web pages with HTML and CSS."
-            />
-          </Grid>
+          {CoursesData.map((item)=>{
+            return(
+            <Grid item xs={4} key={item.index}>
+              <CourseCard
+              image={item.Pic}
+              link={item.Link}
+              title={item.Title}
+              description={item.Description}
+              />
+            </Grid>
+                        
+              )
+            })}
         </Grid>
       </Container>
     </SummaryContainer>
