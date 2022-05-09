@@ -41,7 +41,7 @@ export default function About() {
       <Container maxWidth="xl">
         <Stack justifyContent="center" alignItems="center">
           <Typography variant="h3" paddingBottom="12px">
-            About the Course
+            About the Courses
           </Typography>
           <Underline />
         </Stack>
