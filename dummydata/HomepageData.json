@@ -67,6 +67,25 @@
       }
     ]
   },
+  "WhySectionData": [
+    {
+      "id": 1,
+      "title": "Why Javascript?",
+      "cards": [
+        "JavaScript has been the most popular language in the world for 9 years in a row, according to StackOverflow.com, the largest community website for professional and enthusiast programmers.",
+        "Knowing JavaScript allows you to design Web and mobile apps without any restrictions. JavaScript can be used to create back-end, front-end, full-stack, iOS, and Android apps.",
+        "The most in-demand position on the job market is full-stack developer."
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Why NFT?",
+      "cards": [
+        "JavaScript has been the most popular language in the world for 9 years in a row, according to StackOverflow.com, the largest community website for professional and enthusiast programmers.",
+        "Knowing JavaScript allows you to design Web and mobile apps without any restrictions. JavaScript can be used to create back-end, front-end, full-stack, iOS, and Android apps."
+      ]
+    }
+  ],
   "WhatStandsOutData": {
     "title": "What Stands Us Out",
     "subTitle": "Register yourself now and get real employable skills that top companies want",

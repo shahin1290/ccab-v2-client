@@ -3,7 +3,7 @@ import HowToStart from "../../components/pages/Homepage/HowToStart";
 import LearningSummary from "../../components/pages/Homepage/LearningSummary";
 import TechStack from "../../components/pages/Homepage/TechStack";
 import Tuition from "../../components/pages/Homepage/Tuition";
-import WhyJavascript from "../../components/pages/Homepage/WhyJavascript";
+import WhyJavascript from "../../components/pages/Homepage/WhySection";
 import StudyTime from "../../components/pages/Homepage/StudyTime";
 import WhatStandsOut from "../../components/pages/Homepage/WhatStandsOut";
 import StudentReviews from "../../components/pages/Homepage/StudentReviews";
@@ -29,6 +29,7 @@ export default function HomePage({
   WhatStandsOutData,
   FAQData,
   StudentReviewData,
+  WhySectionData,
 }) {
   return (
     <>
@@ -54,7 +55,7 @@ export default function HomePage({
         banner={HowToStartData.banner}
         cardData={HowToStartData.cardData}
       />
-      <WhyJavascript />
+      <WhyJavascript data={WhySectionData} />
       <Tuition />
       <HowMuch />
       <TechStack />

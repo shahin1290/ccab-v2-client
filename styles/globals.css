@@ -75,3 +75,12 @@ body {
 #s3:checked ~ #slide1 {
   transform: translate3d(50%, 0, -280px);
 }
+
+/* .whySectionStyling {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  background-color: red;
+} */
