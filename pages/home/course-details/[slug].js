@@ -237,7 +237,6 @@ export async function getStaticProps(context) {
   const data = JSON.parse(jsonData);
 
   const [staticProps] = data.CoursesData.filter((item) => item.slug === slug);
-  console.log(staticProps);
   return {
     props: {
       ...staticProps,
@@ -255,7 +254,6 @@ export async function getStaticPaths() {
     return { params: { slug: item.slug } };
   });
 
-  console.log(staticPaths);
   return {
     paths: staticPaths,
     fallback: false,

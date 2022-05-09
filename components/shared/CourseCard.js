@@ -5,7 +5,6 @@ import React from "react";
 import { CardButton } from "./StyledComponents";
 
 const CourseCard = ({ image, title, description, slug }) => {
-  console.log(slug);
   const router = useRouter();
   return (
     <Card
