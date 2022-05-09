@@ -26,6 +26,9 @@ export default function HomePage({
   LearningSummaryData,
   CoursesData,
   HowToStartData,
+  WhatStandsOutData,
+  FAQData,
+  StudentReviewData,
 }) {
   return (
     <>
@@ -56,10 +59,18 @@ export default function HomePage({
       <HowMuch />
       <TechStack />
       <StudyTime />
-      <WhatStandsOut />
-      <StudentReviews />
+      <WhatStandsOut
+        title={WhatStandsOutData.title}
+        subTitle={WhatStandsOutData.subTitle}
+        cardData={WhatStandsOutData.cardData}
+      />
+      <StudentReviews
+        title={StudentReviewData.title}
+        subTitle={StudentReviewData.subtitle}
+        reviewData={StudentReviewData.reviewData}
+      />
       <CompanyReviews />
-      <FAQ />
+      <FAQ FAQs={FAQData.FAQs} title={FAQData.title} />
       <CareerSupport />
     </>
   );

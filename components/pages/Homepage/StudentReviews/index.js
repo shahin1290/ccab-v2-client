@@ -8,30 +8,6 @@ import Image from "next/image";
 import Underline from "../../../../images/svg/Underline";
 import StyledModal from "./StyledModal";
 
-const data = [
-  {
-    id: 1,
-    name: "John doe",
-    address: "London, UK",
-    avatarUrl: "/images/reviewer.jpeg",
-    videoImageUrl: "/images/review1.jpeg",
-  },
-  {
-    id: 2,
-    name: "John doe",
-    address: "London, UK",
-    avatarUrl: "/images/reviewer.jpeg",
-    videoImageUrl: "/images/review2.jpeg",
-  },
-  {
-    id: 3,
-    name: "John doe",
-    address: "London, UK",
-    avatarUrl: "/images/reviewer.jpeg",
-    videoImageUrl: "/images/review3.jpeg",
-  },
-];
-
 const UserImg = styled("img")(({ theme }) => ({
   display: "block",
   width: "100px",
@@ -56,7 +32,7 @@ const CustomImageMobile = styled(Image)(({ theme }) => ({
   borderRadius: 30,
 }));
 
-const StudentReview = () => {
+const StudentReview = ({ title, subTitle, reviewData }) => {
   const theme = useTheme();
 
   /* Slider */
@@ -88,7 +64,7 @@ const StudentReview = () => {
         }}
       >
         <Typography variant="h3" mb={1}>
-          Reviews By Students
+          {title}
         </Typography>
         <Underline />
         <Typography
@@ -96,7 +72,7 @@ const StudentReview = () => {
           mt={{ xs: 3 }}
           color="secondary.contrastText"
         >
-          Most of our graduates were employed after 6 months upon graduation
+          {subTitle}
         </Typography>
       </Box>
       <Box sx={{ display: { xs: "none", md: "block", position: "relative" } }}>
@@ -113,7 +89,7 @@ const StudentReview = () => {
         </Box>
         <div>
           <section id="slider">
-            {data.map((item, index) => (
+            {reviewData.map((item, index) => (
               <input
                 key={item.id}
                 type="radio"
@@ -125,7 +101,7 @@ const StudentReview = () => {
               />
             ))}
 
-            {data.map((item, index) => (
+            {reviewData.map((item, index) => (
               <label
                 htmlFor={`s${index + 1}`}
                 id={`slide${index + 1}`}
@@ -206,7 +182,7 @@ const StudentReview = () => {
       </Box>
 
       <Container sx={{ display: { xs: "block", md: "none" } }}>
-        {data.map((item, index) => (
+        {reviewData.map((item, index) => (
           <Stack
             key={item.id}
             mb={15}

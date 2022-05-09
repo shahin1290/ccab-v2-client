@@ -66,5 +66,96 @@
         "content": "We provide support via a support portal, chat, and provide comments on your progress."
       }
     ]
+  },
+  "WhatStandsOutData": {
+    "title": "What Stands Us Out",
+    "subTitle": "Register yourself now and get real employable skills that top companies want",
+    "cardData": [
+      {
+        "id": 1,
+        "icon": "/svgImages/HowToStart/HouseIcon.svg",
+        "title": "Build skills for a new career",
+        "content": "We start with the languages that you'll need most to work : JavaScript, Express JS and more..."
+      },
+      {
+        "id": 2,
+        "icon": "/svgImages/HowToStart/TeacherIcon.svg",
+        "title": "Match-up with an employers",
+        "content": "Our students' skills are in demand so we have employment partners over the globe. We work hard to find a place that suits you."
+      },
+      {
+        "id": 3,
+        "icon": "/svgImages/HowToStart/HelpIcon.svg",
+        "title": "We’re here to support you",
+        "content": "We offer 24-hour weekday support plus help throughout the weekend, a student care package, individual career support, mentoring and more…"
+      },
+      {
+        "id": 4,
+        "icon": "/svgImages/HowToStart/CalenderIcon.svg",
+        "title": "We know your strengths",
+        "content": "We monitor your progress with our custom software so we can support you exactly where you need it."
+      }
+    ]
+  },
+  "FAQData": {
+    "title": "Frequently Asked Questions",
+    "FAQs": [
+      {
+        "title": "What is the refund policy?",
+        "content": "If you subscribed, you get a 7-day free trial during which you can cancel at no penalty. After that, we don’t give refunds, but you can cancel your subscription at any time."
+      },
+      {
+        "title": "Can I just enroll in a single course?",
+        "content": "Yes! To get started, click the course card that interests you and enroll. You can enroll and complete the course to earn a shareable certificate."
+      },
+      {
+        "title": "Is financial aid available?",
+        "content": "No, Codify college does not presently provide financial aid to learners who cannot afford the fee."
+      },
+
+      {
+        "title": "Is this course really with live Mentoring and online? Do I need to attend any classes in person?",
+        "content": "This course is entirely with live Mentoring and online, where you will book your live mentoring sessions in the platform calendar. You can access your lectures, recorded videos, and assignments via  web or mobile."
+      },
+      {
+        "title": "Do I get a certificate after completion of the course?",
+        "content": "Yes, you will receive a certificate of graduation from the course once you pass the project."
+      },
+      {
+        "title": "What background knowledge is necessary?",
+        "content": "No prerequisite knowledge is needed as our course is designed to take you from ground zero up."
+      },
+      {
+        "title": "Do I need to take the courses in a specific order?",
+        "content": "Ideally, learners should complete the courses in the specified sequence. However, if you are already comfortable in some languages you may choose to skip the lesson which we strongly discourage."
+      }
+    ]
+  },
+  "StudentReviewData": {
+    "title": "Reviews By Students",
+    "subTitle": "Most of our graduates were employed after 6 months upon graduation",
+    "reviewData": [
+      {
+        "id": 1,
+        "name": "John doe",
+        "address": "London, UK",
+        "avatarUrl": "/images/reviewer.jpeg",
+        "videoImageUrl": "/images/review1.jpeg"
+      },
+      {
+        "id": 2,
+        "name": "John doe",
+        "address": "London, UK",
+        "avatarUrl": "/images/reviewer.jpeg",
+        "videoImageUrl": "/images/review2.jpeg"
+      },
+      {
+        "id": 3,
+        "name": "John doe",
+        "address": "London, UK",
+        "avatarUrl": "/images/reviewer.jpeg",
+        "videoImageUrl": "/images/review3.jpeg"
+      }
+    ]
   }
 }
