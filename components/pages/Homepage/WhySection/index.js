@@ -44,7 +44,7 @@ const CardsComponent = ({ cards, id }) => {
           <Grid
             item
             justifyContent="center"
-            aligItems="center"
+            alignItems="center"
             key={index}
             xs={12}
             md={6}

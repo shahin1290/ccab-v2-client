@@ -43,12 +43,19 @@ const Section1 = [
   },
   {
     title: "Android Applications",
+    description: "This is a brief summary about the services",
     iconUrl: "/svgImages/ServiceCardIcons/androidLogo.svg",
   },
-  { title: "Website", iconUrl: "/svgImages/ServiceCardIcons/webLogo.svg" },
-  { title: "UI / UX", Icon: <UIUXLogo /> },
-  { title: "Cloud", Icon: <CloudLogo /> },
-  { title: "Research", Icon: <ResearchLogo /> },
+  {
+    title: "Ios Application",
+    iconUrl: "/svgImages/ServiceCardIcons/applelogo.svg",
+    description: "This is a brief summary about the services",
+  },
+  {
+    title: "Android Applications",
+    description: "This is a brief summary about the services",
+    iconUrl: "/svgImages/ServiceCardIcons/androidLogo.svg",
+  },
 ];
 
 const Section2 = [

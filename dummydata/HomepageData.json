@@ -86,6 +86,58 @@
       ]
     }
   ],
+
+  "HowMuchData": {
+    "title": "How much?",
+    "description": "Click the icons below to describe your app to get the estimate",
+    "sections": [
+      [
+        {
+          "title": "Ios Application",
+          "iconUrl": "/svgImages/ServiceCardIcons/applelogo.svg",
+          "description": "This is a brief summary about the services"
+        },
+        {
+          "title": "Android Applications",
+          "description": "This is a brief summary about the services",
+          "iconUrl": "/svgImages/ServiceCardIcons/androidLogo.svg"
+        },
+        {
+          "title": "Ios Application",
+          "iconUrl": "/svgImages/ServiceCardIcons/applelogo.svg",
+          "description": "This is a brief summary about the services"
+        },
+        {
+          "title": "Android Applications",
+          "description": "This is a brief summary about the services",
+          "iconUrl": "/svgImages/ServiceCardIcons/androidLogo.svg"
+        }
+      ],
+      [
+        {
+          "title": "Ios Application",
+          "iconUrl": "/svgImages/ServiceCardIcons/applelogo.svg",
+          "description": "This is a brief summary about the services"
+        },
+        {
+          "title": "Android Applications",
+          "description": "This is a brief summary about the services",
+          "iconUrl": "/svgImages/ServiceCardIcons/androidLogo.svg"
+        },
+        {
+          "title": "Ios Application",
+          "iconUrl": "/svgImages/ServiceCardIcons/applelogo.svg",
+          "description": "This is a brief summary about the services"
+        },
+        {
+          "title": "Android Applications",
+          "description": "This is a brief summary about the services",
+          "iconUrl": "/svgImages/ServiceCardIcons/androidLogo.svg"
+        }
+      ]
+    ]
+  },
+
   "WhatStandsOutData": {
     "title": "What Stands Us Out",
     "subTitle": "Register yourself now and get real employable skills that top companies want",

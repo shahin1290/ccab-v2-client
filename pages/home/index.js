@@ -16,6 +16,7 @@ import HowMuch from "../../components/pages/SoftwareHub/HowMuch";
 import path from "path";
 import util from "util";
 import fs from "fs";
+import { HowMuchData } from "../../dummydata/SoftwarePageData";
 // import {
 //   HeroDummyData,
 //   LearningSummaryData,
@@ -30,6 +31,7 @@ export default function HomePage({
   FAQData,
   StudentReviewData,
   WhySectionData,
+  HowMuchData,
 }) {
   return (
     <>
@@ -57,7 +59,11 @@ export default function HomePage({
       />
       <WhyJavascript data={WhySectionData} />
       <Tuition />
-      <HowMuch />
+      <HowMuch
+        Header={HowMuchData.title}
+        Description={HowMuchData.description}
+        AllSections={HowMuchData.sections}
+      />
       <TechStack />
       <StudyTime />
       <WhatStandsOut
