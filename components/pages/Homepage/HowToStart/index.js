@@ -2,7 +2,6 @@ import {
   Container,
   Stack,
   Box,
-  Card,
   CardMedia,
   CardContent,
   Grid,
@@ -10,12 +9,6 @@ import {
   useTheme,
 } from "@mui/material";
 import Image from "next/image";
-import {
-  CalenderIcon,
-  HelpIcon,
-  HouseIcon,
-  TeacherIcon,
-} from "../../../../images/svg/cardIcons";
 import {
   BannerImage,
   InfoCard,
@@ -28,37 +21,13 @@ import HappyGuy from "../../../../public/images/happyGuy.png";
 import HowToStartImage from "../../../../public/images/howToStart.png";
 import { useRouter } from "next/router";
 
-const cardData = [
-  {
-    id: 1,
-    icon: HouseIcon,
-    title: "Learn full-stack from the comfort of your own home",
-    content:
-      "Get access to all of the course's core contents, including both text and video lessons.  Begin learning at your own pace from the first day of the Bootcamp, extending the course duration as needed.",
-  },
-  {
-    id: 2,
-    icon: TeacherIcon,
-    title: "Personal 1:1 sessions with mentors",
-    content:
-      "Schedule weekly 1:1 appointments with your mentor to work through any current challenges, obtain additional explanations, and ask any concerns you may have.",
-  },
-  {
-    id: 3,
-    icon: HelpIcon,
-    title: "For code-related questions, there is a support platform",
-    content:
-      "The curriculum, projects, exercises, and outcomes are identical to the boot camp's in-person version.",
-  },
-  {
-    id: 4,
-    icon: CalenderIcon,
-    title: "Flexible schedule Completely",
-    content:
-      "We provide support via a support portal, chat, and provide comments on your progress.",
-  },
-];
-const HowToStart = () => {
+const HowToStart = ({
+  title,
+  subTitle,
+  bannerTitle,
+  bannerSubTitle,
+  cardData,
+}) => {
   const theme = useTheme();
   const router = useRouter();
 
@@ -76,10 +45,9 @@ const HowToStart = () => {
         }}
       >
         <Stack justifyContent="center" alignItems="center" spacing={1}>
-          <Typography variant="h3">How can you start?</Typography>
+          <Typography variant="h3">{title}</Typography>
           <Typography variant="h6" color="secondary.contrastText">
-            Register yourself now and get real employable skills that top
-            companies want
+            {subTitle}
           </Typography>
         </Stack>
         <Grid
@@ -94,15 +62,8 @@ const HowToStart = () => {
               alignItems={{ xs: "center", md: "start" }}
               sx={{ maxWidth: "450px", height: "100%" }}
             >
-              <Typography variant="h4">
-                Remote supervised self-paced training
-              </Typography>
-              <Typography variant="body1">
-                Choose a start date and register on this page to secure your
-                spot. To prepare for the Bootcamp, get the pre-course materials.
-                If you have no prior experience with JavaScript, HTML, or CSS,
-                we estimate it will take you 20-30 hours
-              </Typography>
+              <Typography variant="h4">{bannerTitle}</Typography>
+              <Typography variant="body1">{bannerSubTitle}</Typography>
               <PrimaryButton variant="contained" color="primary">
                 Learn More
               </PrimaryButton>
@@ -128,8 +89,13 @@ const HowToStart = () => {
             return (
               <Grid item key={item.id} sx={{ width: 294 }}>
                 <InfoCard>
-                  <CardMedia sx={{ height: "30%" }}>
-                    <item.icon />
+                  <CardMedia>
+                    <Image
+                      alt="company-logo"
+                      src={item.icon}
+                      width={168}
+                      height={75}
+                    />
                   </CardMedia>
                   <CardContent sx={{ height: "70%" }}>
                     <Typography variant="h6" align="center" mb={2}>

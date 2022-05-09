@@ -33,5 +33,38 @@
       "title": "Javascript Full Stack Web and Mobile Development",
       "description": "We will start from the ground up by learning how to implement modern web pages with HTML and CSS."
     }
-  ]
+  ],
+  "HowToStartData": {
+    "title": "How can you start?",
+    "subTitle": "Register yourself now and get real employable skills that top companies want",
+    "bannerTitle": "Remote supervised self-paced training",
+    "bannerSubTitle": "Choose a start date and register on this page to secure your spot. To prepare for the Bootcamp, get the pre-course materials. If you have no prior experience with JavaScript, HTML, or CSS, we estimate it will take you 20-30 hours",
+    "banner": "/images/howToStart.png",
+    "cardData": [
+      {
+        "id": 1,
+        "icon": "/svgImages/HowToStart/HouseIcon.svg",
+        "title": "Learn full-stack from the comfort of your own home",
+        "content": "Get access to all of the course's core contents, including both text and video lessons.  Begin learning at your own pace from the first day of the Bootcamp, extending the course duration as needed."
+      },
+      {
+        "id": 2,
+        "icon": "/svgImages/HowToStart/TeacherIcon.svg",
+        "title": "Personal 1:1 sessions with mentors",
+        "content": "Schedule weekly 1:1 appointments with your mentor to work through any current challenges, obtain additional explanations, and ask any concerns you may have."
+      },
+      {
+        "id": 3,
+        "icon": "/svgImages/HowToStart/HelpIcon.svg",
+        "title": "For code-related questions, there is a support platform",
+        "content": "The curriculum, projects, exercises, and outcomes are identical to the boot camp's in-person version."
+      },
+      {
+        "id": 4,
+        "icon": "/svgImages/HowToStart/CalenderIcon.svg",
+        "title": "Flexible schedule Completely",
+        "content": "We provide support via a support portal, chat, and provide comments on your progress."
+      }
+    ]
+  }
 }

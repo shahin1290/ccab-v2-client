@@ -25,6 +25,7 @@ export default function HomePage({
   HeroData,
   LearningSummaryData,
   CoursesData,
+  HowToStartData,
 }) {
   return (
     <>
@@ -42,7 +43,14 @@ export default function HomePage({
         CoursesData={CoursesData}
       />
       <CurriculumSection />
-      <HowToStart />
+      <HowToStart
+        title={HowToStartData.title}
+        subTitle={HowToStartData.subTitle}
+        bannerTitle={HowToStartData.bannerTitle}
+        bannerSubTitle={HowToStartData.bannerSubTitle}
+        banner={HowToStartData.banner}
+        cardData={HowToStartData.cardData}
+      />
       <WhyJavascript />
       <Tuition />
       <HowMuch />
