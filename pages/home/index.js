@@ -12,7 +12,10 @@ import FAQ from "../../components/pages/Homepage/FAQ";
 import CareerSupport from "../../components/pages/Homepage/CareerSupport";
 import CurriculumSection from "../../components/pages/Homepage/CurriculumSection";
 import HowMuch from "../../components/pages/SoftwareHub/HowMuch";
-import { HeroDummyData, LearningSummaryData } from "../../dummydata/HomePageData";
+import {
+  HeroDummyData,
+  LearningSummaryData,
+} from "../../dummydata/HomePageData";
 
 export default function HomePage() {
   return (
@@ -23,12 +26,12 @@ export default function HomePage() {
         Description={HeroDummyData.description}
         Media={HeroDummyData.pic}
       />
-      <LearningSummary 
-      Header={LearningSummaryData.title}
-      BranchedHeader={LearningSummaryData.brachedTitle}
-      SubHeader={LearningSummaryData.subTitle}
-      Description={LearningSummaryData.description}
-        />
+      <LearningSummary
+        Header={LearningSummaryData.title}
+        BranchedHeader={LearningSummaryData.brachedTitle}
+        SubHeader={LearningSummaryData.subTitle}
+        Description={LearningSummaryData.description}
+      />
       <CurriculumSection />
       <HowToStart />
       <WhyJavascript />
