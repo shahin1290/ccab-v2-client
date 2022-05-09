@@ -38,11 +38,6 @@ const CurriculumContent = ({
         layout="fixed"
         width={350}
         height={1200}
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
       />
     );
   return (

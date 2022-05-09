@@ -1,0 +1,37 @@
+{
+  "HeroData": {
+    "title": "Learn to code,",
+    "subTitle": "With a New Digital Life ",
+    "description": "Start your new Work with our weekly remotely Tech programs in full-stack developer and build web and mobile apps powered by JavaScript Start your new Work with our weekly remotely",
+    "media": "/svgImages/HeroImages/HomepageHero.svg"
+  },
+  "LearningSummaryData": {
+    "title": "Learn how to become a",
+    "titleKeyword": "Full-stack Developer",
+    "subTitle": "and build Web and Mobile Apps using JavaScript",
+    "description": " As a graduate, you’ll leave with a solid base of fundamental programming and computer science knowledge, as well as experience with languages, frameworks, and libraries that employers demand."
+  },
+  "CoursesData": [
+    {
+      "id": 1,
+      "pic": "/images/learning.png",
+      "link": "/home/course-details",
+      "title": "Javascript Full Stack Web and Mobile Development",
+      "description": "We will start from the ground up by learning how to implement modern web pages with HTML and CSS."
+    },
+    {
+      "id": 2,
+      "pic": "/images/learning.png",
+      "link": "/home/course-details",
+      "title": "Javascript Full Stack Web and Mobile Development",
+      "description": "We will start from the ground up by learning how to implement modern web pages with HTML and CSS."
+    },
+    {
+      "id": 3,
+      "pic": "/images/learning.png",
+      "link": "/home/course-details",
+      "title": "Javascript Full Stack Web and Mobile Development",
+      "description": "We will start from the ground up by learning how to implement modern web pages with HTML and CSS."
+    }
+  ]
+}

@@ -12,25 +12,34 @@ import FAQ from "../../components/pages/Homepage/FAQ";
 import CareerSupport from "../../components/pages/Homepage/CareerSupport";
 import CurriculumSection from "../../components/pages/Homepage/CurriculumSection";
 import HowMuch from "../../components/pages/SoftwareHub/HowMuch";
-import {
-  HeroDummyData,
-  LearningSummaryData,
-} from "../../dummydata/HomePageData";
 
-export default function HomePage() {
+import path from "path";
+import util from "util";
+import fs from "fs";
+// import {
+//   HeroDummyData,
+//   LearningSummaryData,
+// } from "../../dummydata/HomePageData";
+
+export default function HomePage({
+  HeroData,
+  LearningSummaryData,
+  CoursesData,
+}) {
   return (
     <>
       <Hero
-        Header={HeroDummyData.title}
-        SubHeader={HeroDummyData.subTitle}
-        Description={HeroDummyData.description}
-        Media={HeroDummyData.pic}
+        Header={HeroData.title}
+        SubHeader={HeroData.subTitle}
+        Description={HeroData.description}
+        Media={HeroData.media}
       />
       <LearningSummary
         Header={LearningSummaryData.title}
-        BranchedHeader={LearningSummaryData.brachedTitle}
+        BranchedHeader={LearningSummaryData.titleKeyword}
         SubHeader={LearningSummaryData.subTitle}
         Description={LearningSummaryData.description}
+        CoursesData={CoursesData}
       />
       <CurriculumSection />
       <HowToStart />
@@ -46,4 +55,19 @@ export default function HomePage() {
       <CareerSupport />
     </>
   );
+}
+
+export async function getStaticProps(context) {
+  const readFile = util.promisify(fs.readFile);
+
+  const jsonData = await readFile(
+    path.join(process.cwd(), "dummydata", "HomepageData.json")
+  );
+  const data = JSON.parse(jsonData);
+
+  console.log(data);
+
+  return {
+    props: { ...data },
+  };
 }

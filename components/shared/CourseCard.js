@@ -15,7 +15,14 @@ const CourseCard = ({ image, title, description, link }) => {
         boxShadow: "none",
       }}
     >
-      <Image priority src={image} alt="learning" layout="responsive" />
+      <Image
+        priority
+        src={image}
+        alt="learning"
+        layout="responsive"
+        width={385}
+        height={250}
+      />
       <CardContent style={{ textAlign: "center" }}>
         <Typography variant="h6" align="center" mb={2}>
           {title}

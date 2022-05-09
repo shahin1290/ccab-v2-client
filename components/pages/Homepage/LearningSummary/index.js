@@ -18,9 +18,14 @@ import {
 import Underline from "../../../../images/svg/Underline";
 import { useRouter } from "next/router";
 import CourseCard from "../../../shared/CourseCard";
-import { CoursesData } from "../../../../dummydata/HomePageData";
 
-export default function LearningSummary({Header, BranchedHeader, SubHeader, Description}) {
+export default function LearningSummary({
+  Header,
+  BranchedHeader,
+  SubHeader,
+  Description,
+  CoursesData,
+}) {
   const router = useRouter();
   return (
     <SummaryContainer>
@@ -33,7 +38,7 @@ export default function LearningSummary({Header, BranchedHeader, SubHeader, Desc
           gap={1}
         >
           <Typography variant="h3">
-              {Header}
+            {Header}
             <BranchedTitle> {BranchedHeader} </BranchedTitle>
           </Typography>
           <Typography style={{ marginTop: "5px" }} variant="h3" mb={1}>
@@ -45,7 +50,7 @@ export default function LearningSummary({Header, BranchedHeader, SubHeader, Desc
             variant="h6"
             sx={{ color: "secondary.contrastText", padding: "0.8rem" }}
           >
-             {Description}
+            {Description}
           </Typography>
         </Stack>
         <Grid
@@ -59,16 +64,16 @@ export default function LearningSummary({Header, BranchedHeader, SubHeader, Desc
             overflowY: "hidden",
           }}
         >
-          {CoursesData?.map((item)=>{
-          return(
-            <Grid item xs={4} key={item.id}>
-              <CourseCard
-                image={item.Pic}
-                link={item.Link}
-                title={item.Title}
-                description={item.Description}
-              /> 
-          </Grid>
+          {CoursesData?.map((item) => {
+            return (
+              <Grid item xs={4} key={item.id}>
+                <CourseCard
+                  image={item.pic}
+                  link={item.link}
+                  title={item.title}
+                  description={item.description}
+                />
+              </Grid>
             );
           })}
         </Grid>
