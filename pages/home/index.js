@@ -16,27 +16,22 @@ import HowMuch from "../../components/pages/SoftwareHub/HowMuch";
 import path from "path";
 import util from "util";
 import fs from "fs";
-import { HowMuchData } from "../../dummydata/SoftwarePageData";
-// import {
-//   HeroDummyData,
-//   LearningSummaryData,
-// } from "../../dummydata/HomePageData";
 
-export default function HomePage({
+export default function Homepage({
   HeroData,
   LearningSummaryData,
   CoursesData,
   HowToStartData,
-  WhatStandsOutData,
-  FAQData,
-  StudentReviewData,
   WhySectionData,
   HowMuchData,
+  WhatStandsOutData,
+  StudentReviewData,
+  FAQData,
 }) {
   return (
     <>
       <Hero
-        Header={HeroData.title}
+        Header={HeroData?.title}
         SubHeader={HeroData.subTitle}
         Description={HeroData.description}
         Media={HeroData.media}
@@ -83,7 +78,7 @@ export default function HomePage({
   );
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   const readFile = util.promisify(fs.readFile);
 
   const jsonData = await readFile(
@@ -91,7 +86,14 @@ export async function getStaticProps(context) {
   );
   const data = JSON.parse(jsonData);
 
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
+
   return {
     props: { ...data },
+    revalidate: 10,
   };
 }

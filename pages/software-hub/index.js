@@ -4,30 +4,35 @@ import Services from "../../components/pages/SoftwareHub/Services";
 import ReviewsByClients from "../../components/pages/SoftwareHub/ReviewsByClients";
 import { useRouter } from "next/router";
 import { LocalDining } from "@mui/icons-material";
-import { HeroDummyData, HowMuchData, ReviewsByClientsData, ReviewsData } from "../../dummydata/SoftwarePageData";
+import {
+  HeroDummyData,
+  HowMuchData,
+  ReviewsByClientsData,
+  ReviewsData,
+} from "../../dummydata/SoftwarePageData";
 import SoftwareServicesData from "../../dummydata/SoftwareServicesData";
 import AllSections from "../../components/pages/SoftwareHub/HowMuch/data.";
 
-const SoftwareHub = ({ }) => {
+const SoftwareHub = ({}) => {
   const router = useRouter();
   if (router.isFallback) return <h1>Loading...</h1>;
   return (
     <>
-      <Hero 
-      Header={HeroDummyData.title} 
-      SubHeader={HeroDummyData.subTitle} 
-      Media={HeroDummyData.pic} 
+      <Hero
+        Header={HeroDummyData.title}
+        SubHeader={HeroDummyData.subTitle}
+        Media={HeroDummyData.pic}
       />
       <Services SoftwareServiceData={SoftwareServicesData} />
-      <HowMuch 
-      Header={HowMuchData.title}
-      Description={HowMuchData.description}
-      AllSections={AllSections}
-       />
-      <ReviewsByClients 
-      Header={ReviewsByClientsData.title}
-      Description={ReviewsByClientsData.description}
-      ReviewsData={ReviewsData}
+      <HowMuch
+        Header={HowMuchData.title}
+        Description={HowMuchData.description}
+        AllSections={AllSections}
+      />
+      <ReviewsByClients
+        Header={ReviewsByClientsData.title}
+        Description={ReviewsByClientsData.description}
+        ReviewsData={ReviewsData}
       />
     </>
   );

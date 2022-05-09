@@ -1,19 +1,10 @@
-import {
-  Card,
-  CardContent,
-  Container,
-  Grid,
-  Stack,
-  Typography,
-} from "@mui/material";
+import { Container, Grid, Stack, Typography } from "@mui/material";
 import React from "react";
 import learning from "../../../../public/images/learning.png";
 import Image from "next/image";
 import {
   BranchedTitle,
-  CardButton,
   SummaryContainer,
-  TextWrapper,
 } from "../../../shared/StyledComponents";
 import Underline from "../../../../images/svg/Underline";
 import { useRouter } from "next/router";
@@ -64,7 +55,7 @@ export default function LearningSummary({
             overflowY: "hidden",
           }}
         >
-          {CoursesData?.map((item) => {
+          {CoursesData.map((item) => {
             return (
               <Grid item xs={4} key={item.id}>
                 <CourseCard
