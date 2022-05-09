@@ -20,7 +20,19 @@ import EventSeatSharpIcon from "@mui/icons-material/EventSeatSharp";
 import { DotGrid } from "../../../images/svg/CareerSupport";
 import Image from "next/image";
 
-export default function Course() {
+import fs from "fs";
+import path from "path";
+import util from "util";
+
+export default function Course({
+  title,
+  courseSummary,
+  courseImage,
+  startingPrice,
+  duration,
+  availableSeats,
+  coverImage,
+}) {
   const router = useRouter();
   const theme = useTheme();
   if (router.isFallback) return <h1>Loading...</h1>;
@@ -51,7 +63,7 @@ export default function Course() {
               textAlign={{ xs: "center", md: "start" }}
               whiteSpace={{ xs: "break-spaces" }}
             >
-              JavaScript Full Stack Web and Mobile Development
+              {title}
             </Typography>
           </HubLeftSide>
           <HubRightSide
@@ -66,7 +78,7 @@ export default function Course() {
           >
             <Image
               priority
-              src="/svgImages/HeroImages/CourseHeroImage.svg"
+              src={courseImage}
               layout="fill"
               alt="Software Hub Hero"
             />
@@ -105,21 +117,7 @@ export default function Course() {
                   variant="body1"
                   sx={{ color: "secondary.contrastText" }}
                 >
-                  In this course, we will learn the basic tools that every web
-                  page coder needs to know we will start from the ground up by
-                  learning how to implement modern web pages with HTML and CSS.
-                  We will then advance to learning how to code our pages such
-                  that its components rearrange and resize themselves
-                  automatically based on the size of the users screen. You will
-                  be able to code up a web page that will be just as useful on a
-                  mobile phone as on a desktop computer. No pinch and zoom
-                  required. Last ut certainly not least, we will get a thorough
-                  introduction to the most ubiquitous, popular, and incredibly
-                  powerful language of the web: Javascript. Using Javascript,
-                  you will be able to build a fully functional web application
-                  that utilizesAjax to expose server-side functionality and data
-                  to the end user. We will also develop mobile applications
-                  using React-Native.
+                  {courseSummary}.
                 </Typography>
                 <SecondaryButton
                   variant="contained"
@@ -151,7 +149,7 @@ export default function Course() {
               }}
             >
               <CourseInfoCardImg
-                src={cover}
+                src={coverImage}
                 alt="cover"
                 sx={{
                   position: "relative",
@@ -162,9 +160,9 @@ export default function Course() {
                 }}
               />
               <CourseInfoCard
-                price=" 384 $"
-                duration="30 Weeks"
-                SeatsNumber="9 Seats available"
+                price={startingPrice}
+                duration={duration}
+                SeatsNumber={availableSeats}
                 icon={
                   <AccessTimeFilledIcon
                     style={{ fontSize: "20px", marginTop: "4px" }}
@@ -194,7 +192,10 @@ export default function Course() {
         mt={{ md: 10, xs: 5 }}
         p={{ md: 0, xs: 5 }}
       >
-        <Container maxWidth="lg" sx={{ position: "relative", height:{md:'300px', xs:'225px' }}}>
+        <Container
+          maxWidth="lg"
+          sx={{ position: "relative", height: { md: "300px", xs: "225px" } }}
+        >
           <Box
             sx={{
               position: "absolute",
@@ -205,7 +206,7 @@ export default function Course() {
           >
             <DotGrid fillColor={theme.palette.secondary.main} />
           </Box>
-          <TextWrapper sx={{paddingTop:'25px'}}>
+          <TextWrapper sx={{ paddingTop: "25px" }}>
             <Typography variant="h3" paddingBottom="12px">
               Ready to get Started?
             </Typography>
@@ -224,4 +225,37 @@ export default function Course() {
       </Box>
     </>
   );
+}
+
+export async function getStaticProps(context) {
+  const { slug } = context.params;
+  const readFile = util.promisify(fs.readFile);
+
+  const jsonData = await readFile(
+    path.join(process.cwd(), "dummydata", "HomepageData.json")
+  );
+  const data = JSON.parse(jsonData);
+
+  const [staticProps] = data.CoursesData.filter((item) => item.slug === slug);
+  return {
+    props: {
+      ...staticProps,
+    },
+  };
+}
+
+export async function getStaticPaths() {
+  const readFile = util.promisify(fs.readFile);
+  const jsonData = await readFile(
+    path.join(process.cwd(), "dummydata", "HomepageData.json")
+  );
+  const data = JSON.parse(jsonData);
+  const staticPaths = data.CoursesData.map((item) => {
+    return { params: { slug: item.slug } };
+  });
+
+  return {
+    paths: staticPaths,
+    fallback: false,
+  };
 }

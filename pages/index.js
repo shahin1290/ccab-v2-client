@@ -4,7 +4,6 @@ import util from "util";
 import fs from "fs";
 
 export default function Home(props) {
-  console.log(props);
   return <Homepage {...props} />;
 }
 
