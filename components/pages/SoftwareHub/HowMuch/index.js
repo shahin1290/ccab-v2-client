@@ -15,7 +15,6 @@ import ProgressBar from "../../../../images/svg/ProgressBar";
 import ProgressBarMobile from "../../../../images/svg/ProgressBarMobile";
 import ServiceSelectionCard from "../../../shared/ServiceSelectionCard";
 import Underline from "../../../../images/svg/Underline";
-import AllSections from "./data.";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import { ForwardArrow } from "../../../../images/svg/ServiceIcons";
 import HowContactForm from "../ContactForm";
@@ -57,7 +56,7 @@ const CustomStack = styled(Stack)(({ theme }) => ({
   },
 }));
 
-const HowMuch = () => {
+const HowMuch = ({Header, Description, AllSections}) => {
   const theme = useTheme();
   const [currentStage, setCurrentStage] = React.useState(1);
   const [slider, setSlider] = React.useState(null);
@@ -111,11 +110,11 @@ const HowMuch = () => {
           variant="h2"
           sx={{ color: "common.white", mb: 2, mt: { md: 3, xs: 3 } }}
         >
-          How much?
+           {Header}
         </Typography>
         <Underline fill={theme.palette.common.white} />
         <Typography variant="subtitle2" color="common.white" mt={3} mb={5}>
-          Click the icons below to describe your app to get the estimate
+           {Description}
         </Typography>
 
         <CustomStack spacing={1}>

@@ -37,3 +37,9 @@ export const ReviewsData = [
         avatarUrl: "/images/reviewer.jpeg",
       },
 ]
+
+export const HowMuchData = {
+    title:'How much?',
+    description:'Click the icons below to describe your app to get the estimate',
+
+}
