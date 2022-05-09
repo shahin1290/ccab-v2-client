@@ -4,7 +4,8 @@ import { useRouter } from "next/router";
 import React from "react";
 import { CardButton } from "./StyledComponents";
 
-const CourseCard = ({ image, title, description, link }) => {
+const CourseCard = ({ image, title, description, slug }) => {
+  console.log(slug);
   const router = useRouter();
   return (
     <Card
@@ -36,7 +37,7 @@ const CourseCard = ({ image, title, description, link }) => {
         <CardButton
           variant="contained"
           color="primary"
-          onClick={() => router.push(link)}
+          onClick={() => router.push(`/home/course-details/${slug}`)}
         >
           Learn More
         </CardButton>
