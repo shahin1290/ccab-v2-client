@@ -1,13 +1,13 @@
 import { Box, useTheme } from "@mui/system";
 import React from "react";
 import OverviewSection from "../../../shared/OverviewSection";
-import SoftwareServiceData from "../../../../dummydata/SoftwareServicesData";
+// import SoftwareServiceData from "../../../../dummydata/SoftwareServicesData";
 
-const Services = () => {
+const Services = ({SoftwareServiceData}) => {
   const theme = useTheme();
   return (
     <Box>
-      {SoftwareServiceData.map((item, index) => {
+      {SoftwareServiceData?.map((item, index) => {
         return (
           <OverviewSection
             key={item.slug}

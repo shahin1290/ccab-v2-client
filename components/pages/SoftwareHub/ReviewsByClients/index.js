@@ -21,7 +21,7 @@ const CustomImage = styled("img")(({ theme }) => ({
   margin: "0 auto",
 }));
 
-const StudentReviews = () => {
+const StudentReviews = ({Header, Description, ReviewsData}) => {
   const theme = useTheme();
   const [slider, setSlider] = useState(null);
 
@@ -70,7 +70,7 @@ const StudentReviews = () => {
           }}
         >
           <Typography variant="h3" mb={1}>
-            Reviews By Students
+            {Header}
           </Typography>
           <Underline />
           <Typography
@@ -79,13 +79,13 @@ const StudentReviews = () => {
             color="secondary.contrastText"
             align="center"
           >
-            Most of our graduates were employed after 6 months upon graduation
+            {Description}
           </Typography>
         </Box>
 
         <Box sx={{ position: "relative" }} mb={{ xs: 10, sm: 15 }}>
           <Slider {...settings} ref={(slider) => setSlider(slider)}>
-            {data.map((item) => (
+            {ReviewsData.map((item) => (
               <Box
                 p={{ sm: 2 }}
                 sx={{
@@ -194,32 +194,5 @@ const StudentReviews = () => {
     </Container>
   );
 };
-
-const data = [
-  {
-    id: 1,
-    name: "John doe",
-    address: "London, UK",
-    avatarUrl: "/images/reviewer.jpeg",
-  },
-  {
-    id: 2,
-    name: "John doe",
-    address: "London, UK",
-    avatarUrl: "/images/reviewer.jpeg",
-  },
-  {
-    id: 3,
-    name: "John doe",
-    address: "London, UK",
-    avatarUrl: "/images/reviewer.jpeg",
-  },
-  {
-    id: 4,
-    name: "John doe",
-    address: "London, UK",
-    avatarUrl: "/images/reviewer.jpeg",
-  },
-];
 
 export default StudentReviews;
