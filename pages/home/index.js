@@ -65,8 +65,6 @@ export async function getStaticProps(context) {
   );
   const data = JSON.parse(jsonData);
 
-  console.log(data);
-
   return {
     props: { ...data },
   };
