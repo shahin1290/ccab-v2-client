@@ -24,6 +24,7 @@ const StyledSvg = styled("svg")(({ theme }) => ({
   height: "930px",
 
   [theme.breakpoints.down("xl")]: { width: "600px", height: "600px" },
+  // [theme.breakpoints.down("lg")]: { width: "400px", height: "400px" },
   [theme.breakpoints.down("sm")]: { width: "350px", height: "350px" },
 }));
 
@@ -53,13 +54,13 @@ const Details = (props) => {
               position: "absolute",
               top: "-120px",
               left: { xs: "-70px", sm: 0 },
-              zIndex: 3,
+              zIndex: {xl:0, xs:0},
             }}
           >
             <Box
               sx={{
                 position: "absolute",
-                top: { xl: "300px", md: "200px", sm: "170px", xs: "90px" },
+                top: { xl: "300px", md: "200px", sm: "170px", xs: "120px" },
                 left: { xl: "100px", md: "70px", sm: "70px", xs: "90px" },
               }}
             >
@@ -75,7 +76,7 @@ const Details = (props) => {
                 {props.subheader}
               </Typography>
             </Box>
-            <StyledSvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+            <StyledSvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" >
               <g fill="#7072DF">
                 <path
                   xmlns="http://www.w3.org/2000/svg"
@@ -172,14 +173,14 @@ const Details = (props) => {
               zIndex: 999,
               px: 1,
               width: {
-                xs: "75vw",
+                xs: "60vw",
                 sm: "60vw",
                 md: "50vw",
                 lg: "40vw",
                 xl: "50vw",
               },
               height: {
-                xs: "75vw",
+                xs: "60vw",
                 sm: "60vw",
                 md: "50vw",
                 lg: "40vw",

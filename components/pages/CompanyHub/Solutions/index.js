@@ -1,9 +1,9 @@
 import { Box, useTheme } from "@mui/system";
 import React from "react";
-import CompanySolutionsData from "../../../../dummydata/CompanySolutionsData";
+// import CompanySolutionsData from "../../../../dummydata/CompanySolutionsData";
 import OverviewSection from "../../../shared/OverviewSection";
 
-const Solutions = () => {
+const Solutions = ({CompanySolutionsData}) => {
   const theme = useTheme();
   return (
     <Box>
