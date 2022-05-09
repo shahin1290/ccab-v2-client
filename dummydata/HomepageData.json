@@ -7,14 +7,14 @@
   },
   "LearningSummaryData": {
     "title": "Learn how to become a",
-    "titleKeyword": "Full-stack Developer",
+    "titleKeyword": "Full-Stack Developer",
     "subTitle": "and build Web and Mobile Apps using JavaScript",
     "description": " As a graduate, you’ll leave with a solid base of fundamental programming and computer science knowledge, as well as experience with languages, frameworks, and libraries that employers demand."
   },
   "CoursesData": [
     {
       "id": 1,
-      "pic": "/images/learning.png",
+      "pic": "/svgImages/CourseImage.svg",
       "link": "/home/course-details",
       "title": "Javascript Full Stack Web and Mobile Development",
       "description": "We will start from the ground up by learning how to implement modern web pages with HTML and CSS."
