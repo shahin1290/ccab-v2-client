@@ -2,7 +2,7 @@ import { Container, Grid, useTheme } from "@mui/material";
 import { Box } from "@mui/system";
 import Image from "next/image";
 
-export default function Banner() {
+export default function Banner({Media}) {
   const theme = useTheme();
 
   return (
@@ -11,7 +11,7 @@ export default function Banner() {
         <Grid item xs={10} sm={8} md={6} sx={{ display: "block" }}>
           <Image
             priority
-            src="/svgImages/BackgroundImages/CompanyHubBanner.svg"
+            src={Media}
             layout="responsive"
             width={950}
             height={550}
