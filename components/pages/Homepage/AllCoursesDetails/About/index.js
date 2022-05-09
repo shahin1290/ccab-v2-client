@@ -9,32 +9,9 @@ import EventSeatSharpIcon from "@mui/icons-material/EventSeatSharp";
 
 import CourseInfoCard from "../../../../shared/CourseInfoCard";
 import CourseInfoCardImg from "../../../../shared/CourseInfoCardImg";
+import { CourseData } from "../../../../../dummydata/AllCoursesData";
 
-const data = [
-  {
-    id: 1,
-    color: "primary",
-    wrap: "wrap",
-    flexDirection: "row",
-    cardColor: "#6364D9",
-  },
-  {
-    id: 2,
-    color: "secondary",
-    wrap: "wrap",
-    flexDirection: "row-reverse",
-    cardColor: "rgb(255, 169, 80)",
-  },
-  {
-    id: 3,
-    color: "primary",
-    wrap: "wrap",
-    flexDirection: "row",
-    cardColor: "#6364D9",
-  },
-];
-
-export default function About() {
+export default function About({ CourseData}) {
   const theme = useTheme();
   return (
     <Box bgcolor="#ffffff" py={{ xs: 2, sm: 10 }} sx={{ marginTop: "20px" }}>
@@ -45,19 +22,20 @@ export default function About() {
           </Typography>
           <Underline />
         </Stack>
-        {data.map(({ id, color, wrap, flexDirection, cardColor }) => (
+        {CourseData.map(( item, index ) => {
+          return (
           <Grid
-            key={id}
+            key={item.id}
             container
             sx={{
               alignItems: { xs: "center", md: "start" },
               textAlign: { xs: "center", md: "start" },
             }}
-            flexDirection={flexDirection}
+            flexDirection={index % 2 !== 0 ? "row-reverse" : "row"}
             justifyContent="space-between"
             mt={{ sm: 10, xs: 2 }}
             spacing={1}
-            wrap={wrap}
+            wrap="wrap"
           >
             <Grid
               item
@@ -71,30 +49,16 @@ export default function About() {
               }}
             >
               <Stack direction="column" spacing={3}>
-                <Typography variant="h4">Course Name</Typography>
+                <Typography variant="h4"> {item.title} </Typography>
                 <Typography
                   variant="body1"
                   sx={{ color: "secondary.contrastText" }}
                 >
-                  In this course, we will learn the basic tools that every web
-                  page coder needs to know we will start from the ground up by
-                  learning how to implement modern web pages with HTML and CSS.
-                  We will then advance to learning how to code our pages such
-                  that its components rearrange and resize themselves
-                  automatically based on the size of the users screen. You will
-                  be able to code up a web page that will be just as useful on a
-                  mobile phone as on a desktop computer. No pinch and zoom
-                  required. Last ut certainly not least, we will get a thorough
-                  introduction to the most ubiquitous, popular, and incredibly
-                  powerful language of the web: Javascript. Using Javascript,
-                  you will be able to build a fully functional web application
-                  that utilizesAjax to expose server-side functionality and data
-                  to the end user. We will also develop mobile applications
-                  using React-Native.
+                  {item.description}
                 </Typography>
                 <SecondaryButton
                   variant="contained"
-                  color={color}
+                  color={index % 2 !== 0 ? "secondary" : "primary"}
                   sx={{
                     width: { md: "40%", xs: "60%" },
                     alignSelf: { xs: "center", md: "start" },
@@ -125,7 +89,7 @@ export default function About() {
               }}
             >
               <CourseInfoCardImg
-                src={cover}
+                src={item.pic}
                 alt="cover"
                 sx={{
                   position: "relative",
@@ -136,9 +100,9 @@ export default function About() {
                 }}
               />
               <CourseInfoCard
-                price=" 384 $"
-                duration="30 Weeks"
-                SeatsNumber="9 Seats available"
+                price={item.price}
+                duration={item.duration}
+                SeatsNumber={item.seats}
                 icon={
                   <AccessTimeFilledIcon
                     style={{ fontSize: "20px", marginTop: "4px" }}
@@ -149,7 +113,7 @@ export default function About() {
                     style={{ fontSize: "20px", marginTop: "4px" }}
                   />
                 }
-                cardColor={cardColor}
+                cardColor={index % 2 !== 0 ?  "rgb(255, 169, 80)": "#6364D9" }
                 sx={{
                   position: "relative",
                   zIndex: 2,
@@ -160,7 +124,8 @@ export default function About() {
               />
             </Grid>
           </Grid>
-        ))}
+          )
+        })}
       </Container>
     </Box>
   );

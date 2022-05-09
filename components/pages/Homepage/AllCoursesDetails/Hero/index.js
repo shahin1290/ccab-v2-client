@@ -7,7 +7,7 @@ import {
 } from "../../../../shared/StyledComponents";
 import Image from "next/image";
 
-export default function index() {
+export default function Hero({Header,Media}) {
   return (
     <HeroHubContainer>
       <Grid
@@ -34,7 +34,7 @@ export default function index() {
             textAlign={{ xs: "center", md: "start" }}
             whiteSpace={{ xs: "break-spaces" }}
           >
-            JavaScript Full Stack Web and Mobile Development
+             {Header}
           </Typography>
         </HubLeftSide>
         <HubRightSide
@@ -49,7 +49,7 @@ export default function index() {
         >
           <Image
             priority
-            src="/svgImages/HeroImages/CourseHeroImage.svg"
+            src={Media}
             layout="fill"
             alt="Software Hub Hero"
           />
