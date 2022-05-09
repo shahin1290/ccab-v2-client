@@ -5,6 +5,7 @@ import React from "react";
 import Underline from "../../../../images/svg/Underline";
 
 import InfoCard from "../../../shared/InfoCard";
+import CustomPriceCard from "../StudyTime/CustomPriceCard";
 
 const data = {
   title: "Fully Flexible Self-Paced Online Learning",
@@ -24,10 +25,9 @@ const Tuition = () => {
           <Typography variant="h3" sx={{ mt: 5, mb: 2 }}>
             Tuition
           </Typography>
-          <Underline />
           <Typography
             variant="h6"
-            sx={{ color: "secondary.contrastText", mt: 5, px: 3 }}
+            sx={{ color: "secondary.contrastText", px: 3 }}
           >
             We conduct discount programs from time to time, so the price may be
             lower
@@ -69,7 +69,7 @@ const Tuition = () => {
               })}
             </Stack>
           </Grid>
-          <Grid
+          {/* <Grid
             item
             md={5}
             sm={10}
@@ -129,6 +129,49 @@ const Tuition = () => {
                 // width: { sm: 300, xs: 200 },
               }}
             />
+          </Grid> */}
+
+          <Grid
+            item
+            sm={5}
+            xs={11}
+            sx={{
+              width: "100%",
+              maxWidth: "500px",
+              height: "500px",
+              position: "relative",
+              left: { xs: "7vw", sm: "25%", md: 0 },
+            }}
+          >
+            <Box>
+              <Box
+                sx={{
+                  position: "absolute",
+                  width: { lg: 250, xs: 150, sm: 200 },
+                  top: 0,
+                  left: 0,
+                }}
+              >
+                <CustomPriceCard
+                  position="top"
+                  bgcolor={theme.palette.primary.main}
+                />
+              </Box>
+
+              <Box
+                sx={{
+                  position: "absolute",
+                  top: { xs: "144px", sm: "163px", lg: "185px" },
+                  left: { xs: "139px", sm: "190px", lg: "238px" },
+                  width: { lg: 250, xs: 150, sm: 200 },
+                }}
+              >
+                <CustomPriceCard
+                  position="bottom"
+                  bgcolor={theme.palette.secondary.main}
+                />
+              </Box>
+            </Box>
           </Grid>
         </Grid>
       </Container>

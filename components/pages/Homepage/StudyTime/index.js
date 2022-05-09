@@ -24,18 +24,16 @@ const StyledSvg = styled("svg")(({ theme }) => ({
 const Study = () => {
   const theme = useTheme();
   return (
-    <Box bgcolor="#fff" py={{ xs: 1, lg: 10 }}>
+    <Box bgcolor="#fff" py={{ xs: 1, lg: 4 }}>
       <Container maxWidth="xl">
         <Grid
           container
           alignItems="start"
-          justifyContent={{ sm: "space-between", xs: "center" }}
-          spacing={1}
+          justifyContent={{ xs: "center" }}
           wrap="wrap-reverse"
         >
           <Grid
             item
-            md={6}
             sm={12}
             sx={{
               height: "100%",
@@ -67,7 +65,7 @@ const Study = () => {
                   <path
                     d="M 9.995 -0.005 C 9.965 3.859 10.188 2.105 1.912 5.032 Q 1.184 5.537 1.311 6.988 M 10.946 0.04 V 6.979 M 12.001 -0.019 Q 11.926 2.506 13.115 2.848 Q 16.815 3.665 20.158 4.988 Q 20.767 5.523 20.693 6.979"
                     stroke={theme.palette.primary.main}
-                    strokeWidth="0.21"
+                    strokeWidth="0.18"
                     fill="none"
                   />
                 </StyledSvg>
@@ -117,7 +115,7 @@ const Study = () => {
               </Stack>
             </Stack>
           </Grid>
-          <Grid
+          {/* <Grid
             item
             sm={5}
             xs={11}
@@ -158,7 +156,7 @@ const Study = () => {
                 />
               </Box>
             </Box>
-          </Grid>
+          </Grid> */}
         </Grid>
       </Container>
     </Box>

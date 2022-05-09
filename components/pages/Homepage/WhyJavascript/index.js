@@ -15,10 +15,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 const Cards = [
   "JavaScript has been the most popular language in the world for 9 years in a row, according to StackOverflow.com, the largest community website for professional and enthusiast programmers.",
   "Knowing JavaScript allows you to design Web and mobile apps without any restrictions. JavaScript can be used to create back-end, front-end, full-stack, iOS, and Android apps.",
-  "The most in-demand position on the job market is full-stack developer.",
-  "The most in-demand position on the job market is full-stack developer.",
-  "The most in-demand position on the job market is full-stack developer.",
-  "The most in-demand position on the job market is full-stack developer.",
+  "The most in-demand position on the job market is full-stack developer.", 
 ];
 
 const WhyJavascript = () => {
