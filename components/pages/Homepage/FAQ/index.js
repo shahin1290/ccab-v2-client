@@ -4,7 +4,7 @@ import Underline from "../../../../images/svg/Underline";
 import FAQAccordion from "./FAQAccordion";
 
 const FAQ = ({ FAQs, title }) => {
-  const [active, setActive] = useState("What is the refund policy?");
+  const [active, setActive] = useState("");
 
   return (
     <Box bgcolor="#fff">

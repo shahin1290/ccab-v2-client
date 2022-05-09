@@ -13,7 +13,7 @@ import Image from "next/image";
 import CircleIcon from "@mui/icons-material/Circle";
 import { DotGrid } from "../../../../images/svg/CareerSupport";
 
-const CareerSupport = () => {
+const CareerSupport = ({ title, subTitle, supportList }) => {
   const theme = useTheme();
 
   return (
@@ -46,7 +46,7 @@ const CareerSupport = () => {
             </Box>
 
             <List>
-              {data.map((item) => (
+              {supportList.map((item) => (
                 <ListItem key={item.id} disableGutters>
                   <Stack
                     direction="row"
@@ -83,10 +83,4 @@ const CareerSupport = () => {
   );
 };
 
-const data = [
-  { id: 1, content: "CV writing" },
-  { id: 2, content: "Technical Interviews / Mock Interviews" },
-  { id: 3, content: "Personal Development Program Portfolio" },
-  { id: 4, content: " Network Events" },
-];
 export default CareerSupport;

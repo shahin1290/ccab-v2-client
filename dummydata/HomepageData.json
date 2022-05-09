@@ -246,5 +246,15 @@
         "videoImageUrl": "/images/review3.jpeg"
       }
     ]
+  },
+  "careerSupportData": {
+    "title": "What Stands Us Out",
+    "subTitle": "Register yourself now and get real employable skills that top companies want",
+    "supportList": [
+      { "id": 1, "content": "CV writing" },
+      { "id": 2, "content": "Technical Interviews / Mock Interviews" },
+      { "id": 3, "content": "Personal Development Program Portfolio" },
+      { "id": 4, "content": " Network Events" }
+    ]
   }
 }

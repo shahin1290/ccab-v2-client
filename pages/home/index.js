@@ -27,6 +27,7 @@ export default function Homepage({
   WhatStandsOutData,
   StudentReviewData,
   FAQData,
+  careerSupportData,
 }) {
   return (
     <>
@@ -73,7 +74,11 @@ export default function Homepage({
       />
       <CompanyReviews />
       <FAQ FAQs={FAQData.FAQs} title={FAQData.title} />
-      <CareerSupport />
+      <CareerSupport
+        title={careerSupportData.title}
+        subTitle={careerSupportData.subtitle}
+        supportList={careerSupportData.supportList}
+      />
     </>
   );
 }
