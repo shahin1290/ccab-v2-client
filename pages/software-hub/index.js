@@ -28,6 +28,8 @@ const SoftwareHub = ({}) => {
         Header={HowMuchData.title}
         Description={HowMuchData.description}
         AllSections={AllSections}
+        lastStage={7}
+        lastButtonText="Get Estimate Today"
       />
       <ReviewsByClients
         Header={ReviewsByClientsData.title}

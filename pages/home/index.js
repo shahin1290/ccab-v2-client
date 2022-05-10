@@ -68,6 +68,8 @@ export default function Homepage({
         Header={HowMuchData.title}
         Description={HowMuchData.description}
         AllSections={HowMuchData.sections}
+        lastStage={4}
+        lastButtonText="Start Learning"
       />
       <TechStack />
       <StudyTime StudyTimeData={StudyTimeData} />

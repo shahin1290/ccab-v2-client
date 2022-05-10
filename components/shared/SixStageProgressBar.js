@@ -11,13 +11,7 @@ const progress = {
   7: 1,
 };
 
-const ProgressBar = ({
-  width = 140,
-  height = 50,
-  stage,
-  color,
-  totalStages,
-}) => {
+const SixStageProgressBar = ({ width = 140, height = 50, stage, color }) => {
   let currentStage = stage;
   if (currentStage < 1) currentStage = 1;
   if (currentStage > 7) currentStage = 7;
@@ -148,4 +142,4 @@ const ProgressBar = ({
   );
 };
 
-export default ProgressBar;
+export default SixStageProgressBar;

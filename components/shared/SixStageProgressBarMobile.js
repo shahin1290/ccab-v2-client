@@ -1,4 +1,4 @@
-import { motion, useMotionValue, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import React from "react";
 
 const progress = {
@@ -11,7 +11,12 @@ const progress = {
   7: 1,
 };
 
-const ProgressBarMobile = ({ width = 78, height = 814, stage, color }) => {
+const SixStageProgressBarMobile = ({
+  width = 78,
+  height = 814,
+  stage,
+  color,
+}) => {
   let currentStage = stage;
   if (currentStage < 1) currentStage = 1;
   if (currentStage > 7) currentStage = 7;
@@ -120,4 +125,4 @@ const ProgressBarMobile = ({ width = 78, height = 814, stage, color }) => {
   );
 };
 
-export default ProgressBarMobile;
+export default SixStageProgressBarMobile;

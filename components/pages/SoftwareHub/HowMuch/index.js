@@ -11,13 +11,16 @@ import Slider from "react-slick";
 import styled from "@emotion/styled";
 import { Box, useTheme } from "@mui/system";
 import { useRouter } from "next/router";
-import ProgressBar from "../../../../images/svg/ProgressBar";
-import ProgressBarMobile from "../../../../images/svg/ProgressBarMobile";
+
 import ServiceSelectionCard from "../../../shared/ServiceSelectionCard";
 import Underline from "../../../../images/svg/Underline";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import { ForwardArrow } from "../../../../images/svg/ServiceIcons";
 import HowContactForm from "../ContactForm";
+import SixStageProgressBar from "../../../shared/SixStageProgressBar";
+import SixStageProgressBarMobile from "../../../shared/SixStageProgressBarMobile";
+import FourStageProgressBarMobile from "../../../shared/FourStageProgressBarMobile";
+import FourStageProgressBar from "../../../shared/FourStageProgressbar";
 
 const LargeContainer = styled(Box)(({ theme }) => ({
   width: "100%",
@@ -56,7 +59,14 @@ const CustomStack = styled(Stack)(({ theme }) => ({
   },
 }));
 
-const HowMuch = ({ Header, Description, AllSections }) => {
+const HowMuch = ({
+  Header,
+  Description,
+  AllSections,
+  lastStage,
+  lastButtonText,
+  lastLink,
+}) => {
   const theme = useTheme();
   const [currentStage, setCurrentStage] = React.useState(1);
   const [slider, setSlider] = React.useState(null);
@@ -78,13 +88,12 @@ const HowMuch = ({ Header, Description, AllSections }) => {
     speed: 500,
 
     beforeChange: function (oldIndex, newIndex) {
-      // console.log(oldIndex, newIndex);
       setCurrentStage(newIndex + 1);
     },
   };
 
   const nextHandler = () => {
-    if (currentStage === 7) return console.log("Form Submitted");
+    if (currentStage === lastStage) return console.log("Form Submitted");
 
     slider.slickNext();
     setCurrentStage(currentStage + 1);
@@ -120,13 +129,13 @@ const HowMuch = ({ Header, Description, AllSections }) => {
         <CustomStack spacing={1}>
           {md ? (
             <Box>
-              <ProgressBarMobile
+              <FourStageProgressBarMobile
                 color={theme.palette.secondary.main}
                 stage={currentStage}
               />
             </Box>
           ) : (
-            <ProgressBar
+            <FourStageProgressBar
               color={theme.palette.secondary.main}
               stage={currentStage}
             />
@@ -243,8 +252,8 @@ const HowMuch = ({ Header, Description, AllSections }) => {
               },
             }}
           >
-            {currentStage === 7 ? (
-              "Get Estimate Today "
+            {currentStage === lastStage ? (
+              <p>{lastButtonText}</p>
             ) : (
               <>
                 Next <ForwardArrow />
