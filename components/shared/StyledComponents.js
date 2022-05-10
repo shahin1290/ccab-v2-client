@@ -328,3 +328,7 @@ export const CourseDetailsBtn2 = styled("button")({
     height: " 38px",
   },
 });
+
+export const ImageWrapper = styled("div")({
+  display: 'block',
+})

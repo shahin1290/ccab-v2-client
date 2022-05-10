@@ -20,7 +20,7 @@ const StyledSvg = styled("svg")(({ theme }) => ({
   [theme.breakpoints.down("sm")]: { width: "220px", height: "90px" },
 }));
 
-const Study = () => {
+const StudyTime = ({ StudyTimeData }) => {
   const theme = useTheme();
   return (
     <Box bgcolor="#fff" py={{ xs: 1, lg: 4 }}>
@@ -96,12 +96,22 @@ const Study = () => {
               </Box>
 
               <Stack direction="row" spacing={{ xs: 1, lg: 3 }}>
-                <CustomScheduleCard
-                  color="#63CD9B"
-                  period="Morning Time"
-                  time="8-16"
-                />
-                <CustomScheduleCard
+                {StudyTimeData.map((item, index) => (
+                  <CustomScheduleCard
+                    key={item.id}
+                    color={
+                      index === 0
+                        ? "#63CD9B"
+                        : index === 1
+                        ? theme.palette.primary.main
+                        : theme.palette.secondary.main
+                    }
+                    period={item.period}
+                    time={item.time}
+                  />
+                ))}
+
+                {/* <CustomScheduleCard
                   color={theme.palette.primary.main}
                   period="Evening Time"
                   time="17-20"
@@ -110,7 +120,7 @@ const Study = () => {
                   color={theme.palette.secondary.main}
                   period="Weekends"
                   time="12-17"
-                />
+                /> */}
               </Stack>
             </Stack>
           </Grid>
@@ -162,4 +172,4 @@ const Study = () => {
   );
 };
 
-export default Study;
+export default StudyTime;

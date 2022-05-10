@@ -216,7 +216,7 @@ export default function Course({
             </Typography>
             <ButtonWrap style={{ paddingBottom: "50px" }}>
               <CourseDetailsBtn2>Get Started</CourseDetailsBtn2>
-              <CourseDetailsBtn onClick={() => router.push("all-courses")}>
+              <CourseDetailsBtn onClick={() => router.push("/home/all-courses")}>
                 All Courses
               </CourseDetailsBtn>
             </ButtonWrap>

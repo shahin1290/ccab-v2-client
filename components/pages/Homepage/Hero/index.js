@@ -30,7 +30,7 @@ export default function Hero({ Header, SubHeader, Description, Media }) {
               {Description}
             </Typography>
           </LeftSide>
-          <RightSide item xs={6} md={6} sx={{ position: "relative" }}>
+          <RightSide item xs={6} md={6} sx={{ position: "relative", marginTop:'10px' }}>
             <Image priority src={Media} layout="fill" alt="Homepage Hero" />
           </RightSide>
         </Grid>

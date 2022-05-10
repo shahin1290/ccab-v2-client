@@ -246,7 +246,7 @@
       }
     ]
   },
-  "careerSupportData": {
+  "CareerSupportData": {
     "title": "What Stands Us Out",
     "subTitle": "Register yourself now and get real employable skills that top companies want",
     "supportList": [
@@ -256,7 +256,7 @@
       { "id": 4, "content": " Network Events" }
     ]
   },
-  "tuitionData": {
+  "TuitionData": {
     "title": "Tuition",
     "subTitle": "We conduct discount programs from time to time, so the price may be lower",
     "paragraphTitle": "Fully Flexible Self-Paced Online Learning",
@@ -277,5 +277,10 @@
       "price": "199€",
       "courseDuration": "3-4 months"
     }
-  }
+  },
+  "StudyTimeData": [
+    { "id": 1, "period": "Morning Time", "time": "8-16" },
+    { "id": 2, "period": "Evening Time", "time": "17-20" },
+    { "id": 3, "period": "Weekends", "time": "12-17" }
+  ]
 }
