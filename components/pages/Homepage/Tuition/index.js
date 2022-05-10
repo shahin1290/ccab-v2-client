@@ -13,21 +13,27 @@ const data = {
   ],
 };
 
-const Tuition = () => {
+const Tuition = ({
+  title,
+  subTitle,
+  paragraphTitle,
+  content,
+  firstCourseCategory,
+  secondCourseCategory,
+}) => {
   const theme = useTheme();
   return (
     <Box bgcolor="#F8F9FB" py={{ xs: 2, sm: 10 }}>
       <Container maxWidth="xl">
         <Stack justifyContent="center" alignItems="center">
           <Typography variant="h3" sx={{ mt: 5, mb: 2 }}>
-            Tuition
+            {title}
           </Typography>
           <Typography
             variant="h6"
             sx={{ color: "secondary.contrastText", px: 3 }}
           >
-            We conduct discount programs from time to time, so the price may be
-            lower
+            {subTitle}
           </Typography>
         </Stack>
         <Grid
@@ -51,9 +57,9 @@ const Tuition = () => {
           >
             <Stack direction="column" spacing={3}>
               <Typography variant="h4" sx={{ color: "primary.main" }}>
-                {data.title}
+                {paragraphTitle}
               </Typography>
-              {data.content.map((item, index) => {
+              {content.map((item, index) => {
                 return (
                   <Typography
                     variant="body1"
@@ -152,6 +158,9 @@ const Tuition = () => {
                 <CustomPriceCard
                   position="top"
                   bgcolor={theme.palette.primary.main}
+                  name={firstCourseCategory.name}
+                  price={firstCourseCategory.price}
+                  courseDuration={firstCourseCategory.courseDuration}
                 />
               </Box>
 
@@ -166,6 +175,9 @@ const Tuition = () => {
                 <CustomPriceCard
                   position="bottom"
                   bgcolor={theme.palette.secondary.main}
+                  name={secondCourseCategory.name}
+                  price={secondCourseCategory.price}
+                  courseDuration={secondCourseCategory.courseDuration}
                 />
               </Box>
             </Stack>

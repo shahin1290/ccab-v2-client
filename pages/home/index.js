@@ -28,6 +28,7 @@ export default function Homepage({
   StudentReviewData,
   FAQData,
   careerSupportData,
+  tuitionData,
 }) {
   return (
     <>
@@ -54,7 +55,14 @@ export default function Homepage({
         cardData={HowToStartData.cardData}
       />
       <WhyJavascript data={WhySectionData} />
-      <Tuition />
+      <Tuition
+        title={tuitionData.title}
+        subTitle={tuitionData.subTitle}
+        paragraphTitle={tuitionData.paragraphTitle}
+        content={tuitionData.content}
+        firstCourseCategory={tuitionData.firstCourseCategory}
+        secondCourseCategory={tuitionData.secondCourseCategory}
+      />
       <HowMuch
         Header={HowMuchData.title}
         Description={HowMuchData.description}

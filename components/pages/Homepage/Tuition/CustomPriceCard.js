@@ -2,7 +2,13 @@ import { BorderAllRounded } from "@mui/icons-material";
 import { Box, Paper, Stack, Typography } from "@mui/material";
 import React from "react";
 
-const CustomPriceCard = ({ bgcolor, position }) => {
+const CustomPriceCard = ({
+  bgcolor,
+  position,
+  name,
+  price,
+  courseDuration,
+}) => {
   const border = 20;
   return (
     <Stack
@@ -51,7 +57,7 @@ const CustomPriceCard = ({ bgcolor, position }) => {
               fontSize: { xs: 16, sm: 20 },
             }}
           >
-            {position === "top" ? "Full-time studying" : "Part-time studying"}
+            {name}
           </Typography>
           <Stack
             direction="row"
@@ -72,7 +78,7 @@ const CustomPriceCard = ({ bgcolor, position }) => {
               color={bgcolor}
               sx={{ fontSize: { xs: 25, sm: 30 } }}
             >
-              199€
+              {price}
             </Typography>
           </Stack>
 
@@ -87,7 +93,7 @@ const CustomPriceCard = ({ bgcolor, position }) => {
               variant="h6"
               sx={{ fontWeight: "normal", fontSize: { xs: 10 } }}
             >
-              3-4 months
+              {courseDuration}
             </Typography>
           </Stack>
         </Box>
