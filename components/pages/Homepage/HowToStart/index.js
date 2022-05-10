@@ -20,6 +20,8 @@ import {
 import HappyGuy from "../../../../public/images/happyGuy.png";
 import HowToStartImage from "../../../../public/images/howToStart.png";
 import { useRouter } from "next/router";
+import Underline from "../../../../images/svg/Underline";
+import InformationCard from "../../../shared/InformationCard";
 
 const HowToStart = ({
   title,
@@ -44,9 +46,14 @@ const HowToStart = ({
           gap: { xs: 5, md: 10 },
         }}
       >
-        <Stack justifyContent="center" alignItems="center" spacing={1}>
+        <Stack justifyContent="center" alignItems="center" spacing={2}>
           <Typography variant="h3">{title}</Typography>
-          <Typography variant="h6" color="secondary.contrastText">
+          <Underline />
+          <Typography
+            variant="h6"
+            color="secondary.contrastText"
+            textAlign="center"
+          >
             {subTitle}
           </Typography>
         </Stack>
@@ -88,22 +95,11 @@ const HowToStart = ({
           {cardData.map((item) => {
             return (
               <Grid item key={item.id} sx={{ width: 294 }}>
-                <InfoCard>
-                  <CardMedia>
-                    <Image
-                      alt="company-logo"
-                      src={item.icon}
-                      width={168}
-                      height={75}
-                    />
-                  </CardMedia>
-                  <CardContent sx={{ height: "70%" }}>
-                    <Typography variant="h6" align="center" mb={2}>
-                      {item.title}
-                    </Typography>
-                    <Typography variant="body2">{item.content}</Typography>
-                  </CardContent>
-                </InfoCard>
+                <InformationCard
+                  title={item.title}
+                  content={item.content}
+                  icon={item.icon}
+                />
               </Grid>
             );
           })}
@@ -158,7 +154,7 @@ const HowToStart = ({
               <Typography
                 sx={{
                   color: "common.white",
-                  fontWeight: "normal",
+                  fontWeight: "bold",
                   textAlign: { xs: "center", sm: "start" },
                 }}
                 variant="h6"

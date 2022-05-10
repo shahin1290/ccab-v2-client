@@ -56,7 +56,7 @@ const CustomStack = styled(Stack)(({ theme }) => ({
   },
 }));
 
-const HowMuch = ({Header, Description, AllSections}) => {
+const HowMuch = ({ Header, Description, AllSections }) => {
   const theme = useTheme();
   const [currentStage, setCurrentStage] = React.useState(1);
   const [slider, setSlider] = React.useState(null);
@@ -110,11 +110,11 @@ const HowMuch = ({Header, Description, AllSections}) => {
           variant="h2"
           sx={{ color: "common.white", mb: 2, mt: { md: 3, xs: 3 } }}
         >
-           {Header}
+          {Header}
         </Typography>
         <Underline fill={theme.palette.common.white} />
         <Typography variant="subtitle2" color="common.white" mt={3} mb={5}>
-           {Description}
+          {Description}
         </Typography>
 
         <CustomStack spacing={1}>

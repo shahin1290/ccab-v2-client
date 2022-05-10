@@ -104,15 +104,14 @@
       ]
     }
   ],
-
   "HowMuchData": {
     "title": "How much?",
     "description": "Click the icons below to describe your app to get the estimate",
     "sections": [
       [
         {
-          "title": "Ios Application",
-          "iconUrl": "/svgImages/ServiceCardIcons/applelogo.svg",
+          "title": "Mobile Application Services",
+          "iconUrl": "/Desgin_Icons/How-much/Mobile-dev.svg",
           "description": "This is a brief summary about the services"
         },
         {

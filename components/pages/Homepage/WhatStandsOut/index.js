@@ -9,10 +9,9 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import Underline from "../../../../images/svg/Underline";
+import InformationCard from "../../../shared/InformationCard";
 
-import {
-  InfoCard,
-} from "../../../shared/StyledComponents";
+import { InfoCard } from "../../../shared/StyledComponents";
 
 const WhatStandsOut = ({ title, subTitle, cardData }) => {
   return (
@@ -50,28 +49,11 @@ const WhatStandsOut = ({ title, subTitle, cardData }) => {
           {cardData.map((item) => {
             return (
               <Grid item key={item.id} sx={{ width: 290 }}>
-                <InfoCard>
-                  <CardMedia>
-                    <Image
-                      alt="company-logo"
-                      src={item.icon}
-                      width={168}
-                      height={75}
-                    />
-                  </CardMedia>
-                  <CardContent>
-                    <Typography variant="h6" align="center" mb={2}>
-                      {item.title}
-                    </Typography>
-                    <Typography
-                      variant="body1"
-                      sx={{ color: "secondary.contrastText" }}
-                      align="center"
-                    >
-                      {item.content}
-                    </Typography>
-                  </CardContent>
-                </InfoCard>
+                <InformationCard
+                  title={item.title}
+                  content={item.content}
+                  icon={item.icon}
+                />
               </Grid>
             );
           })}

@@ -17,8 +17,8 @@ const SelectionCard = styled("div")(({ theme }) => ({
   border: `5px solid ${theme.palette.common.white}`,
   cursor: "pointer",
   [theme.breakpoints.down("md")]: {
-    width: "200px",
-    height: "120px",
+    width: "220px",
+    height: "150px",
     border: `3px solid ${theme.palette.common.white}`,
   },
 }));
@@ -120,8 +120,9 @@ const ServiceSelectionCard = (props) => {
           <Box
             sx={{
               position: "relative",
-              height: 80,
-              width: 80,
+              display: "block",
+              height: { sm: "60px", xs: "40px" },
+              width: { sm: "60px", xs: "40px" },
               backgroundColor: !selected
                 ? theme.palette.secondary.contrastText
                 : theme.palette.primary.contrastText,
@@ -131,12 +132,12 @@ const ServiceSelectionCard = (props) => {
               maskRepeat: "no-repeat",
               maskBorder: "none",
               maskOrigin: "border-box",
+              maskSize: { sm: "60px 60px", xs: "40px 40px" },
             }}
           ></Box>
         )}
         <Box
           sx={{
-            // flexGrow: 1,
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -144,10 +145,7 @@ const ServiceSelectionCard = (props) => {
           }}
         >
           {props.title && (
-            <Typography
-              variant="subtitle2"
-              sx={{ fontWeight: { xs: "normal", md: "bold" } }}
-            >
+            <Typography variant="subtitle2" sx={{ fontWeight: "bold" }}>
               {props.title}
             </Typography>
           )}

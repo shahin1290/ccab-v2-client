@@ -55,6 +55,10 @@ const theme = createTheme({
       fontFamily: "'Segoe UI', sans-serif",
       fontSize: "2.4rem",
       fontWeight: "bold",
+      "@media (max-width: 600px)": {
+        // whiteSpace: "nowrap",
+        fontSize: "3.2rem",
+      },
     },
     h5: {
       fontFamily: "'Segoe UI', sans-serif",
@@ -81,6 +85,9 @@ const theme = createTheme({
       fontFamily: "'Segoe UI', sans-serif",
       fontSize: "1.8rem",
       fontWeight: "normal",
+      "@media (max-width: 600px)": {
+        fontSize: "2.8rem",
+      },
     },
     body1: {
       fontFamily: "'Segoe UI', sans-serif",
