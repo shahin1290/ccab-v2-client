@@ -1,7 +1,9 @@
 import React from "react";
 import HowMuch from "../../../components/pages/SoftwareHub/HowMuch";
-import AllSections from "../../../components/pages/SoftwareHub/HowMuch/data.";
-import { HowMuchData } from "../../../dummydata/SoftwarePageData";
+
+import path from "path";
+import util from "util";
+import fs from "fs";
 
 const HowMuchPage = ({ HowMuchData }) => {
   return (
