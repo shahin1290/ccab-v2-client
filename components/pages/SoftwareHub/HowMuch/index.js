@@ -17,10 +17,8 @@ import Underline from "../../../../images/svg/Underline";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import { ForwardArrow } from "../../../../images/svg/ServiceIcons";
 import HowContactForm from "../ContactForm";
-import SixStageProgressBar from "../../../shared/SixStageProgressBar";
-import SixStageProgressBarMobile from "../../../shared/SixStageProgressBarMobile";
+import FourStageProgressBar from "../../../shared/FourStageProgressBar";
 import FourStageProgressBarMobile from "../../../shared/FourStageProgressBarMobile";
-import FourStageProgressBar from "../../../shared/FourStageProgressbar";
 
 const LargeContainer = styled(Box)(({ theme }) => ({
   width: "100%",
