@@ -27,8 +27,9 @@ export default function Homepage({
   WhatStandsOutData,
   StudentReviewData,
   FAQData,
-  careerSupportData,
-  tuitionData,
+  CareerSupportData,
+  TuitionData,
+  StudyTimeData,
 }) {
   return (
     <>
@@ -56,12 +57,12 @@ export default function Homepage({
       />
       <WhyJavascript data={WhySectionData} />
       <Tuition
-        title={tuitionData.title}
-        subTitle={tuitionData.subTitle}
-        paragraphTitle={tuitionData.paragraphTitle}
-        content={tuitionData.content}
-        firstCourseCategory={tuitionData.firstCourseCategory}
-        secondCourseCategory={tuitionData.secondCourseCategory}
+        title={TuitionData.title}
+        subTitle={TuitionData.subTitle}
+        paragraphTitle={TuitionData.paragraphTitle}
+        content={TuitionData.content}
+        firstCourseCategory={TuitionData.firstCourseCategory}
+        secondCourseCategory={TuitionData.secondCourseCategory}
       />
       <HowMuch
         Header={HowMuchData.title}
@@ -69,7 +70,7 @@ export default function Homepage({
         AllSections={HowMuchData.sections}
       />
       <TechStack />
-      <StudyTime />
+      <StudyTime StudyTimeData={StudyTimeData} />
       <WhatStandsOut
         title={WhatStandsOutData.title}
         subTitle={WhatStandsOutData.subTitle}
@@ -83,9 +84,9 @@ export default function Homepage({
       <CompanyReviews />
       <FAQ FAQs={FAQData.FAQs} title={FAQData.title} />
       <CareerSupport
-        title={careerSupportData.title}
-        subTitle={careerSupportData.subtitle}
-        supportList={careerSupportData.supportList}
+        title={CareerSupportData.title}
+        subTitle={CareerSupportData.subtitle}
+        supportList={CareerSupportData.supportList}
       />
     </>
   );
