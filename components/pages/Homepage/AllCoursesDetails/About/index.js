@@ -22,7 +22,7 @@ export default function About({ AllCourseData}) {
           </Typography>
           <Underline />
         </Stack>
-        {AllCourseData.map(( item, index ) => {
+        {CoursesData.map(( item, index ) => {
           return (
           <Grid
             key={item.id}
@@ -54,7 +54,7 @@ export default function About({ AllCourseData}) {
                   variant="body1"
                   sx={{ color: "secondary.contrastText" }}
                 >
-                  {item.description}
+                  {item.courseSummary}
                 </Typography>
                 <SecondaryButton
                   variant="contained"
@@ -89,7 +89,7 @@ export default function About({ AllCourseData}) {
               }}
             >
               <CourseInfoCardImg
-                src={item.pic}
+                src={item.courseImage}
                 alt="cover"
                 sx={{
                   position: "relative",
@@ -102,7 +102,7 @@ export default function About({ AllCourseData}) {
               <CourseInfoCard
                 price={item.price}
                 duration={item.duration}
-                SeatsNumber={item.seats}
+                SeatsNumber={item.availableSeats}
                 icon={
                   <AccessTimeFilledIcon
                     style={{ fontSize: "20px", marginTop: "4px" }}
