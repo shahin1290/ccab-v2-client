@@ -15,7 +15,7 @@ export default function Course() {
     <Hero 
     Header={HeroData.title} 
     Media={HeroData.pic}/>
-    <About AllCourseData={AllCourseData} />
+    <About CoursesData={CoursesData} />
     <Courses CoursesData={CoursesData} />
     <GetStart Header={GetStartData.title} SubHeader={GetStartData.subTitle} />
     </>
