@@ -5,7 +5,7 @@ import { SummaryContainer } from "../../../../shared/StyledComponents";
 import Underline from "../../../../../images/svg/Underline";
 import CourseCard from "../../../../shared/CourseCard";
 
-export default function Courses({CoursesData}) {
+export default function Courses({ CoursesData }) {
   return (
     <SummaryContainer>
       <Container maxWidth="xl">
@@ -30,19 +30,18 @@ export default function Courses({CoursesData}) {
             overflowY: "hidden",
           }}
         >
-          {CoursesData.map((item)=>{
-            return(
-            <Grid item xs={4} key={item.index}>
-              <CourseCard
-              image={item.Pic}
-              link={item.Link}
-              title={item.Title}
-              description={item.Description}
-              />
-            </Grid>
-                        
-              )
-            })}
+          {CoursesData.map((item) => {
+            return (
+              <Grid item xs={4} key={item.id}>
+                <CourseCard
+                  image={item.pic}
+                  link={item.slug}
+                  title={item.title}
+                  description={item.description}
+                />
+              </Grid>
+            );
+          })}
         </Grid>
       </Container>
     </SummaryContainer>
