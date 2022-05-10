@@ -111,7 +111,7 @@
       [
         {
           "title": "Mobile Application Services",
-          "iconUrl": "/Desgin_Icons/How-much/Mobile-dev.svg",
+          "iconUrl": "/design_Icons/How-much/backend.svg",
           "description": "This is a brief summary about the services"
         },
         {
@@ -154,7 +154,6 @@
       ]
     ]
   },
-
   "WhatStandsOutData": {
     "title": "What Stands Us Out",
     "subTitle": "Register yourself now and get real employable skills that top companies want",
