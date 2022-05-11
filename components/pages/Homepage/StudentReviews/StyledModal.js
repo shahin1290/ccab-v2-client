@@ -26,7 +26,7 @@ const Backdrop = styled("div")`
   -webkit-tap-highlight-color: transparent;
 `;
 
-export default function ModalUnstyledDemo({ open, handleClose }) {
+export default function ModalUnstyledDemo({ open, handleClose, videoUrl }) {
   return (
     <div>
       <StyledModal
@@ -38,7 +38,7 @@ export default function ModalUnstyledDemo({ open, handleClose }) {
       >
         <Box>
           <ReactPlayer
-            url="https://www.youtube.com/watch?v=W-f6F2gxrl4"
+            url={videoUrl}
             playing={true}
             controls={true}
             config={{

@@ -246,24 +246,27 @@
     "reviewData": [
       {
         "id": 1,
-        "name": "John doe",
+        "name": "Emy Watson",
         "address": "London, UK",
         "avatarUrl": "/images/reviewer.jpeg",
-        "videoImageUrl": "/images/review1.jpeg"
+        "videoImageUrl": "/images/review1.jpeg",
+        "videoUrl": "https://www.youtube.com/watch?v=W-f6F2gxrl4"
       },
       {
         "id": 2,
         "name": "John doe",
         "address": "London, UK",
         "avatarUrl": "/images/reviewer.jpeg",
-        "videoImageUrl": "/images/review2.jpeg"
+        "videoImageUrl": "/images/review2.jpeg",
+        "videoUrl": "https://www.youtube.com/watch?v=D0UnqGm_miA"
       },
       {
         "id": 3,
-        "name": "John doe",
+        "name": "Michael John",
         "address": "London, UK",
         "avatarUrl": "/images/reviewer.jpeg",
-        "videoImageUrl": "/images/review3.jpeg"
+        "videoImageUrl": "/images/review3.jpeg",
+        "videoUrl": "https://www.youtube.com/watch?v=yAoLSRbwxL8"
       }
     ]
   },

@@ -50,6 +50,7 @@ const StudentReview = ({ title, subTitle, reviewData }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const [videoUrl, setVideoUrl] = useState("");
 
   return (
     <Container maxWidth="xl" sx={{ pb: 7 }}>
@@ -115,7 +116,10 @@ const StudentReview = ({ title, subTitle, reviewData }) => {
                     left: { xs: "44%" },
                     cursor: "pointer",
                   }}
-                  onClick={handleOpen}
+                  onClick={() => {
+                    handleOpen();
+                    setVideoUrl(item.videoUrl);
+                  }}
                 >
                   <svg
                     focusable="false"
@@ -250,7 +254,7 @@ const StudentReview = ({ title, subTitle, reviewData }) => {
         ))}
       </Container>
 
-      <StyledModal open={open} handleClose={handleClose} />
+      <StyledModal open={open} handleClose={handleClose} videoUrl={videoUrl}/>
     </Container>
   );
 };
