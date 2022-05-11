@@ -1,6 +1,7 @@
 import Header from "./Header/Header";
 import Footer from "./Footer";
 import { useMenuContext } from "../shared/MenuProvider";
+import { HeaderData } from "../../dummydata/HomePageData";
 
 const HomepageLayout = ({ children }) => {
   const menu = useMenuContext();
@@ -15,9 +16,14 @@ const HomepageLayout = ({ children }) => {
     socialLinks,
   } = menu.FooterData;
 
+  const {
+    pic,
+    navLinks,
+  } = menu.HeaderData;
+
   return (
     <main>
-      <Header />
+      <Header Media={pic} navLinks={navLinks} />
       {children}
       <Footer
         logoLink={logoLink}
