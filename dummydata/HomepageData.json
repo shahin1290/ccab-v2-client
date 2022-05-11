@@ -303,5 +303,32 @@
     { "id": 1, "period": "Morning Time", "time": "8-16" },
     { "id": 2, "period": "Evening Time", "time": "17-20" },
     { "id": 3, "period": "Weekends", "time": "12-17" }
-  ]
+  ],
+  "FooterData": {
+    "logoLink": "/images/Logo.ico",
+    "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati.",
+    "socialLinks": {
+      "googlePlus": "#",
+      "facebook": "https://www.facebook.com/CfCollegezz/",
+      "linkedin": "https://www.linkedin.com/company/codifycollegeab/"
+    },
+    "services": [
+      { "id": 1, "name": "Foundation Course", "link": "#" },
+      { "id": 2, "name": "Front-end Full Course", "link": "#" },
+      { "id": 3, "name": "Mern Full-Stack Developer", "link": "#" },
+      { "id": 4, "name": "Career Support", "link": "#" },
+      { "id": 5, "name": "Comprehendive Curriculum", "link": "#" }
+    ],
+    "quickLinks": [
+      { "id": 1, "name": "About Us", "link": "#" },
+      { "id": 2, "name": "Contact Us", "link": "#" },
+      { "id": 3, "name": "FAQs", "link": "#" },
+      { "id": 4, "name": "Privacy Policy", "link": "#" }
+    ],
+    "contactUs": {
+      "address": " Rontgenvagen 1, 141 52, Huddinge, Stockholm, Sweden",
+      "email": "info@codifycollege.se"
+    },
+    "copyrightText": "CF College AB. Designed by CF College AB"
+  }
 }

@@ -8,6 +8,7 @@ import Head from "next/head";
 
 import "../styles/globals.css";
 import HomepageLayout from "../components/Layout/HomepageLayout";
+import { MenuProvider } from "../components/shared/MenuProvider";
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -18,14 +19,16 @@ function MyApp(props) {
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <HomepageLayout>
-          <Head>
-            <title>Codify College Dashboard</title>
-            <meta name="description" content="CodifyCollege" />
-            <link rel="shortcut icon" href="/images/Logo.ico" />
-          </Head>
-          <Component {...pageProps} />
-        </HomepageLayout>
+        <MenuProvider value={pageProps}>
+          <HomepageLayout>
+            <Head>
+              <title>Codify College Dashboard</title>
+              <meta name="description" content="CodifyCollege" />
+              <link rel="shortcut icon" href="/images/Logo.ico" />
+            </Head>
+            <Component {...pageProps} />
+          </HomepageLayout>
+        </MenuProvider>
       </ThemeProvider>
     </CacheProvider>
   );

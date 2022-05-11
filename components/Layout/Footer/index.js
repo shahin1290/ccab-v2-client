@@ -13,7 +13,15 @@ const FooterLink = styled(Link)(({ theme }) => ({
   },
 }));
 
-export default function Footer() {
+export default function Footer({
+  logoLink,
+  description,
+  services,
+  quickLinks,
+  contactUs,
+  copyrightText,
+  socialLinks,
+}) {
   const matches = useMediaQuery("(max-width:600px)");
 
   return (
@@ -24,18 +32,14 @@ export default function Footer() {
             <Box py={{ xs: 2 }}>
               <Image
                 priority
-                src={logo}
+                src={logoLink}
                 alt="company-logo"
                 width="100"
                 height="100"
               />
             </Box>
             <Box pr={{ xl: 25, lg: 15, md: 10, xs: 2 }} color="white">
-              <Typography variant="body2">
-                At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                blanditiis praesentium voluptatum deleniti atque corrupti quos
-                dolores et quas molestias excepturi sint occaecati.
-              </Typography>
+              <Typography variant="body2">{description}</Typography>
             </Box>
             <Box
               pt={{ xs: 2 }}
@@ -46,7 +50,7 @@ export default function Footer() {
               }}
             >
               <Link
-                href="#"
+                href={socialLinks.gogglePlus}
                 sx={{
                   backgroundColor: "#6364D9",
                   borderRadius: "50%",
@@ -72,7 +76,7 @@ export default function Footer() {
                 </svg>
               </Link>
               <Link
-                href="#"
+                href={socialLinks.facebook}
                 sx={{
                   backgroundColor: "#6364D9",
                   borderRadius: "50%",
@@ -102,7 +106,7 @@ export default function Footer() {
                 </svg>
               </Link>
               <Link
-                href="#"
+                href={socialLinks.linkedin}
                 sx={{
                   backgroundColor: "#6364D9",
                   borderRadius: "50%",
@@ -141,36 +145,14 @@ export default function Footer() {
             >
               <Typography variant="body1">Services</Typography>
             </Box>
-            <Box pb={{ xs: 3 }}>
-              <FooterLink href="/" color="inherit">
-                <Typography variant="body1">Foundation Course</Typography>
-              </FooterLink>
-            </Box>
-            <Box pb={{ xs: 3 }}>
-              <FooterLink href="/" color="inherit">
-                <Typography variant="body1">Front-end Full Course</Typography>
-              </FooterLink>
-            </Box>
-            <Box pb={{ xs: 3 }}>
-              <FooterLink href="/" color="inherit">
-                <Typography variant="body1">
-                  Mern Full-Stack Developer
-                </Typography>
-              </FooterLink>
-            </Box>
-            <Box pb={{ xs: 3 }}>
-              <FooterLink href="/" color="inherit">
-                <Typography variant="body1">Career Support</Typography>
-              </FooterLink>
-            </Box>
-            <Box pb={{ xs: 3 }}>
-              <FooterLink href="/" color="inherit">
-                <Typography variant="body1">
-                  {" "}
-                  Comprehendive Curriculum
-                </Typography>
-              </FooterLink>
-            </Box>
+
+            {services.map((item) => (
+              <Box key={item.id} pb={{ xs: 3 }}>
+                <FooterLink href={item.link} color="inherit">
+                  <Typography variant="body1">{item.name}</Typography>
+                </FooterLink>
+              </Box>
+            ))}
           </Grid>
 
           <Grid item xs={12} md={2} sm={6}>
@@ -181,26 +163,14 @@ export default function Footer() {
             >
               <Typography variant="body1">Quick Links</Typography>
             </Box>
-            <Box pb={{ xs: 3 }}>
-              <FooterLink href="/" color="inherit">
-                <Typography variant="body1">About Us</Typography>
-              </FooterLink>
-            </Box>
-            <Box pb={{ xs: 3 }}>
-              <FooterLink href="/" color="inherit">
-                <Typography variant="body1">Contact Us</Typography>
-              </FooterLink>
-            </Box>
-            <Box pb={{ xs: 3 }}>
-              <FooterLink href="/" color="inherit">
-                <Typography variant="body1"> FAQs</Typography>
-              </FooterLink>
-            </Box>
-            <Box pb={{ xs: 3 }}>
-              <FooterLink href="/" color="inherit">
-                <Typography variant="body1">Privacy Policy</Typography>
-              </FooterLink>
-            </Box>
+
+            {quickLinks.map((item) => (
+              <Box key={item.id} pb={{ xs: 3 }}>
+                <FooterLink href={item.link} color="inherit">
+                  <Typography variant="body1">{item.name}</Typography>
+                </FooterLink>
+              </Box>
+            ))}
           </Grid>
           <Grid item xs={12} sm={3}>
             <Box
@@ -214,9 +184,7 @@ export default function Footer() {
               <PinDropIcon sx={{ fontSize: "20px", color: "#6364D9" }} />
 
               <FooterLink href="/" color="inherit">
-                <Typography variant="body1">
-                  Rontgenvagen 1, 141 52, Huddinge, Stockholm, Sweden
-                </Typography>
+                <Typography variant="body1">{contactUs.address}</Typography>
               </FooterLink>
             </Stack>
             <Box
@@ -228,15 +196,14 @@ export default function Footer() {
               />
 
               <FooterLink href="/" color="inherit">
-                <Typography variant="body1"> info@codifycollege.se</Typography>
+                <Typography variant="body1"> {contactUs.email}</Typography>
               </FooterLink>
             </Box>
           </Grid>
         </Grid>
         <Box py={{ xs: 5 }} color="#fff">
           <Typography variant="body1">
-            {new Date().getFullYear()} &copy; CF College AB. Designed by CF
-            College AB
+            {new Date().getFullYear()} &copy; {copyrightText}
           </Typography>
         </Box>
       </Box>

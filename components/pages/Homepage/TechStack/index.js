@@ -34,7 +34,7 @@ const TechStack = () => {
     >
       <Grid container spacing={{ md: 1, xs: 1 }} sx={{ pb: 6 }}>
         <Grid xs={12} lg={6} item pb={5}>
-          <Typography align="center" variant={matchSmall ? "h4" : "h4"} pb={3}>
+          <Typography align="center" variant={matchSmall ? "h3" : "h4"} pb={3}>
             Front End
           </Typography>
           <Stack
@@ -69,7 +69,7 @@ const TechStack = () => {
           </Stack>
         </Grid>
         <Grid xs={6} lg={3} item>
-          <Typography align="center" variant={matchSmall ? "h4" : "h4"} pb={3}>
+          <Typography align="center" variant={matchSmall ? "h3" : "h4"} pb={3}>
             Back-end
           </Typography>
           <Stack
@@ -94,7 +94,7 @@ const TechStack = () => {
         </Grid>
 
         <Grid xs={6} lg={3} item>
-          <Typography align="center" variant={matchSmall ? "h4" : "h4"} pb={3}>
+          <Typography align="center" variant={matchSmall ? "h3" : "h4"} pb={3}>
             Mobile Development
           </Typography>
           <Stack
@@ -121,7 +121,7 @@ const TechStack = () => {
 
       <Grid container>
         <Grid xs={12} item>
-          <Typography align="center" variant={matchSmall ? "h4" : "h4"} pb={3}>
+          <Typography align="center" variant={matchSmall ? "h3" : "h4"} pb={3}>
             Full-stack
           </Typography>
           <Stack
@@ -150,8 +150,8 @@ const TechStack = () => {
                 <Typography>Database</Typography>
               </Stack>
             </Stack>
-            <Typography variant={matchSmall ? "h4" : "h4"}>OR</Typography>
-            <Stack direction="row" spacing={{ xs: 5, sm: 2, md: 5, lg: 14 }}>
+            <Typography variant={matchSmall ? "h3" : "h4"}>OR</Typography>
+            <Stack direction="row" spacing={{ xs: 7, sm: 2, md: 5, lg: 14 }}>
               <Stack alignItems="center" spacing={1}>
                 <ReactIcon size={match} />
                 <Typography>React</Typography>
