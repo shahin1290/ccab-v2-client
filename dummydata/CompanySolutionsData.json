@@ -1,5 +1,8 @@
 [
   {
+  "BannerData": {
+      "pic":"/svgImages/BackgroundImages/CompanyHubBanner.svg"
+  },
     "slug": "company-solutions",
     "header": "Company",
     "subheader": "Solutions",
