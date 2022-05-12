@@ -38,12 +38,7 @@ export default function GetStart({Header, SubHeader}) {
             {SubHeader}
           </Typography>
           <ButtonWrap style={{ paddingBottom: "50px" }}>
-            <CourseDetailsBtn2>Get Started</CourseDetailsBtn2>
-            <CourseDetailsBtn
-              onClick={() => router.push("/course-details/all-courses")}
-            >
-              All Courses
-            </CourseDetailsBtn>
+            <CourseDetailsBtn>Get Started</CourseDetailsBtn>
           </ButtonWrap>
         </TextWrapper>
       </Container>
