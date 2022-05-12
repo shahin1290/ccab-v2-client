@@ -6,6 +6,7 @@ import PinDropIcon from "@mui/icons-material/PinDrop";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { styled } from "@mui/system";
 
+
 const FooterLink = styled(Link)(({ theme }) => ({
   textDecoration: "none",
   "&:hover": {

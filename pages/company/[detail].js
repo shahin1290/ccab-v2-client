@@ -46,7 +46,7 @@ const Details = (props) => {
           bgcolor={theme.palette.primary.background}
           sx={{
             position: "relative",
-            height: { xl: 900, lg: 600, sm: 550, xs: 300 },
+            height: { xl: 900, lg: 600, md: 600, sm: 590, xs: 315 },
           }}
         >
           <Box
@@ -169,7 +169,7 @@ const Details = (props) => {
             sx={{
               position: "absolute",
               left: { xl: "40vw", lg: "550px", sm: "35vw", xs: "20vw" },
-              top: { xs: "-5vw", lg: 0, md: "-3vw", sm: "5vw" },
+              top: { xs: "-5vw", xl: "50px", md: 0, sm: "5vw" },
               zIndex: 999,
               px: 1,
               width: {
@@ -184,7 +184,7 @@ const Details = (props) => {
                 sm: "60vw",
                 md: "50vw",
                 lg: "40vw",
-                xl: "50vw",
+                xl: "46vw",
               },
             }}
           >

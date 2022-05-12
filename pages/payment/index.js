@@ -16,6 +16,7 @@ import Image from "next/image";
 import React from "react";
 import { useState } from "react";
 
+
 const PaymentMethods = [
   { id: 1, name: "paypal", image: "/svgImages/payment/paypal.svg" },
   { id: 2, name: "Visa", image: "/svgImages/payment/visa.svg" },

@@ -13,7 +13,7 @@ const HomepageLayout = ({ children }) => {
     contactUs,
     copyrightText,
     socialLinks,
-  } = menu.FooterData;
+  } = menu;
 
   return (
     <main>

@@ -4,14 +4,6 @@ import { Box } from "@mui/system";
 import React from "react";
 import CustomPriceCard from "./CustomPriceCard";
 
-const data = {
-  title: "Fully Flexible Self-Paced Online Learning",
-  content: [
-    "Interest-free payment option of 5-6 months Alternatively, you may sign up for up to 36 months with Klarna, which includes complete access to the materials for 6 months and 9-15 weeks of mentor assistance, which includes access to the support platform, 1:1 sessions, and our Slack chat group.",
-    "If you require additional time and mentor help to complete the bootcamp, you may extend it on a weekly basis for 99€ each week, allowing you to study at your own speed while still receiving all of the support and direction we give.",
-    "As a result, you may finish the bootcamp according to your schedule and learning pace – from a full-time intense 3-6 months to a longer period, just as we do with our in-person group on campus.",
-  ],
-};
 
 const Tuition = ({
   title,
@@ -23,10 +15,13 @@ const Tuition = ({
 }) => {
   const theme = useTheme();
   return (
-    <Box bgcolor="#F8F9FB" py={{ xs: 2, sm: 10 }}>
-      <Container maxWidth="xl">
+    <Box bgcolor="#F8F9FB" py={{ xs: 2, sm: 8 }}>
+      <Container
+        maxWidth="xl"
+        sx={{ textAlign: { xs: "center", sm: "inherit" } }}
+      >
         <Stack justifyContent="center" alignItems="center">
-          <Typography variant="h3" sx={{ mt: 5, mb: 2 }}>
+          <Typography variant="h3" sx={{ mb: 2 }}>
             {title}
           </Typography>
           <Typography
@@ -40,8 +35,7 @@ const Tuition = ({
           container
           alignItems="start"
           justifyContent="space-between"
-          mt={{ sm: 10, xs: 2 }}
-          spacing={1}
+          mt={{ sm: 10 }}
           wrap="wrap-reverse"
         >
           <Grid
@@ -54,6 +48,7 @@ const Tuition = ({
               justifyContent: "start",
               display: "flex",
             }}
+            mb={4}
           >
             <Stack direction="column" spacing={3}>
               <Typography variant="h4" sx={{ color: "primary.main" }}>
@@ -141,7 +136,7 @@ const Tuition = ({
             sx={{
               width: "100%",
               maxWidth: "500px",
-              height: "500px",
+              height: "450px",
               position: "relative",
               left: { xs: "7vw", sm: "25%", md: 0 },
             }}
@@ -151,6 +146,7 @@ const Tuition = ({
                 sx={{
                   position: { xs: "inherit", sm: "absolute" },
                   width: { lg: 250, xs: 250, sm: 200 },
+                  height: { xs: 200, sm: "auto" },
                   top: 0,
                   left: 0,
                 }}

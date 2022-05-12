@@ -3,6 +3,7 @@ import Banner from "../../components/pages/CompanyHub/Banner";
 import Solutions from "../../components/pages/CompanyHub/Solutions";
 import { BannerData } from "../../dummydata/CompanyHubData";
 import CompanySolutionsData from '../../dummydata/CompanySolutionsData'
+
 const CompanyHub = () => {
   const router = useRouter();
   if (router.isFallback) return <h1>Loading...</h1>;
@@ -13,5 +14,6 @@ const CompanyHub = () => {
     </>
   );
 };
+
 
 export default CompanyHub;
