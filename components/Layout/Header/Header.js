@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Image from "next/image";
 import {
   SwipeableDrawer,
   IconButton,
@@ -8,7 +9,7 @@ import {
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
-import logo from "../../../images/Logo.svg";
+import logo from "../../../public/images/Logo.svg";
 import ActiveLink from "./ActiveLink";
 import {
   Appbar,
@@ -27,22 +28,22 @@ import {
 } from "./styles";
 import Link from "next/link";
 
-const navLinks = [
-  { name: "Home", to: "/home", type: "nav" },
-  { name: "Software Hub", to: "/software-hub", type: "nav" },
-  { name: "Company Hub", to: "/company", type: "nav" },
-  // { name: "Teaching Hub", to: "/education", type: "nav" },
-  { name: "Login", to: "/", type: "button", color: "primary" },
-  { name: "Register", to: "/", type: "button", color: "secondary" },
-];
-export default function Header() {
+// const navLinks = [
+//   { name: "Home", to: "/home", type: "nav" },
+//   { name: "Software Hub", to: "/software-hub", type: "nav" },
+//   { name: "Company Hub", to: "/company", type: "nav" },
+//   // { name: "Teaching Hub", to: "/education", type: "nav" },
+//   { name: "Login", to: "/", type: "button", color: "primary" },
+//   { name: "Register", to: "/", type: "button", color: "secondary" },
+// ];
+export default function Header({navLinks, Media}) {
   const [open, setOpen] = useState(false);
 
   return (
     <Appbar>
       <NavbarContainer>
         <NavLogo href="/">
-          <Logo src={logo} alt="codify logo" />
+          <Logo priority src={Media} layout="fixed" height="100" width="100" alt="codify logo"/>
         </NavLogo>
         <MobileIcon onClick={() => setOpen(true)}>
           <MenuIcon style={{ fontSize: "35px" }} color="primary" />

@@ -333,5 +333,15 @@
       "email": "info@codifycollege.se"
     },
     "copyrightText": "CF College AB. Designed by CF College AB"
-  }
+  },
+  "HeaderData": {
+    "pic": "/images/Logo.svg",
+    "navLinks": [
+    { "name": "Home", "to": "/home", "type": "nav" },
+    { "name": "Software Hub", "to": "/software-hub", "type": "nav" },
+    { "name": "Company Hub", "to": "/company", "type": "nav" },
+    { "name": "Login", "to": "/", "type": "button", "color": "primary" },
+    { "name": "Register", "to": "/", "type": "button", "color": "secondary" }
+  ]
+}
 }

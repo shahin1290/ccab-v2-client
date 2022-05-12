@@ -1,6 +1,6 @@
 import { Box, Grid, Link, Stack, Typography } from "@mui/material";
 import Image from "next/image";
-import logo from "../../../images/Logo.svg";
+import logo from "../../../public/images/Logo.svg";
 import LocalPostOfficeIcon from "@mui/icons-material/LocalPostOffice";
 import PinDropIcon from "@mui/icons-material/PinDrop";
 import useMediaQuery from "@mui/material/useMediaQuery";
