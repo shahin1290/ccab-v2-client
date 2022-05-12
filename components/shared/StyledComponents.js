@@ -115,9 +115,6 @@ export const LeftSide = styled(Grid)({
 
 export const RightSide = styled(Grid)({
   marginTop: "60px",
-  "@media (max-width: 600px)": {
-    marginTop: "-120px",
-  },
 });
 
 export const SummaryContainer = styled(Container)({
