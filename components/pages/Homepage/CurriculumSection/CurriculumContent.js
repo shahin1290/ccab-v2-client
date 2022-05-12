@@ -8,18 +8,18 @@ import Image from "next/image";
 
 const CurriculumContent = ({
   description,
-  LargeContent,
-  SmallContent,
+  largeContent,
+  smallContent,
   list,
 }) => {
   const theme = useTheme();
 
   const LgContent =
-    list && LargeContent ? (
-      LargeContent
+    list && largeContent ? (
+      largeContent
     ) : (
       <Image
-        src={LargeContent}
+        src={largeContent}
         alt="Curriculum Image"
         objectFit="contain"
         layout="responsive"
@@ -28,11 +28,11 @@ const CurriculumContent = ({
       />
     );
   const SmContent =
-    list && SmallContent ? (
-      SmallContent
+    list && smallContent ? (
+      smallContent
     ) : (
       <Image
-        src={SmallContent}
+        src={smallContent}
         alt="Curriculum Image"
         objectFit="contain"
         layout="fixed"

@@ -11,6 +11,42 @@
     "subTitle": "and build Web and Mobile Apps using JavaScript",
     "description": " As a graduate, you’ll leave with a solid base of fundamental programming and computer science knowledge, as well as experience with languages, frameworks, and libraries that employers demand."
   },
+  "Curriculums": [
+    {
+      "id": 1,
+      "title": "Full Stack Curriculum",
+      "summary": "Our Full Stack Developer Courses are made to give you an easy and fast path in web development. By the end these courses you will be able to build web applications from scratch.",
+      "list": false,
+      "largeContent": "/svgImages/Curriculums/FullStackCurriculumDesktop.svg",
+      "smallContent": "/svgImages/Curriculums/FullStackCurriculumMobile.svg"
+    },
+    {
+      "id": 2,
+      "title": "NFT Curriculum",
+      "summary": "Our Full Stack Developer Courses are made to give you an easy and fast path in web development. By the end these courses you will be able to build web applications from scratch.",
+      "list": true,
+      "listData": [
+        "Welcome to the Course",
+        "Understanding the Concepts behind NFTs",
+        "History Behind NFTs",
+        "NFT Projects Ecosystem",
+        "NFT Projects Ecosystem",
+        "Welcome to the Course",
+        "Understanding the Concepts behind NFTs and how it works",
+        "History Behind NFTs",
+        "NFT Projects Ecosystem",
+        "NFT Projects Ecosystem"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "UI/UX Curriculum",
+      "summary": "Our Full Stack Developer Courses are made to give you an easy and fast path in web development. By the end these courses you will be able to build web applications from scratch.",
+      "list": false,
+      "largeContent": "/svgImages/Curriculums/UIUXCurriculumDesktop.svg",
+      "smallContent": "/svgImages/Curriculums/UIUXCurriculumMobile.svg"
+    }
+  ],
   "CoursesData": [
     {
       "id": 1,
@@ -337,11 +373,11 @@
   "HeaderData": {
     "pic": "/images/Logo.svg",
     "navLinks": [
-    { "name": "Home", "to": "/home", "type": "nav" },
-    { "name": "Software Hub", "to": "/software-hub", "type": "nav" },
-    { "name": "Company Hub", "to": "/company", "type": "nav" },
-    { "name": "Login", "to": "/", "type": "button", "color": "primary" },
-    { "name": "Register", "to": "/", "type": "button", "color": "secondary" }
-  ]
-}
+      { "name": "Home", "to": "/home", "type": "nav" },
+      { "name": "Software Hub", "to": "/software-hub", "type": "nav" },
+      { "name": "Company Hub", "to": "/company", "type": "nav" },
+      { "name": "Login", "to": "/", "type": "button", "color": "primary" },
+      { "name": "Register", "to": "/", "type": "button", "color": "secondary" }
+    ]
+  }
 }

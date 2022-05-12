@@ -13,19 +13,6 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import CurriculumContent from "./CurriculumContent";
 import ListCurriculum from "./ListCurriculum";
 
-const NFTCurriculumData = [
-  "Welcome to the Course",
-  "Understanding the Concepts behind NFTs",
-  "History Behind NFTs",
-  "NFT Projects Ecosystem",
-  "NFT Projects Ecosystem",
-  "Welcome to the Course",
-  "Understanding the Concepts behind NFTs and how it works",
-  "History Behind NFTs",
-  "NFT Projects Ecosystem",
-  "NFT Projects Ecosystem",
-];
-
 const settings = {
   infinite: true,
   dots: false,
@@ -38,10 +25,7 @@ const settings = {
   swipe: false,
 };
 
-const DUMMY_DESCRIPTION =
-  "Our Full Stack Developer Courses are made to give you an easy and fast path in web development. By the end these courses you will be able to build web applications from scratch.";
-
-export default function CurriculumSection() {
+export default function CurriculumSection({ Curriculums }) {
   const [slider, setSlider] = useState(null);
   const [slider2, setSlider2] = useState(null);
 
@@ -62,7 +46,7 @@ export default function CurriculumSection() {
         <Box
           sx={{
             position: "relative",
-            width: { lg: "50%", md: "60%", xs: "70%" },
+            width: { lg: "30%", md: "60%", xs: "90%" },
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -74,15 +58,11 @@ export default function CurriculumSection() {
             ref={(slider) => setSlider(slider)}
             style={{ width: "100%", padding: 0 }}
           >
-            <Typography variant="h3" mb={1} textAlign="center">
-              Full Stack Curriculum
-            </Typography>
-            <Typography variant="h3" mb={1} textAlign="center">
-              NFT Curriculum
-            </Typography>
-            <Typography variant="h3" mb={1} textAlign="center">
-              UI/UX Curriculum
-            </Typography>
+            {Curriculums.map((item) => (
+              <Typography variant="h3" mb={1} textAlign="center" key={item.id}>
+                {item.title}
+              </Typography>
+            ))}
           </Slider>
         </Box>
         <SliderButton onClick={() => slider.slickNext()}>
@@ -101,22 +81,28 @@ export default function CurriculumSection() {
           padding: 0,
         }}
       >
-        <CurriculumContent
-          description={DUMMY_DESCRIPTION}
-          LargeContent="/svgImages/Curriculums/FullStackCurriculumDesktop.svg"
-          SmallContent="/svgImages/Curriculums/FullStackCurriculumMobile.svg"
-        />
-        <CurriculumContent
-          list
-          description={DUMMY_DESCRIPTION}
-          LargeContent={<ListCurriculum data={NFTCurriculumData} />}
-          SmallContent={<ListCurriculum data={NFTCurriculumData} />}
-        />
-        <CurriculumContent
-          description={DUMMY_DESCRIPTION}
-          LargeContent="/svgImages/Curriculums/UIUXCurriculumDesktop.svg"
-          SmallContent="/svgImages/Curriculums/UIUXCurriculumMobile.svg"
-        />
+        {Curriculums.map((curriculum) => {
+          return (
+            <>
+              {curriculum?.list ? (
+                <CurriculumContent
+                  key={curriculum.id}
+                  list
+                  description={curriculum.description}
+                  largeContent={<ListCurriculum data={curriculum.listData} />}
+                  smallContent={<ListCurriculum data={curriculum.listData} />}
+                />
+              ) : (
+                <CurriculumContent
+                  key={curriculum.id}
+                  description={curriculum.description}
+                  largeContent={curriculum.largeContent}
+                  smallContent={curriculum.smallContent}
+                />
+              )}
+            </>
+          );
+        })}
       </Slider>
     </SectionContainer>
   );

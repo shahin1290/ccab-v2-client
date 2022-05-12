@@ -30,6 +30,7 @@ export default function Homepage({
   CareerSupportData,
   TuitionData,
   StudyTimeData,
+  Curriculums,
 }) {
   return (
     <>
@@ -46,7 +47,7 @@ export default function Homepage({
         Description={LearningSummaryData.description}
         CoursesData={CoursesData}
       />
-      <CurriculumSection />
+      <CurriculumSection Curriculums={Curriculums} />
       <HowToStart
         title={HowToStartData.title}
         subTitle={HowToStartData.subTitle}
