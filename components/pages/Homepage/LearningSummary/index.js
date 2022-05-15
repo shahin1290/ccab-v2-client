@@ -59,7 +59,7 @@ export default function LearningSummary({
             return (
               <Grid item xs={4} key={item.id}>
                 <CourseCard
-                  image={item.pic}
+                  coverImage={item.coverImage}
                   slug={item.slug}
                   title={item.title}
                   description={item.description}

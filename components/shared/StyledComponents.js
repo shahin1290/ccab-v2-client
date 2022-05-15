@@ -47,13 +47,13 @@ export const CustomImageContainer = styled("div")(({ theme }) => ({
 
 export const InfoCard = styled(Card)(({ theme }) => ({
   borderRadius: 20,
-  height: "364px",
+  height: "370px",
   boxShadow: "0 0 20px  #00000029",
   display: "flex",
   flexDirection: "column",
   // justifyContent: "stretch",
   alignItems: "center",
-  padding: "35px 10px 5px",
+  padding: "25px 10px 5px",
 }));
 
 export const BannerImage = styled("div")(({ theme }) => ({
@@ -327,5 +327,5 @@ export const CourseDetailsBtn2 = styled("button")({
 });
 
 export const ImageWrapper = styled("div")({
-  display: 'block',
-})
+  display: "block",
+});

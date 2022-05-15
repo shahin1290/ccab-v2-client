@@ -27,11 +27,11 @@ import util from "util";
 export default function Course({
   title,
   courseSummary,
-  courseImage,
+  courseHeroImage,
   startingPrice,
   duration,
   availableSeats,
-  coverImage,
+  infoCardImage,
 }) {
   const router = useRouter();
   const theme = useTheme();
@@ -78,7 +78,7 @@ export default function Course({
           >
             <Image
               priority
-              src={courseImage}
+              src={courseHeroImage}
               layout="fill"
               alt="Software Hub Hero"
             />
@@ -149,7 +149,7 @@ export default function Course({
               }}
             >
               <CourseInfoCardImg
-                src={coverImage}
+                src={infoCardImage}
                 alt="cover"
                 sx={{
                   position: "relative",
@@ -216,7 +216,9 @@ export default function Course({
             </Typography>
             <ButtonWrap style={{ paddingBottom: "50px" }}>
               <CourseDetailsBtn2>Get Started</CourseDetailsBtn2>
-              <CourseDetailsBtn onClick={() => router.push("/home/all-courses")}>
+              <CourseDetailsBtn
+                onClick={() => router.push("/home/all-courses")}
+              >
                 All Courses
               </CourseDetailsBtn>
             </ButtonWrap>
