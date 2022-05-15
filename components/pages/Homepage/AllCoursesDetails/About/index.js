@@ -21,7 +21,7 @@ export default function About({ CoursesData }) {
               key={item.id}
               title={item.title}
               courseSummary={item.courseSummary}
-              courseImage={item.courseImage}
+              courseImage={item.infoCardImage}
               color={index % 2 !== 0 ? "primary" : "secondary"}
               price={item.price}
               duration={item.duration}

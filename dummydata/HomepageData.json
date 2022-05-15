@@ -11,42 +11,6 @@
     "subTitle": "and build Web and Mobile Apps using JavaScript",
     "description": " As a graduate, you’ll leave with a solid base of fundamental programming and computer science knowledge, as well as experience with languages, frameworks, and libraries that employers demand."
   },
-  "Curriculums": [
-    {
-      "id": 1,
-      "title": "Full Stack Curriculum",
-      "summary": "Our Full Stack Developer Courses are made to give you an easy and fast path in web development. By the end these courses you will be able to build web applications from scratch.",
-      "list": false,
-      "largeContent": "/svgImages/Curriculums/FullStackCurriculumDesktop.svg",
-      "smallContent": "/svgImages/Curriculums/FullStackCurriculumMobile.svg"
-    },
-    {
-      "id": 2,
-      "title": "NFT Curriculum",
-      "summary": "Our Full Stack Developer Courses are made to give you an easy and fast path in web development. By the end these courses you will be able to build web applications from scratch.",
-      "list": true,
-      "listData": [
-        "Welcome to the Course",
-        "Understanding the Concepts behind NFTs",
-        "History Behind NFTs",
-        "NFT Projects Ecosystem",
-        "NFT Projects Ecosystem",
-        "Welcome to the Course",
-        "Understanding the Concepts behind NFTs and how it works",
-        "History Behind NFTs",
-        "NFT Projects Ecosystem",
-        "NFT Projects Ecosystem"
-      ]
-    },
-    {
-      "id": 3,
-      "title": "UI/UX Curriculum",
-      "summary": "Our Full Stack Developer Courses are made to give you an easy and fast path in web development. By the end these courses you will be able to build web applications from scratch.",
-      "list": false,
-      "largeContent": "/svgImages/Curriculums/UIUXCurriculumDesktop.svg",
-      "smallContent": "/svgImages/Curriculums/UIUXCurriculumMobile.svg"
-    }
-  ],
   "CoursesData": [
     {
       "id": 1,
@@ -86,6 +50,42 @@
       "duration": "9 Months",
       "availableSeats": "12 Seats Available",
       "courseSummary": "In this course, we will learn the basic tools that every web page coder needs to know we will start from the ground up by learning how to implement modern web pages with HTML and CSS. We will then advance to learning how to code our pages such that its components rearrange and resize themselves automatically based on the size of the users screen. You will be able to code up a web page that will be just as useful on a mobile phone as on a desktop computer. No pinch and zoom required. Last ut certainly not least, we will get a thorough introduction to the most ubiquitous, popular, and incredibly powerful language of the web: Javascript. Using Javascript, you will be able to build a fully functional web application that utilizesAjax to expose server-side functionality and data to the end user. We will also develop mobile applications using React-Native."
+    }
+  ],
+  "Curriculums": [
+    {
+      "id": 1,
+      "title": "Full Stack Curriculum",
+      "summary": "Our Full Stack Developer Courses are made to give you an easy and fast path in web development. By the end these courses you will be able to build web applications from scratch.",
+      "list": false,
+      "largeContent": "/svgImages/Curriculums/FullStackCurriculumDesktop.svg",
+      "smallContent": "/svgImages/Curriculums/FullStackCurriculumMobile.svg"
+    },
+    {
+      "id": 2,
+      "title": "NFT Curriculum",
+      "summary": "Our Full Stack Developer Courses are made to give you an easy and fast path in web development. By the end these courses you will be able to build web applications from scratch.",
+      "list": true,
+      "listData": [
+        "Welcome to the Course",
+        "Understanding the Concepts behind NFTs",
+        "History Behind NFTs",
+        "NFT Projects Ecosystem",
+        "NFT Projects Ecosystem",
+        "Welcome to the Course",
+        "Understanding the Concepts behind NFTs and how it works",
+        "History Behind NFTs",
+        "NFT Projects Ecosystem",
+        "NFT Projects Ecosystem"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "UI/UX Curriculum",
+      "summary": "Our Full Stack Developer Courses are made to give you an easy and fast path in web development. By the end these courses you will be able to build web applications from scratch.",
+      "list": false,
+      "largeContent": "/svgImages/Curriculums/UIUXCurriculumDesktop.svg",
+      "smallContent": "/svgImages/Curriculums/UIUXCurriculumMobile.svg"
     }
   ],
   "HowToStartData": {
@@ -140,6 +140,28 @@
       ]
     }
   ],
+  "TuitionData": {
+    "title": "Tuition",
+    "subTitle": "We conduct discount programs from time to time, so the price may be lower",
+    "paragraphTitle": "Fully Flexible Self-Paced Online Learning",
+    "content": [
+      "Interest-free payment option of 5-6 months Alternatively, you may sign up for up to 36 months with Klarna, which includes complete access to the materials for 6 months and 9-15 weeks of mentor assistance, which includes access to the support platform, 1:1 sessions, and our Slack chat group.",
+      "If you require additional time and mentor help to complete the bootcamp, you may extend it on a weekly basis for 99€ each week, allowing you to study at your own speed while still receiving all of the support and direction we give.",
+      "As a result, you may finish the bootcamp according to your schedule and learning pace – from a full-time intense 3-6 months to a longer period, just as we do with our in-person group on campus."
+    ],
+
+    "firstCourseCategory": {
+      "name": "Full-time studying",
+      "price": "199€",
+      "courseDuration": "3-4 months"
+    },
+
+    "secondCourseCategory": {
+      "name": "Part-time studying",
+      "price": "199€",
+      "courseDuration": "3-4 months"
+    }
+  },
   "HowMuchData": {
     "title": "How much?",
     "description": "Click the icons below to describe your app to get the estimate",
@@ -212,6 +234,11 @@
       ]
     ]
   },
+  "StudyTimeData": [
+    { "id": 1, "period": "Morning Time", "time": "8-16" },
+    { "id": 2, "period": "Evening Time", "time": "17-20" },
+    { "id": 3, "period": "Weekends", "time": "12-17" }
+  ],
   "WhatStandsOutData": {
     "title": "What Stands Us Out",
     "subTitle": "Register yourself now and get real employable skills that top companies want",
@@ -239,6 +266,36 @@
         "icon": "/svgImages/HowToStart/CalenderIcon.svg",
         "title": "We know your strengths",
         "content": "We monitor your progress with our custom software so we can support you exactly where you need it."
+      }
+    ]
+  },
+  "StudentReviewData": {
+    "title": "Reviews By Students",
+    "subTitle": "Most of our graduates were employed after 6 months upon graduation",
+    "reviewData": [
+      {
+        "id": 1,
+        "name": "Emy Watson",
+        "address": "London, UK",
+        "avatarUrl": "/images/reviewer.jpeg",
+        "videoImageUrl": "/images/review1.jpeg",
+        "videoUrl": "https://www.youtube.com/watch?v=W-f6F2gxrl4"
+      },
+      {
+        "id": 2,
+        "name": "John doe",
+        "address": "London, UK",
+        "avatarUrl": "/images/reviewer.jpeg",
+        "videoImageUrl": "/images/review2.jpeg",
+        "videoUrl": "https://www.youtube.com/watch?v=D0UnqGm_miA"
+      },
+      {
+        "id": 3,
+        "name": "Michael John",
+        "address": "London, UK",
+        "avatarUrl": "/images/reviewer.jpeg",
+        "videoImageUrl": "/images/review3.jpeg",
+        "videoUrl": "https://www.youtube.com/watch?v=yAoLSRbwxL8"
       }
     ]
   },
@@ -276,36 +333,7 @@
       }
     ]
   },
-  "StudentReviewData": {
-    "title": "Reviews By Students",
-    "subTitle": "Most of our graduates were employed after 6 months upon graduation",
-    "reviewData": [
-      {
-        "id": 1,
-        "name": "Emy Watson",
-        "address": "London, UK",
-        "avatarUrl": "/images/reviewer.jpeg",
-        "videoImageUrl": "/images/review1.jpeg",
-        "videoUrl": "https://www.youtube.com/watch?v=W-f6F2gxrl4"
-      },
-      {
-        "id": 2,
-        "name": "John doe",
-        "address": "London, UK",
-        "avatarUrl": "/images/reviewer.jpeg",
-        "videoImageUrl": "/images/review2.jpeg",
-        "videoUrl": "https://www.youtube.com/watch?v=D0UnqGm_miA"
-      },
-      {
-        "id": 3,
-        "name": "Michael John",
-        "address": "London, UK",
-        "avatarUrl": "/images/reviewer.jpeg",
-        "videoImageUrl": "/images/review3.jpeg",
-        "videoUrl": "https://www.youtube.com/watch?v=yAoLSRbwxL8"
-      }
-    ]
-  },
+
   "CareerSupportData": {
     "title": "What Stands Us Out",
     "subTitle": "Register yourself now and get real employable skills that top companies want",
@@ -316,33 +344,6 @@
       { "id": 4, "content": " Network Events" }
     ]
   },
-  "TuitionData": {
-    "title": "Tuition",
-    "subTitle": "We conduct discount programs from time to time, so the price may be lower",
-    "paragraphTitle": "Fully Flexible Self-Paced Online Learning",
-    "content": [
-      "Interest-free payment option of 5-6 months Alternatively, you may sign up for up to 36 months with Klarna, which includes complete access to the materials for 6 months and 9-15 weeks of mentor assistance, which includes access to the support platform, 1:1 sessions, and our Slack chat group.",
-      "If you require additional time and mentor help to complete the bootcamp, you may extend it on a weekly basis for 99€ each week, allowing you to study at your own speed while still receiving all of the support and direction we give.",
-      "As a result, you may finish the bootcamp according to your schedule and learning pace – from a full-time intense 3-6 months to a longer period, just as we do with our in-person group on campus."
-    ],
-
-    "firstCourseCategory": {
-      "name": "Full-time studying",
-      "price": "199€",
-      "courseDuration": "3-4 months"
-    },
-
-    "secondCourseCategory": {
-      "name": "Part-time studying",
-      "price": "199€",
-      "courseDuration": "3-4 months"
-    }
-  },
-  "StudyTimeData": [
-    { "id": 1, "period": "Morning Time", "time": "8-16" },
-    { "id": 2, "period": "Evening Time", "time": "17-20" },
-    { "id": 3, "period": "Weekends", "time": "12-17" }
-  ],
   "FooterData": {
     "logoLink": "/images/Logo.ico",
     "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati.",
@@ -380,12 +381,12 @@
       { "name": "Register", "to": "/", "type": "button", "color": "secondary" }
     ]
   },
-  "AllCoursesHeroData" : {
-    "title":"JavaScript Full Stack Web and Mobile Development",
-    "pic":"/svgImages/HeroImages/CourseHeroImage.svg"
+  "AllCoursesHeroData": {
+    "title": "JavaScript Full Stack Web and Mobile Development",
+    "pic": "/svgImages/HeroImages/CourseHeroImage.svg"
   },
-  "AllCoursesGetStartData" : {
-    "title":"Ready to get Started?",
-    "subTitle":"Register yourself now and get real employable skills that top companies want."
+  "AllCoursesGetStartData": {
+    "title": "Ready to get Started?",
+    "subTitle": "Register yourself now and get real employable skills that top companies want."
   }
 }

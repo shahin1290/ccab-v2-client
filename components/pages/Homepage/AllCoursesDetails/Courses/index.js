@@ -1,11 +1,10 @@
 import { Container, Grid, Stack, Typography } from "@mui/material";
 import React from "react";
-import learning from "../../../../../public/images/learning.png";
 import { SummaryContainer } from "../../../../shared/StyledComponents";
 import Underline from "../../../../../images/svg/Underline";
 import CourseCard from "../../../../shared/CourseCard";
 
-export default function Courses({ CoursesData }) {
+export default function Courses({ Courses }) {
   return (
     <SummaryContainer>
       <Container maxWidth="xl">
@@ -30,12 +29,12 @@ export default function Courses({ CoursesData }) {
             overflowY: "hidden",
           }}
         >
-          {CoursesData.map((item) => {
+          {Courses.map((item) => {
             return (
               <Grid item xs={4} key={item.id}>
                 <CourseCard
-                  image={item.pic}
-                  link={item.slug}
+                  coverImage={item.coverImage}
+                  slug={item.slug}
                   title={item.title}
                   description={item.description}
                 />
