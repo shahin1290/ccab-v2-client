@@ -1,3 +1,7 @@
+export const BannerData= {
+  pic:"/svgImages/BackgroundImages/CompanyHubBanner.svg"
+}
+
 const CompanySolutionsData = [
   {
     slug: "company-solutions",

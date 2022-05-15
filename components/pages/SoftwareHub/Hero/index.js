@@ -5,7 +5,6 @@ import {
   HubRightSide,
 } from "../../../shared/StyledComponents";
 import Image from "next/image";
-import { HeroDummyData } from "../../../../dummydata/SoftwarePageData";
 
 export default function Hero({Header, SubHeader, Media}) {
   return (

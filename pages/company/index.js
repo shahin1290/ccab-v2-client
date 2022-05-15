@@ -1,8 +1,7 @@
 import { useRouter } from "next/router";
 import Banner from "../../components/pages/CompanyHub/Banner";
 import Solutions from "../../components/pages/CompanyHub/Solutions";
-import { BannerData } from "../../dummydata/CompanyHubData";
-import CompanySolutionsData from '../../dummydata/CompanySolutionsData'
+import CompanySolutionsData, { BannerData } from '../../dummydata/CompanySolutionsData'
 
 const CompanyHub = () => {
   const router = useRouter();

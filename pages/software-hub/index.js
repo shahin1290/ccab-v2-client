@@ -4,13 +4,7 @@ import Services from "../../components/pages/SoftwareHub/Services";
 import ReviewsByClients from "../../components/pages/SoftwareHub/ReviewsByClients";
 import { useRouter } from "next/router";
 import { LocalDining } from "@mui/icons-material";
-import {
-  HeroDummyData,
-  HowMuchData,
-  ReviewsByClientsData,
-  ReviewsData,
-} from "../../dummydata/SoftwarePageData";
-import SoftwareServicesData from "../../dummydata/SoftwareServicesData";
+import SoftwareServicesData, { HeroDummyData, HowMuchData, ReviewsByClientsData, ReviewsData } from "../../dummydata/SoftwareServicesData";
 import AllSections from "../../components/pages/SoftwareHub/HowMuch/data.";
 
 const SoftwareHub = ({}) => {
