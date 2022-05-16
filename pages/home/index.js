@@ -105,8 +105,8 @@ export async function getStaticProps() {
   );
   const data = JSON.parse(jsonData);
 
-  const results = await axios.get("/api/homepages?populate=*");
-  console.log(results.data.data[0]);
+  // const results = await axios.get("/api/homepages?populate=*");
+  // console.log(results.data.data[0]);
 
   if (!data) {
     return {
