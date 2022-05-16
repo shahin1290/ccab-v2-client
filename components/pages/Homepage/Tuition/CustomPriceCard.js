@@ -24,7 +24,7 @@ const CustomPriceCard = ({
       <Box
         sx={{
           width: { xs: "85%", sm: "90%" },
-          height: 20,
+          height: 15,
           backgroundColor: bgcolor,
           borderTopLeftRadius: {
             xs: border,
@@ -55,6 +55,7 @@ const CustomPriceCard = ({
             align="center"
             sx={{
               fontSize: { xs: 16, sm: 20 },
+              fontWeight: 700,
             }}
           >
             {name}
@@ -85,13 +86,13 @@ const CustomPriceCard = ({
           <Stack direction="row" justifyContent="space-between">
             <Typography
               variant="h3"
-              sx={{ fontWeight: "normal", fontSize: { xs: 13 } }}
+              sx={{ fontWeight: "700", fontSize: { xs: 13 } }}
             >
               Course Duration
             </Typography>
             <Typography
               variant="h6"
-              sx={{ fontWeight: "normal", fontSize: { xs: 10 } }}
+              sx={{ fontWeight: "700", fontSize: { xs: 12 } }}
             >
               {courseDuration}
             </Typography>
@@ -102,7 +103,7 @@ const CustomPriceCard = ({
       <Box
         sx={{
           width: { xs: "85%", sm: "90%" },
-          height: 20,
+          height: 15,
           backgroundColor: bgcolor,
           borderBottomLeftRadius: border,
           borderBottomRightRadius: {

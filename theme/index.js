@@ -25,7 +25,6 @@ const theme = createTheme({
     "@media (max-width: 600px)": {
       htmlFontSize: 5,
     },
-    // fontSize: 10,
     h1: {
       fontFamily: "'Segoe UI', sans-serif",
       fontSize: "4.8rem",

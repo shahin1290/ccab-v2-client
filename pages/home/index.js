@@ -59,6 +59,7 @@ export default function Homepage({
       />
       <WhyJavascript data={WhySectionData} />
       <Tuition
+        TuitionFees={TuitionData}
         title={TuitionData.title}
         subTitle={TuitionData.subTitle}
         paragraphTitle={TuitionData.paragraphTitle}

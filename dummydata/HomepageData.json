@@ -140,28 +140,58 @@
       ]
     }
   ],
-  "TuitionData": {
-    "title": "Tuition",
-    "subTitle": "We conduct discount programs from time to time, so the price may be lower",
-    "paragraphTitle": "Fully Flexible Self-Paced Online Learning",
-    "content": [
-      "Interest-free payment option of 5-6 months Alternatively, you may sign up for up to 36 months with Klarna, which includes complete access to the materials for 6 months and 9-15 weeks of mentor assistance, which includes access to the support platform, 1:1 sessions, and our Slack chat group.",
-      "If you require additional time and mentor help to complete the bootcamp, you may extend it on a weekly basis for 99€ each week, allowing you to study at your own speed while still receiving all of the support and direction we give.",
-      "As a result, you may finish the bootcamp according to your schedule and learning pace – from a full-time intense 3-6 months to a longer period, just as we do with our in-person group on campus."
-    ],
+  "TuitionData": [
+    {
+      "id": 1,
+      "header": {
+        "title": "Full Stack Course",
+        "subTitle": "We conduct discount programs from time to time, so the price may be lower"
+      },
+      "paragraphTitle": "Fully Flexible Self-Paced Online Learning",
+      "content": [
+        "Interest-free payment option of 5-6 months Alternatively, you may sign up for up to 36 months with Klarna, which includes complete access to the materials for 6 months and 9-15 weeks of mentor assistance, which includes access to the support platform, 1:1 sessions, and our Slack chat group.",
+        "If you require additional time and mentor help to complete the bootcamp, you may extend it on a weekly basis for 99€ each week, allowing you to study at your own speed while still receiving all of the support and direction we give.",
+        "As a result, you may finish the bootcamp according to your schedule and learning pace – from a full-time intense 3-6 months to a longer period, just as we do with our in-person group on campus."
+      ],
 
-    "firstCourseCategory": {
-      "name": "Full-time studying",
-      "price": "199€",
-      "courseDuration": "3-4 months"
+      "firstCourseCategory": {
+        "name": "Full-time studying",
+        "price": "399€",
+        "courseDuration": "3-4 months"
+      },
+
+      "secondCourseCategory": {
+        "name": "Part-time studying",
+        "price": "299€",
+        "courseDuration": "3-4 months"
+      }
     },
+    {
+      "id": 2,
+      "header": {
+        "title": "NFT Course",
+        "subTitle": "We conduct discount programs from time to time, so the price may be lower"
+      },
+      "paragraphTitle": "Fully Flexible Self-Paced Online Learning",
+      "content": [
+        "Interest-free payment option of 5-6 months Alternatively, you may sign up for up to 36 months with Klarna, which includes complete access to the materials for 6 months and 9-15 weeks of mentor assistance, which includes access to the support platform, 1:1 sessions, and our Slack chat group.",
+        "If you require additional time and mentor help to complete the bootcamp, you may extend it on a weekly basis for 99€ each week, allowing you to study at your own speed while still receiving all of the support and direction we give.",
+        "As a result, you may finish the bootcamp according to your schedule and learning pace – from a full-time intense 3-6 months to a longer period, just as we do with our in-person group on campus."
+      ],
 
-    "secondCourseCategory": {
-      "name": "Part-time studying",
-      "price": "199€",
-      "courseDuration": "3-4 months"
+      "firstCourseCategory": {
+        "name": "Full-time studying",
+        "price": "199€",
+        "courseDuration": "3-4 months"
+      },
+
+      "secondCourseCategory": {
+        "name": "Part-time studying",
+        "price": "199€",
+        "courseDuration": "3-4 months"
+      }
     }
-  },
+  ],
   "HowMuchData": {
     "title": "How much?",
     "subTitle": "Click the icons below to describe your app to get the estimate",
