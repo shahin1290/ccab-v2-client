@@ -20,6 +20,8 @@ import HowContactForm from "../ContactForm";
 import FourStageProgressBar from "../../../shared/FourStageProgressBar";
 import FourStageProgressBarMobile from "../../../shared/FourStageProgressBarMobile";
 import Header from "../../../shared/Header";
+import SixStageProgressBarMobile from "../../../shared/SixStageProgressBarMobile";
+import SixStageProgressBar from "../../../shared/SixStageProgressBar";
 
 const LargeContainer = styled(Box)(({ theme }) => ({
   width: "100%",
@@ -106,37 +108,38 @@ const HowMuch = ({
   return (
     <LargeContainer
       sx={{
-        // scrollSnapAlign: router.pathname.includes("how-much")
-        //   ? "none"
-        //   : "start",
         display: "grid",
         placeItems: "center",
       }}
     >
       <InnerContainer maxWidth="xl">
-        {/* <Typography
-          variant="h2"
-          sx={{ color: "common.white", mb: 2, mt: { md: 3, xs: 3 } }}
-        >
-          {Header}
-        </Typography>
-        <Underline fill={theme.palette.common.white} />
-        <Typography variant="subtitle2" color="common.white" mt={3} mb={5}>
-          {Description}
-        </Typography> */}
         <Box sx={{ color: "common.white", mb: 2, mt: { md: 3, xs: 3 } }}>
           <Header title={title} subTitle={subTitle} color="secondary" />
         </Box>
         <CustomStack spacing={1}>
-          {md ? (
+          {lastStage === 4 ? (
+            md ? (
+              <Box>
+                <FourStageProgressBarMobile
+                  color={theme.palette.secondary.main}
+                  stage={currentStage}
+                />
+              </Box>
+            ) : (
+              <FourStageProgressBar
+                color={theme.palette.secondary.main}
+                stage={currentStage}
+              />
+            )
+          ) : md ? (
             <Box>
-              <FourStageProgressBarMobile
+              <SixStageProgressBarMobile
                 color={theme.palette.secondary.main}
                 stage={currentStage}
               />
             </Box>
           ) : (
-            <FourStageProgressBar
+            <SixStageProgressBar
               color={theme.palette.secondary.main}
               stage={currentStage}
             />

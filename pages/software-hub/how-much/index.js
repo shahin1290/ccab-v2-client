@@ -8,10 +8,10 @@ import fs from "fs";
 const HowMuchPage = ({ HowMuchData }) => {
   return (
     <HowMuch
-      Header={HowMuchData.title}
-      Description={HowMuchData.description}
+      title={HowMuchData.title}
+      subTitle={HowMuchData.subTitle}
       AllSections={HowMuchData.sections}
-      lastStage={4}
+      lastStage={7}
       lastButtonText="Start Learning"
     />
   );
