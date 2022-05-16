@@ -60,9 +60,6 @@ export default function CurriculumSection({ Curriculums }) {
             style={{ width: "100%", padding: 0 }}
           >
             {Curriculums.map((item) => (
-              // <Typography variant="h3" mb={1} textAlign="center" key={item.id}>
-              //   {item.title}
-              // </Typography>
               <Header title={item.title} color="primary" key={item.id} />
             ))}
           </Slider>

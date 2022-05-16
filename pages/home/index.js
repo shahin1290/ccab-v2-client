@@ -16,6 +16,7 @@ import HowMuch from "../../components/pages/SoftwareHub/HowMuch";
 import path from "path";
 import util from "util";
 import fs from "fs";
+import axios from "../../axios";
 
 export default function Homepage({
   HeroData,
@@ -102,6 +103,9 @@ export async function getStaticProps() {
     path.join(process.cwd(), "dummydata", "HomepageData.json")
   );
   const data = JSON.parse(jsonData);
+
+  const results = await axios.get("/api/homepages?populate=*");
+  console.log(results.data.data[0]);
 
   if (!data) {
     return {
