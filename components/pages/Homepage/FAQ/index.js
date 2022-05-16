@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import { useState } from "react";
 import Underline from "../../../../images/svg/Underline";
 import FAQAccordion from "./FAQAccordion";
-
+import Header from "../../../shared/Header";
 const FAQ = ({ FAQs, title }) => {
   const [active, setActive] = useState("");
 
@@ -18,10 +18,7 @@ const FAQ = ({ FAQs, title }) => {
           pb: { xs: 5, md: 10 },
         }}
       >
-        <Typography variant="h3" mb={2}>
-          {title}
-        </Typography>
-        <Underline />
+        <Header title={title} color="primary" />
       </Box>
 
       <Box pb={{ xs: 2 }}>

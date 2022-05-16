@@ -22,6 +22,7 @@ import HowToStartImage from "../../../../public/images/howToStart.png";
 import { useRouter } from "next/router";
 import Underline from "../../../../images/svg/Underline";
 import InformationCard from "../../../shared/InformationCard";
+import Header from "../../../shared/Header";
 
 const HowToStart = ({
   title,
@@ -46,17 +47,7 @@ const HowToStart = ({
           gap: { xs: 5, md: 10 },
         }}
       >
-        <Stack justifyContent="center" alignItems="center" spacing={2}>
-          <Typography variant="h3">{title}</Typography>
-          <Underline />
-          <Typography
-            variant="h6"
-            color="secondary.contrastText"
-            textAlign="center"
-          >
-            {subTitle}
-          </Typography>
-        </Stack>
+        <Header title={title} subTitle={subTitle} color="primary" />
         <Grid
           container
           justifyContent={{ lg: "space-between", xs: "center" }}

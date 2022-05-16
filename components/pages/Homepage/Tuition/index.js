@@ -2,8 +2,9 @@ import { useTheme } from "@emotion/react";
 import { Container, Grid, Stack, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
+import Underline from "../../../../images/svg/Underline";
+import Header from "../../../shared/Header";
 import CustomPriceCard from "./CustomPriceCard";
-
 
 const Tuition = ({
   title,
@@ -20,17 +21,8 @@ const Tuition = ({
         maxWidth="xl"
         sx={{ textAlign: { xs: "center", sm: "inherit" } }}
       >
-        <Stack justifyContent="center" alignItems="center">
-          <Typography variant="h3" sx={{ mb: 2 }}>
-            {title}
-          </Typography>
-          <Typography
-            variant="h6"
-            sx={{ color: "secondary.contrastText", px: 3 }}
-          >
-            {subTitle}
-          </Typography>
-        </Stack>
+        <Header title={title} subTitle={subTitle} color="primary" />
+
         <Grid
           container
           alignItems="start"

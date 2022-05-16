@@ -1,17 +1,6 @@
-import {
-  Container,
-  Stack,
-  Box,
-  CardMedia,
-  CardContent,
-  Grid,
-  Typography,
-} from "@mui/material";
-import Image from "next/image";
-import Underline from "../../../../images/svg/Underline";
+import { Container, Box, Grid } from "@mui/material";
 import InformationCard from "../../../shared/InformationCard";
-
-import { InfoCard } from "../../../shared/StyledComponents";
+import Header from "../../../shared/Header";
 
 const WhatStandsOut = ({ title, subTitle, cardData }) => {
   return (
@@ -27,20 +16,7 @@ const WhatStandsOut = ({ title, subTitle, cardData }) => {
           gap: { xs: 5, md: 10 },
         }}
       >
-        <Stack justifyContent="center" alignItems="center" spacing={1}>
-          <Typography variant="h3" sx={{ color: "primary.contrastText" }}>
-            {title}
-          </Typography>
-          <Underline fill="#fff" />
-          <Typography
-            variant="h6"
-            sx={{ color: "primary.contrastText", fontWeight: "normal" }}
-            pt={1}
-          >
-            {subTitle}
-          </Typography>
-        </Stack>
-
+        <Header title={title} subTitle={subTitle} color="secondary" />
         <Grid
           container
           sx={{ justifyContent: { xs: "center", lg: "space-between" } }}

@@ -19,6 +19,7 @@ import { ForwardArrow } from "../../../../images/svg/ServiceIcons";
 import HowContactForm from "../ContactForm";
 import FourStageProgressBar from "../../../shared/FourStageProgressBar";
 import FourStageProgressBarMobile from "../../../shared/FourStageProgressBarMobile";
+import Header from "../../../shared/Header";
 
 const LargeContainer = styled(Box)(({ theme }) => ({
   width: "100%",
@@ -58,8 +59,8 @@ const CustomStack = styled(Stack)(({ theme }) => ({
 }));
 
 const HowMuch = ({
-  Header,
-  Description,
+  title,
+  subTitle,
   AllSections,
   lastStage,
   lastButtonText,
@@ -105,15 +106,15 @@ const HowMuch = ({
   return (
     <LargeContainer
       sx={{
-        scrollSnapAlign: router.pathname.includes("how-much")
-          ? "none"
-          : "start",
+        // scrollSnapAlign: router.pathname.includes("how-much")
+        //   ? "none"
+        //   : "start",
         display: "grid",
         placeItems: "center",
       }}
     >
       <InnerContainer maxWidth="xl">
-        <Typography
+        {/* <Typography
           variant="h2"
           sx={{ color: "common.white", mb: 2, mt: { md: 3, xs: 3 } }}
         >
@@ -122,8 +123,10 @@ const HowMuch = ({
         <Underline fill={theme.palette.common.white} />
         <Typography variant="subtitle2" color="common.white" mt={3} mb={5}>
           {Description}
-        </Typography>
-
+        </Typography> */}
+        <Box sx={{ color: "common.white", mb: 2, mt: { md: 3, xs: 3 } }}>
+          <Header title={title} subTitle={subTitle} color="secondary" />
+        </Box>
         <CustomStack spacing={1}>
           {md ? (
             <Box>

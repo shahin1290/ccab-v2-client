@@ -1,4 +1,4 @@
-import { Container, Typography, Box, Stack } from "@mui/material";
+import { Container, Typography, Box } from "@mui/material";
 import React from "react";
 
 import {
@@ -12,6 +12,7 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import CurriculumContent from "./CurriculumContent";
 import ListCurriculum from "./ListCurriculum";
+import Header from "../../../shared/Header";
 
 const settings = {
   infinite: true,
@@ -59,18 +60,16 @@ export default function CurriculumSection({ Curriculums }) {
             style={{ width: "100%", padding: 0 }}
           >
             {Curriculums.map((item) => (
-              <Typography variant="h3" mb={1} textAlign="center" key={item.id}>
-                {item.title}
-              </Typography>
+              // <Typography variant="h3" mb={1} textAlign="center" key={item.id}>
+              //   {item.title}
+              // </Typography>
+              <Header title={item.title} color="primary" key={item.id} />
             ))}
           </Slider>
         </Box>
         <SliderButton onClick={() => slider.slickNext()}>
           <ArrowForwardIosIcon />
         </SliderButton>
-      </Container>
-      <Container sx={{ display: "flex", justifyContent: "center" }}>
-        <Underline />
       </Container>
       <Slider
         {...settings}

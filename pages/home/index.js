@@ -66,8 +66,8 @@ export default function Homepage({
         secondCourseCategory={TuitionData.secondCourseCategory}
       />
       <HowMuch
-        Header={HowMuchData.title}
-        Description={HowMuchData.description}
+        title={HowMuchData.title}
+        subTitle={HowMuchData.subTitle}
         AllSections={HowMuchData.sections}
         lastStage={4}
         lastButtonText="Start Learning"

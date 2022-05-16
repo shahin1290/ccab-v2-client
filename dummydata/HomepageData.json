@@ -164,7 +164,7 @@
   },
   "HowMuchData": {
     "title": "How much?",
-    "description": "Click the icons below to describe your app to get the estimate",
+    "subTitle": "Click the icons below to describe your app to get the estimate",
     "sections": [
       [
         {
@@ -333,7 +333,6 @@
       }
     ]
   },
-
   "CareerSupportData": {
     "title": "What Stands Us Out",
     "subTitle": "Register yourself now and get real employable skills that top companies want",
