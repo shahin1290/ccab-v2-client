@@ -32,7 +32,7 @@ const navLinks = [
   { name: "Home", to: "/home", type: "nav" },
   { name: "Software Hub", to: "/software-hub", type: "nav" },
   { name: "Company Hub", to: "/company", type: "nav" },
-  // { name: "Teaching Hub", to: "/education", type: "nav" },
+  { name: "Teaching Hub", to: "/education", type: "nav" },
   { name: "Login", to: "/", type: "button", color: "primary" },
   { name: "Register", to: "/", type: "button", color: "secondary" },
 ];
