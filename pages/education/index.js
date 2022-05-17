@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import Hero from "../../components/pages/EducationHub/Hero";
-import { HeroData,  } from "../../dummydata/TeachingHubData";
+import HowCodifyWork from "../../components/pages/EducationHub/HowCodifyWork";
+import { CodifyData, HeroData, HowCodifyWorkData,  } from "../../dummydata/TeachingHubData";
 
 
 const CompanyHub = () => {
@@ -9,6 +10,7 @@ const CompanyHub = () => {
   return (
     <>
         <Hero Media={HeroData.CoverImage} />
+        <HowCodifyWork title={HowCodifyWorkData.Title} CodifyData={CodifyData} />
     </>
   );
 };
