@@ -27,3 +27,37 @@ export const CodifyData = [
     },
 ]
 
+export const SubjectInfoData = {
+    Title:"Personalized private tutoring in all subjects ",
+}
+
+export const SubjectInfoCardData = [
+    {
+        id:1,
+        Header: "Math & Science",
+        SubHeader: "Private tutoring in these subjects:",
+        Body: "Biology, physics, chemistry, engineering and mathematics",
+        Content: "Our tutoring in the science and math category is available in all grades, from grade 1 to university level. We even cover a range of courses at the university level. Contact us for more info regarding our math & science help "
+    },
+    {
+        id:2,
+        Header: "Math & Science",
+        SubHeader: "Private tutoring in these subjects:",
+        Body: "Biology, physics, chemistry, engineering and mathematics",
+        Content: "Our tutoring in the science and math category is available in all grades, from grade 1 to university level. We even cover a range of courses at the university level. Contact us for more info regarding our math & science help "
+    },
+    {
+        id:3,
+        Header: "Math & Science",
+        SubHeader: "Private tutoring in these subjects:",
+        Body: "Biology, physics, chemistry, engineering and mathematics",
+        Content: "Our tutoring in the science and math category is available in all grades, from grade 1 to university level. We even cover a range of courses at the university level. Contact us for more info regarding our math & science help "
+    },
+    {
+        id:4,
+        Header: "Math & Science",
+        SubHeader: "Private tutoring in these subjects:",
+        Body: "Biology, physics, chemistry, engineering and mathematics",
+        Content: "Our tutoring in the science and math category is available in all grades, from grade 1 to university level. We even cover a range of courses at the university level. Contact us for more info regarding our math & science help "
+    },
+]
