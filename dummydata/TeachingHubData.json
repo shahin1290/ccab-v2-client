@@ -155,5 +155,28 @@
                 "Title": "Get a Free Hour",
                 "Description":"Get a free hour of tutoring when you refer a friend or family member to hire a tutor. there is no limit to how many you can recommend!" 
             }
+        ],
+        "BecomeTutorData":{
+            "Title":"Become a Tutor"
+        },
+        "BecomeTutorCardsData":[
+            {
+                "id":1,
+                "IconImage":"/svgImages/HeroImages/CompanySolution.svg",
+                "Title": "Fast Payments",
+                "Description":"Set your own rates by bidding on jobs. Get paid weekly"
+            },
+            {
+                "id":2,
+                "IconImage":"/svgImages/HeroImages/CompanySolution.svg",
+                "Title": "Supportive Team",
+                "Description":"24/7 tech and administrative support. We are here when you need us"
+            },
+            {
+                "id":3,
+                "IconImage":"/svgImages/HeroImages/CompanySolution.svg",
+                "Title": "The Best Tech",
+                "Description":"Everything is automated in one simple and easy to use platform."
+            }
         ]
     }

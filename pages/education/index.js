@@ -8,6 +8,7 @@ import util from "util";
 import fs from "fs";
 import PrivateTutoring from "../../components/pages/EducationHub/PrivateTutoring";
 import Pricing from "../../components/pages/EducationHub/Pricing";
+import BecomeTutor from "../../components/pages/EducationHub/BecomeTutor";
 
 const CompanyHub = ({
   TeachingData, 
@@ -19,7 +20,9 @@ const CompanyHub = ({
   PrivateTutoringCardsData, 
   PricingData, 
   PricingCardData, 
-  CodifyPricingOffers}) => {
+  CodifyPricingOffers,
+  BecomeTutorData,
+  BecomeTutorCardsData}) => {
 
   const router = useRouter();
   if (router.isFallback) return <h1>Loading...</h1>;
@@ -36,6 +39,7 @@ const CompanyHub = ({
         secondTitle={PricingData.SecondHeader} 
         CodifyPricingOffers={CodifyPricingOffers}  
         />
+        <BecomeTutor title={BecomeTutorData.Title} BecomeTutorCardsData={BecomeTutorCardsData} />
     </>
   );
 };
