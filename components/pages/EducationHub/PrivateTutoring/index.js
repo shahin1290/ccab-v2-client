@@ -30,9 +30,8 @@ function PrivateTutoring({title, PrivateTutoringCardsData}) {
           style={{
             textAlign: "-webkit-center",
             marginTop: "20px",
-            flexWrap: "nowrap",
-            overflowY: "hidden",
           }}
+          sx={{flexWrap:{lg:"nowrap", xs:"wrap"}}}
         >
             {PrivateTutoringCardsData.map((item) => {
             return (

@@ -32,3 +32,34 @@ export const TechInfoCard = styled(Card)(({ theme }) => ({
   export const SubjectInfoCardSubHeader = styled(CardContent)(({theme}) =>({
     borderBottom: "1px solid ",
   }))
+
+  export const PricingInfoCard =styled(Card)(({theme}) =>({
+    height: "100%",
+    width:"100%",
+    display: "flex",
+    flexDirection: "column",
+    overflow: "inherit",
+    border:"none",
+    boxShadow:"none",
+    alignItems: "center",
+    textAlign: "center",
+    borderRadius: "15px",
+    background:"#F5F6F9"
+  }))
+
+  export const PricingInfoCardHeader = styled('div')(({theme}) =>({
+    paddingTop:"12px",
+    width: "100%",
+  }))
+
+  export const PricingInfoCardSubHeader = styled(CardContent)(({theme}) =>({
+    width:"105%",
+    borderRadius:" 5px ",
+  }))
+
+  export const PricingInfoCardFooter = styled(CardContent)(({theme}) =>({
+    display:"flex",
+    justifyContent:"space-between",
+    width:"100%",
+    borderRadius:"0 0 15px 15px"
+  }))

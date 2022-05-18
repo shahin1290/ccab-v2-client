@@ -86,5 +86,74 @@
                 "Header":"Private tutoring for grade 1-3",
                 "Content":"Reach your goals with our tutoring and get admitted to your dream education! With a handpicked private tutor you will get help with the homework, but you will also gain motivation, confidence and great strategies for studying"
             }
-        ]   
+        ],
+        "PricingData":{
+            "Header":"Pricing",
+            "Content":"All tutoring is pay as you go. Prices depends on the subject, level, and tutor experience. Our one-time registration fee gives you unlimited access to our network of professional tutors.",
+            "SecondHeader":"We Offer Discounts"
+        },
+        "PricingCardData":[
+            {
+                "id":1,
+                "Header":"School",
+                "Price":"$ 9.9/hour",
+                "Content":"Reach your goals with our tutoring and get admitted to your dream education! With a handpicked private tutor you will get help with the homework, but you will also gain motivation, confidence and great strategies for studying",
+                "Fees":"+$20"
+            },
+            {
+                "id":2,
+                "Header":"Undergraduate",
+                "Price":"$ 9.9/hour",
+                "Content":"Reach your goals with our tutoring and get admitted to your dream education! With a handpicked private tutor you will get help with the homework, but you will also gain motivation, confidence and great strategies for studying",
+                "Fees":"+$20"
+            },
+            {
+                "id":3,
+                "Header":"Postgraduate",
+                "Price":"$ 9.9/hour",
+                "Content":"Reach your goals with our tutoring and get admitted to your dream education! With a handpicked private tutor you will get help with the homework, but you will also gain motivation, confidence and great strategies for studying",
+                "Fees":"+$20"
+            },
+            {
+                "id":4,
+                "Header":"Professional",
+                "Price":"$ 9.9/hour",
+                "Content":"Reach your goals with our tutoring and get admitted to your dream education! With a handpicked private tutor you will get help with the homework, but you will also gain motivation, confidence and great strategies for studying",
+                "Fees":"+$20"
+            },
+            {
+                "id":5,
+                "Header":"Specialist",
+                "Price":"$ 9.9/hour",
+                "Content":"Reach your goals with our tutoring and get admitted to your dream education! With a handpicked private tutor you will get help with the homework, but you will also gain motivation, confidence and great strategies for studying",
+                "Fees":"+$20"
+            },
+            {
+                "id":6,
+                "Header":"Applications",
+                "Price":"$ 9.9/hour",
+                "Content":"Reach your goals with our tutoring and get admitted to your dream education! With a handpicked private tutor you will get help with the homework, but you will also gain motivation, confidence and great strategies for studying",
+                "Fees":"+$20"
+            }
+        ],
+        "CodifyPricingOffers":[
+            {
+                "id":1,
+                "IconImage":"/svgImages/HeroImages/CompanySolution.svg",
+                "Title": "Block Bookings",
+                "Description":"We offer discounts for block bookings. 5% off for 10hours and 10% off for 20 hours of tutoring paid upfront " 
+            },
+            {
+                "id":2,
+                "IconImage":"/svgImages/HeroImages/CompanySolution.svg",
+                "Title": "Group Discounts",
+                "Description":"Pair up with friends and learn together for less. Each additional student will only need to pay 50% of the rate " 
+            },
+            {
+                "id":3,
+                "IconImage":"/svgImages/HeroImages/CompanySolution.svg",
+                "Title": "Get a Free Hour",
+                "Description":"Get a free hour of tutoring when you refer a friend or family member to hire a tutor. there is no limit to how many you can recommend!" 
+            }
+        ]
     }

@@ -7,8 +7,20 @@ import path from "path";
 import util from "util";
 import fs from "fs";
 import PrivateTutoring from "../../components/pages/EducationHub/PrivateTutoring";
+import Pricing from "../../components/pages/EducationHub/Pricing";
 
-const CompanyHub = ({TeachingData, HowCodifyWorkData, CodifyData, SubjectInfoData, SubjectInfoCardData, PrivateTutoringData, PrivateTutoringCardsData}) => {
+const CompanyHub = ({
+  TeachingData, 
+  HowCodifyWorkData, 
+  CodifyData, 
+  SubjectInfoData, 
+  SubjectInfoCardData, 
+  PrivateTutoringData, 
+  PrivateTutoringCardsData, 
+  PricingData, 
+  PricingCardData, 
+  CodifyPricingOffers}) => {
+
   const router = useRouter();
   if (router.isFallback) return <h1>Loading...</h1>;
   return (
@@ -17,6 +29,13 @@ const CompanyHub = ({TeachingData, HowCodifyWorkData, CodifyData, SubjectInfoDat
         <HowCodifyWork title={HowCodifyWorkData.Title} CodifyData={CodifyData} />
         <SubjectInfo title={SubjectInfoData.Title} SubjectInfoCardData={SubjectInfoCardData}/>
         <PrivateTutoring title={PrivateTutoringData.Header} PrivateTutoringCardsData={PrivateTutoringCardsData}/>
+        <Pricing 
+        title={PricingData.Header} 
+        description={PricingData.Content} 
+        PricingCardData={PricingCardData} 
+        secondTitle={PricingData.SecondHeader} 
+        CodifyPricingOffers={CodifyPricingOffers}  
+        />
     </>
   );
 };
