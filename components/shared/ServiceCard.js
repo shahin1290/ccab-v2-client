@@ -9,6 +9,7 @@ const OuterCard = styled(Box)(({ theme }) => ({
   height: "250px",
   borderRadius: "20px",
   perspective: "1000px",
+  "-webkit-perspective": "1000px",
   padding: "1px",
   margin: 20,
   [theme.breakpoints.down("sm")]: {
