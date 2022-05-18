@@ -54,7 +54,6 @@ export default function CurriculumSection({ Curriculums }) {
           }}
         >
           <Slider
-            key={Date.now() * 1000}
             {...settings}
             asNavFor={slider2}
             ref={(slider) => setSlider(slider)}
@@ -70,7 +69,6 @@ export default function CurriculumSection({ Curriculums }) {
         </SliderButton>
       </Container>
       <Slider
-        key={Date.now() * 100}
         {...settings}
         asNavFor={slider}
         ref={(slider) => setSlider2(slider)}
