@@ -60,7 +60,7 @@ export default function CurriculumSection({ Curriculums }) {
             style={{ width: "100%", padding: 0 }}
           >
             {Curriculums.map((item) => (
-              <Header title={item.title} color="primary" key={item.id} />
+              <Header title={item.title} color="primary" key={item.id * 1000} />
             ))}
           </Slider>
         </Box>

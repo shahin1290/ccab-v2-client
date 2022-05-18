@@ -59,6 +59,7 @@ export const ServiceCardFront = ({ icon, title, backgroundColor }) => {
         width: "100%",
         height: "100%",
         backfaceVisibility: "hidden",
+        "-webkit-backface-visibility": "hidden",
         borderRadius: "20px",
       }}
     >
@@ -95,6 +96,7 @@ export const ServiceCardBack = ({ title, content, price, backgroundColor }) => {
         width: "100%",
         height: "100%",
         backfaceVisibility: "hidden",
+        "-webkit-backface-visibility": "hidden",
         transform: "rotateY(180deg)",
         borderRadius: "20px",
       }}
