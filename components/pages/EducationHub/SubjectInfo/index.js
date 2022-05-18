@@ -3,6 +3,19 @@ import { Box } from '@mui/system'
 import Underline from '../../../../images/svg/Underline'
 import SubjectCard from '../../../shared/teachHub/SubjectCard'
 
+const cardColors = [
+  "#6364D9",
+  "#ff7f69",
+  "#f55167",
+  "#ffa950",
+];
+const cardSecondColors = [
+  "#e4e4f3",
+  "#ffe8e4",
+  "#ffdadf",
+  "#ffd9b2",
+]
+
 function SubjectInfo({title, SubjectInfoCardData}) {
     const theme = useTheme();
   return (
@@ -35,8 +48,14 @@ function SubjectInfo({title, SubjectInfoCardData}) {
               subHeader={item.SubHeader}
               body={item.Body}
               content={item.Content}
-              Color={(index + 1 ) % 4 === 0 ? "#ffa950" : (index + 1) % 3 === 0 ? "#f55167" : (index + 1) % 2 === 0 ? "#ff7f69" : "#6364D9"}
-              secondColor={(index + 1 ) % 4 === 0 ? "#ffd9b2" : (index + 1) % 3 === 0 ? "#ffdadf" : (index + 1) % 2 === 0 ? "#ffe8e4" : "#e4e4f3"}
+              
+              Color={index + 1 / cardColors.length > 1
+              ? cardColors[index % cardColors.length]
+              : cardColors[index]}
+
+              secondColor={index + 1 / cardSecondColors.length > 1
+              ? cardSecondColors[index % cardSecondColors.length]
+              : cardSecondColors[index]}
             />
         </Grid>
             );
