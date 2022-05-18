@@ -16,7 +16,7 @@ export default function HowCodifyWork({title, CodifyData}) {
             pb: { xs: 5, md: 8 },
           }}
         >
-            <Typography variant="h3" mb={1}>
+            <Typography variant="h3" mb={1} sx={{paddingBottom:"10px"}}>
                 {title}
             </Typography>
             <Underline />

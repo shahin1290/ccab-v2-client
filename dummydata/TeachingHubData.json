@@ -57,5 +57,34 @@
                 "Body": "Biology, physics, chemistry, engineering and mathematics",
                 "Content": "Our tutoring in the science and math category is available in all grades, from grade 1 to university level. We even cover a range of courses at the university level. Contact us for more info regarding our math & science help "
             }
+        ],
+        "PrivateTutoringData":{
+            "Header":"Which School Grade do you want Private Tutoring for?"
+        },
+        "PrivateTutoringCardsData":[
+            {
+                "id":1,
+                "coverImage": "/images/learning.png",
+                "Header":"Private tutoring for gymnasium",
+                "Content":"Reach your goals with our tutoring and get admitted to your dream education! With a handpicked private tutor you will get help with the homework, but you will also gain motivation, confidence and great strategies for studying"
+            },
+            {
+                "id":2,
+                "coverImage": "/images/learning.png",
+                "Header":"Private tutoring for grade 7-9",
+                "Content":"Reach your goals with our tutoring and get admitted to your dream education! With a handpicked private tutor you will get help with the homework, but you will also gain motivation, confidence and great strategies for studying"
+            },
+            {
+                "id":3,
+                "coverImage": "/images/learning.png",
+                "Header":"Private tutoring for grade 4-6",
+                "Content":"Reach your goals with our tutoring and get admitted to your dream education! With a handpicked private tutor you will get help with the homework, but you will also gain motivation, confidence and great strategies for studying"
+            },
+            {
+                "id":4,
+                "coverImage": "/images/learning.png",
+                "Header":"Private tutoring for grade 1-3",
+                "Content":"Reach your goals with our tutoring and get admitted to your dream education! With a handpicked private tutor you will get help with the homework, but you will also gain motivation, confidence and great strategies for studying"
+            }
         ]   
     }

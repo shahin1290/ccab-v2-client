@@ -6,8 +6,9 @@ import SubjectInfo from "../../components/pages/EducationHub/SubjectInfo";
 import path from "path";
 import util from "util";
 import fs from "fs";
+import PrivateTutoring from "../../components/pages/EducationHub/PrivateTutoring";
 
-const CompanyHub = ({TeachingData, HowCodifyWorkData, CodifyData, SubjectInfoData, SubjectInfoCardData}) => {
+const CompanyHub = ({TeachingData, HowCodifyWorkData, CodifyData, SubjectInfoData, SubjectInfoCardData, PrivateTutoringData, PrivateTutoringCardsData}) => {
   const router = useRouter();
   if (router.isFallback) return <h1>Loading...</h1>;
   return (
@@ -15,6 +16,7 @@ const CompanyHub = ({TeachingData, HowCodifyWorkData, CodifyData, SubjectInfoDat
         <Hero Media={TeachingData.CoverImage} />
         <HowCodifyWork title={HowCodifyWorkData.Title} CodifyData={CodifyData} />
         <SubjectInfo title={SubjectInfoData.Title} SubjectInfoCardData={SubjectInfoCardData}/>
+        <PrivateTutoring title={PrivateTutoringData.Header} PrivateTutoringCardsData={PrivateTutoringCardsData}/>
     </>
   );
 };
