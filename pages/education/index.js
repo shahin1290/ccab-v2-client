@@ -2,7 +2,6 @@ import { useRouter } from "next/router";
 import Hero from "../../components/pages/EducationHub/Hero";
 import HowCodifyWork from "../../components/pages/EducationHub/HowCodifyWork";
 import SubjectInfo from "../../components/pages/EducationHub/SubjectInfo";
-// import { CodifyData, HeroData, HowCodifyWorkData, SubjectInfoCardData, SubjectInfoData,  } from "../../dummydata/TeachingHubData";
 import path from "path";
 import util from "util";
 import fs from "fs";
@@ -63,9 +62,6 @@ export async function getStaticProps() {
     path.join(process.cwd(), "dummydata", "TeachingHubData.json")
   );
   const data = JSON.parse(jsonData);
-
-  // const results = await axios.get("/api/homepages?populate=*");
-  // console.log(results.data.data[0]);
 
   if (!data) {
     return {
