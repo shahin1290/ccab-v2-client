@@ -9,7 +9,10 @@ const OuterCard = styled(Box)(({ theme }) => ({
   height: "250px",
   borderRadius: "20px",
   perspective: "1000px",
-  WebkitPerspective: "1000px",
+  WebkitPerspective: "500px",
+  WebkitTransform: "translate3d(0,0,0)",
+  transformStyle: "preserve-3d",
+  WebkitTransformStyle: "preserve-3d",
   padding: "1px",
   margin: 20,
   [theme.breakpoints.down("sm")]: {
@@ -17,8 +20,8 @@ const OuterCard = styled(Box)(({ theme }) => ({
     height: "210px",
   },
   "&:hover .inner-card": {
+    WebkitTransform: "translate3d(0,0,0)",
     transform: "rotateY(180deg)",
-    WebkitTransform: "rotateY(180deg)",
   },
 }));
 
@@ -63,6 +66,7 @@ export const ServiceCardFront = ({ icon, title, backgroundColor }) => {
         height: "100%",
         backfaceVisibility: "hidden",
         WebkitBackfaceVisibility: "hidden",
+        visibility: "visible",
         borderRadius: "20px",
       }}
     >
@@ -99,10 +103,10 @@ export const ServiceCardBack = ({ title, content, price, backgroundColor }) => {
         width: "100%",
         height: "100%",
         backfaceVisibility: "hidden",
-        WebkitBackfaceVisibility: "hidden",
         transform: "rotateY(180deg)",
-        WebkitTransform: "rotateY(180deg)",
+        WebkitBackfaceVisibility: "hidden",
         borderRadius: "20px",
+        visibility: "visible",
       }}
     >
       <Stack
