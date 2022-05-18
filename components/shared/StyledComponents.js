@@ -147,13 +147,10 @@ export const Title = styled("h1")({
 
 export const BranchedTitle = styled("span")({
   color: "#6364d9",
-  fontSize: "2.9rem",
+  fontSize: "inherit",
   fontWeight: "900",
   whiteSpace: "nowrap",
   paddingLeft: "4px",
-  "@media (max-width: 480px)": {
-    fontSize: "20px",
-  },
 });
 
 export const CardButton = styled(SecondaryButton)({

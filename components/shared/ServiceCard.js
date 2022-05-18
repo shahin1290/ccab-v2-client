@@ -19,7 +19,6 @@ const OuterCard = styled(Box)(({ theme }) => ({
   "&:hover .inner-card": {
     transform: "rotateY(180deg)",
     "-webkit-transform": "rotateY(180deg)",
-    "-webkit-transform": "translate3d(0,0,0)",
   },
 }));
 
@@ -103,7 +102,7 @@ export const ServiceCardBack = ({ title, content, price, backgroundColor }) => {
         "-webkit-backface-visibility": "hidden",
         transform: "rotateY(180deg)",
         " -webkit-transform": "rotateY(180deg)",
-        "-webkit-transform": "translate3d(0,0,0)",
+        // "-webkit-transform": "translate3d(0,0,0)",
         borderRadius: "20px",
       }}
     >

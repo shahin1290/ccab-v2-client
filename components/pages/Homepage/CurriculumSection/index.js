@@ -60,7 +60,11 @@ export default function CurriculumSection({ Curriculums }) {
             style={{ width: "100%", padding: 0 }}
           >
             {Curriculums.map((item) => (
-              <Header title={item.title} color="primary" key={item.id * 1000} />
+              <Header
+                title={item.title}
+                color="primary"
+                key={item.id * Math.random()}
+              />
             ))}
           </Slider>
         </Box>
@@ -79,24 +83,25 @@ export default function CurriculumSection({ Curriculums }) {
       >
         {Curriculums.map((curriculum) => {
           return (
-            <>
-              {curriculum?.list ? (
-                <CurriculumContent
-                  key={curriculum.id}
-                  list
-                  description={curriculum.description}
-                  largeContent={<ListCurriculum data={curriculum.listData} />}
-                  smallContent={<ListCurriculum data={curriculum.listData} />}
-                />
-              ) : (
-                <CurriculumContent
-                  key={curriculum.id}
-                  description={curriculum.description}
-                  largeContent={curriculum.largeContent}
-                  smallContent={curriculum.smallContent}
-                />
-              )}
-            </>
+            <CurriculumContent
+              key={curriculum.id}
+              list={curriculum.list}
+              description={curriculum.description}
+              largeContent={
+                curriculum.list ? (
+                  <ListCurriculum data={curriculum.listData} />
+                ) : (
+                  curriculum.largeContent
+                )
+              }
+              smallContent={
+                curriculum.list ? (
+                  <ListCurriculum data={curriculum.listData} />
+                ) : (
+                  curriculum.smallContent
+                )
+              }
+            />
           );
         })}
       </Slider>
