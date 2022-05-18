@@ -178,5 +178,27 @@
                 "Title": "The Best Tech",
                 "Description":"Everything is automated in one simple and easy to use platform."
             }
-        ]
+        ],
+        "TimelineData":[
+            {
+                "id":1,
+                "Title":"Request Tution"
+            },
+            {
+                "id":2,
+                "Title":"Choose you Tutor"
+            },
+            {
+                "id":3,
+                "Title":"Have Online Lessons"
+            },
+            {
+                "id":4,
+                "Title":"Playback your online Classes"
+            }
+        ],
+        "TimelineMainData":{
+            "Header":"How it Works",
+            "Media":"/svgImages/HeroImages/HomepageHero.svg"
+        }
     }
