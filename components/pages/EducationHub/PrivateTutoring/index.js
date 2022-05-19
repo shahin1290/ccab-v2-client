@@ -31,7 +31,7 @@ function PrivateTutoring({title, PrivateTutoringCardsData}) {
             textAlign: "-webkit-center",
             marginTop: "20px",
           }}
-          sx={{flexWrap:{lg:"nowrap", xs:"wrap"}}}
+          sx={{flexWrap:{xs:"wrap", xlg: "nowrap", lg:"nowrap"}}}
         >
             {PrivateTutoringCardsData.map((item) => {
             return (

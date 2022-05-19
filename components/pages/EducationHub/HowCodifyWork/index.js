@@ -23,7 +23,7 @@ export default function HowCodifyWork({title, CodifyData}) {
         </Box>
         <Grid
           container
-          sx={{ justifyContent: { xs: "center", lg: "center" } }}
+          sx={{ justifyContent: { xs: "center", lg: "center" }, flexWrap: {xs:"wrap", xlg: "nowrap", lg:"nowrap"} }}
           gap={4}
         >
             {CodifyData.map((item)=> {

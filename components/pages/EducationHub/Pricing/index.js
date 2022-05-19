@@ -85,7 +85,7 @@ const Pricing = ({title, description, PricingCardData, secondTitle, CodifyPricin
         </Box>
         <Grid
           container
-          sx={{ justifyContent: { xs: "center", lg: "center" } }}
+          sx={{ justifyContent: { xs: "center", lg: "center" }, flexWrap:{xs:"wrap", xlg: "nowrap", lg:"nowrap"}}}
           gap={4}
         >
             {CodifyPricingOffers.map((item)=> {
