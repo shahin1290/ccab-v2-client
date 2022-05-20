@@ -16,8 +16,9 @@ import ServiceCard, {
 import Underline from "../../images/svg/Underline";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import CompanySolutionSection from "../../components/shared/CompanySolutionSection";
 import CompanySolutionsData from "../../dummydata/CompanySolutionsData";
+import OtherSolutionCard from "../../components/shared/OtherSolutionCard";
+import OtherSections from "../../components/shared/OtherSections";
 
 const StyledSvg = styled("svg")(({ theme }) => ({
   width: "930px",
@@ -54,7 +55,7 @@ const Details = (props) => {
               position: "absolute",
               top: "-120px",
               left: { xs: "-70px", sm: 0 },
-              zIndex: {xl:0, xs:0},
+              zIndex: { xl: 0, xs: 0 },
             }}
           >
             <Box
@@ -76,7 +77,7 @@ const Details = (props) => {
                 {props.subheader}
               </Typography>
             </Box>
-            <StyledSvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" >
+            <StyledSvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
               <g fill="#7072DF">
                 <path
                   xmlns="http://www.w3.org/2000/svg"
@@ -167,7 +168,7 @@ const Details = (props) => {
 
           <Box
             sx={{
-              position: "absolute",
+              position: "relative",
               left: { xl: "40vw", lg: "550px", sm: "35vw", xs: "20vw" },
               top: { xs: "-5vw", xl: "50px", md: 0, sm: "5vw" },
               zIndex: 999,
@@ -184,7 +185,7 @@ const Details = (props) => {
                 sm: "60vw",
                 md: "50vw",
                 lg: "40vw",
-                xl: "46vw",
+                xl: "44vw",
               },
             }}
           >
@@ -240,42 +241,11 @@ const Details = (props) => {
           </Grid>
         </DetailsContainer>
       </Box>
-
-      <Container maxWidth="xl">
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            pt: { xs: 5, md: 10 },
-            pb: { xs: 5, md: 10 },
-          }}
-        >
-          <Typography variant="h3" mb={2}>
-            Other Solutions
-          </Typography>
-          <Underline />
-        </Box>
-        <Grid
-          container
-          sx={{ justifyContent: { xs: "center", lg: "space-between" } }}
-        >
-          {CompanySolutionsData.filter((item) => item.slug !== props.slug).map(
-            (item, index) => (
-              <Grid item key={index} sm={12} lg={6}>
-                <CompanySolutionSection
-                  imageUrl={item.HeroImage}
-                  title={item.header + " " + item.subheader}
-                  description={item.description}
-                  slug={item.slug}
-                  subDirectory="company"
-                />
-              </Grid>
-            )
-          )}
-        </Grid>
-      </Container>
+      <OtherSections
+        solutionData={CompanySolutionsData}
+        currentItem={props.slug}
+        identifier="slug"
+      />
     </Box>
   );
 };

@@ -7,7 +7,7 @@ import Image from "next/image";
 import { Stack } from "@mui/material";
 import { useRouter } from "next/router";
 
-export default function CompanySolutionSection({
+export default function OtherSolutionCard({
   imageUrl,
   title,
   description,
