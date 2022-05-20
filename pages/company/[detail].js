@@ -15,9 +15,6 @@ import ServiceCard, {
 } from "../../components/shared/ServiceCard";
 import Underline from "../../images/svg/Underline";
 import Image from "next/image";
-import { useRouter } from "next/router";
-import CompanySolutionsData from "../../dummydata/CompanySolutionsData";
-import OtherSolutionCard from "../../components/shared/OtherSolutionCard";
 import OtherSections from "../../components/shared/OtherSections";
 
 const StyledSvg = styled("svg")(({ theme }) => ({
@@ -37,8 +34,15 @@ const StyledCircleSvg = styled("svg")(({ theme }) => ({
   [theme.breakpoints.down("sm")]: { width: "200px", height: "200px" },
 }));
 
-const Details = (props) => {
-  const router = useRouter();
+const Details = ({
+  header,
+  subheader,
+  HeroImage,
+  slug,
+  detailParagraphs,
+  serviceCardsDetails,
+  otherSolutionData,
+}) => {
   const theme = useTheme();
   return (
     <Box>
@@ -71,10 +75,10 @@ const Details = (props) => {
                 mb={1}
                 sx={{ fontWeight: "normal" }}
               >
-                {props.header}
+                {header}
               </Typography>
               <Typography variant="h1" color="#fff" mb={3}>
-                {props.subheader}
+                {subheader}
               </Typography>
             </Box>
             <StyledSvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
@@ -189,7 +193,7 @@ const Details = (props) => {
               },
             }}
           >
-            <Image src={props.HeroImage} alt={props.header} layout="fill" />
+            <Image src={HeroImage} alt={header} layout="fill" priority />
           </Box>
         </Box>
 
@@ -197,11 +201,11 @@ const Details = (props) => {
           <Container maxWidth="lg">
             <TextWrapper>
               <Typography variant="h3" mb={2}>
-                {props.header + " " + props.subheader}
+                {header + " " + subheader}
               </Typography>
               <Underline />
               <Box mt={5}>
-                {props.detailParagraphs?.map((paragraph) => (
+                {detailParagraphs?.map((paragraph) => (
                   <Typography
                     key={paragraph.id}
                     variant="body1"
@@ -224,26 +228,24 @@ const Details = (props) => {
               alignItems: "center",
             }}
           >
-            {props.serviceCardsDetails?.map(
-              ({ id, title, content, price, icon }) => (
-                <Grid item md={4} sm={6} xs={12} key={id}>
-                  <ServiceCard style={{ maxWidth: "385px" }}>
-                    <ServiceCardFront title={title} icon={icon} />
-                    <ServiceCardBack
-                      title={title}
-                      content={content}
-                      price={price}
-                    />
-                  </ServiceCard>
-                </Grid>
-              )
-            )}
+            {serviceCardsDetails?.map(({ id, title, content, price, icon }) => (
+              <Grid item md={4} sm={6} xs={12} key={id}>
+                <ServiceCard style={{ maxWidth: "385px" }}>
+                  <ServiceCardFront title={title} icon={icon} />
+                  <ServiceCardBack
+                    title={title}
+                    content={content}
+                    price={price}
+                  />
+                </ServiceCard>
+              </Grid>
+            ))}
           </Grid>
         </DetailsContainer>
       </Box>
       <OtherSections
-        solutionData={CompanySolutionsData}
-        currentItem={props.slug}
+        solutionData={otherSolutionData}
+        currentItem={slug}
         identifier="slug"
       />
     </Box>
@@ -263,7 +265,7 @@ export async function getStaticProps(context) {
 
   if (!pageProps) return { notFound: true };
   return {
-    props: { ...pageProps },
+    props: { ...pageProps, otherSolutionData: data },
   };
 }
 
