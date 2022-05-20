@@ -20,7 +20,7 @@ const CareerSupport = ({ title, subTitle, supportList }) => {
     <Box
       bgcolor="#6364D9"
       color="white"
-      mt={{ md: 10, xs: 5 }}
+      // mt={{ md: 10, xs: 5 }}
       p={{ md: 0, xs: 5 }}
     >
       <Container maxWidth="lg" sx={{ position: "relative" }}>
@@ -37,12 +37,9 @@ const CareerSupport = ({ title, subTitle, supportList }) => {
 
         <Grid container spacing={0} alignItems="center" justifyContent="center">
           <Grid item xs={12} sm={8} order={{ xs: 2, sm: 1 }}>
-            <Typography variant="h2">Career Support?</Typography>
+            <Typography variant="h2">{title}</Typography>
             <Box py={{ xs: 1 }}>
-              <Typography variant="body1">
-                Register yourself now and get real employable skills that top
-                companies want.
-              </Typography>
+              <Typography variant="body1">{subTitle}</Typography>
             </Box>
 
             <List>

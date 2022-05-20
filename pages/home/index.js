@@ -80,6 +80,11 @@ export default function Homepage({
         title={WhatStandsOutData.title}
         subTitle={WhatStandsOutData.subTitle}
         cardData={WhatStandsOutData.cardData}
+      />{" "}
+      <CareerSupport
+        title={CareerSupportData.title}
+        subTitle={CareerSupportData.subTitle}
+        supportList={CareerSupportData.supportList}
       />
       <StudentReviews
         title={StudentReviewData.title}
@@ -88,11 +93,6 @@ export default function Homepage({
       />
       <CompanyReviews />
       <FAQ FAQs={FAQData.FAQs} title={FAQData.title} />
-      <CareerSupport
-        title={CareerSupportData.title}
-        subTitle={CareerSupportData.subtitle}
-        supportList={CareerSupportData.supportList}
-      />
     </>
   );
 }

@@ -11,7 +11,7 @@ const WhatStandsOut = ({ title, subTitle, cardData }) => {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          my: { xs: 2, md: 5 },
+          mt: { xs: 2, md: 5 },
           py: { xs: 3, md: 10 },
           gap: { xs: 5, md: 10 },
         }}
