@@ -18,9 +18,6 @@ const CareerSupport = ({ title, subTitle, supportList }) => {
 
   return (
     <Box
-      bgcolor="#6364D9"
-      color="white"
-      // mt={{ md: 10, xs: 5 }}
       p={{ md: 0, xs: 5 }}
     >
       <Container maxWidth="lg" sx={{ position: "relative" }}>
@@ -35,11 +32,19 @@ const CareerSupport = ({ title, subTitle, supportList }) => {
           <DotGrid fillColor={theme.palette.secondary.main} />
         </Box>
 
-        <Grid container spacing={0} alignItems="center" justifyContent="center">
+        <Grid
+          container
+          spacing={0}
+          alignItems="center"
+          justifyContent="center"
+          pt={{ md: 10, xs: 5 }}
+        >
           <Grid item xs={12} sm={8} order={{ xs: 2, sm: 1 }}>
-            <Typography variant="h2">{title}</Typography>
+            <Typography variant="h2" mb={3}>{title}</Typography>
             <Box py={{ xs: 1 }}>
-              <Typography variant="body1">{subTitle}</Typography>
+              <Typography variant="body1" color="secondary.contrastText">
+                {subTitle}
+              </Typography>
             </Box>
 
             <List>
@@ -52,7 +57,9 @@ const CareerSupport = ({ title, subTitle, supportList }) => {
                     alignItems="center"
                   >
                     <CircleIcon sx={{ fontSize: 8 }} />
-                    <Typography variant="body1">{item.content}</Typography>
+                    <Typography variant="body1" color="secondary.contrastText">
+                      {item.content}
+                    </Typography>
                   </Stack>
                 </ListItem>
               ))}

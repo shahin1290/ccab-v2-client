@@ -33,8 +33,18 @@ const navLinks = [
   { name: "Software Hub", to: "/software-hub", type: "nav" },
   { name: "Company Hub", to: "/company", type: "nav" },
   { name: "Teaching Hub", to: "/education", type: "nav" },
-  { name: "Login", to: "/", type: "button", color: "primary" },
-  { name: "Register", to: "/", type: "button", color: "secondary" },
+  {
+    name: "Login",
+    to: "https://ccab.netlify.app/login",
+    type: "button",
+    color: "primary",
+  },
+  {
+    name: "Register",
+    to: "https://ccab.netlify.app/get-start",
+    type: "button",
+    color: "secondary",
+  },
 ];
 export default function Header() {
   const [open, setOpen] = useState(false);

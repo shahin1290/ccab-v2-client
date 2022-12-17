@@ -7,7 +7,7 @@ const FAQ = ({ FAQs, title }) => {
   const [active, setActive] = useState("");
 
   return (
-    <Box bgcolor="#fff">
+    <Box mb={5}>
       <Box
         sx={{
           display: "flex",

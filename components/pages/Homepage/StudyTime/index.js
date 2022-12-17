@@ -23,7 +23,7 @@ const StyledSvg = styled("svg")(({ theme }) => ({
 const StudyTime = ({ StudyTimeData }) => {
   const theme = useTheme();
   return (
-    <Box bgcolor="#fff" py={{ xs: 1, lg: 4 }}>
+    <Box bgcolor="#fff" py={{ xs: 1 }}>
       <Container maxWidth="xl">
         <Grid
           container
